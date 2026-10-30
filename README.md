@@ -4,9 +4,11 @@ A React and TypeScript (TSX) website recreation of a Canva design, with emphasis
 
 ## Project status
 
-**Documentation baseline in progress.** The design reference has not yet been inspected, and the application scaffold has not been created. Visual specifications and page structure remain pending rather than assumed.
+**Documentation baseline established; application implementation not started.** The design reference has not yet been inspected, so visual specifications and page structure remain pending rather than assumed.
 
 ## Documentation
+
+### Project specification
 
 - [Project brief](docs/project-brief.md)
 - [Design reference and inspection record](docs/design-reference.md)
@@ -18,6 +20,16 @@ A React and TypeScript (TSX) website recreation of a Canva design, with emphasis
 - [Accessibility requirements](docs/accessibility.md)
 - [Implementation plan](docs/implementation-plan.md)
 - [Decision log](docs/decision-log.md)
+
+### Delivery phases
+
+See [the phase register](docs/phases/README.md) for the delivery sequence, current phase statuses, and governance rules.
+
+- [Phase 0 — Source discovery and specification](docs/phases/phase-0-source-discovery.md)
+- [Phase 1 — Application foundation](docs/phases/phase-1-application-foundation.md)
+- [Phase 2 — Design system and page composition](docs/phases/phase-2-design-system-and-composition.md)
+- [Phase 3 — Responsive and accessible implementation](docs/phases/phase-3-responsive-accessibility.md)
+- [Phase 4 — Verification and release readiness](docs/phases/phase-4-verification-release.md)
 
 ## Agreed direction
 
