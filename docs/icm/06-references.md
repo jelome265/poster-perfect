@@ -30,14 +30,7 @@ A document may have different classes for different sections only when clearly m
 
 ## 3. Authority hierarchy
 
-Use the ICM authority hierarchy:
-1. Explicit current project-owner decision.
-2. Owner-approved Canva source and assets for design/content facts.
-3. Applicable external standards and platform/provider requirements.
-4. Approved project requirements and phase contracts.
-5. Architecture and interface contracts.
-6. Current source and executable evidence.
-7. Tooling convention and implementation convenience.
+Use the authority hierarchy defined in [the ICM charter](README.md#21-authority-hierarchy). The detailed rule distinguishes binding law/regulation, applicable security/privacy/accessibility and platform/provider constraints, current owner decisions within the owner's authority, the approved source-design baseline, accepted project contracts, architecture contracts, implementation evidence, and convenience.
 
 For external requirements, cite the authoritative source close to the relevant claim. A third-party tutorial, blog post, search result, or AI-generated summary does not supersede primary documentation.
 
@@ -51,8 +44,8 @@ For external requirements, cite the authoritative source close to the relevant c
 | `PP-REF-004` | `docs/architecture.md` | Architecture contract | Logical architecture and boundaries | Current |
 | `PP-REF-005` | `docs/phases/` | Contract | Phase entry/exit requirements | Current |
 | `PP-REF-006` | [WCAG 2.2 Recommendation](https://www.w3.org/TR/WCAG22/) | External standard | Accessibility assessment target | Current project target; verify relevant criteria during implementation |
-| `PP-REF-007` | Official React documentation | External platform reference | React runtime and component behavior | Specific pages to be recorded when a relevant design/tool decision is made |
-| `PP-REF-008` | Official TypeScript documentation | External platform reference | TypeScript language/compiler behavior | Specific pages to be recorded when toolchain is selected |
+| `PP-REF-007` | [React documentation](https://react.dev/learn) | External platform reference | React component, state, and effect semantics | Use the specific official page relevant to the implementation decision |
+| `PP-REF-008` | [TypeScript documentation](https://www.typescriptlang.org/docs/) | External platform reference | TypeScript language and compiler behavior | Use the specific official page relevant to the implementation decision |
 | `PP-REF-009` | Selected build/package tool documentation | External platform reference | Build and dependency behavior | Not selected |
 
 Do not add a reference solely to make the register look complete. Add a specific official documentation page when it materially governs a decision or contract.
