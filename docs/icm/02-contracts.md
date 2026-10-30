@@ -40,7 +40,8 @@ Not every visual component needs a separate long-form document. The contract mus
 | `PP-REQ-006` | Do not invent source-specific colors, typography, dimensions, assets, content, page structure, or interactions. | Project brief and source-inspection limitation | Accepted | Phase 0 source reconciliation |
 | `PP-REQ-007` | Do not add a backend, API, persistence, analytics, payments, or other external integration without an approved requirement. | Project scope boundary | Accepted | Dependency/effect review and decision log |
 | `PP-REQ-008` | Merge and production-release authorization remain with the project owner. | Project workflow rule | Accepted | Pull request and release disposition |
-| `PP-REQ-009` | Phase 0 produces an information architecture and component blueprint derived from the inspected source, before Phase 1 foundational technical decisions are made. | DEC-007; project owner directive | Accepted | Phase 0 reconciliation (`PP-VER-016`) and `PP-VER-013` |
+| `PP-REQ-009` | Phase 0 produces an information architecture and component blueprint derived from the inspected source and approved requirements, before Phase 1 foundational technical decisions are made. | DEC-007; project owner directive | Accepted | Phase 0 reconciliation (`PP-VER-016`) and `PP-VER-013` |
+| `PP-REQ-010` | Poster Perfect is a company portfolio for a graphic design business, not an individual designer's personal portfolio; it must present the company's approved offering and work, communicate current availability for new projects, and provide a clear owner-approved enquiry path for prospective customers. | DEC-008; project owner clarification dated 2026-10-30 | Accepted; specific company content and enquiry details pending Phase 0 | Company-purpose and customer-journey reconciliation (`PP-VER-017`) |
 
 This is the accepted requirement baseline as of DEC-007. New requirements receive new IDs; do not repurpose an existing ID to mean something different.
 
@@ -192,12 +193,36 @@ Changes MUST be made on a reviewable branch with scope and verification recorded
 
 The information architecture MUST define every in-scope page or route, section, navigation entry, and anchor target exactly once, with one parent, a stated order, and a reference to its content, interaction, responsive, and component records. A navigation entry MUST reference an observed destination in the interaction inventory. No route, page, section, or navigation entry MAY be added, removed, or reordered without an approved change to `information-architecture.md`. The set of routes is unknown until Phase 0.
 
-**Inputs:** Inspected source page/artboard inventory; owner-approved responsive interpretation.  
+**Inputs:** Inspected source page/artboard inventory; accepted owner-approved business and functional requirements; owner-approved responsive interpretation.  
 **Outputs:** Accepted IA record (`PP-ART-018`) used as the input to page composition and to Phase 1 routing decisions.  
 **Invariants:** Unique identifiers; no orphan nodes; DOM order matches visual reading order unless an owner-approved adaptation says otherwise; no route or section is inferred from the project name.  
 **Verification:** `PP-VER-016`, `PP-VER-005`, `PP-VER-009`, `PP-VER-014` (after composition exists).
 
 **Specification:** Blocked on Phase 0  
+**Implementation:** Not started  
+**Evidence:** Not collected
+
+### PP-CON-011 — Company positioning, portfolio and customer engagement
+
+**Business content authority:** Project owner  
+**Implementation owner:** Page implementation owner (PP-MAP-011)  
+**Consumers:** Page and section composition, content inventory, navigation and interaction controls  
+**Requirement:** PP-REQ-010; related contracts PP-CON-002, PP-CON-006 and PP-CON-010
+
+The website MUST represent Poster Perfect at company level as a graphic design business, not as an individual designer's personal portfolio. It MUST present owner-approved company identity and positioning, the approved service/capability offering, selected creative work the company is authorized to publish, its current availability for new work, and an accessible, owner-approved path for prospective customers to make enquiries.
+
+The exact company description, target customer segments, service list, portfolio items, publication permissions, supporting claims, availability wording, call-to-action copy, contact destination and customer journey are not established by this contract. They MUST be confirmed and recorded during Phase 0. Availability MUST be reconfirmed before publication because it can change.
+
+The website MUST NOT fabricate or imply company registration, size, team structure, client relationships, testimonials, awards, credentials, metrics, project outcomes, prices, guarantees, or service commitments. Portfolio materials MUST have an identified source and owner-confirmed permission for publication; confidential client information MUST NOT be exposed.
+
+A business requirement not represented in the Canva source may be implemented only as an explicitly recorded and owner-approved web adaptation. The Canva source remains the visual/content reference, not an authorization to invent business facts.
+
+**Inputs:** Owner-approved company profile, positioning, service/capability content, publishable portfolio material, current availability statement, and enquiry destination/behavior.  
+**Outputs:** Company-level presentation and a documented prospective-customer enquiry path.  
+**Invariants:** No personal-portfolio framing; no invented business claims; no unapproved portfolio publication; no stale availability claim; no inert or unverified enquiry control. Remote submission, data persistence, CRM, or other external integration is not implied and remains subject to PP-REQ-007 and PP-CON-007.  
+**Verification:** PP-VER-017, PP-VER-005, PP-VER-009, PP-VER-010 and owner review before release.
+
+**Specification:** Partially specified; business purpose accepted, detailed content and journey pending Phase 0  
 **Implementation:** Not started  
 **Evidence:** Not collected
 
