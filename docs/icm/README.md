@@ -40,7 +40,7 @@ OWNER / SOURCE REQUIREMENT
   PHASE GATE / RELEASE DECISION
 ```
 
-Every edge must be explainable. An unlinked requirement is unimplemented scope; an unlinked effect is an uncontrolled side effect; an unlinked artifact has unclear authority; an unlinked verification claim is not evidence.
+Every edge must be explainable. An unmapped requirement is an untracked requirement; the missing mapping alone does not establish whether code is implemented. An unlinked effect is an uncontrolled side effect; an unlinked artifact has unclear authority; an unlinked verification claim is not evidence.
 
 ## 2. Authority boundary
 
@@ -48,17 +48,18 @@ The ICM governs engineering traceability and control. It does not override the s
 
 ### 2.1 Authority hierarchy
 
-Resolve conflicts using this order:
+The canonical conflict-resolution hierarchy is maintained in [the reference integrity contract](06-references.md#3-authority-hierarchy). In summary:
 
-1. Explicit, current decision by the project owner.
-2. Owner-approved Canva source and approved source assets for visual/content truth.
-3. Applicable accessibility, browser, security, privacy, and legal requirements.
-4. Approved project requirements and phase contracts.
-5. Architecture and interface contracts in this ICM.
-6. Current implementation and executable evidence.
-7. Tooling conventions and implementation convenience.
+1. Applicable law, regulation, and binding obligations.
+2. Applicable security, privacy, accessibility, browser/platform, and provider constraints.
+3. Current explicit project-owner decisions within the owner's authority.
+4. The owner-approved Canva source as the baseline for observed visual and content facts.
+5. Accepted project requirements and phase contracts.
+6. Architecture and interface contracts.
+7. Current implementation and executable evidence as observations of system state, not authority to weaken requirements.
+8. Tooling conventions and implementation convenience.
 
-A lower-level document cannot silently weaken a higher-level requirement. When evidence shows that implementation and contract disagree, record the gap and disposition it explicitly.
+A newer explicit owner decision may approve a change to the source-design baseline, but it cannot waive a binding legal/regulatory obligation or an applicable security/platform constraint. A lower-level document cannot silently weaken a higher-authority requirement. When implementation and contract disagree, record the gap and disposition it explicitly.
 
 ### 2.2 One canonical home per fact
 
@@ -138,8 +139,10 @@ Keep approval, implementation, and verification states separate.
 
 **Specification state**
 - `Proposed`: drafted but not approved.
-- `Accepted`: approved as a project requirement or contract.
+- `Accepted`: approved as a project requirement or contract, with its scope sufficiently defined.
+- `Partially specified`: the high-level intent is accepted, but some details remain dependent on a source or later decision.
 - `Blocked`: cannot be resolved because a required input or decision is missing.
+- `Excluded`: explicitly outside the approved baseline; a future inclusion requires change control.
 - `Retired`: no longer applicable; retain its history.
 
 **Implementation state**
@@ -161,7 +164,7 @@ Do not compress these into one ambiguous status. `Accepted` does not mean implem
 
 ## 6. Normative language
 
-- **MUST / MUST NOT**: release-blocking requirement unless the owner formally changes the governing contract.
+- **MUST / MUST NOT**: mandatory within its authority domain. Only the authority that owns the governing requirement may change it; an owner decision cannot waive applicable law, regulation, or binding external/platform constraints.
 - **SHOULD / SHOULD NOT**: default requirement; a deviation needs a recorded reason.
 - **MAY**: optional behavior.
 - **UNKNOWN**: not established by current evidence.
