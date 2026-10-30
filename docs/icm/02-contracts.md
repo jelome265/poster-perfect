@@ -43,7 +43,7 @@ Not every visual component needs a separate long-form document. The contract mus
 | `PP-REQ-009` | Phase 0 produces an information architecture and component blueprint derived from the inspected source and approved requirements, before Phase 1 foundational technical decisions are made. | DEC-007; project owner directive | Accepted | Phase 0 reconciliation (`PP-VER-016`) and `PP-VER-013` |
 | `PP-REQ-010` | Poster Perfect is a company portfolio for a graphic design business, not an individual designer's personal portfolio; it must present the company's approved offering and work, communicate current availability for new projects, and provide a clear owner-approved enquiry path for prospective customers. | DEC-008; project owner clarification dated 2026-10-30 | Accepted; specific company content and enquiry details pending Phase 0 | Company-purpose and customer-journey reconciliation (`PP-VER-017`) |
 
-This is the accepted requirement baseline as of DEC-007. New requirements receive new IDs; do not repurpose an existing ID to mean something different.
+This is the accepted requirement baseline as of DEC-008. New requirements receive new IDs; do not repurpose an existing ID to mean something different.
 
 ## 4. Boundary contracts
 
