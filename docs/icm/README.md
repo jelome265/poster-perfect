@@ -67,7 +67,7 @@ Each substantive fact has one canonical owner:
 - Product scope and goals: `docs/project-brief.md`.
 - Source-design observations: `docs/design-reference.md`.
 - Design tokens: `docs/design-system.md`.
-- Page and content hierarchy: `docs/content-structure.md`.
+- Section content, copy, media, and interaction inventory: `docs/content-structure.md`.
 - Component inventory and responsibilities: `docs/components.md`.
 - Page set, hierarchy, navigation, and section order: `docs/information-architecture.md`.
 - Per-component contract details: `docs/component-blueprint.md`.
