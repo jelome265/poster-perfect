@@ -39,10 +39,11 @@ Every control must specify:
 | `PP-VER-010` | Asset loading and alternative text review | Automated/manual | PP-CON-005 | Does not independently establish copyright/licensing or full design fidelity | Pending asset inventory |
 | `PP-VER-011` | Release artifact and revision provenance | Automated/manual | PP-REQ-008, PP-CON-009 | Establishes traceability, not the artifact's complete security or runtime correctness | Planned |
 | `PP-VER-012` | Owner review and release disposition | Manual approval | PP-REQ-008, PP-CON-009 | Records authorization; it does not replace technical verification | Required for each release |
-| `PP-VER-013` | ICM reference and traceability integrity | Manual initially; automation when justified | All accepted requirements and ICM registers | Proves documentation/link/identifier/traceability integrity only; not application implementation | Passed at `86246e1` (PP-ART-017 §7 R2); failed at `9eae0e2` (R1, ambiguous ownership), corrected |
+| `PP-VER-013` | ICM reference and traceability integrity | Manual initially; automation when justified | All accepted requirements and ICM registers | Proves documentation/link/identifier/traceability integrity only; not application implementation | Passed at `86246e1` for that exact revision (PP-ART-017 §7 R2); failed at `9eae0e2` (R1), corrected; rerun required for subsequent ICM changes |
 | `PP-VER-014` | Architecture and component-boundary review | Manual/hybrid | PP-REQ-003, PP-CON-003 | Depends on the actual source tree and reviewed revision; a logical map alone is not implementation evidence | Planned; run as the physical architecture is introduced |
 | `PP-VER-015` | Dependency and side-effect surface review | Manual/hybrid | PP-REQ-007, PP-CON-007, PP-EFF-005–010 | Reviews declared/observable dependencies and effects; cannot prove absence of all runtime vulnerabilities | Defined; run at foundation and whenever dependencies/effects change |
 | `PP-VER-016` | Information architecture and component-blueprint reconciliation against inspected source | Manual | PP-REQ-001, PP-REQ-003, PP-REQ-006, PP-REQ-009, PP-CON-002, PP-CON-003, PP-CON-010 | Verifies record completeness and cross-reference consistency against the source; does not prove the implemented DOM, visual fidelity, or accessibility (`PP-VER-005`, `PP-VER-006`, `PP-VER-008`, `PP-VER-014`) | Blocked on source |
+| `PP-VER-017` | Company positioning, approved portfolio content and prospective-customer journey reconciliation | Manual | PP-REQ-010, PP-CON-011 | Verifies owner-approved company facts, publication permissions, availability and enquiry-path specification; does not measure lead generation, conversion rate, sales, or customer satisfaction | Partially specified; detailed company content and enquiry route pending Phase 0 |
 
 ## 4. Automated controls
 
@@ -133,9 +134,9 @@ A code change affecting a tested property makes the prior evidence stale for tha
 
 | Gate | Required evidence | Blocks progression when |
 |---|---|---|
-| G0 — Specification ready | Source inspection, inventories, decisions, approved scope | Source or material requirements are unknown |
+| G0 — Specification ready | Source inspection, inventories, accepted company purpose and customer-journey specification, decisions, approved scope | Source or material requirements are unknown |
 | G1 — Foundation ready | Clean install, strict types, static checks, build, smoke test | Toolchain is not reproducible or checks fail |
-| G2 — Composition ready | Content/asset reconciliation, visual comparison, functional controls | Core sections or approved behavior are missing |
+| G2 — Composition ready | Content/asset reconciliation, company-positioning and portfolio reconciliation, enquiry-path behavior, visual comparison, functional controls | Core sections or approved behavior are missing |
 | G3 — Responsive/accessibility ready | Viewport matrix, keyboard/manual checks, accessibility findings | Critical usability/accessibility issue remains unresolved |
 | G4 — Release ready | Current build/test evidence, final visual/functional review, known limitations, owner disposition | Evidence is stale, a release blocker remains, or owner authorization is absent |
 
@@ -226,6 +227,25 @@ Checks:
 Method: manual reconciliation against the inspected export (`PP-REF-001`). Record the export identity, the IA and blueprint revision, and the date in the report template (§13). Automation is deferred until Phase 1 establishes a toolchain, per the automation policy in §10.
 
 Limitation: validates the records against the source only. It does not prove that the implementation matches them (`PP-VER-014`) or that the rendered page matches the design (`PP-VER-006`).
+
+### PP-VER-017 — Company positioning and prospective-customer journey reconciliation
+
+Covers PP-REQ-010 and PP-CON-011. Run during Phase 0 against the current project brief, owner-confirmed business details, content inventory, information architecture, interaction inventory, and any proposed web adaptations. Repeat the relevant checks before release where availability, portfolio permissions, or contact destinations may have changed.
+
+Checks:
+
+- The project brief and proposed page content represent Poster Perfect as a graphic design business/company, not as an individual designer's personal portfolio.
+- The company description, positioning, target customer segments, capabilities and service statements are supported by owner-approved information.
+- Each displayed portfolio item, client name or logo has a recorded source and owner-confirmed publication permission; confidential client information is excluded.
+- Testimonials, awards, credentials, client counts, metrics, project outcomes, prices, guarantees and other trust claims are omitted unless their facts and publication approval are established.
+- The availability statement is explicitly approved and reconfirmed before publication/release.
+- The prospective-customer journey has a clear, owner-approved enquiry action and destination. Every visible CTA has a documented expected outcome in the interaction inventory; no decorative or inert control is represented as an enquiry action.
+- Any business content or enquiry behavior absent from the Canva source is recorded as an owner-approved web adaptation, not mislabeled as source-observed content.
+- Any deliberate omission (for example, no public client list or no remote form) is recorded as an owner-approved scope decision or accepted limitation.
+
+Method: manual review of the canonical records and owner confirmation. Record the approved company-content revision, portfolio permission references, availability confirmation date, enquiry destination/behavior, reviewer, and date in the verification report (§13).
+
+Limitation: this control verifies specification and content authorization. It does not establish that the site will generate leads, that a prospective customer will convert, or that any future external contact channel remains available. Functional behavior of links and controls is covered by PP-VER-009; WCAG assessment is covered by PP-VER-008. Analytics or CRM measurement is not implied.
 
 ## 12. Failure and waiver policy
 

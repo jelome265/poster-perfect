@@ -79,7 +79,7 @@ owner-authorized deployment
 ## 4. PP-PRC-002 — Initial page load and render
 
 **Purpose:** present the approved page to a visitor.  
-**Contracts:** PP-CON-001, PP-CON-002.
+**Contracts:** PP-CON-001, PP-CON-002, PP-CON-011.
 
 ```text
 visitor navigates to URL
@@ -124,8 +124,8 @@ This is a logical target flow. Exact document delivery, route fallback, renderin
 
 ## 5. PP-PRC-003 — Link and navigation activation
 
-**Purpose:** move a visitor to an approved destination.  
-**Contract:** PP-CON-006.
+**Purpose:** move a visitor to an approved destination, including the company-approved prospective-customer enquiry destination where applicable.  
+**Contracts:** PP-CON-006, PP-CON-011.
 
 **Preconditions**
 - The interaction inventory contains an explicit destination.
@@ -143,7 +143,7 @@ This is a logical target flow. Exact document delivery, route fallback, renderin
 - Opening a new browsing context must be justified and communicated; do not add it by default.
 
 **Effects:** PP-EFF-003.  
-**Verification:** PP-VER-008 and PP-VER-009.
+**Verification:** PP-VER-008, PP-VER-009 and PP-VER-017.
 
 **Implementation status:** Conditional; actual links unknown.
 
@@ -262,7 +262,7 @@ merge / release only as explicitly authorized
 ## 9. PP-PRC-007 — Source inspection and specification
 
 **Purpose:** convert the owner-supplied Canva source into a verified page, content, asset, interaction, and responsive specification.  
-**Contracts:** PP-CON-002, PP-CON-004, PP-CON-005, PP-CON-006, PP-CON-008.  
+**Contracts:** PP-CON-002, PP-CON-004, PP-CON-005, PP-CON-006, PP-CON-008, PP-CON-011.  
 **Initiator:** Project owner supplies an inspectable export or view-only reference.  
 **Owner:** Project owner for source authority and scope approval; maintainer for recording and reconciling the specification.
 
@@ -285,7 +285,7 @@ merge / release only as explicitly authorized
 **Failure/blocking:** if the source is inaccessible or material assets/requirements cannot be established, keep Phase 0 blocked. Do not substitute guesses.
 
 **Effects:** no website runtime effect. Outputs are documentation and source-inventory artifacts, not application behavior.  
-**Verification:** PP-VER-005, PP-VER-006, PP-VER-010, and PP-VER-013.
+**Verification:** PP-VER-005, PP-VER-006, PP-VER-010, PP-VER-013, and PP-VER-017.
 
 ## 10. State-transition discipline
 

@@ -3,15 +3,15 @@
 | Field | Value |
 | --- | --- |
 | Status | Blocked — inspectable source required |
-| Objective | Convert the supplied Canva design into a verified web implementation specification |
+| Objective | Produce an owner-approved company portfolio and customer-journey specification alongside the verified Canva-to-web design specification |
 | Depends on | Project brief and accessible source material |
-| Primary outputs | Source inventory, page/content specification, information architecture, component inventory and blueprint, design-token inventory, interaction inventory, approved web interpretation |
+| Primary outputs | Company positioning and customer-journey specification, source inventory, page/content specification, information architecture, component inventory and blueprint, design-token inventory, interaction inventory, approved web interpretation |
 
 ## 1. Objective
 
-Establish a sufficiently complete and reliable description of the Canva source so implementation does not depend on guesses. Phase 0 is a discovery and specification phase; it does not include building the website. Its specification outputs include the information architecture (`PP-ART-018`) and the component blueprint (`PP-ART-019`), per `PP-REQ-009` and DEC-007.
+Establish the approved business purpose, company-facing content requirements and prospective-customer journey, then produce a sufficiently complete and reliable description of the Canva source so implementation does not depend on guesses. Phase 0 is a discovery and specification phase; it does not include building the website. Its specification outputs include the information architecture (`PP-ART-018`) and component blueprint (`PP-ART-019`), per `PP-REQ-009` and DEC-007, plus the company positioning and customer-engagement contract (`PP-CON-011`).
 
-The source design is the visual reference. Owner-confirmed requirements govern any behavior or responsive adaptation that cannot be determined from a static design.
+Poster Perfect is a company portfolio for a graphic design business, not an individual designer's personal portfolio (`DEC-008`, `PP-REQ-010`). The source design is the visual reference; accepted business requirements establish the company purpose. Owner-approved requirements govern any business content, behavior or responsive adaptation that cannot be determined from a static design.
 
 ## 2. Entry conditions
 
@@ -77,16 +77,16 @@ Do not invent fixed breakpoint values during discovery. Breakpoints should be de
 
 ### 3.6 Requirements and decisions
 
-- Confirm the website's intended purpose and audience.
+- The company-level website purpose is owner-confirmed in DEC-008. Confirm the specific target customer segments and what those customers need to understand before making an enquiry.
 - Confirm whether the source maps to one page, multiple pages, or a reusable template.
 - Confirm the in-scope content and required behavior.
 - Record non-goals and explicitly out-of-scope functionality.
 - Resolve important unknowns with the project owner.
-- Update the project brief, design reference, content structure, design system, component inventory, and decision log.
+- Update the project brief, design reference, content structure, design system, component inventory, decision log, and ICM records affected by accepted company requirements.
 
 ### 3.7 Information architecture and component blueprint
 
-Derived only from the inspected source (`PP-REQ-009`, DEC-007):
+Derived from the inspected source and owner-approved requirements (`PP-REQ-009`, `PP-REQ-010`, DEC-007 and DEC-008):
 
 - Record every in-scope page or artboard once in `information-architecture.md` with its parent, order, and source locator.
 - Record the section order per page. Map each section to its content entry in `content-structure.md` and to any responsive rule in `design-system.md`.
@@ -94,6 +94,21 @@ Derived only from the inspected source (`PP-REQ-009`, DEC-007):
 - Identify repeated patterns (two or more observed instances) and coherent regions with one responsibility. For each, add a `components.md` row and a `component-blueprint.md` entry, or record why it stays local markup.
 - Do not split, merge, or rename pages, sections, or components to suit an anticipated framework, router, or styling approach.
 - The route count, navigation model, and component boundaries are inputs to Phase 1 decisions. They are not presumed before acceptance.
+
+### 3.8 Company positioning and prospective-customer engagement
+
+Apply DEC-008, PP-REQ-010, and PP-CON-011.
+
+- Confirm the company description and positioning approved for public presentation. Do not assume legal registration, company size, ownership structure, or team composition.
+- Confirm the target customer segments and the design problems or needs the company wants to serve.
+- Confirm the services and capabilities the company actually offers; do not infer categories or guarantees from common industry practice.
+- Identify the creative work the company wants to showcase. Record the source, client/confidentiality constraints, and owner-confirmed permission for each item, client name, or logo before publication.
+- Confirm whether testimonials, case studies, awards, credentials, metrics, client lists, or other proof are available and authorized. Omit unsupported claims.
+- Record the company's current availability for new work and the date it was reconfirmed. Reconfirm before publication/release.
+- Define the intended prospective-customer journey: the action a visitor should take, the approved CTA wording, the contact destination, expected hand-off, and any restrictions.
+- Do not assume email, telephone, WhatsApp, remote forms, CRM, analytics, or another contact/integration technology. Record only the owner-approved destination and behavior.
+- If the business objective requires content or an enquiry action not present in the Canva source, describe it as a proposed web adaptation and obtain owner approval before adding it.
+- Where an item is intentionally excluded or cannot yet be verified, record that disposition rather than filling the gap with invented content.
 
 ## 4. Deliverables
 
@@ -106,6 +121,7 @@ Derived only from the inspected source (`PP-REQ-009`, DEC-007):
 | Design-token inventory | Measured colors, typography, spacing, layout, shape, elevation |
 | Interaction inventory | Trigger, result, destination/state, keyboard expectations |
 | Responsive interpretation | Source variants, expected reflow, proposed adaptations |
+| Company positioning and customer-engagement specification | Owner-approved company description, customer segments, services/capabilities, publishable portfolio and permissions, availability statement, enquiry action/destination, customer journey and exclusions; recorded in the project brief, content and interaction inventories, and ICM without duplicating canonical facts |
 | Information architecture (`PP-ART-018`) | Page and route set, parent/child hierarchy, section order, navigation entries, anchor targets, responsive navigation rules |
 | Component inventory and blueprint (`PP-ART-007`, `PP-ART-019`) | Component list, one-line responsibility, IA placement, typed inputs, owned state, effects, keyboard and focus, accessibility obligations |
 | Decision record | Approved assumptions, unresolved questions, non-goals |
@@ -124,7 +140,8 @@ The relevant project documents are the authoritative records; avoid maintaining 
 - Reconcile the information architecture with the source page/artboard inventory: every in-scope page and section appears exactly once with a valid parent and order (`PP-VER-016`).
 - Confirm every IA section, navigation entry, and anchor references existing content, interaction, responsive, and component records, with no unresolved identifiers.
 - Confirm every component entry is referenced by at least one IA section and declares its effects and verification controls (`PP-VER-016`).
-- Run `PP-VER-013` after the change and record the revision it was run against.
+- Reconcile the company-facing content, publication permissions, availability statement, and prospective-customer enquiry path against owner-approved facts (`PP-VER-017`).
+- Run `PP-VER-013` after the ICM change and record the exact revision and result. A prior pass does not transfer to this revision.
 
 ## 6. Exit criteria
 
@@ -138,6 +155,7 @@ Phase 0 is complete only when:
 - Responsive interpretation is documented.
 - The information architecture (`PP-ART-018`) is accepted and reconciled with the source inventory (`PP-VER-016`).
 - The component inventory and blueprint are recorded for every component the source justifies. Each entry is accepted, or it is explicitly marked partially specified with its open questions.
+- Company positioning, target customer segments, approved services/capabilities, publishable portfolio work and permissions, current availability, and enquiry route are specified and owner-approved, or explicitly excluded/recorded as accepted limitations (`PP-VER-017`).
 - Material ambiguities and scope questions are resolved or recorded as accepted limitations.
 - The project owner approves the web interpretation and implementation scope.
 
@@ -148,6 +166,7 @@ Phase 0 is complete only when:
 - Backend/API design or integration.
 - Unrequested authentication, persistence, analytics, CMS, or payment features.
 - Guessing missing content, imagery, typography, or behavior.
+- Fabricating company claims, service categories, client relationships, portfolio permissions, endorsements, metrics, or contact destinations.
 
 ## 8. Handoff to Phase 1
 

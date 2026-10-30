@@ -12,7 +12,14 @@
 
 This document is the canonical record of the **structure** of the Poster Perfect website: which pages or routes exist, how they nest, how navigation connects them, what order sections appear in, and where in-page anchor targets exist.
 
-**No page, route, section, navigation entry, or anchor is recorded here until it is observed in the inspected Canva source or explicitly confirmed by the project owner.** The sections below are templates. They contain no sitemap, because none has been established. Do not infer one from the project name, from typical landing-page patterns, or from the component names in `components.md`.
+**No page, route, section, navigation entry, or anchor is recorded here until it is observed in the inspected Canva source or explicitly approved by the project owner as a web requirement/adaptation.** The sections below are templates. They contain no sitemap, because none has been established. Do not infer one from the project name, from typical company-portfolio patterns, or from the component names in `components.md`.
+
+### Business-purpose constraint
+
+The owner-confirmed company purpose and prospective-customer objective are defined in `docs/project-brief.md` and `PP-CON-011`. The information architecture must support the approved company-level presentation and enquiry journey; it must not turn the site into an individual designer's personal portfolio.
+
+The Canva source supplies observed visual and content structure. If the company objective requires an additional section, page, navigation entry, or enquiry action that is not present in the source, record it as a proposed web adaptation and obtain explicit owner approval before adding it. Do not label an approved adaptation as source-observed. Exact page count and IA nodes remain blocked until the required source inspection and approvals are complete.
+
 
 ## 2. Ownership split
 

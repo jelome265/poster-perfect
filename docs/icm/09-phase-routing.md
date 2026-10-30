@@ -19,7 +19,7 @@ A phase may touch multiple ICM levels, and an ICM level may be revisited across 
 
 | Delivery phase | L0 Intent | L1 Structure | L2 Contracts/processes | L3 Effects | L4 Evidence | Gate |
 |---|---|---|---|---|---|---|
-| Phase 0 — Source discovery | Primary | Define logical boundary; record page/route hierarchy (`PP-ART-018`) and component boundaries (`PP-ART-019`) | Inventory user-visible contracts and flows; accept `PP-CON-010` and component contracts | Identify possible effects; exclude unknown integrations | Source reconciliation, PP-PRC-007, PP-VER-016 and owner approval | G0 |
+| Phase 0 — Source discovery | Primary | Define company purpose and customer context; record page/route hierarchy (`PP-ART-018`) and component boundaries (`PP-ART-019`) | Specify company positioning, approved portfolio content, availability and enquiry path (`PP-CON-011`); accept `PP-CON-010` and component contracts | Identify possible effects; exclude unapproved remote submission and integrations | Source reconciliation, PP-PRC-007, PP-VER-016, PP-VER-017 and owner approval | G0 |
 | Phase 1 — Application foundation | Confirm scope | Primary | Define runtime/build contracts | Control package-registry access and build artifact writes; deployment remains excluded unless authorized | Install, type, static checks, architecture/dependency review, build, smoke test | G1 |
 | Phase 2 — Design system/composition | Preserve approved design intent | Implement page/component boundaries | Implement page/section/component contracts | Implement only required local/browser effects | Content, asset, functional and primary visual checks | G2 |
 | Phase 3 — Responsive/accessibility | Validate visitor scope across contexts | Refine responsive responsibility | Verify semantic and interaction behavior | Verify focus, navigation, and other browser effects | Viewport and accessibility evidence | G3 |
@@ -32,6 +32,7 @@ A phase may touch multiple ICM levels, and an ICM level may be revisited across 
 Required:
 - Inspectable source and completed source inventory.
 - PP-PRC-007 source inspection/reconciliation completed.
+- Approved company-level purpose, target customer segments or accepted limitations, positioning, service/capability information, publishable work and permissions, availability wording, and enquiry path (`PP-VER-017`).
 - Approved page/content hierarchy.
 - Asset, typography, and design-token inventory.
 - Interaction and responsive interpretation.
@@ -72,6 +73,7 @@ Required:
 - Source/token reconciliation.
 - Primary viewport visual review.
 - Required interactions implemented or explicitly blocked.
+- Company positioning, approved work, availability content and the customer-enquiry path reconciled with `PP-CON-011` and `PP-VER-017`.
 
 Blocks:
 - Missing core sections or content.
@@ -122,7 +124,7 @@ Blocks:
 
 | Gate | Status | Reason |
 |---|---|---|
-| G0 | Blocked | Source artwork and page/content facts not inspectable; information architecture and component blueprint cannot be derived |
+| G0 | Blocked | Source artwork is not inspectable; company-level purpose is known but business content, enquiry details, information architecture and component blueprint are not yet complete |
 | G1 | Not started | Toolchain not selected; application scaffold absent |
 | G2 | Not started | No application composition |
 | G3 | Not started | No responsive implementation |

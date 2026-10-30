@@ -8,7 +8,7 @@ The project follows gated phase progression. A phase is not complete because wor
 
 | Phase | Name | Status | Objective |
 | --- | --- | --- | --- |
-| 0 | [Source discovery and specification](phases/phase-0-source-discovery.md) | Blocked — inspectable source required | Establish the verified design and web specification |
+| 0 | [Source discovery and specification](phases/phase-0-source-discovery.md) | Blocked — inspectable source required | Establish the company positioning/customer journey and the verified design/web specification |
 | 1 | [Application foundation](phases/phase-1-application-foundation.md) | Not started | Establish a minimal, reproducible React + TypeScript application |
 | 2 | [Design system and page composition](phases/phase-2-design-system-and-composition.md) | Not started | Translate the approved design into page structure and components |
 | 3 | [Responsive and accessible implementation](phases/phase-3-responsive-accessibility.md) | Not started | Verify responsive behavior and accessibility requirements |
@@ -32,7 +32,7 @@ Phase 3: Responsive and accessible implementation
 Phase 4: Verification and release readiness
 ```
 
-Phase 1 may only begin after the source specification is stable enough to inform foundational technical choices. Any explicitly approved overlap must identify which inputs are stable and which remain unresolved.
+Phase 1 may only begin after the company positioning/customer-journey specification and source specification are stable enough to inform foundational technical choices. Any explicitly approved overlap must identify which inputs are stable and which remain unresolved.
 
 ## ICM control model
 
@@ -51,7 +51,8 @@ See the [ICM phase routing](icm/09-phase-routing.md) for the mapping between pha
 - Phase 0 is blocked because the supplied Canva links did not expose the design for inspection. An inspectable full-resolution export or accessible view-only reference is required.
 - Phases 1–4 have not started.
 - The repository currently contains documentation only; no application scaffold, build scripts, or automated application checks have been established.
-- No visual properties, content hierarchy, assets, interactions, or responsive rules have been inferred from the project name.
+- The company-level purpose is confirmed: Poster Perfect is a graphic design company portfolio intended to attract prospective customers, not an individual designer's portfolio.
+- Specific customer segments, positioning copy, service categories, publishable portfolio material and permissions, current availability wording, enquiry route, page hierarchy, visual properties, assets, interactions, and responsive rules remain to be confirmed; none is inferred from the project name.
 
 ## Governance
 
