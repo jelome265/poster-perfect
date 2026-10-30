@@ -60,15 +60,18 @@ When facts conflict or are uncertain, state the conflict and obtain the required
 
 ## 4. Current project baseline and phase controls
 
-Poster Perfect is a React and TypeScript/TSX recreation of the project owner's Canva design.
+Poster Perfect is a company portfolio and customer-acquisition website for a graphic design business. It represents the company at business level, not an individual designer's personal portfolio. Its purpose is to present owner-approved company identity, positioning, capabilities and selected creative work, communicate current availability for new projects, and provide prospective customers with a clear enquiry path.
 
-The approved technical direction is React with TypeScript/TSX and a component-based frontend. Toolchain, package manager, router, styling framework, hosting provider, and any backend or external integrations are not assumed until confirmed by the phase process.
+The project owner confirmed this purpose on 2026-10-30. The supplied Canva design is the visual and content reference; it does not replace the separately confirmed business purpose. The approved technical direction is React with TypeScript/TSX and a component-based frontend. Toolchain, package manager, router, styling framework, hosting provider, and any backend or external integrations are not assumed until confirmed by the phase process.
 
 **Phase 0 is currently blocked** because the Canva artwork is not yet inspectable through the supplied reference. The source design or a suitable full-resolution export/view-only reference is required.
 
 Until Phase 0 exit criteria are met and the project owner approves the web interpretation:
 
 - Do not invent page count, page hierarchy, text, typography, colors, spacing, assets, dimensions, interactions, responsive behavior, or navigation.
+- Do not invent company services, customer segments, portfolio projects, client relationships, testimonials, awards, metrics, credentials, team size, prices, guarantees, or contact destinations. Use only owner-approved business facts and publication-authorized work.
+- Treat availability for new work as time-sensitive content: reconfirm it with the project owner before publication or release.
+- Where the company-acquisition objective requires content or an enquiry action not present in the Canva source, document it as a proposed web adaptation and obtain owner approval rather than adding it silently.
 - Do not start application scaffolding or production implementation on the assumption that unknown design facts are settled.
 - Do not treat a Canva editor URL that cannot be inspected as evidence of its visual contents.
 - Documentation, source-access investigation, governance, and other explicitly approved discovery work may proceed without pretending Phase 0 is complete.
