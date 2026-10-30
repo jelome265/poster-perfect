@@ -50,7 +50,7 @@ Use WCAG 2.2 Level AA as the engineering target and verify the implemented pages
 
 Use the five-level ICM (L0–L4) to govern traceability from requirements through architecture, contracts, processes, effects, artifacts, and verification.
 
-**Reason:** A design recreation still requires explicit ownership, behavior, side-effect, and evidence boundaries. The model must remain proportionate to a frontend website and must not invent backend or infrastructure requirements.
+**Reason:** A company portfolio website still requires explicit ownership, behavior, side-effect, and evidence boundaries. The model must remain proportionate to a frontend website and must not invent backend or infrastructure requirements.
 
 **Authority:** [ICM charter](icm/README.md).
 
@@ -63,6 +63,20 @@ Phase 0 produces two canonical specification artifacts: the [information archite
 **Reason:** Foundational technical choices made before the page set and component boundaries are known would create rework and invent structure the source may not contain.
 
 **Authority:** `PP-REQ-009`; `PP-CON-010`; ICM ownership rules in [the ICM charter](icm/README.md) §2.2.
+
+### DEC-008 — Company portfolio and prospective-customer acquisition purpose
+
+**Status:** Accepted (project owner clarification, 2026-10-30).
+
+Poster Perfect is a company portfolio website for a graphic design business, not an individual designer's personal portfolio. The website is intended to present the company's approved identity, positioning, capabilities and selected creative work, communicate that the company is open to new work, and attract prospective customers through a clear, owner-approved enquiry path.
+
+This decision establishes business purpose and company-level representation only. It does not establish legal registration, company size or team structure, target customer segments, exact services, portfolio items or publication rights, client relationships, testimonials, awards, credentials, metrics, prices, guarantees, contact channel, CTA wording, or page/route structure. Those details require owner confirmation in Phase 0. Availability must be reconfirmed before publication because it can change.
+
+The Canva source remains the visual/content reference. Business content or an enquiry action not represented in the source must be documented as a proposed web adaptation and approved before inclusion.
+
+**Reason:** The company portfolio must serve the business objective of attracting prospective customers; treating it only as an individual portfolio or a generic Canva recreation would omit the actual product purpose.
+
+**Authority:** Project owner clarification dated 2026-10-30; PP-REQ-010; PP-CON-011.
 
 ## Open decisions
 
