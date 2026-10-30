@@ -44,6 +44,16 @@ Use WCAG 2.2 Level AA as the engineering target and verify the implemented pages
 
 **Reference:** [W3C WCAG 2.2](https://www.w3.org/TR/WCAG22/).
 
+### DEC-006 — Implementation Control Model
+
+**Status:** Accepted
+
+Use the five-level ICM (L0–L4) to govern traceability from requirements through architecture, contracts, processes, effects, artifacts, and verification.
+
+**Reason:** A design recreation still requires explicit ownership, behavior, side-effect, and evidence boundaries. The model must remain proportionate to a frontend website and must not invent backend or infrastructure requirements.
+
+**Authority:** [ICM charter](icm/README.md).
+
 ## Open decisions
 
 | Decision | Status | Resolution gate |
