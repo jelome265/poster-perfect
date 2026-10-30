@@ -143,32 +143,42 @@ Items 9, 10, 12, and 13 were checked by targeted search and by reading the relev
 - This is documentation-integrity evidence only. It is not application verification, visual fidelity, or WCAG conformance.
 - No waiver was granted.
 
-## 9. PP-VER-016 author run against the Canva export (2026-10-30)
+## 8. PP-VER-013 re-run record — revision `76f990f`
 
-This run is by the author and is not independent. It is reported as a structural reconciliation with open items. It does not satisfy the owner's review, and no approval is recorded here.
+| Run | Revision (full SHA) | Scope | Result |
+| --- | --- | --- | --- |
+| R3 | `76f990f` (`76f990fa3ce2ba644e78ee478049337cab5b5fc8`, `origin/main` after PR #5 and PR #6) | Full ICM and canonical-document tree; 34 Markdown files; 10 accepted requirements (PP-REQ-010 added by PR #6) | **PASS** |
 
-Source: the export identified in `docs/design-reference.md` (SHA-256 `173bd1a7…baea6`). Not committed.
+Run in a clean worktree at `76f990f` (0 uncommitted changes). Method: one-off stdlib script outside the repository, plus targeted command checks. Not a committed CI gate.
 
-| Check | Result |
-| --- | --- |
-| Pages in source vs. information architecture | 1 page in source; recorded once (`PP-IA-001`, §5.1) |
-| Sections in source vs. IA | 7 sections; each recorded once in §5.3 and §5.6; each has a content entry in `content-structure.md` |
-| Navigation entries | None observed in source; §5.4 records none, and no link is invented |
-| Anchor targets | None observed; §5.5 records none |
-| Components referenced by IA | 5 of 5 (`PP-CMP-001`–`005`) referenced from §5.6, defined in the blueprint, and listed in the inventory |
-| Repeated or coherent regions without a component | Recorded as local markup with a reason (`components.md`, "Local markup") |
-| Effects declared per component | 5 of 5 declared. 3 are "none". 2 (`PP-CMP-002`, `PP-CMP-005`) depend on the link decision and are open |
-| Keyboard and focus declared | 5 of 5 declared. 3 not applicable. 2 open, on the same link decision |
-| Entries marked Accepted | 0. No approval recorded |
-| Identifiers and links (validator) | 0 errors; 131 identifiers defined |
-| Owner-role check | 0 findings |
+Automated:
+- Relative links and anchors: 0 broken.
+- Table shape: 0 malformed.
+- Identifiers: 118 defined; 0 referenced-but-undefined.
+- Requirement-to-verification coverage: each of the 10 accepted requirements has at least one `PP-VER` control.
+- Owner-role check against the 9 roles in `01-architecture-map.md`: 0 findings.
 
-Result: structural reconciliation **passes with open items**.
+Manual checklist (`07-verification.md` §10):
 
-Open items that block G0 approval:
+| # | Result | Evidence |
+| --- | --- | --- |
+| 1 | Pass | 11 canonical ICM files exist |
+| 2 | Pass | Automated link check |
+| 3 | Pass | 10 accepted requirements in the contract table and register; none missing or extra |
+| 4 | Pass | Automated coverage check |
+| 5 | Pass | Automated identifier check |
+| 6 | Pass | No duplicate definitions within any single file |
+| 7 | Pass | `PP-EFF-001`–`010` each referenced in `03-processes.md` |
+| 8 | Pass | 17 `PP-VER` rows, each with a limitation column |
+| 9 | Pass | Status definitions in `02-contracts.md` §7 hold; no conflated status wording found |
+| 10 | Pass | No unsupported completion or merge claims found; deployment remains conditional on authorization |
+| 11 | Pass | Owner-role check: 0 findings |
+| 12 | Pass | All seven process sections contain contract, effects, and verification |
+| 13 | Pass | `PP-EFF-005`–`010` listed in `08-traceability-register.md` §6 with dispositions |
 
-1. Link decisions for service cards (`PP-CMP-002`) and the logo lockup (`PP-CMP-005`).
-2. Responsive reflow for the value badges, service cards, statistics, and testimonials: no source variant exists.
-3. Owner decisions 1–12 in `content-structure.md`: duplicated paragraph, voice, statistics, testimonial permissions, service terms, portfolio permissions, copy typos, contact destinations, hero button, social profile URLs, font licence, and the enquiry path required by PP-CON-011.
-4. Full-resolution assets: the original images, logo vector, and sample artwork are not in the repository.
-5. Approximate color values (`design-system.md`) to be confirmed. Spacing, shape, and elevation not yet measured.
+Limitations:
+- Documentation-integrity evidence only; not application verification, visual fidelity, or WCAG conformance.
+- PP-VER-016 not run (blocked on Phase 0 source inspection).
+- Items 9, 10, and 13 were checked by targeted search and reading, not by a committed checker.
+- Business-level claims introduced by PR #6 (`DEC-008`, `PP-REQ-010`, `PP-RSK-008`) are unverified as company facts; this run checks their traceability only.
+- No waiver granted.
