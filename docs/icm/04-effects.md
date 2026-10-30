@@ -17,11 +17,11 @@ A React component can be visually simple while still triggering network, storage
 | `E0` | Pure computation/render | Formatting a label, deriving a class name, rendering props | Preferred; deterministic for given inputs |
 | `E1` | Ephemeral in-memory UI state | Open/closed menu, selected tab, input draft | Allowed only when source behavior requires it |
 | `E2` | Browser/platform effect | URL navigation, focus, download, clipboard, media playback | Requires an interaction contract and user gesture where browser policy requires it |
-| `E3` | Network read | Loading remote content or calling an API | Not assumed; approved destination and data contract required |
-| `E4` | Durable local state | localStorage, IndexedDB, cookies, service worker cache | Not assumed; purpose, lifecycle, privacy and invalidation contract required |
-| `E5` | External mutation/action | Form submission, email provider, payment, booking, remote account mutation | Not in baseline; explicit owner approval and full failure/duplicate controls required |
+| `E3` | Network read | Loading approved remote content, calling an API, retrieving package dependencies from a registry | Runtime requests require an approved destination/data contract; build-time dependency retrieval requires a locked dependency graph and trusted registry configuration |
+| `E4` | Durable local state or artifact write | localStorage, IndexedDB, cookies, service worker cache, generated build output | Browser persistence is not assumed; build output must be isolated, attributable to the source revision, and excluded from source control unless explicitly required |
+| `E5` | External mutation/action | Form submission, email provider, payment, booking, remote account mutation, deployment/promotion of a live site | Not in baseline; explicit owner approval and full failure/duplicate controls required |
 
-Loading a local build asset still consumes browser/network resources, but it is not an application-level business mutation. Track asset provenance, size, and failure behavior in the asset inventory.
+Loading a same-origin asset from the deployed build is an expected browser resource request; it is tracked under PP-EFF-004. Loading a third-party asset or remote resource is an E3 boundary and requires an approved source. Track asset provenance, size, and failure behavior in the asset inventory.
 
 ## 3. Effect inventory
 
@@ -34,6 +34,9 @@ Loading a local build asset still consumes browser/network resources, but it is 
 | `PP-EFF-005` | Remote data request | E3 | Excluded until approved | API contract, validation, timeout, failure and data minimization |
 | `PP-EFF-006` | Durable browser persistence | E4 | Excluded until approved | Data classification, retention, consent/notice if required, versioning and clear/reset behavior |
 | `PP-EFF-007` | External mutation or submission | E5 | Excluded until approved | Explicit authority, validation, duplicate handling, confirmation, auditability where needed |
+| `PP-EFF-008` | Build-time dependency retrieval | E3 | Expected only during an approved build | Locked manifest/lockfile, trusted registry configuration, integrity checks, no credentials in repository |
+| `PP-EFF-009` | Build artifact generation | E4 | Expected during an approved build | Clean output directory, known source revision, reproducible build inputs, artifact provenance |
+| `PP-EFF-010` | Deployment or production promotion | E5 | Excluded until explicitly authorized | Owner approval, target verification, revision attribution, rollback/recovery plan where supported |
 
 The expected/conditional/excluded statuses do not claim that these effects already exist in code.
 
@@ -111,7 +114,7 @@ For purely local UI state, failure handling may be simple, but invalid or imposs
 ## 9. Effect budgets
 
 The baseline website should have the smallest effect surface compatible with the source:
-- No API requests unless required by approved behavior.
+- No application API requests unless required by approved behavior. Build-time dependency retrieval through the selected package manager is controlled under PP-EFF-008.
 - No persistence unless required.
 - No analytics or tracking by default.
 - No auto-playing media or motion not approved by the source and accessibility review.
