@@ -19,7 +19,7 @@ A phase may touch multiple ICM levels, and an ICM level may be revisited across 
 
 | Delivery phase | L0 Intent | L1 Structure | L2 Contracts/processes | L3 Effects | L4 Evidence | Gate |
 |---|---|---|---|---|---|---|
-| Phase 0 — Source discovery | Primary | Define logical boundary | Inventory user-visible contracts and flows | Identify possible effects; exclude unknown integrations | Source reconciliation and owner approval | G0 |
+| Phase 0 — Source discovery | Primary | Define logical boundary | Inventory user-visible contracts and flows | Identify possible effects; exclude unknown integrations | Source reconciliation, PP-PRC-007 and owner approval | G0 |
 | Phase 1 — Application foundation | Confirm scope | Primary | Define runtime/build contracts | Control package-registry access and build artifact writes; deployment remains excluded unless authorized | Install, type, static checks, architecture/dependency review, build, smoke test | G1 |
 | Phase 2 — Design system/composition | Preserve approved design intent | Implement page/component boundaries | Implement page/section/component contracts | Implement only required local/browser effects | Content, asset, functional and primary visual checks | G2 |
 | Phase 3 — Responsive/accessibility | Validate visitor scope across contexts | Refine responsive responsibility | Verify semantic and interaction behavior | Verify focus, navigation, and other browser effects | Viewport and accessibility evidence | G3 |
@@ -31,6 +31,7 @@ A phase may touch multiple ICM levels, and an ICM level may be revisited across 
 
 Required:
 - Inspectable source and completed source inventory.
+- PP-PRC-007 source inspection/reconciliation completed.
 - Approved page/content hierarchy.
 - Asset, typography, and design-token inventory.
 - Interaction and responsive interpretation.
@@ -78,8 +79,8 @@ Blocks:
 Required:
 - Agreed viewport matrix passed.
 - No unintended content overflow or clipping.
-- Keyboard and focus review complete.
-- Accessible names, semantics and text alternatives reviewed.
+- Accessibility manual assessment (PP-VER-008), including keyboard/focus, semantics, contrast, and representative assistive-technology checks.
+- Accessible names and text alternatives reviewed.
 - Applicable WCAG 2.2 AA criteria assessed.
 - Findings fixed or explicitly accepted.
 
