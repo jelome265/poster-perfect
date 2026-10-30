@@ -85,3 +85,60 @@ The link, identifier, matrix, process-coverage, and reference checks were run as
 Re-run PP-VER-013 after material changes to identifiers, canonical paths, process/effect mappings, traceability columns, authority rules, or phase routing. Re-run the implementation-specific controls when the application is created.
 
 The exact reviewed branch revision is identifiable from the head commit of PR #3. Do not rely on this report as evidence for a later, modified revision without repeating the affected checks.
+
+## 7. PP-VER-013 re-run record
+
+Retained as history. Each run names its exact tested revision. A PASS applies only to the revision named in that row.
+
+| Run | Revision (full SHA) | Scope | Result |
+| --- | --- | --- | --- |
+| R1 | `9eae0e2` (`9eae0e2747642ba7b3f2b5b00ea646c3999501eb`, `origin/main` after PR #4) | Full ICM and canonical-document tree | **FAIL** — failure condition "ambiguous ownership" (`07-verification.md` §10) |
+| R2 | `86246e1` (`86246e1aa47d1dea6c79bec7b61a05cd473bd57d`, ownership correction) | Same | **PASS** |
+
+### 7.1 R1 — `9eae0e2`, FAIL
+
+Automated (clean worktree at `9eae0e2`, 0 uncommitted changes):
+
+- Files checked: 34 Markdown files. Relative links and anchors: 0 broken. Table shape: 0 malformed (the `01-architecture-map.md` defect fixed in PR #4 is confirmed resolved).
+- Identifiers: 112 defined; 0 referenced-but-undefined.
+- Accepted requirements: 9 (`PP-REQ-001`–`PP-REQ-009`), each present in the contract table and the traceability register, and each mapped to at least one `PP-VER` control.
+- Ownership-role check against the owner roles defined in `01-architecture-map.md` (9 roles): **3 findings**:
+  - `information-architecture.md` — canonical owner "Page composition owner" (not a defined role).
+  - `component-blueprint.md` — canonical owner "section owners for their sections" (not a defined role).
+  - `05-artifacts.md`, `PP-ART-018` producer — "Page composition owner" (not a defined role).
+
+Result: the ICM failure condition "ambiguous ownership" is triggered. PP-VER-013 is **FAIL** at this revision.
+
+### 7.2 R2 — `86246e1`, PASS
+
+Automated (clean worktree at `86246e1`, 0 uncommitted changes):
+
+- Links, anchors, table shape, identifiers, requirement coverage: 0 errors (same as R1).
+- Ownership-role check: 0 findings across 9 defined roles.
+
+### 7.3 Manual checklist (`07-verification.md` §10), run against `86246e1`
+
+| # | Item | Result | Method |
+| --- | --- | --- | --- |
+| 1 | Canonical ICM documents exist | Pass | File existence check (11 files) |
+| 2 | Internal Markdown links resolve | Pass | Automated |
+| 3 | Accepted `PP-REQ` identifiers unique and in contract table and register | Pass | 9/9 in each |
+| 4 | Each accepted requirement maps to a `PP-VER` control | Pass | Automated |
+| 5 | Every referenced identifier has a canonical definition | Pass | Automated |
+| 6 | IDs stable and not reused | Pass | No duplicate definitions within any single file; no retired IDs |
+| 7 | Each effect linked to a process | Pass | `PP-EFF-001`–`010` each referenced in `03-processes.md` |
+| 8 | Each verification record states scope and limitation | Pass | 16 `PP-VER` rows in `07-verification.md`, each with a limitation column |
+| 9 | Specified, implemented, and verified not conflated | Pass | Keyword search; status definitions in `02-contracts.md` §7 hold |
+| 10 | No unsupported completion claims | Pass | Keyword search of `docs/phases` and `implementation-plan.md`; deployment is conditional on authorization |
+| 11 | Architecture map nodes have an owner role and dependency direction | Pass | Owner-role check (9 roles); artifact owners corrected in R2 |
+| 12 | Each process names contract, effects, and verification | Pass | 7/7 process sections include all three |
+| 13 | Dependency, persistence, network, deployment effects recorded and approved or excluded | Pass | `PP-EFF-005`–`010` listed in `08-traceability-register.md` §6 with dispositions |
+
+Items 9, 10, 12, and 13 were checked by targeted search and by reading the relevant sections. They are not mechanized.
+
+### 7.4 Limitations
+
+- The automated checks ran through a one-off stdlib script outside the repository. It is not a committed CI gate, and the ICM does not yet require one.
+- PP-VER-016 was not run. It is blocked until the Canva source is inspectable.
+- This is documentation-integrity evidence only. It is not application verification, visual fidelity, or WCAG conformance.
+- No waiver was granted.

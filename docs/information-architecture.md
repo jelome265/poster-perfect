@@ -3,7 +3,9 @@
 **Artifact:** `PP-ART-018`  
 **Class:** Specification (contract-backed; see `PP-CON-010`)  
 **Status:** Blocked — Phase 0 source inspection required (`PP-RSK-001`, `PP-RSK-002`)  
-**Canonical owner:** Page composition owner (`PP-MAP-011`); approval by the project owner  
+**Canonical owner:** Page implementation owner (`PP-MAP-011`, role as defined in `icm/01-architecture-map.md`)  
+**Producer:** Page implementation owner, from the source-inspection record  
+**Approval:** Project owner  
 **Update trigger:** Any change to the set of pages or routes, section order, navigation structure, anchor targets, or responsive navigation behavior  
 
 ## 1. Purpose and status
