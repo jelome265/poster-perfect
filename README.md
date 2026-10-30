@@ -1,6 +1,6 @@
 # Poster Perfect
 
-A React and TypeScript (TSX) website recreation of a Canva design, with emphasis on visual fidelity, responsive behavior, accessibility, and maintainable component structure.
+A responsive company portfolio website for a graphic design business, built with React and TypeScript (TSX). It presents the company and its approved creative work, communicates availability for new projects, and gives prospective customers a clear enquiry path. The supplied Canva design is the visual reference for the web implementation.
 
 ## Project status
 
@@ -45,6 +45,8 @@ Start with the [system context](docs/icm/00-system-context.md), [architecture ma
 
 ## Agreed direction
 
+- Company-level portfolio for a graphic design business; not an individual designer's personal portfolio.
+- Present approved company capabilities and work, communicate current availability, and support prospective-customer enquiries.
 - React with TypeScript and TSX.
 - Component-based implementation with maintainable boundaries.
 - Responsive behavior across supported viewport sizes.
