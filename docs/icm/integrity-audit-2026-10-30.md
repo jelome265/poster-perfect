@@ -142,3 +142,43 @@ Items 9, 10, 12, and 13 were checked by targeted search and by reading the relev
 - PP-VER-016 was not run. It is blocked until the Canva source is inspectable.
 - This is documentation-integrity evidence only. It is not application verification, visual fidelity, or WCAG conformance.
 - No waiver was granted.
+
+## 8. PP-VER-013 re-run record — revision `76f990f`
+
+| Run | Revision (full SHA) | Scope | Result |
+| --- | --- | --- | --- |
+| R3 | `76f990f` (`76f990fa3ce2ba644e78ee478049337cab5b5fc8`, `origin/main` after PR #5 and PR #6) | Full ICM and canonical-document tree; 34 Markdown files; 10 accepted requirements (PP-REQ-010 added by PR #6) | **PASS** |
+
+Run in a clean worktree at `76f990f` (0 uncommitted changes). Method: one-off stdlib script outside the repository, plus targeted command checks. Not a committed CI gate.
+
+Automated:
+- Relative links and anchors: 0 broken.
+- Table shape: 0 malformed.
+- Identifiers: 118 defined; 0 referenced-but-undefined.
+- Requirement-to-verification coverage: each of the 10 accepted requirements has at least one `PP-VER` control.
+- Owner-role check against the 9 roles in `01-architecture-map.md`: 0 findings.
+
+Manual checklist (`07-verification.md` §10):
+
+| # | Result | Evidence |
+| --- | --- | --- |
+| 1 | Pass | 11 canonical ICM files exist |
+| 2 | Pass | Automated link check |
+| 3 | Pass | 10 accepted requirements in the contract table and register; none missing or extra |
+| 4 | Pass | Automated coverage check |
+| 5 | Pass | Automated identifier check |
+| 6 | Pass | No duplicate definitions within any single file |
+| 7 | Pass | `PP-EFF-001`–`010` each referenced in `03-processes.md` |
+| 8 | Pass | 17 `PP-VER` rows, each with a limitation column |
+| 9 | Pass | Status definitions in `02-contracts.md` §7 hold; no conflated status wording found |
+| 10 | Pass | No unsupported completion or merge claims found; deployment remains conditional on authorization |
+| 11 | Pass | Owner-role check: 0 findings |
+| 12 | Pass | All seven process sections contain contract, effects, and verification |
+| 13 | Pass | `PP-EFF-005`–`010` listed in `08-traceability-register.md` §6 with dispositions |
+
+Limitations:
+- Documentation-integrity evidence only; not application verification, visual fidelity, or WCAG conformance.
+- PP-VER-016 not run (blocked on Phase 0 source inspection).
+- Items 9, 10, and 13 were checked by targeted search and reading, not by a committed checker.
+- Business-level claims introduced by PR #6 (`DEC-008`, `PP-REQ-010`, `PP-RSK-008`) are unverified as company facts; this run checks their traceability only.
+- No waiver granted.
