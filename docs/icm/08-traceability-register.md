@@ -20,14 +20,14 @@ Do not infer an implementation status from a specification or a verification sta
 
 | Requirement | L0/L1 map | Contract | Process | Effect | Verification | Phase |
 |---|---|---|---|---|---|---|
-| `PP-REQ-001` Canva design recreation | PP-MAP-004, PP-MAP-011–015 | PP-CON-002, 004, 005, 006 | PP-PRC-002–004 | PP-EFF-001–004; conditional effects only with approval | PP-VER-005, 006, 009, 010 | 0, 2, 3, 4 |
-| `PP-REQ-002` React + TypeScript/TSX | PP-MAP-010, 017 | PP-CON-001 | PP-PRC-001, 002 | PP-EFF-001 | PP-VER-001–004 | 1, 4 |
-| `PP-REQ-003` Maintainable component structure | PP-MAP-010–014 | PP-CON-003 | PP-PRC-002, 004 | PP-EFF-001, 002 | PP-VER-002, 003 plus architecture review | 1, 2, 4 |
-| `PP-REQ-004` Visual identity and responsive web behavior | PP-MAP-004, 011–015 | PP-CON-002, 004, 008 | PP-PRC-002–004 | PP-EFF-001–004 | PP-VER-005–007 | 0, 2, 3, 4 |
-| `PP-REQ-005` WCAG 2.2 AA target | PP-MAP-002, 003, 012–016 | PP-CON-006, 008 | PP-PRC-003, 004 | Relevant E0–E2 effects | PP-VER-008, 009, 010 | 2, 3, 4 |
-| `PP-REQ-006` No invented source facts | PP-MAP-001, 004 | PP-CON-002, 004, 005 | PP-PRC-002 and source inspection process | PP-EFF-004 | PP-VER-005, 006, 010 | 0, 2, 4 |
-| `PP-REQ-007` No unapproved backend/integration/persistence | PP-MAP-007, 016 | PP-CON-007 | PP-PRC-005 | PP-EFF-005–007 | Architecture/effect review; future integration-specific controls | 0–4 |
-| `PP-REQ-008` Owner retains merge/release authority | PP-MAP-001, 017, 018 | PP-CON-009 | PP-PRC-001, 006 | Build/deploy action only after approval | PP-VER-011, 012 | 1–4 |
+| `PP-REQ-001` Canva design recreation | PP-MAP-004, PP-MAP-011–015 | PP-CON-002, 004, 005, 006 | PP-PRC-002–004 | PP-EFF-001–004; conditional effects only with approval | PP-VER-005, 006, 009, 010, 013 | 0, 2, 3, 4 |
+| `PP-REQ-002` React + TypeScript/TSX | PP-MAP-010, 017 | PP-CON-001 | PP-PRC-001, 002 | PP-EFF-001 | PP-VER-001–004, 013 | 1, 4 |
+| `PP-REQ-003` Maintainable component structure | PP-MAP-010–014 | PP-CON-003 | PP-PRC-002, 004 | PP-EFF-001, 002 | PP-VER-002, 003, 013 plus architecture review | 1, 2, 4 |
+| `PP-REQ-004` Visual identity and responsive web behavior | PP-MAP-004, 011–015 | PP-CON-002, 004, 008 | PP-PRC-002–004 | PP-EFF-001–004 | PP-VER-005–007, 013 | 0, 2, 3, 4 |
+| `PP-REQ-005` WCAG 2.2 AA target | PP-MAP-002, 003, 012–016 | PP-CON-006, 008 | PP-PRC-003, 004 | Relevant E0–E2 effects | PP-VER-008–010, 013 | 2, 3, 4 |
+| `PP-REQ-006` No invented source facts | PP-MAP-001, 004 | PP-CON-002, 004, 005 | PP-PRC-002 and source inspection process | PP-EFF-004 | PP-VER-005, 006, 010, 013 | 0, 2, 4 |
+| `PP-REQ-007` No unapproved backend/integration/persistence | PP-MAP-007, 016 | PP-CON-007 | PP-PRC-005 | PP-EFF-005–007 | PP-VER-013 plus future integration-specific controls | 0–4 |
+| `PP-REQ-008` Owner retains merge/release authority | PP-MAP-001, 017, 018 | PP-CON-009 | PP-PRC-001, 006 | Build/deploy action only after approval | PP-VER-011–013 | 1–4 |
 
 ## 3. Map registry
 
@@ -95,6 +95,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-VER-010` | Asset loading/alt text | Pending asset inventory | G2, G3, G4 |
 | `PP-VER-011` | Release artifact provenance | Planned | G4 |
 | `PP-VER-012` | Owner review/release disposition | Required | G4 |
+| `PP-VER-013` | ICM reference/traceability integrity | Manual initially; not yet run on final revision | All gates and material documentation changes |
 
 ## 8. Open questions and blockers
 
@@ -112,7 +113,7 @@ These are risk/blocker records, not claims that the listed conditions have cause
 ## 9. Reconciliation rules
 
 - Update this register in the same change that adds or materially alters an ICM record.
-- New requirement IDs must appear in both the contracts document and this register.
+- New requirement IDs must appear in both the contract inventory and this register.
 - New effects must be linked to their initiating process and relevant verification.
 - New verification controls must identify the requirements/contracts they prove.
 - Retired records remain visible and point to their successor.
