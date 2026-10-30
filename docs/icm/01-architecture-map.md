@@ -8,23 +8,23 @@
 
 Translate the L0 system boundary into a small, understandable React frontend. Architecture exists to preserve responsibility boundaries and design consistency, not to maximize the number of folders, packages, or abstractions.
 
-The default architecture is a single frontend application with page composition, reusable components where justified, styling/design tokens, static assets, and a deliberately small set of runtime dependencies.
+The provisional default is a single frontend application with page composition, reusable components where justified, styling/design tokens, static assets, and a deliberately small set of runtime dependencies. Phase 0 must confirm the page and delivery requirements before this becomes a final topology decision. Separate applications, microfrontends, backend services, and distributed architecture are not assumed.
 
 ## 2. Logical component map
 
-| ID | Component boundary | Owns | Must not own |
+| ID | Boundary kind | Component boundary | Accountable owner role | Owns | Must not own |
 |---|---|---|---|
-| `PP-MAP-010` | Application composition | App entry, global providers only when required, page composition root | Page-specific visual details unrelated to composition |
-| `PP-MAP-011` | Page/route composition | Route-to-page mapping and section order | Duplicate implementation of shared visual primitives |
-| `PP-MAP-012` | Page sections | Coherent content regions derived from the design | Unrelated global configuration |
-| `PP-MAP-013` | Shared UI components | Repeated presentation or behavior with a typed interface | Hidden page-specific business rules |
-| `PP-MAP-014` | Design tokens and styling | Semantic colors, type roles, spacing, layout, responsive rules | Content ownership or network orchestration |
-| `PP-MAP-015` | Static assets | Approved image, icon, illustration and font assets | Unapproved third-party asset sourcing |
-| `PP-MAP-016` | Interaction adapters | Explicit browser interaction boundaries if the design requires them | Unreviewed persistence or remote side effects |
-| `PP-MAP-017` | Build and verification tooling | Dependency resolution, compile, lint, tests, output generation | Runtime product behavior |
-| `PP-MAP-018` | Documentation and ICM | Requirements, architecture contracts, process/effect maps, verification records | Replacing source-design truth or implementation evidence |
+| `PP-MAP-010` | Frontend runtime | Application composition | Application maintainer | App entry, global providers only when required, page composition root | Page-specific visual details unrelated to composition |
+| `PP-MAP-011` | Frontend runtime | Page/route composition | Page implementation owner | Page selection and section order; route mapping only if multiple routes are confirmed | Duplicate implementation of shared visual primitives; a router is not required for a single-page site |
+| `PP-MAP-012` | Frontend runtime | Page sections | Section implementation owner | Coherent content regions derived from the approved design | Unrelated global configuration |
+| `PP-MAP-013` | Frontend runtime | Shared UI components | Component maintainer | Repeated presentation or behavior with a typed interface | Hidden page-specific business rules |
+| `PP-MAP-014` | Frontend styling | Design tokens and styling | Frontend/design-system maintainer | Semantic colors, type roles, spacing, layout, responsive rules | Content ownership or network orchestration |
+| `PP-MAP-015` | Frontend resources | Static assets | Asset maintainer / project owner | Approved image, icon, illustration and font assets | Unapproved third-party asset sourcing |
+| `PP-MAP-016` | Frontend interaction | Interaction adapters | Interaction/component owner | Explicit browser interaction boundaries if the design requires them | Unreviewed persistence or remote side effects |
+| `PP-MAP-017` | Engineering tooling | Build and verification tooling | Build/CI maintainer | Dependency resolution, compile, lint, tests, output generation | Runtime product behavior |
+| `PP-MAP-018` | Cross-cutting governance (not a runtime component) | Documentation and ICM | Documentation/ICM maintainer | Requirements, architecture contracts, process/effect maps, verification records | Replacing source-design truth or implementation evidence |
 
-These are logical boundaries, not a mandate to create one directory per row. Physical modules should be created only when needed by the inspected page structure.
+These are logical boundaries, not a mandate to create one directory per row. PP-MAP-010–016 describe frontend runtime responsibilities, PP-MAP-017 describes engineering tooling, and PP-MAP-018 is a cross-cutting governance boundary rather than a runtime component. Physical modules should be created only when needed by the inspected page structure.
 
 ## 3. Dependency direction
 
