@@ -113,6 +113,7 @@ References and artifacts are cross-cutting records. They establish where authori
 | [Verification](07-verification.md) | L4 controls, test obligations, evidence and release gates |
 | [Traceability register](08-traceability-register.md) | Requirement-to-evidence reconciliation |
 | [Phase routing](09-phase-routing.md) | Mapping between delivery phases and ICM control levels |
+| [Integrity audit](integrity-audit-2026-10-30.md) | Current ICM documentation-integrity audit evidence |
 
 ## 5. Stable identifiers
 
