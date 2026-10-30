@@ -37,6 +37,10 @@ The [ICM charter](docs/icm/README.md) defines L0–L4 control levels and the tra
 
 Start with the [system context](docs/icm/00-system-context.md), [architecture map](docs/icm/01-architecture-map.md), and [master traceability register](docs/icm/08-traceability-register.md).
 
+## Agent instructions
+
+[`CLAUDE.md`](CLAUDE.md) is the single canonical source of repository-level agent instructions. [`AGENTS.md`](AGENTS.md) and [`GEMINI.md`](GEMINI.md) are discovery pointers that direct agents to it; they do not define separate policies.
+
 ## Agreed direction
 
 - React with TypeScript and TSX.
