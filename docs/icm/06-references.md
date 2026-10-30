@@ -47,6 +47,8 @@ For external requirements, cite the authoritative source close to the relevant c
 | `PP-REF-007` | [React documentation](https://react.dev/learn) | External platform reference | React component, state, and effect semantics | Use the specific official page relevant to the implementation decision |
 | `PP-REF-008` | [TypeScript documentation](https://www.typescriptlang.org/docs/) | External platform reference | TypeScript language and compiler behavior | Use the specific official page relevant to the implementation decision |
 | `PP-REF-009` | Selected build/package tool documentation | External platform reference | Build and dependency behavior | Not selected |
+| `PP-REF-010` | [Information architecture](../information-architecture.md) | Canonical | Page set, hierarchy, navigation, section order | Blocked on source inspection |
+| `PP-REF-011` | [Component blueprint](../component-blueprint.md) | Contract | Per-component contract details | Blocked on source inspection |
 
 Do not add a reference solely to make the register look complete. Add a specific official documentation page when it materially governs a decision or contract.
 

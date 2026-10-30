@@ -40,8 +40,9 @@ Not every visual component needs a separate long-form document. The contract mus
 | `PP-REQ-006` | Do not invent source-specific colors, typography, dimensions, assets, content, page structure, or interactions. | Project brief and source-inspection limitation | Accepted | Phase 0 source reconciliation |
 | `PP-REQ-007` | Do not add a backend, API, persistence, analytics, payments, or other external integration without an approved requirement. | Project scope boundary | Accepted | Dependency/effect review and decision log |
 | `PP-REQ-008` | Merge and production-release authorization remain with the project owner. | Project workflow rule | Accepted | Pull request and release disposition |
+| `PP-REQ-009` | Phase 0 produces an information architecture and component blueprint derived from the inspected source, before Phase 1 foundational technical decisions are made. | DEC-007; project owner directive | Accepted | Phase 0 reconciliation (`PP-VER-016`) and `PP-VER-013` |
 
-This is the complete accepted requirement baseline at the time of writing. New requirements receive new IDs; do not repurpose an existing ID to mean something different.
+This is the accepted requirement baseline as of DEC-007. New requirements receive new IDs; do not repurpose an existing ID to mean something different.
 
 ## 4. Boundary contracts
 
@@ -66,9 +67,9 @@ The application runtime MUST be built with React and TypeScript/TSX. Its exact e
 
 **Owner:** Page/route composition  
 **Consumers:** Application composition and page sections  
-**Requirement:** PP-REQ-001, PP-REQ-003, PP-REQ-004
+**Requirement:** PP-REQ-001, PP-REQ-003, PP-REQ-004, PP-REQ-009
 
-A page MUST compose the sections in the approved source order and preserve the approved content hierarchy. Page count, route names, section order, and exact content are unknown until Phase 0.
+A page MUST compose the sections in the approved source order and preserve the approved content hierarchy. Page count, route names, section order, and exact content are unknown until Phase 0; the accepted structure is recorded in `information-architecture.md` (`PP-ART-018`) under `PP-CON-010`.
 
 **Inputs:** Approved page specification, tokens, and assets.  
 **Outputs:** A semantic page composition.  
@@ -83,9 +84,9 @@ A page MUST compose the sections in the approved source order and preserve the a
 
 **Owner:** Component implementation  
 **Consumers:** Page and section composition  
-**Requirement:** PP-REQ-003
+**Requirement:** PP-REQ-003, PP-REQ-009
 
-Every reusable component MUST expose an explicit typed interface. Props must describe data, state, or callbacks that the component actually needs. Components MUST NOT conceal page-specific network, persistence, or business behavior.
+Every reusable component MUST expose an explicit typed interface. Props must describe data, state, or callbacks that the component actually needs. Components MUST NOT conceal page-specific network, persistence, or business behavior. Per-component details are recorded in `component-blueprint.md` (`PP-ART-019`).
 
 **Inputs:** Typed props and explicitly owned local state.  
 **Outputs:** Semantic rendered content and explicitly declared events.  
@@ -182,6 +183,23 @@ Changes MUST be made on a reviewable branch with scope and verification recorded
 **Specification:** Accepted  
 **Implementation:** Not applicable (governance contract; not application runtime code)  
 **Evidence:** Not collected per individual change
+
+### PP-CON-010 — Information architecture and navigation
+
+**Owner:** Page composition (`PP-MAP-011`)  
+**Consumers:** Application composition, page sections, navigation controls (`PP-CON-006`), verification  
+**Requirement:** PP-REQ-001, PP-REQ-006, PP-REQ-009
+
+The information architecture MUST define every in-scope page or route, section, navigation entry, and anchor target exactly once, with one parent, a stated order, and a reference to its content, interaction, responsive, and component records. A navigation entry MUST reference an observed destination in the interaction inventory. No route, page, section, or navigation entry MAY be added, removed, or reordered without an approved change to `information-architecture.md`. The set of routes is unknown until Phase 0.
+
+**Inputs:** Inspected source page/artboard inventory; owner-approved responsive interpretation.  
+**Outputs:** Accepted IA record (`PP-ART-018`) used as the input to page composition and to Phase 1 routing decisions.  
+**Invariants:** Unique identifiers; no orphan nodes; DOM order matches visual reading order unless an owner-approved adaptation says otherwise; no route or section is inferred from the project name.  
+**Verification:** `PP-VER-016`, `PP-VER-005`, `PP-VER-009`, `PP-VER-014` (after composition exists).
+
+**Specification:** Blocked on Phase 0  
+**Implementation:** Not started  
+**Evidence:** Not collected
 
 ## 5. Conditional contracts
 

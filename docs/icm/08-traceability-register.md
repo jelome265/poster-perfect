@@ -20,14 +20,15 @@ Do not infer an implementation status from a specification or a verification sta
 
 | Requirement | L0/L1 map | Contract | Process | Effect | Artifact | Reference | Verification | Phase |
 |---|---|---|---|---|---|---|---|---|
-| `PP-REQ-001` Canva design recreation | PP-MAP-004, PP-MAP-011–015 | PP-CON-002, 004, 005, 006 | PP-PRC-002–004, 007 | PP-EFF-001–004; conditional effects only with approval | PP-ART-001, 002, 005, 006, 013, 014 | PP-REF-001, 002, 005 | PP-VER-005, 006, 009, 010, 013 | 0, 2, 3, 4 |
+| `PP-REQ-001` Canva design recreation | PP-MAP-004, PP-MAP-011–015 | PP-CON-002, 004, 005, 006, 010 | PP-PRC-002–004, 007 | PP-EFF-001–004; conditional effects only with approval | PP-ART-001, 002, 005, 006, 013, 014, 018, 019 | PP-REF-001, 002, 005, 010, 011 | PP-VER-005, 006, 009, 010, 013, 016 | 0, 2, 3, 4 |
 | `PP-REQ-002` React + TypeScript/TSX | PP-MAP-010, 017 | PP-CON-001 | PP-PRC-001, 002 | PP-EFF-001, 008, 009 | PP-ART-003, 004, 011, 012, 015 | PP-REF-007, 008 | PP-VER-001–004, 013 | 1, 4 |
-| `PP-REQ-003` Maintainable component structure | PP-MAP-010–014 | PP-CON-003 | PP-PRC-002, 004 | PP-EFF-001, 002 | PP-ART-003, 007, 011, 015 | PP-REF-004, 007, 008 | PP-VER-002, 003, 013, 014 | 1, 2, 4 |
+| `PP-REQ-003` Maintainable component structure | PP-MAP-010–014 | PP-CON-003 | PP-PRC-002, 004 | PP-EFF-001, 002 | PP-ART-003, 007, 011, 015, 019 | PP-REF-004, 007, 008, 011 | PP-VER-002, 003, 013, 014, 016 | 0, 1, 2, 4 |
 | `PP-REQ-004` Visual identity and responsive web behavior | PP-MAP-004, 011–015 | PP-CON-002, 004, 008 | PP-PRC-002–004, 007 | PP-EFF-001–004 | PP-ART-002, 005, 006, 014, 015 | PP-REF-001, 006 | PP-VER-005–007, 013 | 0, 2, 3, 4 |
 | `PP-REQ-005` WCAG 2.2 AA target | PP-MAP-002, 003, 012–016 | PP-CON-006, 008 | PP-PRC-003, 004 | PP-EFF-001–004 | PP-ART-004, 007, 015 | PP-REF-006 | PP-VER-007–010, 013 | 2, 3, 4 |
-| `PP-REQ-006` No invented source facts | PP-MAP-001, 004 | PP-CON-002, 004, 005 | PP-PRC-007 | PP-EFF-004 | PP-ART-001, 002, 005, 006, 013, 015 | PP-REF-001, 002 | PP-VER-005, 006, 010, 013 | 0, 2, 4 |
+| `PP-REQ-006` No invented source facts | PP-MAP-001, 004 | PP-CON-002, 004, 005, 010 | PP-PRC-007 | PP-EFF-004 | PP-ART-001, 002, 005, 006, 007, 013, 015, 018, 019 | PP-REF-001, 002, 010, 011 | PP-VER-005, 006, 010, 013, 016 | 0, 2, 4 |
 | `PP-REQ-007` No unapproved backend/integration/persistence | PP-MAP-007, 016 | PP-CON-007 | PP-PRC-005 | PP-EFF-005–007 | PP-ART-004, 011, 012, 015 | PP-REF-004 | PP-VER-013, 015; future integration-specific controls if scope changes | 0–4 |
 | `PP-REQ-008` Owner retains merge/release authority | PP-MAP-001, 017, 018 | PP-CON-009 | PP-PRC-001, 006 | PP-EFF-010 only under owner authorization | PP-ART-008, 009, 010, 016 | PP-REF-003, 005 | PP-VER-011–013 | 0–4 |
+| `PP-REQ-009` Phase 0 IA and component blueprint before foundational decisions | PP-MAP-010–013, 018 | PP-CON-002, 003, 010 | PP-PRC-007 | None (documentation output; no runtime effect) | PP-ART-006, 007, 009, 018, 019 | PP-REF-001, 003, 010, 011 | PP-VER-005, 013, 016 | 0, 1 |
 
 ## 3. Map registry
 
@@ -56,6 +57,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-CON-007` | External integration | Excluded from baseline | Not applicable | Not applicable at baseline |
 | `PP-CON-008` | Accessibility/responsive | Partially specified; target accepted, details pending | Not started | Not collected |
 | `PP-CON-009` | Change/release | Accepted | Not applicable (governance contract) | Not collected per individual change |
+| `PP-CON-010` | Information architecture and navigation | Blocked on Phase 0 source | Not started | Not collected |
 
 ## 5. Process registry
 
@@ -100,9 +102,10 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-VER-010` | Asset loading/alt text | Pending asset inventory | G2, G3, G4 |
 | `PP-VER-011` | Release artifact provenance | Planned | G4 |
 | `PP-VER-012` | Owner review/release disposition | Required | G4 |
-| `PP-VER-013` | ICM reference/traceability integrity | Passed for documentation-integrity scope; evidence PP-ART-017 | All gates and material documentation changes |
+| `PP-VER-013` | ICM reference/traceability integrity | Passed at PR #3 revision (evidence PP-ART-017); re-run required for PP-REQ-009 change | All gates and material documentation changes |
 | `PP-VER-014` | Architecture/component-boundary review | Planned | G1, G2, G4 |
 | `PP-VER-015` | Dependency/side-effect surface review | Defined; not yet run | G1, G2, G4 |
+| `PP-VER-016` | IA and component-blueprint reconciliation | Blocked on source | G0, G2 |
 
 ## 8. Open questions and blockers
 
@@ -114,6 +117,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-RSK-004` | Toolchain, routing, styling, package manager, and hosting are undecided | Maintainer / owner decision | Phase 1 | Open; choose from actual requirements |
 | `PP-RSK-005` | Font and asset availability/licensing not verified | Project owner / source inspection | Phase 0 | Pending |
 | `PP-RSK-006` | Responsive source variants or owner-approved adaptations are not known | Project owner / source inspection | Phase 0 | Pending |
+| `PP-RSK-007` | Foundational tooling (router, rendering model, source layout) could be chosen before the page set and component boundaries are known | Maintainer / project owner | Phase 1 entry | Mitigated by `PP-REQ-009` and DEC-007: foundational decisions wait for the accepted information architecture |
 
 These are risk/blocker records, not claims that the listed conditions have caused implementation defects.
 

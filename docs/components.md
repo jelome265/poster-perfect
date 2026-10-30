@@ -2,7 +2,7 @@
 
 ## Status
 
-The component inventory will be produced after the source design is inspected. Naming and boundaries should reflect the actual composition rather than a presumed poster or landing-page pattern.
+**Blocked on Phase 0 source inspection.** The inventory is produced from the inspected source and the information architecture (`PP-ART-018`). Component contracts (inputs, state, effects, keyboard and focus, accessibility) are recorded in the [component blueprint](component-blueprint.md) (`PP-ART-019`), not in this file. Naming and boundaries should reflect the actual composition rather than a presumed poster or landing-page pattern.
 
 ## Component criteria
 
@@ -38,11 +38,11 @@ Avoid:
 
 ## Component inventory
 
-After inspecting the design, list components by page or section.
+After inspecting the design, list components by section, using the section identifiers in the [information architecture](information-architecture.md). Inputs, interactions, effects, and accessibility details belong in the blueprint, not in this table.
 
-| Component | Responsibility | Inputs / interactions | Reused by |
-| --- | --- | --- | --- |
-| Pending source review | Pending | Pending | Pending |
+| Component ID | Component | Responsibility (one line) | IA section(s) | Reused by | Blueprint |
+| --- | --- | --- | --- | --- | --- |
+| Pending | Pending source inspection | Pending | Pending | Pending | Pending |
 
 ## Review checklist
 

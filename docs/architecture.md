@@ -36,7 +36,7 @@ The following choices remain open until implementation requirements justify them
 
 - Vite, another build tool, or a framework with server rendering.
 - Client-side-only rendering versus server rendering.
-- Routing library and route structure.
+- Routing library and route structure (inputs: `information-architecture.md`, DEC-007).
 - CSS approach or styling framework.
 - Package manager and Node.js version.
 - Testing libraries and browser automation.

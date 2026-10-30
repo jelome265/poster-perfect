@@ -13,11 +13,11 @@ The provisional default is a single frontend application with page composition, 
 ## 2. Logical component map
 
 | ID | Boundary kind | Component boundary | Accountable owner role | Owns | Must not own |
-|---|---|---|---|
+|---|---|---|---|---|---|
 | `PP-MAP-010` | Frontend runtime | Application composition | Application maintainer | App entry, global providers only when required, page composition root | Page-specific visual details unrelated to composition |
-| `PP-MAP-011` | Frontend runtime | Page/route composition | Page implementation owner | Page selection and section order; route mapping only if multiple routes are confirmed | Duplicate implementation of shared visual primitives; a router is not required for a single-page site |
+| `PP-MAP-011` | Frontend runtime | Page/route composition | Page implementation owner | Page selection and section composition order (order and page set specified in `information-architecture.md`); route mapping only if multiple routes are confirmed | Duplicate implementation of shared visual primitives; a router is not required for a single-page site |
 | `PP-MAP-012` | Frontend runtime | Page sections | Section implementation owner | Coherent content regions derived from the approved design | Unrelated global configuration |
-| `PP-MAP-013` | Frontend runtime | Shared UI components | Component maintainer | Repeated presentation or behavior with a typed interface | Hidden page-specific business rules |
+| `PP-MAP-013` | Frontend runtime | Shared UI components | Component maintainer | Repeated presentation or behavior with a typed interface (per-component contracts in `component-blueprint.md`) | Hidden page-specific business rules |
 | `PP-MAP-014` | Frontend styling | Design tokens and styling | Frontend/design-system maintainer | Semantic colors, type roles, spacing, layout, responsive rules | Content ownership or network orchestration |
 | `PP-MAP-015` | Frontend resources | Static assets | Asset maintainer / project owner | Approved image, icon, illustration and font assets | Unapproved third-party asset sourcing |
 | `PP-MAP-016` | Frontend interaction | Interaction adapters | Interaction/component owner | Explicit browser interaction boundaries if the design requires them | Unreviewed persistence or remote side effects |
