@@ -40,33 +40,33 @@ Testimonial attributions name private customers. The repository is public and pu
 
 Exact text from the export. Line breaks are shown as written in the source.
 
-### PP-IA-002 Hero (dark navy band)
+### Hero (dark navy band) (`PP-IA-002`)
 
 - Logo lockup: "Poster Perfect"
 - Heading: "Your vision, / Our design"
 - Button: "LEARN MORE"
 - Image: magazine-style sample cover (sample content; permission pending)
 
-### PP-IA-003 About (light grey band)
+### About (light grey band) (`PP-IA-003`)
 
 - Heading: "Poster Perfect is built to convert visitors into DMs"
 - Body (exact): "Poster Perfect was founded in Blantyre on a simple belief: great businesses deserve great design. Too many brands in Malawi and across Africa are forced to choose between expensive agencies or generic templates that don't fit. We're here to close that gap. As a designer and International Management student specializing in Trade, Tax & International Relations, I built Poster Perfect to give startups, restaurants, salons, and growing businesses access to custom, world-class branding without the corporate price tag. Our mission is to make you look unforgettable: whether it's a logo that defines your legacy, a menu that increases orders, or social media graphics that stop the scroll. Our philosophy is partnership over transaction: we listen first, design second, and don't stop revising until it feels like you. The vision is to help 1,000 African brands compete globally with visuals that command respect. Your vision, our design: let's build something perfect."
 
 Note: the body is written in the first person and includes personal education details. See Owner decisions, item 2.
 
-### PP-IA-004 Value statement (bright blue band)
+### Value statement (bright blue band) (`PP-IA-004`)
 
 - Heading: "Count on Poster Perfect to look after your brand needs"
 - Body (exact): "We design custom logos & brand kits, social media graphics, restaurant menus, posters, flyers, business cards, brochures,websites, packaging, and labels. One designer for all your visuals: print + web ready, fast turnaround, unlimited minor revisions."
 - Value points (PP-CMP-001): "RELIABILITY"; "PERSONALIZED APPROACH"; "TIMELY DELIVERY"; "HIGH STANDARDS"
 
-### PP-IA-005 Services (dark navy band)
+### Services (dark navy band) (`PP-IA-005`)
 
 - Heading: "Our Services"
 - Body in the left column: the same paragraph as PP-IA-003, repeated verbatim. See Owner decisions, item 1.
 - Service cards (PP-CMP-002): "Brochures" (sample image); "Logos" (sample image); "Magazine covers" (sample image)
 
-### PP-IA-006 Statistics (three columns)
+### Statistics (three columns) (`PP-IA-006`)
 
 - "99%" / "Projects completed"
 - "1+" / "Years in Operation"
@@ -74,7 +74,7 @@ Note: the body is written in the first person and includes personal education de
 
 Claims are unverified. See Owner decisions, item 3.
 
-### PP-IA-007 Testimonials (light grey band)
+### Testimonials (light grey band) (`PP-IA-007`)
 
 - Heading: "Client Testimonials"
 - Testimonial 1 (PP-CMP-004), role and location: "Founder, Lilongwe"
@@ -86,7 +86,7 @@ Claims are unverified. See Owner decisions, item 3.
 
 Attribution names are withheld (see Privacy handling). The quoted outcomes need substantiation (see Owner decisions, item 4).
 
-### PP-IA-008 Contact and footer (dark navy band)
+### Contact and footer (dark navy band) (`PP-IA-008`)
 
 - Logo lockup: "Poster Perfect"
 - "Headquarters" / "Blantyre, Moneymen"
