@@ -40,6 +40,8 @@ Every control must specify:
 | `PP-VER-011` | Release artifact and revision provenance | Automated/manual | PP-REQ-008, PP-CON-009 | Planned |
 | `PP-VER-012` | Owner review and release disposition | Manual approval | PP-REQ-008, PP-CON-009 | Required for each release |
 | `PP-VER-013` | ICM reference and traceability integrity | Manual initially; automation when justified | All accepted requirements and ICM registers | Defined; not yet run on final ICM revision |
+| `PP-VER-014` | Architecture and component-boundary review | Manual/hybrid | PP-REQ-003, PP-CON-003 | Planned; run as the physical architecture is introduced |
+| `PP-VER-015` | Dependency and side-effect surface review | Manual/hybrid | PP-REQ-007, PP-CON-007, PP-EFF-005–010 | Defined; run at foundation and whenever dependencies/effects change |
 
 ## 4. Automated controls
 
@@ -151,6 +153,9 @@ The purpose of this control is to detect an internally inconsistent ICM before i
 8. Confirm every verification record states its scope and limitation.
 9. Confirm specified, implemented, and verified states have not been conflated.
 10. Review the current project status for unsupported completion claims.
+11. Confirm every architecture map node that represents an implementation boundary has an accountable owner role and permitted dependency direction.
+12. Confirm every defined process names its governing contract, effects, and verification controls.
+13. Confirm dependency, persistence, network, and deployment effects are represented in the effect register and are either approved or explicitly excluded.
 
 ### Failure conditions
 
@@ -164,11 +169,42 @@ The purpose of this control is to detect an internally inconsistent ICM before i
 
 ### Automation policy
 
-A repository script may automate link resolution, ID uniqueness, registry coverage, and presence checks. The first implementation should use the repository's already-selected scripting/runtime ecosystem. Do not introduce a new language or dependency solely for this check before Phase 1 establishes the toolchain.
+A repository script may automate link resolution, ID uniqueness, registry coverage, owner-field presence, process-to-contract/effect mappings, and presence checks. The first implementation should use the repository's already-selected scripting/runtime ecosystem. Do not introduce a new language or dependency solely for this check before Phase 1 establishes the toolchain.
 
 The script must fail non-zero for mandatory integrity failures and report diagnostics with file and record ID. Until such automation exists, describe the procedure as manual and do not claim a CI gate exists.
 
-## 11. Failure and waiver policy
+## 11. Architecture and dependency controls
+
+### PP-VER-014 — Architecture and component-boundary review
+
+Review the implemented source tree and component graph against the approved L1 map and L2 contracts.
+
+Check:
+- Every implemented module/component has one coherent responsibility and an accountable owner role.
+- Cross-component interfaces have explicit typed contracts.
+- Shared components do not import or depend on page-specific implementations.
+- There are no unjustified circular dependencies or unnecessary architectural layers.
+- Browser APIs and interaction behavior are owned by the component/adapter that needs them.
+- Physical folders and abstractions correspond to actual design responsibilities rather than unused planned boxes.
+
+Use code review initially. Add a static architecture check only when the actual source tree and repeated failure mode justify it.
+
+### PP-VER-015 — Dependency and side-effect surface review
+
+Reconcile the dependency manifest, lockfile, build scripts, application source, and produced client artifact with the approved scope.
+
+Check:
+- Every direct dependency has a stated purpose and acceptable maintenance/license posture.
+- Lockfile and package-manager configuration are consistent with the selected toolchain.
+- No unapproved third-party scripts, remote fonts, CDN resources, analytics, tracking, remote APIs, persistence, or external mutations are introduced.
+- Network destinations and data flows match accepted contracts.
+- No secret or credential is exposed in client-side source, build output, URLs, or logs.
+- Build-time registry access, generated output, and production deployment effects are distinguished from runtime behavior.
+- Any scope expansion has an approved decision and corresponding contract/effect/verification records.
+
+Use package/lockfile review and source inspection. Add automated dependency/bundle/network checks when the selected toolchain supports them. Manual review remains required for semantics.
+
+## 12. Failure and waiver policy
 
 - A failed mandatory check blocks the affected gate.
 - A flaky test is not a pass; investigate and record the failure.
