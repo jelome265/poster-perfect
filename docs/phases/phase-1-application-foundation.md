@@ -16,7 +16,7 @@ React and TypeScript with TSX are confirmed. The build tool, package manager, re
 ## 2. Entry conditions
 
 - Phase 0 exit criteria are met, or the owner has explicitly approved a limited foundation task that does not depend on unresolved design choices.
-- The page model and likely routing needs are known.
+- The page model and routing needs are known from the accepted information architecture (`PP-ART-018`).
 - The intended deployment/runtime constraints are understood sufficiently to select compatible tooling.
 - The project owner has approved any material tooling decision that changes the delivery or maintenance model.
 

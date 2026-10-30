@@ -39,9 +39,11 @@ Every control must specify:
 | `PP-VER-010` | Asset loading and alternative text review | Automated/manual | PP-CON-005 | Does not independently establish copyright/licensing or full design fidelity | Pending asset inventory |
 | `PP-VER-011` | Release artifact and revision provenance | Automated/manual | PP-REQ-008, PP-CON-009 | Establishes traceability, not the artifact's complete security or runtime correctness | Planned |
 | `PP-VER-012` | Owner review and release disposition | Manual approval | PP-REQ-008, PP-CON-009 | Records authorization; it does not replace technical verification | Required for each release |
-| `PP-VER-013` | ICM reference and traceability integrity | Manual initially; automation when justified | All accepted requirements and ICM registers | Proves documentation/link/identifier/traceability integrity only; not application implementation | Passed for audited documentation scope; see PP-ART-017 |
+| `PP-VER-013` | ICM reference and traceability integrity | Manual initially; automation when justified | All accepted requirements and ICM registers | Proves documentation/link/identifier/traceability integrity only; not application implementation | Passed at PR #3 revision (evidence PP-ART-017); re-run required for the PP-REQ-009 change |
 | `PP-VER-014` | Architecture and component-boundary review | Manual/hybrid | PP-REQ-003, PP-CON-003 | Depends on the actual source tree and reviewed revision; a logical map alone is not implementation evidence | Planned; run as the physical architecture is introduced |
 | `PP-VER-015` | Dependency and side-effect surface review | Manual/hybrid | PP-REQ-007, PP-CON-007, PP-EFF-005–010 | Reviews declared/observable dependencies and effects; cannot prove absence of all runtime vulnerabilities | Defined; run at foundation and whenever dependencies/effects change |
+| `PP-VER-016` | Information architecture and component-blueprint reconciliation against inspected source | Manual | PP-REQ-001, PP-REQ-003, PP-REQ-006, PP-REQ-009, PP-CON-002, PP-CON-003, PP-CON-010 | Verifies record completeness and cross-reference consistency against the source; does not prove the implemented DOM, visual fidelity, or accessibility (`PP-VER-005`, `PP-VER-006`, `PP-VER-008`, `PP-VER-014`) | Blocked on source |
+
 ## 4. Automated controls
 
 ### 4.1 Dependency reproducibility
@@ -206,6 +208,25 @@ Check:
 
 Use package/lockfile review and source inspection. Add automated dependency/bundle/network checks when the selected toolchain supports them. Manual review remains required for semantics.
 
+### PP-VER-016 — Information architecture and component-blueprint reconciliation
+
+Covers `PP-REQ-009` and the information-architecture and component-blueprint portions of `PP-REQ-001`, `PP-REQ-003`, and `PP-REQ-006`.
+
+Checks:
+
+- Every in-scope page or artboard in the source inventory appears exactly once in `information-architecture.md` §5.1, with a valid parent and order.
+- Every IA section has a unique identifier, one parent, and an order, and maps to exactly one section entry in `content-structure.md`.
+- Every navigation entry references exactly one interaction row, and that row's destination is an observed value.
+- Every anchor target is unique and resolves to a recorded section.
+- Every component entry is referenced by at least one IA section. Every IA section with a repeated or coherent region has a component entry or a recorded local-markup reason.
+- Every component entry declares its `PP-EFF` effects, keyboard and focus expectations, and verification controls.
+- Every `PP-IA`, `PP-CMP`, `PP-CON`, and `PP-VER` reference resolves to an existing record.
+- No identifier is reused. No record marked Accepted contains a Pending field or an unresolved open question.
+
+Method: manual reconciliation against the inspected export (`PP-REF-001`). Record the export identity, the IA and blueprint revision, and the date in the report template (§13). Automation is deferred until Phase 1 establishes a toolchain, per the automation policy in §10.
+
+Limitation: validates the records against the source only. It does not prove that the implementation matches them (`PP-VER-014`) or that the rendered page matches the design (`PP-VER-006`).
+
 ## 12. Failure and waiver policy
 
 - A failed mandatory check blocks the affected gate.
@@ -215,7 +236,7 @@ Use package/lockfile review and source inspection. Add automated dependency/bund
 - A waiver does not convert a failure into a pass; report the control as waived.
 - A release blocker must be fixed or explicitly accepted through the approved risk process before release.
 
-## 12. Verification report template
+## 13. Verification report template
 
 For each significant change, record:
 
@@ -235,6 +256,6 @@ Disposition:
 Reviewer and date:
 ```
 
-## 13. L4 completion condition
+## 14. L4 completion condition
 
 L4 is complete for a release only when all mandatory controls applicable to the approved scope have current evidence, failures and limitations have explicit disposition, and the project owner has authorized the release action.

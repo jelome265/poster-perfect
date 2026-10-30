@@ -19,7 +19,7 @@ A phase may touch multiple ICM levels, and an ICM level may be revisited across 
 
 | Delivery phase | L0 Intent | L1 Structure | L2 Contracts/processes | L3 Effects | L4 Evidence | Gate |
 |---|---|---|---|---|---|---|
-| Phase 0 — Source discovery | Primary | Define logical boundary | Inventory user-visible contracts and flows | Identify possible effects; exclude unknown integrations | Source reconciliation, PP-PRC-007 and owner approval | G0 |
+| Phase 0 — Source discovery | Primary | Define logical boundary; record page/route hierarchy (`PP-ART-018`) and component boundaries (`PP-ART-019`) | Inventory user-visible contracts and flows; accept `PP-CON-010` and component contracts | Identify possible effects; exclude unknown integrations | Source reconciliation, PP-PRC-007, PP-VER-016 and owner approval | G0 |
 | Phase 1 — Application foundation | Confirm scope | Primary | Define runtime/build contracts | Control package-registry access and build artifact writes; deployment remains excluded unless authorized | Install, type, static checks, architecture/dependency review, build, smoke test | G1 |
 | Phase 2 — Design system/composition | Preserve approved design intent | Implement page/component boundaries | Implement page/section/component contracts | Implement only required local/browser effects | Content, asset, functional and primary visual checks | G2 |
 | Phase 3 — Responsive/accessibility | Validate visitor scope across contexts | Refine responsive responsibility | Verify semantic and interaction behavior | Verify focus, navigation, and other browser effects | Viewport and accessibility evidence | G3 |
@@ -35,11 +35,14 @@ Required:
 - Approved page/content hierarchy.
 - Asset, typography, and design-token inventory.
 - Interaction and responsive interpretation.
+- Information architecture (`PP-ART-018`) reconciled with the source inventory (`PP-VER-016`).
+- Component inventory and blueprint recorded (`PP-ART-007`, `PP-ART-019`), with each open component question explicit.
 - Explicit non-goals and owner decisions.
 - Updated requirements and traceability records.
 
 Blocks:
 - Guessing the design or its behavior.
+- Inventing routes, sections, or components to fill the information architecture or blueprint.
 - Selecting foundational tools based on assumptions that may be invalidated by the design.
 
 ### G1 — Application foundation ready
@@ -65,6 +68,7 @@ Required:
 - All in-scope sections represented.
 - Typed component interfaces.
 - Architecture/component-boundary review for implemented page/section components (PP-VER-014).
+- Information architecture and component blueprint reconciled with the implemented composition (`PP-VER-016`).
 - Source/token reconciliation.
 - Primary viewport visual review.
 - Required interactions implemented or explicitly blocked.
@@ -112,12 +116,13 @@ Blocks:
 - Phase 3 deepens L2/L3 correctness across viewport and assistive-technology contexts and supplies G3 evidence.
 - Phase 4 reconciles all levels against the actual release candidate and establishes G4.
 - Defects discovered later may reopen an earlier level or phase. Do not force linear status when evidence shows a previous contract is unsatisfied.
+- Phase 1 foundational decisions (router, rendering model, source layout) use the accepted information architecture as input (`PP-REQ-009`, DEC-007).
 
 ## 5. Current routing disposition
 
 | Gate | Status | Reason |
 |---|---|---|
-| G0 | Blocked | Source artwork and page/content facts not inspectable |
+| G0 | Blocked | Source artwork and page/content facts not inspectable; information architecture and component blueprint cannot be derived |
 | G1 | Not started | Toolchain not selected; application scaffold absent |
 | G2 | Not started | No application composition |
 | G3 | Not started | No responsive implementation |

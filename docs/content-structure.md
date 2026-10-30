@@ -4,6 +4,8 @@
 
 **Pending source inspection.** The number of pages, sections, and content hierarchy have not yet been established. Do not assume a particular landing-page structure.
 
+Ownership: the page set, hierarchy, section order, and navigation structure are canonical in [the information architecture](information-architecture.md) (`PP-ART-018`). This document owns section content and the interaction inventory. Each fact has one home; reference IDs rather than copying values.
+
 ## Content capture rules
 
 - Transcribe visible text exactly before making editorial changes.
@@ -19,13 +21,13 @@ Complete one entry for every page or artboard that is in scope.
 
 | Field | Value |
 | --- | --- |
-| Page / route | Pending |
+| Page / route | Enter the `PP-IA` identifier from `information-architecture.md` §5.1; do not record the route here |
 | Purpose | Pending |
 | Primary audience | Pending |
 | Main heading | Pending |
 | Primary action | Pending |
 | Secondary actions | Pending |
-| Sections in order | Pending |
+| Sections in order | Not recorded here; see `information-architecture.md` §5.3 |
 | Required assets | Pending |
 | Responsive variations | Pending |
 
@@ -33,7 +35,7 @@ Complete one entry for every page or artboard that is in scope.
 
 For each section, record:
 
-- Its position in the page hierarchy.
+- Its `PP-IA` section identifier from `information-architecture.md`. Position and order are owned by that document.
 - Its role and intended message.
 - Exact text content.
 - Associated imagery or other media.
@@ -47,7 +49,7 @@ For each section, record:
 | --- | --- | --- | --- |
 | Pending source review | Pending | Pending | Not assessed |
 
-Use a link for navigation to a destination. Use a button for an action performed on the current page. Do not create decorative controls that appear interactive but do nothing.
+Navigation entries are structured in `information-architecture.md` §5.4 and reference rows in this table. Use a link for navigation to a destination. Use a button for an action performed on the current page. Do not create decorative controls that appear interactive but do nothing.
 
 ## Content review
 

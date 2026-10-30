@@ -69,6 +69,8 @@ Each substantive fact has one canonical owner:
 - Design tokens: `docs/design-system.md`.
 - Page and content hierarchy: `docs/content-structure.md`.
 - Component inventory and responsibilities: `docs/components.md`.
+- Page set, hierarchy, navigation, and section order: `docs/information-architecture.md`.
+- Per-component contract details: `docs/component-blueprint.md`.
 - Technical architecture: `docs/architecture.md`.
 - Technical coding rules: `docs/technical-standards.md`.
 - Phase delivery requirements: `docs/phases/`.
@@ -131,6 +133,8 @@ Use stable identifiers in documents, review comments, issues, commits, and evide
 | Verification control | `PP-VER` | `PP-VER-001` |
 | Risk | `PP-RSK` | `PP-RSK-001` |
 | Decision | `DEC` | `DEC-006` |
+| Information architecture node | `PP-IA` | `PP-IA-<nnn>` (format only; assigned after source inspection) |
+| Component | `PP-CMP` | `PP-CMP-<nnn>` (format only; assigned after source inspection) |
 
 Identifiers are never reused. If a record is retired, retain its identifier and mark it retired with a successor reference where applicable.
 

@@ -54,6 +54,16 @@ Use the five-level ICM (L0–L4) to govern traceability from requirements throug
 
 **Authority:** [ICM charter](icm/README.md).
 
+### DEC-007 — Phase 0 information architecture and component blueprint
+
+**Status:** Accepted (project owner directive). Content remains blocked until the Canva source is inspected.
+
+Phase 0 produces two canonical specification artifacts: the [information architecture](information-architecture.md) (`PP-ART-018`) and the [component blueprint](component-blueprint.md) (`PP-ART-019`). Both are derived from the inspected source. Neither is populated by inference. Phase 1 routing, rendering, and source-layout decisions use the accepted information architecture as an input.
+
+**Reason:** Foundational technical choices made before the page set and component boundaries are known would create rework and invent structure the source may not contain.
+
+**Authority:** `PP-REQ-009`; `PP-CON-010`; ICM ownership rules in [the ICM charter](icm/README.md) §2.2.
+
 ## Open decisions
 
 | Decision | Status | Resolution gate |
@@ -61,7 +71,7 @@ Use the five-level ICM (L0–L4) to govern traceability from requirements throug
 | Build tool and rendering model | Open | After page and delivery requirements are understood |
 | Package manager and Node.js version | Open | Before application scaffold |
 | Styling approach | Open | After design-system requirements are known |
-| Page and route structure | Open | After source inspection |
+| Page and route structure | Open | After source inspection; input: route inventory in `information-architecture.md` (DEC-007) |
 | Test and browser automation stack | Open | During application foundation |
 | Hosting and deployment | Open | Before release planning |
 | Backend or external integrations | Not established | Only if a confirmed requirement needs one |
