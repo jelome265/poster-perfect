@@ -25,24 +25,23 @@ Every control must specify:
 
 ## 3. Verification inventory
 
-| ID | Control | Type | Covers | Status |
-|---|---|---|---|---|
-| `PP-VER-001` | Clean dependency install | Automated | PP-REQ-002, PP-CON-001 | Planned; toolchain not selected |
-| `PP-VER-002` | TypeScript strict type check | Automated | PP-REQ-002, PP-CON-001, PP-CON-003 | Planned |
-| `PP-VER-003` | Lint/format/static quality checks | Automated | PP-REQ-003, technical standards | Planned |
-| `PP-VER-004` | Production build and runtime smoke test | Automated/manual | PP-REQ-002, PP-CON-001 | Planned |
-| `PP-VER-005` | Source-to-page content reconciliation | Manual | PP-REQ-001, PP-REQ-006, PP-CON-002 | Blocked on source |
-| `PP-VER-006` | Visual fidelity comparison | Manual/hybrid | PP-REQ-001, PP-REQ-004, PP-CON-004, PP-CON-005 | Blocked on source and implementation |
-| `PP-VER-007` | Responsive viewport matrix | Manual/hybrid | PP-REQ-004, PP-CON-008 | Planned |
-| `PP-VER-008` | Accessibility manual assessment (keyboard, focus, semantics, contrast, assistive technology) | Manual/hybrid | PP-REQ-005, PP-CON-006, PP-CON-008 | Planned |
-| `PP-VER-009` | Navigation and interaction behavior | Automated/manual | PP-CON-006 | Pending interaction inventory |
-| `PP-VER-010` | Asset loading and alternative text review | Automated/manual | PP-CON-005 | Pending asset inventory |
-| `PP-VER-011` | Release artifact and revision provenance | Automated/manual | PP-REQ-008, PP-CON-009 | Planned |
-| `PP-VER-012` | Owner review and release disposition | Manual approval | PP-REQ-008, PP-CON-009 | Required for each release |
-| `PP-VER-013` | ICM reference and traceability integrity | Manual initially; automation when justified | All accepted requirements and ICM registers | Passed for audited documentation scope; see PP-ART-017 |
-| `PP-VER-014` | Architecture and component-boundary review | Manual/hybrid | PP-REQ-003, PP-CON-003 | Planned; run as the physical architecture is introduced |
-| `PP-VER-015` | Dependency and side-effect surface review | Manual/hybrid | PP-REQ-007, PP-CON-007, PP-EFF-005–010 | Defined; run at foundation and whenever dependencies/effects change |
-
+| ID | Control | Type | Covers | Known limitation | Status |
+|---|---|---|---|---|---|
+| `PP-VER-001` | Clean dependency install | Automated | PP-REQ-002, PP-CON-001 | Does not establish dependency safety or application runtime correctness | Planned; toolchain not selected |
+| `PP-VER-002` | TypeScript strict type check | Automated | PP-REQ-002, PP-CON-001, PP-CON-003 | Does not prove runtime behavior, semantic correctness, or visual fidelity | Planned |
+| `PP-VER-003` | Lint/format/static quality checks | Automated | PP-REQ-003, technical standards | Only detects configured static rules; does not prove functional correctness or complete security | Planned |
+| `PP-VER-004` | Production build and runtime smoke test | Automated/manual | PP-REQ-002, PP-CON-001 | Smoke test covers startup/basic rendering, not full page behavior or visual acceptance | Planned |
+| `PP-VER-005` | Source-to-page content reconciliation | Manual | PP-REQ-001, PP-REQ-006, PP-CON-002 | Verifies inventoried source content; does not prove pixel-level visual fidelity | Blocked on source |
+| `PP-VER-006` | Visual fidelity comparison | Manual/hybrid | PP-REQ-001, PP-REQ-004, PP-CON-004, PP-CON-005 | Limited to captured references, selected viewports, browser and rendering conditions | Blocked on source and implementation |
+| `PP-VER-007` | Responsive viewport matrix | Manual/hybrid | PP-REQ-004, PP-CON-008 | Evidence covers tested widths/browsers, not every possible device or viewport | Planned |
+| `PP-VER-008` | Accessibility manual assessment (keyboard, focus, semantics, contrast, assistive technology) | Manual/hybrid | PP-REQ-005, PP-CON-006, PP-CON-008 | Scope is limited to assessed pages, states, criteria and assistive-technology combinations; not a blanket conformance claim | Planned |
+| `PP-VER-009` | Navigation and interaction behavior | Automated/manual | PP-CON-006 | Covers inventoried controls and destinations; does not guarantee permanent availability of external destinations | Pending interaction inventory |
+| `PP-VER-010` | Asset loading and alternative text review | Automated/manual | PP-CON-005 | Does not independently establish copyright/licensing or full design fidelity | Pending asset inventory |
+| `PP-VER-011` | Release artifact and revision provenance | Automated/manual | PP-REQ-008, PP-CON-009 | Establishes traceability, not the artifact's complete security or runtime correctness | Planned |
+| `PP-VER-012` | Owner review and release disposition | Manual approval | PP-REQ-008, PP-CON-009 | Records authorization; it does not replace technical verification | Required for each release |
+| `PP-VER-013` | ICM reference and traceability integrity | Manual initially; automation when justified | All accepted requirements and ICM registers | Proves documentation/link/identifier/traceability integrity only; not application implementation | Passed for audited documentation scope; see PP-ART-017 |
+| `PP-VER-014` | Architecture and component-boundary review | Manual/hybrid | PP-REQ-003, PP-CON-003 | Depends on the actual source tree and reviewed revision; a logical map alone is not implementation evidence | Planned; run as the physical architecture is introduced |
+| `PP-VER-015` | Dependency and side-effect surface review | Manual/hybrid | PP-REQ-007, PP-CON-007, PP-EFF-005–010 | Reviews declared/observable dependencies and effects; cannot prove absence of all runtime vulnerabilities | Defined; run at foundation and whenever dependencies/effects change |
 ## 4. Automated controls
 
 ### 4.1 Dependency reproducibility
