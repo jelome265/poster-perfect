@@ -207,7 +207,7 @@ The information architecture MUST define every in-scope page or route, section, 
 **Business content authority:** Project owner  
 **Implementation owner:** Page implementation owner (PP-MAP-011)  
 **Consumers:** Page and section composition, content inventory, navigation and interaction controls  
-**Requirement:** PP-REQ-010; related contracts PP-CON-002, PP-CON-006 and PP-CON-010
+**Requirement:** PP-REQ-010; related contracts PP-CON-002, PP-CON-005, PP-CON-006 and PP-CON-010
 
 The website MUST represent Poster Perfect at company level as a graphic design business, not as an individual designer's personal portfolio. It MUST present owner-approved company identity and positioning, the approved service/capability offering, selected creative work the company is authorized to publish, its current availability for new work, and an accessible, owner-approved path for prospective customers to make enquiries.
 
