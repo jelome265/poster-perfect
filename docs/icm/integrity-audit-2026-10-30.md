@@ -27,8 +27,8 @@ This is a documentation-integrity audit. It is not an application security audit
 
 | Check | Expected result | Observed result | Disposition |
 |---|---|---|---|
-| Internal Markdown links | All repository-relative links resolve from their referring files | 15 Markdown files checked; 0 broken internal links | Pass |
-| Canonical record definitions | Every referenced PP identifier has one canonical definition | 96 unique identifiers; 0 missing definitions | Pass |
+| Internal Markdown links | All repository-relative links resolve from their referring files | 16 Markdown files checked; 0 broken internal links | Pass |
+| Canonical record definitions | Every referenced PP identifier has one canonical definition | 97 unique identifiers; 0 missing definitions | Pass |
 | Duplicate identifiers | No duplicate canonical definitions | 0 duplicate canonical definitions | Pass |
 | Accepted requirement coverage | Every accepted requirement maps to controls and delivery | 8 accepted requirements; all 8 have map, contract, process, effect, artifact, reference, verification, and phase mappings | Pass |
 | Process completeness | Every process identifies contract, effect, and verification or explicit exclusion | 7 processes checked; all 7 have all three fields, including explicit inactive status for excluded PP-PRC-005 | Pass |
@@ -37,6 +37,7 @@ This is a documentation-integrity audit. It is not an application security audit
 | Specification lifecycle | Every specification status used is defined by the ICM | Proposed, Accepted, Partially specified, Blocked, Excluded, and Retired are defined | Pass |
 | Authority precedence | Binding legal/regulatory requirements precede project-owner and implementation convenience decisions | Law/regulation is first; applicable security, privacy, accessibility, browser/platform and provider constraints follow | Pass |
 | Phase routing | All delivery phases map to L0–L4 and G0–G4 | Phases 0–4 and gates G0–G4 are represented | Pass |
+| External source references | Official reference URLs resolve to primary documentation | W3C WCAG 2.2, React Learn, and TypeScript documentation pages opened successfully | Pass |
 
 The identifier count covers the canonical records and references present in the audited document set. It does not imply that those records describe implemented application functionality.
 
@@ -63,7 +64,7 @@ The following are intentionally not reported as passing:
 - **PP-VER-014:** the logical architecture map has owner and dependency boundaries, but no physical application source exists for implementation-level review.
 - **PP-VER-015:** the control is specified, but an application dependency/effect surface review cannot be run until the selected toolchain and application source exist.
 
-The review's one-off link and identifier checks do not constitute a committed CI checker. PP-VER-013 remains a manual/documentation control until automation is justified by the selected repository toolchain.
+The link, identifier, matrix, process-coverage, and reference checks were run as one-off review checks against repository content. They do not constitute a committed CI checker. PP-VER-013 remains a manual/documentation control until automation is justified by the selected repository toolchain.
 
 ## 5. Remaining blockers and limitations
 
