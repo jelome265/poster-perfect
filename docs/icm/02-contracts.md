@@ -156,7 +156,7 @@ Every control MUST have a documented trigger and observable outcome. Navigation 
 No external API, remote form submission, analytics provider, payment provider, or durable persistence is part of the baseline. If one is approved, its request/response schema, data classification, credential boundary, permissions, timeout, error policy, retry behavior, privacy obligations, and verification must be contracted before implementation.
 
 **Specification:** Excluded from baseline; a future inclusion requires a new approved contract  
-**Implementation:** Not started  
+**Implementation:** Not applicable  
 **Evidence:** Not applicable
 
 ### PP-CON-008 — Accessibility and responsive contract
@@ -180,8 +180,8 @@ The implementation MUST follow the approved responsive interpretation and be ass
 Changes MUST be made on a reviewable branch with scope and verification recorded. A passing CI run does not authorize merging. The project owner authorizes merge and any production release.
 
 **Specification:** Accepted  
-**Implementation:** Applies to repository workflow  
-**Evidence:** PR/release records required per change
+**Implementation:** Not applicable (governance contract; not application runtime code)  
+**Evidence:** Not collected per individual change
 
 ## 5. Conditional contracts
 
