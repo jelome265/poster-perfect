@@ -46,8 +46,8 @@ A file existing in Git does not automatically make it authoritative or prove tha
 | `PP-ART-015` | Executable verification reports | Not yet created | Verification evidence | CI and manual review | Pending |
 | `PP-ART-016` | Release build and deployment record | Not yet created | Release artifact | Release pipeline / owner | Not started |
 | `PP-ART-017` | ICM integrity audit (2026-10-30) | `docs/icm/integrity-audit-2026-10-30.md` | Verification evidence | ICM/documentation reviewer | Passed for documentation-integrity scope at PR #3 revision; re-run required for the `PP-REQ-009` change; not application verification |
-| `PP-ART-018` | Information architecture | `docs/information-architecture.md` | Specification (contract-backed) | Page composition owner; project owner approval | Blocked — Phase 0 source inspection required |
-| `PP-ART-019` | Component blueprint | `docs/component-blueprint.md` | Contract / architecture | Component maintainer; project owner approval | Blocked — Phase 0 source inspection required |
+| `PP-ART-018` | Information architecture | `docs/information-architecture.md` | Specification (contract-backed) | Page implementation owner (`PP-MAP-011`); approval: project owner | Blocked — Phase 0 source inspection required |
+| `PP-ART-019` | Component blueprint | `docs/component-blueprint.md` | Contract / architecture | Component maintainer (`PP-MAP-013`); approval: project owner | Blocked — Phase 0 source inspection required |
 
 The registry is a navigation and lifecycle record. Subject-specific details remain in the canonical file listed above.
 

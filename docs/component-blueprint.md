@@ -3,7 +3,9 @@
 **Artifact:** `PP-ART-019`  
 **Class:** Contract / architecture (see `PP-CON-003`)  
 **Status:** Blocked — no component is specified until Phase 0 source inspection is complete (`PP-RSK-001`, `PP-RSK-003`)  
-**Canonical owner:** Component maintainer (`PP-MAP-013`); section owners for their sections; approval by the project owner  
+**Canonical owner:** Component maintainer (`PP-MAP-013`, role as defined in `icm/01-architecture-map.md`)  
+**Producer:** Component maintainer; Section implementation owner (`PP-MAP-012`) for entries in their section  
+**Approval:** Project owner  
 **Update trigger:** Any change to a component's props, state, events, semantics, effects, responsive behavior, or accessibility obligations  
 
 ## 1. Purpose and status
