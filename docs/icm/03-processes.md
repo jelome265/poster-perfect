@@ -29,6 +29,7 @@ Do not document every JSX render as a process. A process represents meaningful b
 | `PP-PRC-004` | Local interface interaction | Visitor operates a stateful control | User interaction | Conditional on source inventory |
 | `PP-PRC-005` | Remote form/API operation | Visitor submits or requests remote data | External operation | Not in baseline; future only |
 | `PP-PRC-006` | Verification and release | Candidate revision is submitted for review | Governance lifecycle | Target |
+| `PP-PRC-007` | Source inspection and specification | Owner supplies an inspectable design export or view-only source | Human specification workflow | Blocked until source is available |
 
 ## 3. PP-PRC-001 — Build and delivery
 
@@ -220,6 +221,9 @@ The browser is not the authority for a remote operation. Client-side validation 
 
 ## 8. PP-PRC-006 — Verification, review and release
 
+**Purpose:** reconcile the candidate implementation with approved requirements and authorize controlled repository/release changes.  
+**Contract:** PP-CON-009.
+
 ```text
 change proposed
     |
@@ -244,6 +248,7 @@ owner approval
 merge / release only as explicitly authorized
 ```
 
+**Effects:** PP-EFF-009 for candidate build artifact generation; PP-EFF-010 only for an explicitly authorized merge, deployment, or production promotion.  
 **Invariants**
 - Evidence identifies the commit tested.
 - A changed commit invalidates evidence for changed behavior until affected checks are rerun.
@@ -252,7 +257,35 @@ merge / release only as explicitly authorized
 
 **Verification:** PP-VER-001 through PP-VER-015 as applicable.
 
-## 9. State-transition discipline
+## 9. PP-PRC-007 — Source inspection and specification
+
+**Purpose:** convert the owner-supplied Canva source into a verified page, content, asset, interaction, and responsive specification.  
+**Contracts:** PP-CON-002, PP-CON-004, PP-CON-005, PP-CON-006, PP-CON-008.  
+**Initiator:** Project owner supplies an inspectable export or view-only reference.  
+**Owner:** Project owner for source authority and scope approval; maintainer for recording and reconciling the specification.
+
+**Preconditions**
+- The supplied design can be inspected at sufficient resolution.
+- Required source assets can be inspected or are explicitly recorded as unavailable.
+- The project brief and source inventory are available.
+
+**Process**
+1. Record source identity, inspection date, dimensions, and page/artboard count.
+2. Reconcile page sections, content hierarchy, and exact visible copy.
+3. Inventory images, fonts, icons, dimensions, provenance, and usage constraints.
+4. Identify visible controls, destinations, and confirmed behavior; do not infer behavior from appearance alone.
+5. Record source-responsive variants and proposed web adaptations.
+6. Mark measurements, estimates, and unknowns distinctly.
+7. Update canonical source, design-token, content, asset, interaction, and decision records.
+8. Obtain owner approval for material adaptations and scope.
+
+**Success:** all in-scope source facts are recorded and unresolved questions are explicit; the owner approves the web interpretation.  
+**Failure/blocking:** if the source is inaccessible or material assets/requirements cannot be established, keep Phase 0 blocked. Do not substitute guesses.
+
+**Effects:** no website runtime effect. Outputs are documentation and source-inventory artifacts, not application behavior.  
+**Verification:** PP-VER-005, PP-VER-006, PP-VER-010, and PP-VER-013.
+
+## 10. State-transition discipline
 
 For every stateful process:
 - Enumerate valid states.
@@ -266,6 +299,6 @@ For every stateful process:
 
 Do not introduce global state management unless multiple independent components need shared state and local component state cannot express the contract clearly.
 
-## 10. Process completion rule
+## 11. Process completion rule
 
 A process is complete only when its contract is accepted, implementation is present, normal and relevant failure paths are verified, effects are accounted for, and evidence references the current revision. A diagram alone is not implementation.
