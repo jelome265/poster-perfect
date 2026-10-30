@@ -20,14 +20,14 @@ Do not infer an implementation status from a specification or a verification sta
 
 | Requirement | L0/L1 map | Contract | Process | Effect | Verification | Phase |
 |---|---|---|---|---|---|---|
-| `PP-REQ-001` Canva design recreation | PP-MAP-004, PP-MAP-011–015 | PP-CON-002, 004, 005, 006 | PP-PRC-002–004 | PP-EFF-001–004; conditional effects only with approval | PP-VER-005, 006, 009, 010, 013 | 0, 2, 3, 4 |
+| `PP-REQ-001` Canva design recreation | PP-MAP-004, PP-MAP-011–015 | PP-CON-002, 004, 005, 006 | PP-PRC-002–004, 007 | PP-EFF-001–004; conditional effects only with approval | PP-VER-005, 006, 009, 010, 013 | 0, 2, 3, 4 |
 | `PP-REQ-002` React + TypeScript/TSX | PP-MAP-010, 017 | PP-CON-001 | PP-PRC-001, 002 | PP-EFF-001, 008, 009 | PP-VER-001–004, 013 | 1, 4 |
 | `PP-REQ-003` Maintainable component structure | PP-MAP-010–014 | PP-CON-003 | PP-PRC-002, 004 | PP-EFF-001, 002 | PP-VER-002, 003, 013, 014 | 1, 2, 4 |
 | `PP-REQ-004` Visual identity and responsive web behavior | PP-MAP-004, 011–015 | PP-CON-002, 004, 008 | PP-PRC-002–004 | PP-EFF-001–004 | PP-VER-005–007, 013 | 0, 2, 3, 4 |
 | `PP-REQ-005` WCAG 2.2 AA target | PP-MAP-002, 003, 012–016 | PP-CON-006, 008 | PP-PRC-003, 004 | Relevant E0–E2 effects | PP-VER-007–010, 013 | 2, 3, 4 |
-| `PP-REQ-006` No invented source facts | PP-MAP-001, 004 | PP-CON-002, 004, 005 | PP-PRC-002 and source inspection process | PP-EFF-004 | PP-VER-005, 006, 010, 013 | 0, 2, 4 |
+| `PP-REQ-006` No invented source facts | PP-MAP-001, 004 | PP-CON-002, 004, 005 | PP-PRC-007 | PP-EFF-004 | PP-VER-005, 006, 010, 013 | 0, 2, 4 |
 | `PP-REQ-007` No unapproved backend/integration/persistence | PP-MAP-007, 016 | PP-CON-007 | PP-PRC-005 | PP-EFF-005–007 | PP-VER-013, 015; future integration-specific controls if scope changes | 0–4 |
-| `PP-REQ-008` Owner retains merge/release authority | PP-MAP-001, 017, 018 | PP-CON-009 | PP-PRC-001, 006 | PP-EFF-009, 010 only under owner authorization | PP-VER-011–013 | 0–4 |
+| `PP-REQ-008` Owner retains merge/release authority | PP-MAP-001, 017, 018 | PP-CON-009 | PP-PRC-001, 006 | PP-EFF-010 only under owner authorization | PP-VER-011–013 | 0–4 |
 
 ## 3. Map registry
 
@@ -67,6 +67,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-PRC-004` | Local interface interaction | Conditional on source | Not started |
 | `PP-PRC-005` | Remote form/API | Excluded baseline; future extension | Not started |
 | `PP-PRC-006` | Verification/review/release | Target governance process | Applies per change |
+| `PP-PRC-007` | Source inspection/specification | Blocked until source is available | Phase 0 human workflow |
 
 ## 6. Effect registry
 
@@ -81,7 +82,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-EFF-007` | External mutation/submission | E5 | Excluded unless approved |
 | `PP-EFF-008` | Build-time dependency retrieval | E3 | Expected only during approved build |
 | `PP-EFF-009` | Build artifact generation | E4 | Expected only during approved build |
-| `PP-EFF-010` | Deployment or production promotion | E5 | Excluded until explicitly authorized |
+| `PP-EFF-010` | Repository merge, deployment or production promotion | E5 | Excluded until explicitly authorized |
 
 ## 7. Verification registry
 
@@ -94,7 +95,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-VER-005` | Content/source reconciliation | Blocked on source | G0, G2, G4 |
 | `PP-VER-006` | Visual fidelity comparison | Blocked on source and app | G2, G4 |
 | `PP-VER-007` | Responsive viewport matrix | Planned | G3, G4 |
-| `PP-VER-008` | Keyboard/focus/semantics | Planned | G3, G4 |
+| `PP-VER-008` | Accessibility manual assessment | Planned | G3, G4 |
 | `PP-VER-009` | Navigation/interaction behavior | Pending interaction inventory | G2, G3, G4 |
 | `PP-VER-010` | Asset loading/alt text | Pending asset inventory | G2, G3, G4 |
 | `PP-VER-011` | Release artifact provenance | Planned | G4 |
