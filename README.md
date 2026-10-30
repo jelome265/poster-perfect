@@ -31,6 +31,12 @@ See [the phase register](docs/phases/README.md) for the delivery sequence, curre
 - [Phase 3 — Responsive and accessible implementation](docs/phases/phase-3-responsive-accessibility.md)
 - [Phase 4 — Verification and release readiness](docs/phases/phase-4-verification-release.md)
 
+### Implementation Control Model
+
+The [ICM charter](docs/icm/README.md) defines L0–L4 control levels and the traceability model governing requirements, architecture, contracts, processes, effects, artifacts, references, verification, and release gates.
+
+Start with the [system context](docs/icm/00-system-context.md), [architecture map](docs/icm/01-architecture-map.md), and [master traceability register](docs/icm/08-traceability-register.md).
+
 ## Agreed direction
 
 - React with TypeScript and TSX.
