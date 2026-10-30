@@ -47,8 +47,7 @@ flowchart LR
     Repo -->|Source and configuration| Build
     Build -->|Built frontend artifacts| Host
     Host -->|Document, assets and responses| Browser
-    Visitor -->|Navigation and interactions| Browser
-    Visitor -->|Evaluates offering and selects enquiry action| Browser
+    Visitor -->|Evaluates offering, reviews work and selects enquiry action| Browser
     Browser -->|Owner-approved contact hand-off, if specified| External
 ```
 
@@ -114,4 +113,4 @@ L0 is sufficiently specified for implementation when:
 - Non-goals and unresolved questions are recorded.
 - The owner has approved the web interpretation of the source design and the company-facing content/customer-enquiry journey.
 
-Current L0 state: **blocked** by source inspection and any still-open product-intent decisions.
+Current L0 state: **blocked** by source inspection and the remaining company-content and enquiry-path decisions; the company-level website purpose is accepted.
