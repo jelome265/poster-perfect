@@ -1,8 +1,8 @@
 # Implementation plan
 
-This is the phase overview for Poster Perfect. Detailed execution specifications, including entry conditions, workstreams, deliverables, verification, and exit gates, are maintained in [docs/phases](phases/README.md).
+This is the phase overview for Poster Perfect. Detailed execution specifications are maintained in [docs/phases](phases/README.md). The engineering control model is defined separately in [docs/icm](icm/README.md).
 
-The project follows a gated sequence. A phase is not complete because work was attempted; its exit criteria must be met and the evidence recorded.
+The project follows gated phase progression. A phase is not complete because work was attempted; its exit criteria must be met and the evidence recorded.
 
 ## Phase register
 
@@ -34,6 +34,18 @@ Phase 4: Verification and release readiness
 
 Phase 1 may only begin after the source specification is stable enough to inform foundational technical choices. Any explicitly approved overlap must identify which inputs are stable and which remain unresolved.
 
+## ICM control model
+
+The ICM defines five control levels across all phases:
+
+- **L0 — Intent and context:** purpose, actors, scope, boundaries, non-goals.
+- **L1 — Structure and ownership:** architecture map, modules, dependencies and interfaces.
+- **L2 — Contracts and behaviour:** interfaces, processes, inputs, outputs and state transitions.
+- **L3 — Effects and resources:** browser, network, persistence, external actions and failure handling.
+- **L4 — Verification and evidence:** tests, visual review, accessibility, build and release gates.
+
+See the [ICM phase routing](icm/09-phase-routing.md) for the mapping between phases and control levels. The [master traceability register](icm/08-traceability-register.md) reconciles requirements through evidence.
+
 ## Current project state
 
 - Phase 0 is blocked because the supplied Canva links did not expose the design for inspection. An inspectable full-resolution export or accessible view-only reference is required.
@@ -44,6 +56,7 @@ Phase 1 may only begin after the source specification is stable enough to inform
 ## Governance
 
 - Maintain phase status and evidence in [the phase register](phases/README.md).
+- Maintain requirement, contract, effect, artifact and evidence routing in the [ICM](icm/README.md).
 - Update the project brief, design inventories, and decision log when approved requirements change.
 - Record exact verification commands, tested viewports, relevant commit SHAs, and unresolved findings.
 - Do not report checks as passed unless they were run against the relevant commit.
