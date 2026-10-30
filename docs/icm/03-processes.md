@@ -177,7 +177,9 @@ Examples may include a menu, accordion, tab, dialog, dismissible notice, or loca
 ## 7. PP-PRC-005 — Remote form or API operation
 
 **Status:** Excluded from the current baseline.  
-**Contract:** PP-CON-007 (future extension only).
+**Contract:** PP-CON-007 (future extension only).  
+**Effects:** PP-EFF-005, PP-EFF-006, and PP-EFF-007 are inactive while this process is excluded; activate them only through approved scope change and detailed effect contracts.  
+**Verification:** Not applicable while excluded. Before activation, define process-specific tests and rerun PP-VER-015 for the expanded dependency/effect surface.
 
 This process exists as a controlled extension point, not an implementation instruction.
 
