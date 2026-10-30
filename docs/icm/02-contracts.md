@@ -75,7 +75,7 @@ A page MUST compose the sections in the approved source order and preserve the a
 **Invariants:** No invented section, hidden content, or silent copy rewrite; no duplicated shared composition without reason.  
 **Verification:** Page inventory reconciliation, DOM/reading-order review, visual comparison.
 
-**Specification:** Partially defined  
+**Specification:** Partially specified  
 **Implementation:** Not started  
 **Evidence:** Not collected
 
@@ -143,7 +143,7 @@ Every control MUST have a documented trigger and observable outcome. Navigation 
 **Invariants:** Keyboard operation, visible focus, accessible name, and meaningful failure feedback when an operation can fail.  
 **Verification:** Interaction inventory, keyboard checks, functional tests.
 
-**Specification:** Pending source inspection  
+**Specification:** Blocked  
 **Implementation:** Not started  
 **Evidence:** Not collected
 
@@ -155,7 +155,7 @@ Every control MUST have a documented trigger and observable outcome. Navigation 
 
 No external API, remote form submission, analytics provider, payment provider, or durable persistence is part of the baseline. If one is approved, its request/response schema, data classification, credential boundary, permissions, timeout, error policy, retry behavior, privacy obligations, and verification must be contracted before implementation.
 
-**Specification:** Not applicable at baseline; future contract required if scope changes  
+**Specification:** Excluded from baseline; a future inclusion requires a new approved contract  
 **Implementation:** Not started  
 **Evidence:** Not applicable
 
@@ -167,7 +167,7 @@ No external API, remote form submission, analytics provider, payment provider, o
 
 The implementation MUST follow the approved responsive interpretation and be assessed against applicable WCAG 2.2 AA criteria. Semantic structure, keyboard operation, visible focus, readable content, contrast, zoom/reflow, and appropriate alternatives are mandatory review dimensions.
 
-**Specification:** Target accepted; page-specific criteria pending Phase 0  
+**Specification:** Partially specified; WCAG target accepted, with page-specific responsive and semantic criteria pending Phase 0  
 **Implementation:** Not started  
 **Evidence:** Not collected
 
