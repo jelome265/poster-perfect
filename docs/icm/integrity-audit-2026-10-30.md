@@ -1,0 +1,86 @@
+# ICM integrity audit — 2026-10-30
+
+**Audit type:** Documentation and traceability integrity review  
+**Control:** PP-VER-013  
+**Evidence artifact:** PP-ART-017  
+**Pull request:** [#3 — Establish L0–L4 implementation control model](https://github.com/jelome265/poster-perfect/pull/3)  
+**Disposition:** Passed for the ICM documentation baseline; application/runtime verification remains not applicable or blocked as stated below.
+
+## 1. Audit scope
+
+Reviewed the ICM package and the project entry documents that route to it:
+
+- Root README, frontend architecture, decision log, and implementation plan.
+- ICM charter.
+- L0 system context.
+- L1 architecture map.
+- L2 contracts and processes.
+- L3 effects.
+- Artifact and reference registers.
+- L4 verification model.
+- Master traceability register.
+- Phase routing and gates.
+
+This is a documentation-integrity audit. It is not an application security audit, a visual-fidelity assessment, a runtime test, or a WCAG conformance assessment.
+
+## 2. Integrity checks and results
+
+| Check | Expected result | Observed result | Disposition |
+|---|---|---|---|
+| Internal Markdown links | All repository-relative links resolve from their referring files | 15 Markdown files checked; 0 broken internal links | Pass |
+| Canonical record definitions | Every referenced PP identifier has one canonical definition | 96 unique identifiers; 0 missing definitions | Pass |
+| Duplicate identifiers | No duplicate canonical definitions | 0 duplicate canonical definitions | Pass |
+| Accepted requirement coverage | Every accepted requirement maps to controls and delivery | 8 accepted requirements; all 8 have map, contract, process, effect, artifact, reference, verification, and phase mappings | Pass |
+| Process completeness | Every process identifies contract, effect, and verification or explicit exclusion | 7 processes checked; all 7 have all three fields, including explicit inactive status for excluded PP-PRC-005 | Pass |
+| Architecture ownership | Every architecture boundary has an accountable owner role | 9 architecture-map entries; 0 missing owner roles | Pass |
+| Effect routing | Every defined effect is linked to a process | All 10 effect identifiers are referenced by the process model | Pass |
+| Specification lifecycle | Every specification status used is defined by the ICM | Proposed, Accepted, Partially specified, Blocked, Excluded, and Retired are defined | Pass |
+| Authority precedence | Binding legal/regulatory requirements precede project-owner and implementation convenience decisions | Law/regulation is first; applicable security, privacy, accessibility, browser/platform and provider constraints follow | Pass |
+| Phase routing | All delivery phases map to L0–L4 and G0–G4 | Phases 0–4 and gates G0–G4 are represented | Pass |
+
+The identifier count covers the canonical records and references present in the audited document set. It does not imply that those records describe implemented application functionality.
+
+## 3. Corrections made during audit
+
+The integrity review identified and corrected these issues before disposition:
+
+1. **Authority precedence:** the initial hierarchy placed owner decisions above legal/platform constraints. The revised hierarchy places applicable law, regulation, and binding obligations first; security, privacy, accessibility, and platform/provider constraints next; then owner decisions within the owner's authority.
+2. **Lifecycle vocabulary:** contract statuses used in the register did not all exist in the charter. The charter now defines Partially specified and Excluded, and the contract/register states have been reconciled.
+3. **Architecture ownership:** the architecture map did not name accountable owner roles for each boundary. The map now includes owner roles and distinguishes runtime, engineering-tooling, and cross-cutting governance boundaries.
+4. **Process traceability:** processes now name governing contracts, effects, and verification controls. The future remote form/API process is explicitly excluded and records its effects and verification as inactive until approved.
+5. **Effect coverage:** build-time dependency retrieval, build artifact generation, and repository merge/deployment promotion are represented separately from runtime browser and API effects.
+6. **Verification coverage:** architecture/component-boundary review and dependency/side-effect surface review have dedicated controls (PP-VER-014 and PP-VER-015).
+7. **Master traceability:** the requirement matrix now includes explicit artifact and reference columns, matching the ICM's stated traceability chain.
+
+## 4. Controls not executed
+
+The following are intentionally not reported as passing:
+
+- **PP-VER-001–004:** no application toolchain, package manifest, lockfile, source, or build exists yet.
+- **PP-VER-005–006:** the Canva design has not been made inspectable; content and visual comparison remain blocked.
+- **PP-VER-007–010:** there is no implemented interface to test for responsive behavior, keyboard/accessibility, interactions, or asset rendering.
+- **PP-VER-011–012:** no release artifact exists and no merge/release authorization is implied by this audit.
+- **PP-VER-014:** the logical architecture map has owner and dependency boundaries, but no physical application source exists for implementation-level review.
+- **PP-VER-015:** the control is specified, but an application dependency/effect surface review cannot be run until the selected toolchain and application source exist.
+
+The review's one-off link and identifier checks do not constitute a committed CI checker. PP-VER-013 remains a manual/documentation control until automation is justified by the selected repository toolchain.
+
+## 5. Remaining blockers and limitations
+
+- Phase 0 remains blocked until an inspectable full-resolution Canva export or accessible view-only reference is supplied.
+- Page count, audience, hierarchy, content, assets, design tokens, interactive behavior, responsive interpretation, and source-specific adaptations remain unverified.
+- Build tooling, package manager, routing, styling system, and hosting remain undecided.
+- WCAG 2.2 Level AA is a project target, not a conformance claim. No accessibility assessment of a running website has been performed.
+- No application code or runtime has been reviewed.
+
+## 6. Final disposition
+
+**PP-VER-013: Passed** for the ICM documentation integrity scope described in this report.
+
+**Overall ICM status:** structurally coherent and traceable as a documentation baseline. It is not proof of application implementation or release readiness.
+
+**Phase status:** G0 remains blocked; G1–G4 remain not started.
+
+Re-run PP-VER-013 after material changes to identifiers, canonical paths, process/effect mappings, traceability columns, authority rules, or phase routing. Re-run the implementation-specific controls when the application is created.
+
+The exact reviewed branch revision is identifiable from the head commit of PR #3. Do not rely on this report as evidence for a later, modified revision without repeating the affected checks.
