@@ -45,6 +45,7 @@ A file existing in Git does not automatically make it authoritative or prove tha
 | `PP-ART-014` | Visual reference captures | Not yet created | Verification evidence | Phase 0/2/4 | Pending |
 | `PP-ART-015` | Executable verification reports | Not yet created | Verification evidence | CI and manual review | Pending |
 | `PP-ART-016` | Release build and deployment record | Not yet created | Release artifact | Release pipeline / owner | Not started |
+| `PP-ART-017` | ICM integrity audit (2026-10-30) | `docs/icm/integrity-audit-2026-10-30.md` | Verification evidence | ICM/documentation reviewer | Passed for documentation-integrity scope; not application verification |
 
 The registry is a navigation and lifecycle record. Subject-specific details remain in the canonical file listed above.
 
