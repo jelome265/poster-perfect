@@ -4,7 +4,7 @@
 
 The confirmed implementation direction is React with TypeScript and TSX. The frontend should be component-based, responsive, and maintainable.
 
-This document defines boundaries and principles, not a prematurely fixed directory structure. The concrete scaffold will be selected after the design's page model and behavior are understood.
+This document states the architectural baseline. The detailed L0/L1 map, component identities, interface routing, and architecture verification rules are owned by the [Implementation Control Model](icm/README.md), especially its [architecture map](icm/01-architecture-map.md). This document must not become a competing architecture source.
 
 ## Logical responsibilities
 
@@ -57,3 +57,4 @@ The eventual source tree should make the application entry point, page compositi
 - State is no more global than necessary.
 - The architecture remains understandable without tracing through unnecessary wrapper layers.
 - Each selected dependency has a clear purpose and is reflected in the project documentation.
+- Detailed structure and ownership checks follow the [ICM architecture map](icm/01-architecture-map.md).
