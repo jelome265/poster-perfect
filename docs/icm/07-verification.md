@@ -39,7 +39,7 @@ Every control must specify:
 | `PP-VER-010` | Asset loading and alternative text review | Automated/manual | PP-CON-005 | Pending asset inventory |
 | `PP-VER-011` | Release artifact and revision provenance | Automated/manual | PP-REQ-008, PP-CON-009 | Planned |
 | `PP-VER-012` | Owner review and release disposition | Manual approval | PP-REQ-008, PP-CON-009 | Required for each release |
-| `PP-VER-013` | ICM reference and traceability integrity | Manual initially; automation when justified | All accepted requirements and ICM registers | Defined; not yet run on final ICM revision |
+| `PP-VER-013` | ICM reference and traceability integrity | Manual initially; automation when justified | All accepted requirements and ICM registers | Passed for audited documentation scope; see PP-ART-017 |
 | `PP-VER-014` | Architecture and component-boundary review | Manual/hybrid | PP-REQ-003, PP-CON-003 | Planned; run as the physical architecture is introduced |
 | `PP-VER-015` | Dependency and side-effect surface review | Manual/hybrid | PP-REQ-007, PP-CON-007, PP-EFF-005–010 | Defined; run at foundation and whenever dependencies/effects change |
 
@@ -142,7 +142,7 @@ Passing a phase gate requires evidence and approval, not merely completion of a 
 
 ## 10. ICM integrity control — PP-VER-013
 
-The purpose of this control is to detect an internally inconsistent ICM before it becomes an implementation authority.
+The purpose of this control is to detect an internally inconsistent ICM before it becomes an implementation authority. The 2026-10-30 audit result is recorded in [PP-ART-017](integrity-audit-2026-10-30.md). Its pass applies only to the documentation-integrity scope, not to application/runtime behavior.
 
 ### Manual procedure
 
