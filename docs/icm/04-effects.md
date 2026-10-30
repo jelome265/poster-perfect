@@ -36,7 +36,7 @@ Loading a same-origin asset from the deployed build is an expected browser resou
 | `PP-EFF-007` | External mutation or submission | E5 | Excluded until approved | Explicit authority, validation, duplicate handling, confirmation, auditability where needed |
 | `PP-EFF-008` | Build-time dependency retrieval | E3 | Expected only during an approved build | Locked manifest/lockfile, trusted registry configuration, integrity checks, no credentials in repository |
 | `PP-EFF-009` | Build artifact generation | E4 | Expected during an approved build | Clean output directory, known source revision, reproducible build inputs, artifact provenance |
-| `PP-EFF-010` | Deployment or production promotion | E5 | Excluded until explicitly authorized | Owner approval, target verification, revision attribution, rollback/recovery plan where supported |
+| `PP-EFF-010` | Repository merge, deployment or production promotion | E5 | Excluded until explicitly authorized | Owner approval, target verification, revision attribution, rollback/recovery plan where supported |
 
 The expected/conditional/excluded statuses do not claim that these effects already exist in code.
 
