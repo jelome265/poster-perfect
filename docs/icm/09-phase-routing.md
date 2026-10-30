@@ -20,7 +20,7 @@ A phase may touch multiple ICM levels, and an ICM level may be revisited across 
 | Delivery phase | L0 Intent | L1 Structure | L2 Contracts/processes | L3 Effects | L4 Evidence | Gate |
 |---|---|---|---|---|---|---|
 | Phase 0 — Source discovery | Primary | Define logical boundary | Inventory user-visible contracts and flows | Identify possible effects; exclude unknown integrations | Source reconciliation and owner approval | G0 |
-| Phase 1 — Application foundation | Confirm scope | Primary | Define runtime/build contracts | Keep runtime effects minimal | Install, type, static checks, build, smoke test | G1 |
+| Phase 1 — Application foundation | Confirm scope | Primary | Define runtime/build contracts | Control package-registry access and build artifact writes; deployment remains excluded unless authorized | Install, type, static checks, architecture/dependency review, build, smoke test | G1 |
 | Phase 2 — Design system/composition | Preserve approved design intent | Implement page/component boundaries | Implement page/section/component contracts | Implement only required local/browser effects | Content, asset, functional and primary visual checks | G2 |
 | Phase 3 — Responsive/accessibility | Validate visitor scope across contexts | Refine responsive responsibility | Verify semantic and interaction behavior | Verify focus, navigation, and other browser effects | Viewport and accessibility evidence | G3 |
 | Phase 4 — Verification/release | Confirm final approved scope | Reconcile final topology | Verify all required flows | Verify all effects and failure handling | Revision-bound evidence and owner disposition | G4 |
@@ -48,6 +48,8 @@ Required:
 - Clean install from the lockfile.
 - Strict TypeScript check.
 - Configured static checks.
+- Architecture/component-boundary review (PP-VER-014) for the established scaffold.
+- Dependency and side-effect surface review (PP-VER-015), including package manifest/lockfile and build scripts.
 - Successful production build and runtime smoke test.
 - Documented setup commands and dependency decisions.
 
@@ -61,6 +63,7 @@ Required:
 - Approved content and assets integrated.
 - All in-scope sections represented.
 - Typed component interfaces.
+- Architecture/component-boundary review for implemented page/section components (PP-VER-014).
 - Source/token reconciliation.
 - Primary viewport visual review.
 - Required interactions implemented or explicitly blocked.
@@ -88,6 +91,7 @@ Blocks:
 
 Required:
 - All applicable automated checks pass on the candidate commit.
+- Architecture and dependency/effect reviews are current for the candidate.
 - Functional and visual review complete.
 - Responsive/accessibility evidence current.
 - Known limitations and deviations recorded.
@@ -102,7 +106,7 @@ Blocks:
 ## 4. Phase/ICM progression rules
 
 - Completing Phase 0 does not mean L0–L4 are all complete. It means the initial context and source contracts are sufficiently grounded.
-- Phase 1 establishes executable tooling and some L1/L4 controls; it does not implement the design.
+- Phase 1 establishes executable tooling, dependency/effect controls, and some L1/L4 controls; it does not implement the design.
 - Phase 2 implements major L1/L2 boundaries and the relevant L3 effects; its visual review is not final release evidence.
 - Phase 3 deepens L2/L3 correctness across viewport and assistive-technology contexts and supplies G3 evidence.
 - Phase 4 reconciles all levels against the actual release candidate and establishes G4.
