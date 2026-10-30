@@ -39,6 +39,7 @@ Every control must specify:
 | `PP-VER-010` | Asset loading and alternative text review | Automated/manual | PP-CON-005 | Pending asset inventory |
 | `PP-VER-011` | Release artifact and revision provenance | Automated/manual | PP-REQ-008, PP-CON-009 | Planned |
 | `PP-VER-012` | Owner review and release disposition | Manual approval | PP-REQ-008, PP-CON-009 | Required for each release |
+| `PP-VER-013` | ICM reference and traceability integrity | Manual initially; automation when justified | All accepted requirements and ICM registers | Defined; not yet run on final ICM revision |
 
 ## 4. Automated controls
 
@@ -120,7 +121,7 @@ A verification result is valid only for:
 - The pages, features, and controls included.
 - The time it was executed, subject to known external changes.
 
-A code change affecting a tested property makes the prior evidence stale for that property. Rerun only the relevant controls where impact analysis is sound; otherwise repeat the broader suite.
+A code change affecting a tested property makes the prior evidence stale for that property. Rerun the relevant controls where impact analysis is sound; otherwise repeat the broader suite.
 
 ## 9. Phase gates
 
@@ -134,7 +135,40 @@ A code change affecting a tested property makes the prior evidence stale for tha
 
 Passing a phase gate requires evidence and approval, not merely completion of a task list.
 
-## 10. Failure and waiver policy
+## 10. ICM integrity control — PP-VER-013
+
+The purpose of this control is to detect an internally inconsistent ICM before it becomes an implementation authority.
+
+### Manual procedure
+
+1. Confirm every canonical ICM document listed in the ICM charter exists.
+2. Resolve every internal Markdown link from its referring file.
+3. Confirm all accepted `PP-REQ` identifiers are unique and occur in both the contract inventory and master traceability register.
+4. Confirm every accepted requirement maps to at least one `PP-VER` control.
+5. Confirm every referenced contract, process, effect, artifact, reference, and verification identifier has a canonical definition.
+6. Confirm IDs are stable and not reused for different meanings.
+7. Confirm each effect is linked to a process or explicitly marked as a resource effect.
+8. Confirm every verification record states its scope and limitation.
+9. Confirm specified, implemented, and verified states have not been conflated.
+10. Review the current project status for unsupported completion claims.
+
+### Failure conditions
+
+- Broken internal links or missing canonical records.
+- Duplicate IDs or ambiguous ownership.
+- Accepted requirement without verification mapping.
+- Orphaned effect or verification claim.
+- Missing revision attribution for implementation evidence.
+- A target-state statement represented as current implementation.
+- A release/merge status that lacks owner authorization.
+
+### Automation policy
+
+A repository script may automate link resolution, ID uniqueness, registry coverage, and presence checks. The first implementation should use the repository's already-selected scripting/runtime ecosystem. Do not introduce a new language or dependency solely for this check before Phase 1 establishes the toolchain.
+
+The script must fail non-zero for mandatory integrity failures and report diagnostics with file and record ID. Until such automation exists, describe the procedure as manual and do not claim a CI gate exists.
+
+## 11. Failure and waiver policy
 
 - A failed mandatory check blocks the affected gate.
 - A flaky test is not a pass; investigate and record the failure.
@@ -143,7 +177,7 @@ Passing a phase gate requires evidence and approval, not merely completion of a 
 - A waiver does not convert a failure into a pass; report the control as waived.
 - A release blocker must be fixed or explicitly accepted through the approved risk process before release.
 
-## 11. Verification report template
+## 12. Verification report template
 
 For each significant change, record:
 
@@ -163,6 +197,6 @@ Disposition:
 Reviewer and date:
 ```
 
-## 12. L4 completion condition
+## 13. L4 completion condition
 
 L4 is complete for a release only when all mandatory controls applicable to the approved scope have current evidence, failures and limitations have explicit disposition, and the project owner has authorized the release action.
