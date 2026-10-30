@@ -8,7 +8,7 @@ The project follows gated phase progression. A phase is not complete because wor
 
 | Phase | Name | Status | Objective |
 | --- | --- | --- | --- |
-| 0 | [Source discovery and specification](phases/phase-0-source-discovery.md) | Blocked — inspectable source required | Establish the company positioning/customer journey and the verified design/web specification |
+| 0 | [Source discovery and specification](phases/phase-0-source-discovery.md) | Awaiting owner approval (G0) | Establish the company positioning/customer journey and the verified design/web specification |
 | 1 | [Application foundation](phases/phase-1-application-foundation.md) | Not started | Establish a minimal, reproducible React + TypeScript application |
 | 2 | [Design system and page composition](phases/phase-2-design-system-and-composition.md) | Not started | Translate the approved design into page structure and components |
 | 3 | [Responsive and accessible implementation](phases/phase-3-responsive-accessibility.md) | Not started | Verify responsive behavior and accessibility requirements |

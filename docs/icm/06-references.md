@@ -38,7 +38,7 @@ For external requirements, cite the authoritative source close to the relevant c
 
 | ID | Reference | Class | Authority / purpose | Current applicability |
 |---|---|---|---|---|
-| `PP-REF-001` | Owner-supplied Canva design | Canonical source for visual/content facts | Project owner | Supplied, not yet inspectable |
+| `PP-REF-001` | Owner-supplied Canva design (export PDF, SHA-256 `173bd1a7…baea6`; see `docs/design-reference.md`) | Canonical source for visual/content facts | Project owner | Export inspected 2026-10-30; editor URL not used |
 | `PP-REF-002` | `docs/project-brief.md` | Canonical | Project scope and objectives | Current |
 | `PP-REF-003` | `docs/decision-log.md` | Canonical decision record | Accepted and open decisions | Current |
 | `PP-REF-004` | `docs/architecture.md` | Architecture contract | Logical architecture and boundaries | Current |

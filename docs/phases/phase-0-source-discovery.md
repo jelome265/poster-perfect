@@ -2,7 +2,7 @@
 
 | Field | Value |
 | --- | --- |
-| Status | Blocked — inspectable source required |
+| Status | Awaiting owner approval (G0); records drafted from the export, 2026-10-30 |
 | Objective | Produce an owner-approved company portfolio and customer-journey specification alongside the verified Canva-to-web design specification |
 | Depends on | Project brief and accessible source material |
 | Primary outputs | Company positioning and customer-journey specification, source inventory, page/content specification, information architecture, component inventory and blueprint, design-token inventory, interaction inventory, approved web interpretation |

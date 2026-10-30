@@ -34,8 +34,8 @@ A file existing in Git does not automatically make it authoritative or prove tha
 | `PP-ART-003` | Frontend architecture | `docs/architecture.md` | Architecture | Maintainer / owner approval | Current logical baseline |
 | `PP-ART-004` | Technical standards | `docs/technical-standards.md` | Contract | Maintainer / owner approval | Current baseline |
 | `PP-ART-005` | Design-token inventory | `docs/design-system.md` | Specification | Source inspection | Pending |
-| `PP-ART-006` | Content and section inventory | `docs/content-structure.md` | Specification | Source inspection | Pending; page set and section order owned by `PP-ART-018` |
-| `PP-ART-007` | Component inventory | `docs/components.md` | Architecture/contract | Source inspection and implementation | Pending; contract details owned by `PP-ART-019` |
+| `PP-ART-006` | Content and section inventory | `docs/content-structure.md` | Specification | Source inspection | Drafted from export 2026-10-30; owner confirmations pending; page set and section order owned by `PP-ART-018` |
+| `PP-ART-007` | Component inventory | `docs/components.md` | Architecture/contract | Source inspection and implementation | Drafted from export 2026-10-30; owner approval pending; contract details owned by `PP-ART-019` |
 | `PP-ART-008` | Delivery phase specifications | `docs/phases/` | Contract | Maintainer / owner approval | Current |
 | `PP-ART-009` | Decision log | `docs/decision-log.md` | Governance | Project owner | Current |
 | `PP-ART-010` | ICM charter and indexes | `docs/icm/README.md` and related files | Architecture/governance | Maintainer / owner approval | Initial baseline |

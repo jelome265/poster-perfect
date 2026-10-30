@@ -6,7 +6,7 @@ This directory contains the phase-level execution specifications for Poster Perf
 
 | Phase | Name | Current status | Primary exit condition |
 | --- | --- | --- | --- |
-| 0 | [Source discovery and specification](phase-0-source-discovery.md) | Blocked — source inspection required | Source and owner-approved web specification are complete |
+| 0 | [Source discovery and specification](phase-0-source-discovery.md) | Awaiting owner approval (G0) | Source and owner-approved web specification are complete |
 | 1 | [Application foundation](phase-1-application-foundation.md) | Not started | Reproducible React and TypeScript application foundation |
 | 2 | [Design system and page composition](phase-2-design-system-and-composition.md) | Not started | Approved design translated into complete page composition |
 | 3 | [Responsive and accessible implementation](phase-3-responsive-accessibility.md) | Not started | Agreed viewport and accessibility requirements verified |

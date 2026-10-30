@@ -108,14 +108,14 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-VER-013` | ICM reference/traceability integrity | Passed at `76f990f` for that exact revision (PP-ART-017 §8 R3); prior: failed at `9eae0e2` (R1), passed at `86246e1` (R2); rerun required for later ICM changes | All gates and material documentation changes |
 | `PP-VER-014` | Architecture/component-boundary review | Planned | G1, G2, G4 |
 | `PP-VER-015` | Dependency/side-effect surface review | Defined; not yet run | G1, G2, G4 |
-| `PP-VER-016` | IA and component-blueprint reconciliation | Blocked on source | G0, G2 |
+| `PP-VER-016` | IA and component-blueprint reconciliation | Executed by author 2026-10-30; owner review pending | G0, G2 |
 | `PP-VER-017` | Company positioning, approved portfolio and customer journey reconciliation | Partially specified; details pending Phase 0 | G0, G2, G4 |
 
 ## 8. Open questions and blockers
 
 | ID | Question/blocker | Owner | Resolution phase | Current disposition |
 |---|---|---|---|---|
-| `PP-RSK-001` | Canva artwork cannot currently be inspected from the supplied URL | Project owner supplies accessible export/reference | Phase 0 | Blocks design-specific specification |
+| `PP-RSK-001` | Canva artwork cannot currently be inspected from the supplied URL | Project owner supplies accessible export/reference | Phase 0 | Mitigated 2026-10-30: export inspected (see `design-reference.md`); residual items recorded there |
 | `PP-RSK-002` | Specific customer segments, page count, and section hierarchy are not yet verified; company-level website purpose is owner-confirmed in DEC-008 | Project owner / source inspection | Phase 0 | Partially resolved; do not infer the remaining details |
 | `PP-RSK-003` | Exact copy, destinations, and control behavior are not inventoried | Source inspection / owner | Phase 0 | Unknown; do not implement invented behavior |
 | `PP-RSK-004` | Toolchain, routing, styling, package manager, and hosting are undecided | Maintainer / owner decision | Phase 1 | Open; choose from actual requirements |
