@@ -2,7 +2,7 @@
 
 **Artifact:** `PP-ART-018`  
 **Class:** Specification (contract-backed; see `PP-CON-010`)  
-**Status:** Blocked — Phase 0 source inspection required (`PP-RSK-001`, `PP-RSK-002`)  
+**Status:** Drafted from the export (2026-10-30); owner approval pending (G0). Source inspection complete; `PP-RSK-001` mitigated (`PP-RSK-002` open for web adaptations)  
 **Canonical owner:** Page implementation owner (`PP-MAP-011`, role as defined in `icm/01-architecture-map.md`)  
 **Producer:** Page implementation owner, from the source-inspection record  
 **Approval:** Project owner  
@@ -66,32 +66,46 @@ Every node MUST record the following. A field that does not apply is marked "not
 | Component reference | Component ID(s) from `components.md`, or "local markup" with a reason |
 | Status | Specification state per `docs/icm/README.md` §5.1 |
 
-## 5. Structure (pending source inspection)
+## 5. Structure (observed in the export, 2026-10-30)
+
+The export is one page with seven sections. The records below are drafted from it and are awaiting owner approval (`PP-VER-016`, G0). No navigation, anchors, or additional pages are observed.
 
 ### 5.1 Page and route inventory
 
 | ID | Page / route | Parent | Purpose | Status |
 | --- | --- | --- | --- | --- |
-| Pending | Pending source inspection | Pending | Pending | Blocked |
+| `PP-IA-001` | Home page: the only page observed. Route not assigned | Root | Company portfolio and enquiry entry (DEC-008) | Drafted from export; owner approval pending |
 
 ### 5.2 Hierarchy
 
 ```text
-Pending source inspection.
-No hierarchy is recorded. Do not infer one.
+PP-IA-001 Home page (single page)
+├── PP-IA-002 Hero
+├── PP-IA-003 About
+├── PP-IA-004 Value statement and value points
+├── PP-IA-005 Services
+├── PP-IA-006 Statistics
+├── PP-IA-007 Testimonials
+└── PP-IA-008 Contact and footer
 ```
 
 ### 5.3 Section order per page
 
 | Page ID | Order | Section ID | Source region | Status |
 | --- | --- | --- | --- | --- |
-| Pending | Pending | Pending | Pending | Blocked |
+| `PP-IA-001` | 1 | `PP-IA-002` | Hero, dark navy band at top | Drafted from export |
+| `PP-IA-001` | 2 | `PP-IA-003` | About, light grey band | Drafted from export |
+| `PP-IA-001` | 3 | `PP-IA-004` | Value statement, bright blue band | Drafted from export |
+| `PP-IA-001` | 4 | `PP-IA-005` | Services, dark navy band | Drafted from export; duplicated paragraph under review |
+| `PP-IA-001` | 5 | `PP-IA-006` | Statistics, three columns | Drafted from export; claims under review |
+| `PP-IA-001` | 6 | `PP-IA-007` | Testimonials, light grey band | Drafted from export; permissions under review |
+| `PP-IA-001` | 7 | `PP-IA-008` | Contact and footer, dark navy band | Drafted from export; destinations under review |
 
 ### 5.4 Navigation
 
 | Nav ID | Label source | Destination (interaction ID) | Location(s) | Keyboard and focus expectation | Status |
 | --- | --- | --- | --- | --- | --- |
-| Pending | Pending | Pending | Pending | Pending | Blocked |
+| None observed | Not applicable | Not applicable | Not applicable | Not applicable | The export has no navigation bar or menu. Any navigation or enquiry entry the company objective needs is a web adaptation (PP-CON-011) and requires owner approval |
 
 Navigation entries MUST use semantic links (`PP-CON-006`). A navigation entry without an observed destination is not recorded as a link.
 
@@ -99,9 +113,21 @@ Navigation entries MUST use semantic links (`PP-CON-006`). A navigation entry wi
 
 | Anchor ID | Target section | Used by | Status |
 | --- | --- | --- | --- |
-| Pending | Pending | Pending | Blocked |
+| None observed | Not applicable | Not applicable | If the hero button ("LEARN MORE") targets a section, the owner records the anchor here. Anchor identifiers must be unique and must not be generated from display text that may change |
 
-Anchor identifiers MUST be unique within the document and MUST NOT be generated from display text that may change.
+### 5.6 Node references (content, component, responsive, interaction)
+
+| Section ID | Content entry (`content-structure.md`) | Component(s) or local markup (`components.md`) | Responsive rule (`design-system.md`) | Interaction rows (`content-structure.md`) |
+| --- | --- | --- | --- | --- |
+| `PP-IA-002` | Hero, PP-IA-002 section | `PP-CMP-005` (lockup); local markup for headline and button | None in source | "LEARN MORE" (owner decision) |
+| `PP-IA-003` | About, PP-IA-003 section | Local markup | None in source | None |
+| `PP-IA-004` | Value statement, PP-IA-004 section | `PP-CMP-001` (four instances) | None in source | None |
+| `PP-IA-005` | Services, PP-IA-005 section | `PP-CMP-002` (three instances) | None in source | Service cards (owner decision) |
+| `PP-IA-006` | Statistics, PP-IA-006 section | `PP-CMP-003` (three instances) | None in source | None |
+| `PP-IA-007` | Testimonials, PP-IA-007 section | `PP-CMP-004` (three instances) | None in source | None |
+| `PP-IA-008` | Contact and footer, PP-IA-008 section | `PP-CMP-005`; local markup for the contact block and social group | None in source | Email, telephone, social icons, lockup (owner decisions) |
+
+The export has no navigation bar and no enquiry action. The enquiry path required by `PP-CON-011` is a proposed web adaptation and has no node until it is approved.
 
 ## 6. Responsive navigation and reflow
 

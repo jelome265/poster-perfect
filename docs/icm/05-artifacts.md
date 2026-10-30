@@ -34,8 +34,8 @@ A file existing in Git does not automatically make it authoritative or prove tha
 | `PP-ART-003` | Frontend architecture | `docs/architecture.md` | Architecture | Maintainer / owner approval | Current logical baseline |
 | `PP-ART-004` | Technical standards | `docs/technical-standards.md` | Contract | Maintainer / owner approval | Current baseline |
 | `PP-ART-005` | Design-token inventory | `docs/design-system.md` | Specification | Source inspection | Pending |
-| `PP-ART-006` | Content and section inventory | `docs/content-structure.md` | Specification | Source inspection | Pending; page set and section order owned by `PP-ART-018` |
-| `PP-ART-007` | Component inventory | `docs/components.md` | Architecture/contract | Source inspection and implementation | Pending; contract details owned by `PP-ART-019` |
+| `PP-ART-006` | Content and section inventory | `docs/content-structure.md` | Specification | Source inspection | Drafted from export 2026-10-30; owner confirmations pending; page set and section order owned by `PP-ART-018` |
+| `PP-ART-007` | Component inventory | `docs/components.md` | Architecture/contract | Source inspection and implementation | Drafted from export 2026-10-30; owner approval pending; contract details owned by `PP-ART-019` |
 | `PP-ART-008` | Delivery phase specifications | `docs/phases/` | Contract | Maintainer / owner approval | Current |
 | `PP-ART-009` | Decision log | `docs/decision-log.md` | Governance | Project owner | Current |
 | `PP-ART-010` | ICM charter and indexes | `docs/icm/README.md` and related files | Architecture/governance | Maintainer / owner approval | Initial baseline |
@@ -46,8 +46,8 @@ A file existing in Git does not automatically make it authoritative or prove tha
 | `PP-ART-015` | Executable verification reports | Not yet created | Verification evidence | CI and manual review | Pending |
 | `PP-ART-016` | Release build and deployment record | Not yet created | Release artifact | Release pipeline / owner | Not started |
 | `PP-ART-017` | ICM integrity audit (2026-10-30) | `docs/icm/integrity-audit-2026-10-30.md` | Verification evidence | ICM/documentation reviewer | Passed at `86246e1` (§7 R2) for that revision; failed at `9eae0e2` (§7 R1, ambiguous ownership, corrected); rerun required for subsequent ICM changes; not application verification |
-| `PP-ART-018` | Information architecture | `docs/information-architecture.md` | Specification (contract-backed) | Page implementation owner (`PP-MAP-011`); approval: project owner | Blocked — Phase 0 source inspection required |
-| `PP-ART-019` | Component blueprint | `docs/component-blueprint.md` | Contract / architecture | Component maintainer (`PP-MAP-013`); approval: project owner | Blocked — Phase 0 source inspection required |
+| `PP-ART-018` | Information architecture | `docs/information-architecture.md` | Specification (contract-backed) | Page implementation owner (`PP-MAP-011`); approval: project owner | Drafted from export 2026-10-30; owner approval pending (G0) |
+| `PP-ART-019` | Component blueprint | `docs/component-blueprint.md` | Contract / architecture | Component maintainer (`PP-MAP-013`); approval: project owner | Drafted from export 2026-10-30; owner approval pending (G0) |
 
 The registry is a navigation and lifecycle record. Subject-specific details remain in the canonical file listed above.
 

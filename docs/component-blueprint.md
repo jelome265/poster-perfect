@@ -2,7 +2,7 @@
 
 **Artifact:** `PP-ART-019`  
 **Class:** Contract / architecture (see `PP-CON-003`)  
-**Status:** Blocked — no component is specified until Phase 0 source inspection is complete (`PP-RSK-001`, `PP-RSK-003`)  
+**Status:** Partially specified from the export (2026-10-30); owner approval pending (G0) (`PP-RSK-001` mitigated; `PP-RSK-003` open)  
 **Canonical owner:** Component maintainer (`PP-MAP-013`, role as defined in `icm/01-architecture-map.md`)  
 **Producer:** Component maintainer; Section implementation owner (`PP-MAP-012`) for entries in their section  
 **Approval:** Project owner  
@@ -69,13 +69,99 @@ Open questions:        <none | list with owner>
 - Native elements are preferred. A clickable container is not a substitute for a link or button.
 - Local state stays in the owning component. Shared state requires a recorded justification, consistent with `docs/icm/03-processes.md` §10.
 
-## 6. Inventory status
+## 6. Entries and inventory status
+
+Entries below are drafted from the export (2026-10-30). Each lists only what the source shows. Fields the source cannot determine are marked as open questions, not guessed. No entry is marked Accepted until the owner approves it.
+
+### PP-CMP-001 — ValueBadge
+
+Specification: Partially specified | Implementation: Not started | Evidence: Not collected
+
+- Responsibility: show one value point, a check icon with a short label.
+- Used in sections: `PP-IA-004`. Reused by: value band only (single instance per point; 4 instances).
+- Native element: list item (`li`) in a list. Not interactive.
+- Typed inputs: `label: string` (source text: "RELIABILITY", "PERSONALIZED APPROACH", "TIMELY DELIVERY", "HIGH STANDARDS"); `icon` (check mark, decorative).
+- Owned state: none. Events emitted: none.
+- Browser effects: none (`PP-EFF` not triggered).
+- Keyboard and focus: not applicable (not interactive).
+- Responsive variants: none in source. Reflow of four items is an open question.
+- Asset dependencies: check-mark icon. Original vector not supplied.
+- Accessibility: icon is decorative and hidden from assistive technology; label is the accessible text. Contrast of the label on the blue band to be checked.
+- Failure behavior: open question.
+- Verification: `PP-VER-002`, `PP-VER-005`, `PP-VER-008`.
+
+### PP-CMP-002 — ServiceCard
+
+Specification: Partially specified | Implementation: Not started | Evidence: Not collected
+
+- Responsibility: show one service with a sample image and its label.
+- Used in sections: `PP-IA-005`. Reused by: services only (3 instances).
+- Native element: figure with caption (`figure` / `figcaption`) if non-interactive. A link element if the owner approves links.
+- Typed inputs: `label: string` ("Brochures", "Logos", "Magazine covers"); `image: asset reference`; `altText: string` (owner to supply).
+- Owned state: none.
+- Browser effects: none if non-interactive. If linked, the destination type is an open question.
+- Keyboard and focus: open question. It depends on whether the card links to portfolio content.
+- Responsive variants: none in source. Reflow of three cards is an open question.
+- Asset dependencies: three sample images. Originals not supplied; publication permission pending (`content-structure.md`, Owner decisions 6).
+- Accessibility: alternative text required for each image, and it must describe the sample rather than repeat the label.
+- Failure behavior: open question (what is shown if a sample is withdrawn).
+- Verification: `PP-VER-002`, `PP-VER-005`, `PP-VER-010`.
+
+### PP-CMP-003 — StatTile
+
+Specification: Partially specified | Implementation: Not started | Evidence: Not collected
+
+- Responsibility: show one figure with its label.
+- Used in sections: `PP-IA-006`. Reused by: statistics only (3 instances).
+- Native element: list item (`li`) or a group with the figure and label. Not interactive.
+- Typed inputs: `value: string` ("99%", "1+", "Worldwide"); `label: string | null` ("Projects completed", "Years in Operation", and none for "Worldwide").
+- Owned state: none. Browser effects: none.
+- Keyboard and focus: not applicable.
+- Responsive variants: none in source.
+- Accessibility: value and label read together as one statement. Open question: whether "Worldwide" should be a variant with no label, or whether it should carry a figure.
+- Failure behavior: open question.
+- Verification: `PP-VER-002`, `PP-VER-005`. Claims are subject to owner confirmation (`content-structure.md`, Owner decisions 3).
+
+### PP-CMP-004 — TestimonialCard
+
+Specification: Partially specified | Implementation: Not started | Evidence: Not collected
+
+- Responsibility: show one client quote with role and location.
+- Used in sections: `PP-IA-007`. Reused by: testimonials only (3 instances).
+- Native element: figure with block quote and caption (`figure` / `blockquote` / `figcaption`). Not interactive.
+- Typed inputs: `quote: string`; `attribution: string | null`; `roleAndLocation: string`. The attribution is null until the client gives permission.
+- Owned state: none. Browser effects: none.
+- Keyboard and focus: not applicable.
+- Responsive variants: none in source.
+- Publication: each card may publish only after the owner confirms permission for the quote and attribution (`content-structure.md`, Owner decisions 4).
+- Accessibility: the quote is in a block quote, with the attribution in the caption. Quotation marks come from the markup, not from typed characters.
+- Verification: `PP-VER-002`, `PP-VER-005`, `PP-VER-006`.
+
+### PP-CMP-005 — BrandLockup
+
+Specification: Partially specified | Implementation: Not started | Evidence: Not collected
+
+- Responsibility: show the logo mark with the "Poster Perfect" wordmark.
+- Used in sections: `PP-IA-002` (hero) and `PP-IA-008` (footer). Reused by: hero and footer (2 instances).
+- Native element: open question. A link to the home page, or a plain image group, depending on the owner's decision (`content-structure.md`, Owner decisions 9 and the logo-lockup row).
+- Typed inputs: none. The lockup has a fixed brand asset. Its only variant is the background, and both instances sit on dark navy.
+- Owned state: none. Browser effects: none, unless linked.
+- Keyboard and focus: open question. Depends on the link decision.
+- Asset dependencies: logo mark vector. Not supplied in the export; the owner must supply it.
+- Accessibility: alternative text "Poster Perfect" for a link, or a decorative mark with the wordmark as text.
+- Verification: `PP-VER-008`, `PP-VER-010`.
+
+## 7. Inventory status
 
 | Component ID | Name (from `components.md`) | Specification | Notes |
 | --- | --- | --- | --- |
-| Pending | Pending source inspection | Blocked | No component is specified |
+| `PP-CMP-001` | ValueBadge | Partially specified | Reflow and label contrast open |
+| `PP-CMP-002` | ServiceCard | Partially specified | Link decision and alternative text open; permissions pending |
+| `PP-CMP-003` | StatTile | Partially specified | "Worldwide" variant open; claims pending confirmation |
+| `PP-CMP-004` | TestimonialCard | Partially specified | Attribution null until permission confirmed |
+| `PP-CMP-005` | BrandLockup | Partially specified | Link decision open; logo vector not supplied |
 
-## 7. Verification
+## 8. Verification
 
 | Control | What it checks against this blueprint |
 | --- | --- |
@@ -86,7 +172,7 @@ Open questions:        <none | list with owner>
 | `PP-VER-010` | Asset dependencies and alternative text match `PP-CON-005` |
 | `PP-VER-015` | Declared effects match observed effects |
 
-## 8. Change control
+## 9. Change control
 
 1. Identify the affected component(s), the section(s) they serve, and the requirement or contract.
 2. Update the entry here, the inventory row in `components.md`, and any affected IA node in the same change.

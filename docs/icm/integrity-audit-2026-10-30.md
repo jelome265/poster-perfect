@@ -142,3 +142,33 @@ Items 9, 10, 12, and 13 were checked by targeted search and by reading the relev
 - PP-VER-016 was not run. It is blocked until the Canva source is inspectable.
 - This is documentation-integrity evidence only. It is not application verification, visual fidelity, or WCAG conformance.
 - No waiver was granted.
+
+## 9. PP-VER-016 author run against the Canva export (2026-10-30)
+
+This run is by the author and is not independent. It is reported as a structural reconciliation with open items. It does not satisfy the owner's review, and no approval is recorded here.
+
+Source: the export identified in `docs/design-reference.md` (SHA-256 `173bd1a7…baea6`). Not committed.
+
+| Check | Result |
+| --- | --- |
+| Pages in source vs. information architecture | 1 page in source; recorded once (`PP-IA-001`, §5.1) |
+| Sections in source vs. IA | 7 sections; each recorded once in §5.3 and §5.6; each has a content entry in `content-structure.md` |
+| Navigation entries | None observed in source; §5.4 records none, and no link is invented |
+| Anchor targets | None observed; §5.5 records none |
+| Components referenced by IA | 5 of 5 (`PP-CMP-001`–`005`) referenced from §5.6, defined in the blueprint, and listed in the inventory |
+| Repeated or coherent regions without a component | Recorded as local markup with a reason (`components.md`, "Local markup") |
+| Effects declared per component | 5 of 5 declared. 3 are "none". 2 (`PP-CMP-002`, `PP-CMP-005`) depend on the link decision and are open |
+| Keyboard and focus declared | 5 of 5 declared. 3 not applicable. 2 open, on the same link decision |
+| Entries marked Accepted | 0. No approval recorded |
+| Identifiers and links (validator) | 0 errors; 131 identifiers defined |
+| Owner-role check | 0 findings |
+
+Result: structural reconciliation **passes with open items**.
+
+Open items that block G0 approval:
+
+1. Link decisions for service cards (`PP-CMP-002`) and the logo lockup (`PP-CMP-005`).
+2. Responsive reflow for the value badges, service cards, statistics, and testimonials: no source variant exists.
+3. Owner decisions 1–12 in `content-structure.md`: duplicated paragraph, voice, statistics, testimonial permissions, service terms, portfolio permissions, copy typos, contact destinations, hero button, social profile URLs, font licence, and the enquiry path required by PP-CON-011.
+4. Full-resolution assets: the original images, logo vector, and sample artwork are not in the repository.
+5. Approximate color values (`design-system.md`) to be confirmed. Spacing, shape, and elevation not yet measured.

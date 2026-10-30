@@ -2,7 +2,7 @@
 
 ## Status
 
-**Blocked on Phase 0 source inspection.** The inventory is produced from the inspected source and the information architecture (`PP-ART-018`). Component contracts (inputs, state, effects, keyboard and focus, accessibility) are recorded in the [component blueprint](component-blueprint.md) (`PP-ART-019`), not in this file. Naming and boundaries should reflect the actual composition rather than a presumed poster or landing-page pattern.
+**Drafted from the export (2026-10-30); owner approval pending.** The inventory is produced from the inspected source and the information architecture (`PP-ART-018`). Component contracts (inputs, state, effects, keyboard and focus, accessibility) are recorded in the [component blueprint](component-blueprint.md) (`PP-ART-019`), not in this file. Naming and boundaries should reflect the actual composition rather than a presumed poster or landing-page pattern.
 
 ## Component criteria
 
@@ -38,11 +38,26 @@ Avoid:
 
 ## Component inventory
 
-After inspecting the design, list components by section, using the section identifiers in the [information architecture](information-architecture.md). Inputs, interactions, effects, and accessibility details belong in the blueprint, not in this table.
+Derived from the export (2026-10-30). Repeated patterns and coherent regions are listed as components. Single-use markup is listed as local markup with its reason. Contract details are in the [component blueprint](component-blueprint.md) (`PP-ART-019`).
 
 | Component ID | Component | Responsibility (one line) | IA section(s) | Reused by | Blueprint |
 | --- | --- | --- | --- | --- | --- |
-| Pending | Pending source inspection | Pending | Pending | Pending | Pending |
+| `PP-CMP-001` | ValueBadge | Show one value point: a check icon with a short label | `PP-IA-004` (4 instances) | Value band only | `PP-CMP-001` |
+| `PP-CMP-002` | ServiceCard | Show one service with a sample image and a label | `PP-IA-005` (3 instances) | Services only | `PP-CMP-002` |
+| `PP-CMP-003` | StatTile | Show one figure with its label | `PP-IA-006` (3 instances) | Statistics only | `PP-CMP-003` |
+| `PP-CMP-004` | TestimonialCard | Show one quote with role and location | `PP-IA-007` (3 instances) | Testimonials only | `PP-CMP-004` |
+| `PP-CMP-005` | BrandLockup | Show the logo mark with the "Poster Perfect" wordmark | `PP-IA-002`, `PP-IA-008` (2 instances) | Hero and footer | `PP-CMP-005` |
+
+### Local markup (not extracted)
+
+| Markup | IA section | Reason it stays local |
+| --- | --- | --- |
+| Hero block and headline | `PP-IA-002` | Single instance with a unique layout |
+| "LEARN MORE" button | `PP-IA-002` | Single observed use. Reassess if the enquiry path (`PP-CON-011`) adds a second button |
+| About block | `PP-IA-003` | Single prose block |
+| Section headings | `PP-IA-003` to `PP-IA-007` | Treatment varies: a rule sits above two of five headings. Reassess after the owner confirms the heading style |
+| Contact block | `PP-IA-008` | Single use |
+| Social icon group | `PP-IA-008` | Single use. Reassess when destinations are confirmed |
 
 ## Review checklist
 

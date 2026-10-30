@@ -2,13 +2,20 @@
 
 ## Source
 
-The project owner supplied a Canva design as the visual source of truth. The editor URL is intentionally not copied into this public repository. Access to the editable Canva document should remain under the owner's control.
+The project owner supplied a Canva design as the visual and content reference. The Canva editor URL is intentionally not copied into this public repository; access to the editable document stays under the owner's control.
+
+The export inspected for this record is identified below. The PDF itself is not committed. It contains owner-supplied content and third-party sample imagery whose publication permission is not yet confirmed, so the owner holds it and this record identifies it by name and hash.
+
+| Field | Value |
+| --- | --- |
+| Export file name | `Company_Website_Business_Website_in_Dark_Blue_White_Bright_Blue_Simple_Professional_Style.pdf` |
+| SHA-256 | `173bd1a71399067253292eed129af90df0a8caa425679a2674f932ae475baea6` |
+| Exporting tool | Canva (PDF metadata) |
+| Received | 2026-10-30, owner upload |
 
 ## Inspection status
 
-**Pending.** During the initial documentation pass, neither the supplied Canva editor URL nor its corresponding view URL exposed the design contents to the available read-only inspection method. This is an access limitation; it does not establish that the design or link is invalid.
-
-No visual properties have been inferred from the project name or from generic graphic-design-company website conventions. The company-level business purpose is owner-confirmed in the project brief; visual structure and design values remain pending source inspection.
+**Inspected 2026-10-30, with measurement limits.** The export was inspected by text extraction, embedded-font inspection, and a 72 dpi render. Values marked "approximate" are estimates from that render and must be confirmed before they become canonical tokens (see `design-system.md`). No values were inferred from the project name or from generic company-website conventions.
 
 ## Required source material
 
@@ -25,8 +32,6 @@ Before design-specific implementation begins, inspect and record:
 
 The company-level purpose is established by the project brief and DEC-008, independently of source inspection. If the business objective requires additional web content or an enquiry action not visible in the Canva source, record it as an owner-approved web adaptation; do not represent it as an observed source feature.
 
-A full-resolution PNG is suitable for visual inspection. A PDF is useful when the source contains multiple pages. Supply separately any source assets that should be used independently in the website.
-
 ## Translation rules
 
 1. Treat the inspected Canva design as the visual reference and use owner-approved business requirements as the authority for company purpose and required customer journey.
@@ -39,23 +44,24 @@ A full-resolution PNG is suitable for visual inspection. A PDF is useful when th
 
 ## Inspection record
 
-Complete this table after reviewing the source.
-
 | Field | Result |
 | --- | --- |
-| Inspection date | Pending |
-| Source export received | Pending |
-| Number of pages / artboards | Pending |
-| Canvas dimensions | Pending |
+| Inspection date | 2026-10-30 |
+| Source export received | Yes: one PDF (see Source) |
+| Number of pages / artboards | 1 page: one long scrolling layout |
+| Canvas dimensions | 1024.5 × 4032 pt (PDF page size). Canva artboard size not separately confirmed |
 | Primary content purpose | Company portfolio for a graphic design business and prospective-customer acquisition (owner-confirmed 2026-10-30; DEC-008) |
-| Target audience | Prospective customers; specific customer segments pending owner confirmation |
-| Typography identified | Pending |
-| Color palette identified | Pending |
-| Assets inventoried | Pending |
-| Interactive behavior identified | Pending |
-| Responsive variants supplied | Pending |
-| Owner-approved adaptations | Pending |
+| Target audience | Prospective customers; specific segments pending owner confirmation |
+| Typography identified | Aileron, embedded in Regular and Bold. Family identified; sizes and line heights approximate or pending; licence terms pending owner confirmation |
+| Color palette identified | Six dominant colors, approximate (see `design-system.md`) |
+| Assets inventoried | Hero image (magazine-style sample); three service samples (brochure, logo, magazine cover); footer sample image; logo mark (used twice); four check-mark icons; three social-media icons. Originals not extracted. Publication permission pending |
+| Interactive behavior identified | One button ("LEARN MORE"); contact email and telephone as text; three social icons. Destinations not shown in the source (see `content-structure.md`) |
+| Responsive variants supplied | None. Single desktop-width layout |
+| Owner-approved adaptations | None yet. Enquiry path required by PP-CON-011 is not in the source (see `content-structure.md`) |
 
-## Open dependency
+## Residual dependencies
 
-The project owner needs to provide an export that can be inspected in this workflow, or a view-only Canva link that exposes the design without requiring editor access. Once the source is available, replace the pending entries with measured and verified details.
+- Full-resolution original image files and the logo vector, which the owner must supply separately (the export is a rendered PDF).
+- Confirmation of approximate color and type values, and of the Aileron licence.
+- Responsive variants, if the owner wants them (none supplied).
+- Owner confirmation of the claims, testimonials, portfolio permissions, and contact destinations recorded in `content-structure.md`.

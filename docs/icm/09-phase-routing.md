@@ -124,7 +124,7 @@ Blocks:
 
 | Gate | Status | Reason |
 |---|---|---|
-| G0 | Blocked | Source artwork is not inspectable; company-level purpose is known but business content, enquiry details, information architecture and component blueprint are not yet complete |
+| G0 | Ready for owner review | Source inspected 2026-10-30. Records drafted from the export. Owner approval outstanding for the decisions and claims in `content-structure.md` (Owner decisions) |
 | G1 | Not started | Toolchain not selected; application scaffold absent |
 | G2 | Not started | No application composition |
 | G3 | Not started | No responsive implementation |
