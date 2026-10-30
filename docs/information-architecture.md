@@ -12,9 +12,15 @@
 
 This document is the canonical record of the **structure** of the Poster Perfect website: which pages or routes exist, how they nest, how navigation connects them, what order sections appear in, and where in-page anchor targets exist.
 
-**No page, route, section, navigation entry, or anchor is recorded here until it is observed in the inspected Canva source or explicitly confirmed by the project owner.** The sections below are templates. They contain no sitemap, because none has been established. Do not infer one from the project name, from typical landing-page patterns, or from the component names in `components.md`.
+**No page, route, section, navigation entry, or anchor is recorded here until it is observed in the inspected Canva source or explicitly approved by the project owner as a web requirement/adaptation.** The sections below are templates. They contain no sitemap, because none has been established. Do not infer one from the project name, from typical company-portfolio patterns, or from the component names in `components.md`.
 
-## 2. Ownership split
+## 2. Business-purpose constraint
+
+The owner-confirmed company purpose and prospective-customer objective are defined in `docs/project-brief.md` and `PP-CON-011`. The information architecture must support the approved company-level presentation and enquiry journey; it must not turn the site into an individual designer's personal portfolio.
+
+The Canva source supplies observed visual and content structure. If the company objective requires an additional section, page, navigation entry, or enquiry action that is not present in the source, record it as a proposed web adaptation and obtain explicit owner approval before adding it. Do not label an approved adaptation as source-observed. Exact page count and IA nodes remain blocked until the required source inspection and approvals are complete.
+
+## 3. Ownership split
 
 Each fact has one home. This document references other records by identifier and does not copy their content.
 
@@ -31,7 +37,7 @@ Each fact has one home. This document references other records by identifier and
 | Per-component contracts (props, state, effects, accessibility) | `component-blueprint.md` (`PP-ART-019`) | References component IDs; does not restate contracts |
 | Routing library or route-model decision | `decision-log.md` (open decision) | Supplies the route inventory that the decision requires |
 
-## 3. Identifiers
+## 4. Identifiers
 
 | Node kind | Identifier pattern | Notes |
 | --- | --- | --- |
@@ -42,7 +48,7 @@ Each fact has one home. This document references other records by identifier and
 
 Identifiers are assigned only after source inspection, are never reused, and are retired rather than deleted (see `docs/icm/README.md` §5). The `<nnn>` pattern in this document is a format description, not an assigned identifier.
 
-## 4. Required fields per node
+## 5. Required fields per node
 
 Every node MUST record the following. A field that does not apply is marked "not applicable" with a reason.
 
@@ -59,7 +65,7 @@ Every node MUST record the following. A field that does not apply is marked "not
 | Component reference | Component ID(s) from `components.md`, or "local markup" with a reason |
 | Status | Specification state per `docs/icm/README.md` §5.1 |
 
-## 5. Structure (pending source inspection)
+## 6. Structure (pending source inspection)
 
 ### 5.1 Page and route inventory
 
@@ -96,7 +102,7 @@ Navigation entries MUST use semantic links (`PP-CON-006`). A navigation entry wi
 
 Anchor identifiers MUST be unique within the document and MUST NOT be generated from display text that may change.
 
-## 6. Responsive navigation and reflow
+## 7. Responsive navigation and reflow
 
 For each navigation region and each page that changes structure at a viewport width, record:
 
@@ -106,18 +112,18 @@ For each navigation region and each page that changes structure at a viewport wi
 
 No breakpoint is defined here. Breakpoints are derived from observed content constraints in Phase 0 or 3.
 
-## 7. Route-model inputs
+## 8. Route-model inputs
 
 The routing and rendering decisions in `decision-log.md` ("Page and route structure", "Build tool and rendering model") depend on this document. Phase 1 uses the accepted route inventory (§5.1) and navigation model (§5.4) as inputs. Until those tables are accepted:
 
 - No router, route library, or route-based file layout is selected.
 - A single-page structure is not assumed.
 
-## 8. Reading-order rule
+## 9. Reading-order rule
 
 Unless an owner-approved adaptation says otherwise, the DOM order of each page MUST match the visual reading order at the primary viewport, and the section order in §5.3 is the authority for both. Verification is defined in `PP-VER-016` and `PP-VER-009`.
 
-## 9. Verification
+## 10. Verification
 
 | Control | What it checks against this document |
 | --- | --- |
@@ -127,7 +133,7 @@ Unless an owner-approved adaptation says otherwise, the DOM order of each page M
 | `PP-VER-007` | Each recorded responsive rule is exercised at the agreed viewport matrix |
 | `PP-VER-014` | Implemented page composition matches the accepted section order (Phase 2 onward) |
 
-## 10. Change control
+## 11. Change control
 
 1. Identify the affected node(s) and the requirement or decision that changes.
 2. Update this document and the referenced content, interaction, component, or design-system record in the same change.
