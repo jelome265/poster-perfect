@@ -34,7 +34,7 @@ Every control must specify:
 | `PP-VER-005` | Source-to-page content reconciliation | Manual | PP-REQ-001, PP-REQ-006, PP-CON-002 | Blocked on source |
 | `PP-VER-006` | Visual fidelity comparison | Manual/hybrid | PP-REQ-001, PP-REQ-004, PP-CON-004, PP-CON-005 | Blocked on source and implementation |
 | `PP-VER-007` | Responsive viewport matrix | Manual/hybrid | PP-REQ-004, PP-CON-008 | Planned |
-| `PP-VER-008` | Keyboard/focus/semantics check | Manual/hybrid | PP-REQ-005, PP-CON-006, PP-CON-008 | Planned |
+| `PP-VER-008` | Accessibility manual assessment (keyboard, focus, semantics, contrast, assistive technology) | Manual/hybrid | PP-REQ-005, PP-CON-006, PP-CON-008 | Planned |
 | `PP-VER-009` | Navigation and interaction behavior | Automated/manual | PP-CON-006 | Pending interaction inventory |
 | `PP-VER-010` | Asset loading and alternative text review | Automated/manual | PP-CON-005 | Pending asset inventory |
 | `PP-VER-011` | Release artifact and revision provenance | Automated/manual | PP-REQ-008, PP-CON-009 | Planned |
@@ -105,6 +105,9 @@ Assess applicable WCAG 2.2 Level AA criteria using both automated and manual met
 
 At minimum review:
 - Semantic landmarks and heading order.
+- Text and non-text contrast for applicable WCAG 2.2 AA criteria.
+- Accessible target sizing/spacing and focus visibility/obstruction.
+- Representative screen-reader output and reading order.
 - Accessible names and text alternatives.
 - Keyboard operability and focus visibility/order.
 - Contrast of text and meaningful controls.
