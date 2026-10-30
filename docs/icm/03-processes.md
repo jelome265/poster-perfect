@@ -1,0 +1,264 @@
+# L2 — Process and behaviour model
+
+**Canonical level:** L2 — Contracts and behaviour  
+**Record class:** Process specification  
+**Status:** Baseline process patterns defined; design-specific user flows pending Phase 0
+
+## 1. Process definition
+
+A process is a named, observable sequence that transforms a trigger and its inputs into a result. Each process must identify:
+- Trigger and initiating actor.
+- Preconditions and required contract.
+- Ordered steps and decisions.
+- State read and state changed.
+- Effects invoked.
+- Success outcome.
+- Failure/timeout/cancellation behavior where relevant.
+- User-visible feedback.
+- Verification control.
+
+Do not document every JSX render as a process. A process represents meaningful behavior or an operational workflow.
+
+## 2. Process inventory
+
+| ID | Process | Trigger | Classification | Status |
+|---|---|---|---|---|
+| `PP-PRC-001` | Build and delivery | Approved source revision enters build | Engineering lifecycle | Target |
+| `PP-PRC-002` | Initial page load and render | Visitor opens a website URL | Runtime lifecycle | Target |
+| `PP-PRC-003` | Link/navigation activation | Visitor activates a link | User interaction | Conditional on source inventory |
+| `PP-PRC-004` | Local interface interaction | Visitor operates a stateful control | User interaction | Conditional on source inventory |
+| `PP-PRC-005` | Remote form/API operation | Visitor submits or requests remote data | External operation | Not in baseline; future only |
+| `PP-PRC-006` | Verification and release | Candidate revision is submitted for review | Governance lifecycle | Target |
+
+## 3. PP-PRC-001 — Build and delivery
+
+**Purpose:** turn a known source revision into a browser-deliverable artifact.
+
+```text
+reviewed source revision
+        |
+        v
+clean dependency installation
+        |
+        v
+static checks and tests
+        |
+        v
+production build
+        |
+        v
+artifact/output inspection
+        |
+        v
+owner-authorized deployment
+```
+
+**Preconditions**
+- Toolchain and package manager have been selected.
+- Lockfile is committed.
+- Build scripts and required configuration are documented.
+- No required secret is embedded in the client artifact.
+
+**Success**
+- Checks pass on the intended commit.
+- Build output is produced and attributable to that commit.
+- Deployment occurs only after explicit owner authorization.
+
+**Failure**
+- Any required check or build failure blocks promotion.
+- Do not mask a failure with a fallback exit code.
+- Do not deploy an artifact from an unverified or unknown revision.
+
+**Verification:** PP-VER-001, PP-VER-002, PP-VER-003, PP-VER-004, PP-VER-011.
+
+**Implementation status:** Not started; build tool is undecided.
+
+## 4. PP-PRC-002 — Initial page load and render
+
+**Purpose:** present the approved page to a visitor.
+
+```text
+visitor navigates to URL
+        |
+        v
+browser requests document/resources
+        |
+        v
+delivery layer returns application assets
+        |
+        v
+application entry executes
+        |
+        v
+page composition is rendered
+        |
+        v
+visitor can perceive and operate available content
+```
+
+This is a logical target flow. Exact document delivery, route fallback, rendering mode, and asset strategy depend on Phase 1 toolchain and hosting decisions.
+
+**Preconditions**
+- Production or preview artifact exists.
+- Requested URL is in the supported route set.
+- Required assets are part of the delivery or intentionally external.
+
+**Success**
+- The expected page renders.
+- Content hierarchy and semantics are present.
+- Required assets load.
+- There are no uncaught application errors.
+
+**Failure**
+- Missing document/asset, unavailable route, or runtime exception must not silently render a false success state.
+- Where an error page is required, its content and behavior must be specified by the project owner or derived from an approved route contract.
+
+**Verification:** PP-VER-004, PP-VER-005, PP-VER-006, PP-VER-010.
+
+**Implementation status:** Not started; page structure unknown.
+
+## 5. PP-PRC-003 — Link and navigation activation
+
+**Purpose:** move a visitor to an approved destination.
+
+**Preconditions**
+- The interaction inventory contains an explicit destination.
+- The element is a semantic anchor or equivalent native navigation control.
+- External-destination behavior is documented where applicable.
+
+**Success**
+- Browser navigation resolves to the intended destination.
+- The link has an accessible name and meaningful destination.
+- Focus and keyboard activation work.
+
+**Failure**
+- Unknown or empty destinations are not shipped as misleading links.
+- Broken or prohibited destinations are recorded and corrected.
+- Opening a new browsing context must be justified and communicated; do not add it by default.
+
+**Effects:** PP-EFF-003 and potentially PP-EFF-004.  
+**Verification:** PP-VER-008 and PP-VER-009.
+
+**Implementation status:** Conditional; actual links unknown.
+
+## 6. PP-PRC-004 — Local interface interaction
+
+**Purpose:** support a stateful control that is actually present in the approved design.
+
+Examples may include a menu, accordion, tab, dialog, dismissible notice, or local selector. These are examples, not current requirements.
+
+**Preconditions**
+- The source or owner-approved behavior establishes the control.
+- The state model and keyboard interaction are documented.
+- A semantic native element is preferred where it provides the required behavior.
+
+**Success**
+- The control transitions from a defined prior state to a defined next state.
+- The rendered state matches the model.
+- Keyboard and assistive technology users receive equivalent access.
+
+**Failure**
+- An invalid transition leaves the control in a safe, understandable state.
+- State cannot become contradictory between visual output and accessible state.
+- A purely visual toggle is not represented as a successful remote operation.
+
+**Effects:** PP-EFF-001 and PP-EFF-002; browser focus behavior where required.  
+**Verification:** PP-VER-007, PP-VER-008, and component tests where configured.
+
+**Implementation status:** Conditional; no specific stateful control has been confirmed.
+
+## 7. PP-PRC-005 — Remote form or API operation
+
+**Status:** Excluded from the current baseline.
+
+This process exists as a controlled extension point, not an implementation instruction.
+
+Before this process becomes active, the project owner must approve:
+- Business purpose and target user.
+- Exact data fields and data classification.
+- Destination system and API contract.
+- Authentication and credential handling.
+- Validation and error semantics.
+- Timeouts, cancellation, retry and duplicate-submission behavior.
+- Privacy, retention, consent and security requirements.
+- User-visible pending, success, and failure states.
+- Test environment and production verification.
+
+**Minimum control flow if approved**
+
+```text
+user submits
+    |
+    v
+client validates for usability
+    |
+    v
+request sent to approved service
+    |
+    +---- failure/timeout ---> explicit error state
+    |
+    v
+authoritative service validates and processes
+    |
+    +---- rejection ---------> actionable validation/error state
+    |
+    v
+confirmed result returned
+    |
+    v
+success state shown only after confirmation
+```
+
+The browser is not the authority for a remote operation. Client-side validation does not replace server-side validation.
+
+## 8. PP-PRC-006 — Verification, review and release
+
+```text
+change proposed
+    |
+    v
+requirements/contracts updated
+    |
+    v
+implementation on focused branch
+    |
+    v
+checks and evidence captured for commit
+    |
+    v
+pull request review
+    |
+    +---- findings ---> remediate and rerun affected controls
+    |
+    v
+owner approval
+    |
+    v
+merge / release only as explicitly authorized
+```
+
+**Invariants**
+- Evidence identifies the commit tested.
+- A changed commit invalidates evidence for changed behavior until affected checks are rerun.
+- Mergeability and passing CI are not owner approval.
+- No merge or production deployment is performed without explicit owner authorization.
+
+**Verification:** PP-VER-001 through PP-VER-012 as applicable.
+
+## 9. State-transition discipline
+
+For every stateful process:
+- Enumerate valid states.
+- Enumerate allowed transitions.
+- Define invalid transitions.
+- Define who can trigger each transition.
+- Define whether a transition is reversible.
+- Identify the source of truth for the state.
+- Identify any asynchronous or external boundary.
+- Define what evidence proves the transition behavior.
+
+Do not introduce global state management unless multiple independent components need shared state and local component state cannot express the contract clearly.
+
+## 10. Process completion rule
+
+A process is complete only when its contract is accepted, implementation is present, normal and relevant failure paths are verified, effects are accounted for, and evidence references the current revision. A diagram alone is not implementation.
