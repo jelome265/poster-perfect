@@ -32,7 +32,8 @@ Do not document every JSX render as a process. A process represents meaningful b
 
 ## 3. PP-PRC-001 — Build and delivery
 
-**Purpose:** turn a known source revision into a browser-deliverable artifact.
+**Purpose:** turn a known source revision into a browser-deliverable artifact.  
+**Contracts:** PP-CON-001, PP-CON-009.
 
 ```text
 reviewed source revision
@@ -53,6 +54,7 @@ artifact/output inspection
 owner-authorized deployment
 ```
 
+**Effects:** PP-EFF-008, PP-EFF-009, and PP-EFF-010 only when deployment/promotion is explicitly authorized.  
 **Preconditions**
 - Toolchain and package manager have been selected.
 - Lockfile is committed.
@@ -75,7 +77,8 @@ owner-authorized deployment
 
 ## 4. PP-PRC-002 — Initial page load and render
 
-**Purpose:** present the approved page to a visitor.
+**Purpose:** present the approved page to a visitor.  
+**Contracts:** PP-CON-001, PP-CON-002.
 
 ```text
 visitor navigates to URL
@@ -98,6 +101,7 @@ visitor can perceive and operate available content
 
 This is a logical target flow. Exact document delivery, route fallback, rendering mode, and asset strategy depend on Phase 1 toolchain and hosting decisions.
 
+**Effects:** PP-EFF-001 and PP-EFF-004; PP-EFF-005 only if an approved remote read is part of the page contract.  
 **Preconditions**
 - Production or preview artifact exists.
 - Requested URL is in the supported route set.
@@ -119,7 +123,8 @@ This is a logical target flow. Exact document delivery, route fallback, renderin
 
 ## 5. PP-PRC-003 — Link and navigation activation
 
-**Purpose:** move a visitor to an approved destination.
+**Purpose:** move a visitor to an approved destination.  
+**Contract:** PP-CON-006.
 
 **Preconditions**
 - The interaction inventory contains an explicit destination.
@@ -136,14 +141,15 @@ This is a logical target flow. Exact document delivery, route fallback, renderin
 - Broken or prohibited destinations are recorded and corrected.
 - Opening a new browsing context must be justified and communicated; do not add it by default.
 
-**Effects:** PP-EFF-003 and potentially PP-EFF-004.  
+**Effects:** PP-EFF-003.  
 **Verification:** PP-VER-008 and PP-VER-009.
 
 **Implementation status:** Conditional; actual links unknown.
 
 ## 6. PP-PRC-004 — Local interface interaction
 
-**Purpose:** support a stateful control that is actually present in the approved design.
+**Purpose:** support a stateful control that is actually present in the approved design.  
+**Contracts:** PP-CON-006, PP-CON-008.
 
 Examples may include a menu, accordion, tab, dialog, dismissible notice, or local selector. These are examples, not current requirements.
 
@@ -162,14 +168,15 @@ Examples may include a menu, accordion, tab, dialog, dismissible notice, or loca
 - State cannot become contradictory between visual output and accessible state.
 - A purely visual toggle is not represented as a successful remote operation.
 
-**Effects:** PP-EFF-001 and PP-EFF-002; browser focus behavior where required.  
-**Verification:** PP-VER-007, PP-VER-008, and component tests where configured.
+**Effects:** PP-EFF-001, PP-EFF-002, and PP-EFF-003 when programmatic focus/navigation behavior is required.  
+**Verification:** PP-VER-008, PP-VER-009, and component tests where configured.
 
 **Implementation status:** Conditional; no specific stateful control has been confirmed.
 
 ## 7. PP-PRC-005 — Remote form or API operation
 
-**Status:** Excluded from the current baseline.
+**Status:** Excluded from the current baseline.  
+**Contract:** PP-CON-007 (future extension only).
 
 This process exists as a controlled extension point, not an implementation instruction.
 
@@ -243,7 +250,7 @@ merge / release only as explicitly authorized
 - Mergeability and passing CI are not owner approval.
 - No merge or production deployment is performed without explicit owner authorization.
 
-**Verification:** PP-VER-001 through PP-VER-012 as applicable.
+**Verification:** PP-VER-001 through PP-VER-015 as applicable.
 
 ## 9. State-transition discipline
 
