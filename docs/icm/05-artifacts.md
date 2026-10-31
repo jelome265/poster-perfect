@@ -33,7 +33,7 @@ A file existing in Git does not automatically make it authoritative or prove tha
 | `PP-ART-002` | Design reference inventory | `docs/design-reference.md` | Specification | Source inspection | Drafted from export 2026-10-30; owner confirmation pending |
 | `PP-ART-003` | Frontend architecture | `docs/architecture.md` | Architecture | Maintainer / owner approval | Current logical baseline |
 | `PP-ART-004` | Technical standards | `docs/technical-standards.md` | Contract | Maintainer / owner approval | Current baseline |
-| `PP-ART-005` | Design-token inventory | `docs/design-system.md` | Specification | Source inspection | Pending |
+| `PP-ART-005` | Design-token inventory | `docs/design-system.md` | Specification | Source inspection | Partially measured from export; approximate colors and typeface identified; remaining measurements/licence and owner confirmation pending |
 | `PP-ART-006` | Content and section inventory | `docs/content-structure.md` | Specification | Source inspection | Drafted from export 2026-10-30; owner confirmations pending; page set and section order owned by `PP-ART-018` |
 | `PP-ART-007` | Component inventory | `docs/components.md` | Architecture/contract | Source inspection and implementation | Drafted from export 2026-10-30; owner approval pending; contract details owned by `PP-ART-019` |
 | `PP-ART-008` | Delivery phase specifications | `docs/phases/` | Contract | Maintainer / owner approval | Current |
@@ -41,13 +41,14 @@ A file existing in Git does not automatically make it authoritative or prove tha
 | `PP-ART-010` | ICM charter and indexes | `docs/icm/README.md` and related files | Architecture/governance | Maintainer / owner approval | Initial baseline |
 | `PP-ART-011` | Application source | Not yet created | Implementation | Implementation contributor | Not started |
 | `PP-ART-012` | Application dependency manifest and lockfile | Not yet created | Implementation/reproducibility | Toolchain setup | Not started |
-| `PP-ART-013` | Approved source assets | Not yet inventoried | Static asset | Project owner/source inspection | Pending |
+| `PP-ART-013` | Approved source assets | Not yet created as original web assets; inventory in `docs/design-reference.md` and `docs/content-structure.md` | Static asset | Project owner/source inspection | Source items inventoried from PDF; original files, provenance and publication permission pending |
 | `PP-ART-014` | Visual reference captures | Not yet created | Verification evidence | Phase 0/2/4 | Pending |
 | `PP-ART-015` | Executable verification reports | Not yet created | Verification evidence | CI and manual review | Pending |
 | `PP-ART-016` | Release build and deployment record | Not yet created | Release artifact | Release pipeline / owner | Not started |
-| `PP-ART-017` | ICM integrity audit (2026-10-30) | `docs/icm/integrity-audit-2026-10-30.md` | Verification evidence | ICM/documentation reviewer | Failed at `877933a` (§10 R4): stale statuses and missing §9 reference; remediation pending. Prior: passed at `76f990f` (§8 R3) for that revision only; not application verification |
+| `PP-ART-017` | ICM integrity audit (2026-10-30) | `docs/icm/integrity-audit-2026-10-30.md` | Verification evidence | ICM/documentation reviewer | R4 failed at `877933a`; status/template/reference corrections are included in this remediation branch. The current PP-VER-013 outcome is revision-specific and is reported by the Documentation Integrity workflow, not inferred from R4. Prior R3 pass at `76f990f` applies only to that revision; not application verification |
 | `PP-ART-018` | Information architecture | `docs/information-architecture.md` | Specification (contract-backed) | Page implementation owner (`PP-MAP-011`); approval: project owner | Drafted from export 2026-10-30; owner approval pending (G0) |
 | `PP-ART-019` | Component blueprint | `docs/component-blueprint.md` | Contract / architecture | Component maintainer (`PP-MAP-013`); approval: project owner | Drafted from export 2026-10-30; owner approval pending (G0) |
+| `PP-ART-020` | Documentation integrity validator and CI workflow | `scripts/validate_docs.py`, `scripts/test_validate_docs.py`, `.github/workflows/docs-integrity.yml` | Verification tooling / CI configuration | Build/CI maintainer (`PP-MAP-017`) | Implemented in this remediation; first workflow result pending on the PR revision |
 
 The registry is a navigation and lifecycle record. Subject-specific details remain in the canonical file listed above.
 
