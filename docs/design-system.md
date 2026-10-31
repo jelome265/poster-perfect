@@ -22,7 +22,7 @@
 | Layout | One page, 1024.5 × 4032 pt. Content width, columns, and alignment not yet measured | Partially measured |
 | Shape | Badge and button corner radii; dividers and rules (a short rule sits above some headings) | Pending measurement |
 | Elevation | Not assessed | Pending |
-| Imagery | Source sample images observed in hero, service row, and footer; originals not supplied and excluded under DEC-017 | No imagery in the initial site; no substitutions or recreated brand mark |
+| Imagery | Hero magazine-cover image, three service images, and footer sample image are observed in the source | Preserve each image region with a named placeholder until original or rights-cleared assets are supplied |
 | Responsive | No source variant; owner-approved fluid reflow, content-driven breakpoints, and column stacking | Web adaptation approved under DEC-014/DEC-017; implement in Phase 2 and verify in Phases 2–3 |
 | Motion | Not present in a static export | Not in source |
 
@@ -58,7 +58,7 @@ For each meaningful layout change, record:
 - Any typography or spacing changes.
 - Whether the change is directly represented in the source or is a web-specific adaptation.
 
-No responsive variant is in the source. DEC-014 approves content-driven reflow that preserves semantic order. Statistics and testimonials are excluded from the baseline until substantiated/permission-cleared, so no layout may imply they are approved content.
+No responsive variant is in the source. DEC-014/DEC-018 approve content-driven reflow that preserves semantic order. Statistics and testimonial regions remain in the composition as placeholder cards until claims are substantiated and customer permissions are recorded. Placeholder states must not resemble verified claims or endorsements.
 
 ## Review checklist
 
