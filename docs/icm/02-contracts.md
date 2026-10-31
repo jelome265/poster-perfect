@@ -70,14 +70,14 @@ The application runtime MUST be built with React and TypeScript/TSX. Its exact e
 **Consumers:** Application composition and page sections  
 **Requirement:** PP-REQ-001, PP-REQ-003, PP-REQ-004, PP-REQ-009
 
-A page MUST compose the sections in the approved source order and preserve the approved content hierarchy. Page count, route names, section order, and exact content are unknown until Phase 0; the accepted structure is recorded in `information-architecture.md` (`PP-ART-018`) under `PP-CON-010`.
+A page MUST compose the sections in the owner-approved source order and preserve the approved content hierarchy. The 2026-10-30 export has been transcribed as a draft of one page with seven sections. The route is not assigned, additional web adaptations are not approved, and the draft structure still requires owner acceptance in `information-architecture.md` (`PP-ART-018`) under `PP-CON-010`.
 
 **Inputs:** Approved page specification, tokens, and assets.  
 **Outputs:** A semantic page composition.  
 **Invariants:** No invented section, hidden content, or silent copy rewrite; no duplicated shared composition without reason.  
 **Verification:** Page inventory reconciliation, DOM/reading-order review, visual comparison.
 
-**Specification:** Partially specified  
+**Specification:** Partially specified; source structure drafted, owner approval pending (G0)  
 **Implementation:** Not started  
 **Evidence:** Not collected
 
@@ -111,7 +111,7 @@ Shared visual values MUST be derived from the inspected and approved source or r
 **Invariants:** No guessed canonical palette, typography, spacing scale, or breakpoints.  
 **Verification:** Design-token inventory reconciliation and rendered comparison.
 
-**Specification:** Blocked on Phase 0  
+**Specification:** Partially specified; approximate colors and typeface family recorded, remaining measurements and owner approval pending (G0)  
 **Implementation:** Not started  
 **Evidence:** Not collected
 
@@ -128,7 +128,7 @@ An included asset MUST have a traceable source, intended use, and appropriate we
 **Invariants:** No unapproved substitutions; no invented brand assets; no unnecessary original-resolution payloads.  
 **Verification:** Asset inventory, visual review, network/resource inspection, accessibility review.
 
-**Specification:** Blocked on Phase 0  
+**Specification:** Partially specified; source assets inventoried, original files and publication/licensing confirmation pending (G0)  
 **Implementation:** Not started  
 **Evidence:** Not collected
 
@@ -145,7 +145,7 @@ Every control MUST have a documented trigger and observable outcome. Navigation 
 **Invariants:** Keyboard operation, visible focus, accessible name, and meaningful failure feedback when an operation can fail.  
 **Verification:** Interaction inventory, keyboard checks, functional tests.
 
-**Specification:** Blocked  
+**Specification:** Partially specified; source interactions inventoried, destinations and outcomes pending owner decisions (G0)  
 **Implementation:** Not started  
 **Evidence:** Not collected
 
@@ -169,7 +169,7 @@ No external API, remote form submission, analytics provider, payment provider, o
 
 The implementation MUST follow the approved responsive interpretation and be assessed against applicable WCAG 2.2 AA criteria. Semantic structure, keyboard operation, visible focus, readable content, contrast, zoom/reflow, and appropriate alternatives are mandatory review dimensions.
 
-**Specification:** Partially specified; WCAG target accepted, with page-specific responsive and semantic criteria pending Phase 0  
+**Specification:** Partially specified; WCAG target accepted, source contains no responsive variants, and web reflow/semantic adaptations remain to be approved  
 **Implementation:** Not started  
 **Evidence:** Not collected
 
@@ -191,14 +191,14 @@ Changes MUST be made on a reviewable branch with scope and verification recorded
 **Consumers:** Application composition, page sections, navigation controls (`PP-CON-006`), verification  
 **Requirement:** PP-REQ-001, PP-REQ-006, PP-REQ-009
 
-The information architecture MUST define every in-scope page or route, section, navigation entry, and anchor target exactly once, with one parent, a stated order, and a reference to its content, interaction, responsive, and component records. A navigation entry MUST reference an observed destination in the interaction inventory. No route, page, section, or navigation entry MAY be added, removed, or reordered without an approved change to `information-architecture.md`. The set of routes is unknown until Phase 0.
+The information architecture MUST define every in-scope page or route, section, navigation entry, and anchor target exactly once, with one parent, a stated order, and a reference to its content, interaction, responsive, and component records. A navigation entry MUST reference an observed destination in the interaction inventory. No route, page, section, or navigation entry MAY be added, removed, or reordered without an approved change to `information-architecture.md`. The export-derived draft records one page and seven sections, no navigation or anchors, and an unassigned route; it awaits owner approval at G0.
 
 **Inputs:** Inspected source page/artboard inventory; accepted owner-approved business and functional requirements; owner-approved responsive interpretation.  
 **Outputs:** Accepted IA record (`PP-ART-018`) used as the input to page composition and to Phase 1 routing decisions.  
 **Invariants:** Unique identifiers; no orphan nodes; DOM order matches visual reading order unless an owner-approved adaptation says otherwise; no route or section is inferred from the project name.  
 **Verification:** `PP-VER-016`, `PP-VER-005`, `PP-VER-009`, `PP-VER-014` (after composition exists).
 
-**Specification:** Blocked on Phase 0  
+**Specification:** Partially specified; source-derived IA draft exists, owner approval pending (G0)  
 **Implementation:** Not started  
 **Evidence:** Not collected
 
