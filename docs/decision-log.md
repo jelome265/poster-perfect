@@ -209,6 +209,20 @@ The owner approves proceeding to Phase 2 on the following profile-only scope:
 
 **Authority:** Explicit project-owner approval in chat on 2026-10-31 ("I approve"), recorded by the maintainer in this decision.
 
+### DEC-018 — Publish the Canva export PDF in the repository
+
+**Status:** Accepted (project owner, 2026-10-31).
+
+The owner instructed that the Canva export PDF be published in the repository, after being told that the repository is public and that the PDF contains third-party sample artwork (including sample images, a client logo, and magazine-style covers) whose ownership and publication rights are not evidenced.
+
+- The file is committed at `docs/source/Company_Website_Business_Website_in_Dark_Blue_White_Bright_Blue_Simple_Professional_Style.pdf`. Its SHA-256 is `173bd1a71399067253292eed129af90df0a8caa425679a2674f932ae475baea6`, the value recorded in `docs/design-reference.md`.
+- This supersedes only the earlier "not committed" statement for this file. It does not change DEC-017 or DEC-014: sample artwork, client marks, the original logo symbol, and social icons remain excluded from the website, and testimonials and attributions remain unpublished until customer permission is evidenced.
+- Publication in a public repository is permanent in git history, and the owner accepts that. Removing the file later would require a separate history rewrite decision.
+- Committing this file does not grant third-party rights, customer permissions, or any website publication right.
+
+**Authority:** project owner instruction, 2026-10-31, given after the repository's public visibility and the rights status were stated.
+
+
 ## Open decisions
 
 | Decision | Status | Resolution gate |
