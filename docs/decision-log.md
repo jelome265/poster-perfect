@@ -96,6 +96,17 @@ The three testimonial quotations recorded from the Canva export are retained in 
 
 **Authority:** project owner approval under `CLAUDE.md` change control and §8.
 
+
+### DEC-011 — Standard-library Python for documentation-integrity CI only
+
+**Status:** Accepted (project owner, through merge of PR #10 on 2026-10-31).
+
+The repository may use Python 3's standard library solely for the PP-VER-013 documentation validator executed by GitHub Actions (`scripts/validate_docs.py`). This is a CI-runner tooling exception; it adds no third-party package, application runtime, website dependency, package manifest or lockfile. The React/TypeScript application toolchain remains undecided until Phase 1. This decision does not authorize Python for application code or unrelated repository tooling.
+
+**Reason:** The validator needs deterministic repository/document parsing and runs without installing packages on the GitHub-hosted Ubuntu runner. Keeping the exception narrow avoids turning a documentation check into an application-toolchain decision.
+
+**Authority:** Project-owner merge of PR #10 at `486a81b687d6dee48802b617e0c0e9f0141bd0a8`, 2026-10-31.
+
 ## Open decisions
 
 | Decision | Status | Resolution gate |
