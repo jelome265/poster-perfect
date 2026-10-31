@@ -262,3 +262,23 @@ Limitations:
 | G0 approval | Deferred ("Wait") | Phase 0 remains awaiting owner approval; Phase 1 not authorized |
 
 PP-VER-013 has not been re-run at the commit that contains this section. Its last formal result is FAIL at `877933a` (§10).
+
+## 12. Remediation of the R4 findings — based on main revision `7579e27`
+
+This section records the corrective work prepared after the R4 failure. It is not a PASS record. The first automated run must be observed on the exact pull-request revision before a new PP-VER-013 result is assigned.
+
+| Finding / control | Remediation | Current disposition |
+|---|---|---|
+| Stale Phase 0 status and contradictory template wording | Reconciled canonical status records, DEC-007, contract maturity, risk descriptions, IA wording and project brief against the 2026-10-30 export inspection | Corrective edits prepared in the remediation branch; pending automated and manual verification |
+| Missing PP-VER-016 evidence reference | Restored audit §9 in the earlier remediation and retained the reference to that author-run record | Reference now resolves; the author run remains non-independent and owner review is still outstanding |
+| PP-VER-013 repeatability | Added `PP-ART-020`: dependency-free `scripts/validate-docs.sh` plus `.github/workflows/docs-integrity.yml` | Workflow added; result pending for the PR revision. Manual identifier/ownership/authority/process/effect checks remain required |
+| Testimonial source text | Retained the three quotations under DEC-009; customer names remain withheld; no history rewrite | Owner decision preserved; publication permission for the website remains unconfirmed |
+| Contact details | Kept source-transcribed contact text unchanged; owner decision 8 remains open | Do not treat the email/phone as confirmed current enquiry destinations or ship them as active links before confirmation |
+| Main-branch governance | Verified active ruleset `26256454`: PR required, non-fast-forward updates and deletion blocked, no bypass actors | Active. Approval threshold is currently zero and no required status check is configured; the new workflow reports evidence but does not yet block merging |
+| Phase gate | G0 deferred; Phase 1 not authorized | No G0 acceptance or implementation authorization is claimed |
+
+### Verification boundary
+
+The new automated validator checks a defined subset of PP-VER-013: canonical-file presence, repository-relative Markdown file links and heading anchors, selected stale status statements, accepted requirement rows, and their mapped verification controls. It does not validate all identifier definitions, owner-role assignments, process/effect semantics, visual fidelity, accessibility, application behavior, or publication permissions. Those remain manual or phase-specific controls.
+
+A workflow file existing is not a successful run. Record the workflow result against the exact PR head or `main` commit after GitHub Actions completes. The repository ruleset must be updated separately to make `docs-integrity` a required check; no ruleset write operation was available in this remediation path.
