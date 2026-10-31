@@ -228,6 +228,20 @@ The owner clarified that G0 must derive the company and website information from
 **Gate disposition:** G0 is complete for the source-led seven-section specification and approved future-update placeholders once the reconciled inventory and ICM changes in the follow-up PR pass PP-VER-013. Phase 2 is authorized after those changes are merged. G2 still requires the seven-section composition, source-led content, documented placeholder states and visual comparison. G4 must not publish unverified claims, unlicensed artwork, customer quotations without permission, or nonfunctional contact/social controls.
 
 **Authority:** Project-owner clarification in chat on 2026-10-31: use the information from Canva as the company information; reserve a place for details not supplied or ready to be updated later.
+### DEC-020 — Phase 2 styling approach, reference viewport, and font package
+
+**Status:** Proposed. Implemented for review; owner ratification required.
+
+| Choice | Selected | Alternative and trade-off |
+| --- | --- | --- |
+| Styling | Plain CSS with custom properties in `src/styles/tokens.css`; page layout in `src/styles/page.css` | CSS Modules or a utility framework. Plain CSS keeps the token set small and avoids a new dependency; Phase 2 §3.1 requires centralised tokens |
+| Tokens | Four colour tokens and two font-weight tokens actually used by the page | No decorative or unused tokens (Phase 2 §3.1). Spacing and type scale remain approximate `clamp()` values until measured |
+| Primary reference viewport | 1024 CSS px | Matches the 1024.5 pt artboard width; a different primary viewport would need a new record |
+| Typeface | `@fontsource/aileron` 5.3.0, weights 400 and 700 | Pinned to the CC0-1.0 record in PP-REF-014; self-hosted, so no third-party request at runtime |
+| Placeholders | Named, visibly dashed placeholders; never links | Per DEC-019 placeholder policy |
+
+**Authority:** pending owner ratification. Recorded in `docs/phases/phase-2-visual-review-2026-10-31.md`.
+
 ## Open decisions
 
 | Decision | Status | Resolution gate |

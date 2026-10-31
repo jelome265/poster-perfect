@@ -2,7 +2,7 @@
 
 | Field | Value |
 | --- | --- |
-| Status | Authorized after source-led G0 approval under DEC-019; G2 evidence remains required |
+| Status | In progress on `feat/phase2-design-composition`: seven sections implemented with placeholders per DEC-019; visual review recorded (`docs/phases/phase-2-visual-review-2026-10-31.md`); G2 not closed; styling decisions pending ratification (DEC-020) |
 | Objective | Translate the approved visual reference into design tokens, semantic page structure, and working React components |
 | Depends on | Phase 0 approval and Phase 1 application foundation |
 | Primary outputs | Implemented design tokens, asset integration, page composition, typed components |
