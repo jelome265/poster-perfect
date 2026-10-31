@@ -125,8 +125,8 @@ Blocks:
 
 | Gate | Status | Reason |
 |---|---|---|
-| G0 | In progress; conservative business/content/design dispositions owner-approved under DEC-014 | Exact contact and availability values, original logo/asset files, and publication rights for testimonials/sample artwork remain open; approved responsive adaptation and Aileron source license are recorded |
-| G1 | Foundation/runtime evidence passed; PP-VER-018 SCA/license audit implemented on PR #15; exact-head audit evidence pending | Earlier application-quality and documentation-integrity checks passed. New dependency audit runs on this candidate; owner phase disposition remains pending |
+| G0 | In progress; conservative business/content/design dispositions owner-approved under DEC-014 | Exact contact and availability values, original logo/asset files, company social profile URLs, and publication rights for testimonials/sample artwork remain open; responsive adaptation and Aileron source license are recorded |
+| G1 | Technical evidence complete on PR #15 | Application quality and documentation integrity passed on candidate `98c585c` (runs `41171547343` and `41171547377`); npm advisory, OSV vulnerability, SPDX inventory and deps.dev license checks passed in run `41171547595`. Formal owner Phase 1 disposition remains pending |
 | G2 | Not started | No application composition |
 | G3 | Not started | No responsive implementation |
 | G4 | Not started | No release candidate or execution evidence |

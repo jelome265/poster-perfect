@@ -62,13 +62,13 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-CON-009` | Change/release | Accepted | Not applicable (governance contract) | Not collected per individual change |
 | `PP-CON-010` | Information architecture and navigation | Accepted 2026-10-31 (DEC-013); web adaptations and content decisions still open | Not started | Not collected |
 | `PP-CON-011` | Company positioning, portfolio and customer engagement | Partially specified; company purpose accepted, details pending Phase 0 | Not started | Not collected |
-| `PP-CON-012` | npm dependency security and license compliance | Accepted under DEC-015 | Implemented on PR #15 candidate; exact-head CI evidence pending | PP-ART-021; PP-VER-018 |
+| `PP-CON-012` | npm dependency security and license compliance | Accepted under DEC-015 | Implemented and passed on PR #15 code candidate `98c585c9e7ba79a78c24d7ed621148c32066444c` | PP-ART-021; PP-VER-018; Actions run `41171547595` |
 
 ## 5. Process registry
 
 | ID | Process | Specification | Implementation |
 |---|---|---|---|
-| `PP-PRC-001` | Build and delivery | Implemented at foundation level | CI pipeline includes production-preview smoke and dedicated npm/OSV/SPDX audit; exact-head security-workflow evidence pending |
+| `PP-PRC-001` | Build and delivery | Implemented at foundation level | Production-preview smoke plus npm/OSV/SPDX audit passed on PR #15 code candidate `98c585c`; see Actions run `41171547595` |
 | `PP-PRC-002` | Initial page load/render | Neutral `App` shell renders; complete page composition held by G0/G2 | Dev-server browser smoke recorded at `ef613375`; production-preview HTTP/asset smoke passed on PR #15 head `befdefc` (Actions run `41170052269`) |
 | `PP-PRC-003` | Link/navigation | Conditional on source | Not started |
 | `PP-PRC-004` | Local interface interaction | Conditional on source | Not started |
@@ -113,7 +113,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-VER-015` | Dependency/side-effect surface review | Passed by manual foundation review on `ad45f296`; no SCA/license scan claimed | G1, G2, G4 |
 | `PP-VER-016` | IA and component-blueprint reconciliation | Executed by author 2026-10-30; structural baseline accepted by owner on 2026-10-31 (DEC-013); G0 content remains open | G0, G2 |
 | `PP-VER-017` | Company positioning, approved portfolio and customer journey reconciliation | Partially specified; details pending Phase 0 | G0, G2, G4 |
-| `PP-VER-018` | npm dependency vulnerability and SPDX license audit | Implemented on PR #15 candidate; exact-head CI evidence pending | G1, G4 |
+| `PP-VER-018` | npm dependency vulnerability and SPDX license audit | Passed on PR #15 code candidate `98c585c9e7ba79a78c24d7ed621148c32066444c` in Actions run `41171547595`; all three jobs passed and the inventory artifact was uploaded | G1, G4 |
 
 ## 8. Open questions and blockers
 

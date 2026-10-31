@@ -61,7 +61,7 @@ Not established by this review: a complete transitive-license inventory, a dedic
 | G1-GAP-01 | P1 | Baseline CI built `dist/` but did not serve the production preview or request generated assets. | Addressed: production-preview HTTP/asset smoke passed on initial candidate `da325b2` (run `41169847259`) and reconciled PR #15 head `befdefc` (run `41170052269`). |
 | G1-GAP-02 | P1 | The active `Protect main` ruleset requires pull requests and blocks force-push/deletion, but has zero required approving reviews and no required status checks. | Not changed. The owner/repository administrator should decide whether to require the application-quality and documentation-integrity checks. Until then, CI is evidence but not an enforced merge gate. |
 | G1-GAP-03 | P2 | The application test suite has one jsdom assertion for the main heading. | Appropriate for a neutral scaffold smoke test; add component/behavior tests when approved features exist. Do not invent tests for unapproved interactions. |
-| G1-GAP-04 | P2 | No dedicated SCA, license inventory, or vulnerability-audit job existed in the initial G1 review. | Addressed in the follow-on PR #15 implementation: npm advisory audit, OSV vulnerability scanning, fail-closed SPDX inventory, and deps.dev license metadata checks are added. Exact-head results are recorded after the dedicated workflow completes. |
+| G1-GAP-04 | P2 | No dedicated SCA, license inventory, or vulnerability-audit job existed in the initial G1 review. | Addressed: npm advisory, OSV vulnerability, fail-closed SPDX inventory, and deps.dev license checks passed on PR #15 code candidate `98c585c` in Actions run `41171547595`. The inventory artifact records 140 package entries and zero policy violations. |
 | G1-GAP-05 | P2 | PR #14's historical description still contains a stale “Not merged” statement even though GitHub records it as merged. | Metadata inconsistency only; it does not change repository state. Correct the PR description separately if needed. |
 | G1-GAP-06 | P1 | Several status documents still described the application as absent and the toolchain as undecided after PR #14 merged. | Corrected in this review branch across README, agent guidance, phase registers, decisions, and ICM records. The review candidate passed PP-VER-013 in Actions run `41169847210`; the reconciled PR #15 head `befdefc` also passed in run `41170052381`. |
 
@@ -75,7 +75,7 @@ Not established by this review: a complete transitive-license inventory, a dedic
 | Configured static checks | PASS on `ad45f296`. |
 | Production build | PASS on `ad45f296`. |
 | Development entry point documented and works | PASS; see `docs/development.md`. |
-| Dependencies and significant technical decisions documented | PASS for toolchain selection; security/license analysis remains a follow-up. |
+| Dependencies and significant technical decisions documented | PASS for toolchain and dependency policy; npm/OSV/SPDX checks passed on code candidate `98c585c` (run `41171547595`). Actual license-text/legal compatibility review and non-npm asset rights remain release obligations. |
 | No unapproved backend or unnecessary infrastructure | PASS; no backend, API, persistence, analytics, CMS, or third-party runtime integration is present. |
 | G1 production runtime evidence | PASS on initial candidate `da325b2` and reconciled PR #15 head `befdefc`; production-preview HTTP/asset smoke passed in Actions runs `41169847259` and `41170052269`. |
 
@@ -83,8 +83,8 @@ Not established by this review: a complete transitive-license inventory, a dedic
 
 ## 6. Phase boundary and next permitted work
 
-- G0 remains open. Owner decisions concerning company positioning, target customer segments, services, publishable portfolio work and permissions, testimonials, statistics, contact details, enquiry destination, font licensing, and responsive adaptations remain unresolved.
-- DEC-013 accepts the structural IA/component baseline only. It does not authorize invented content, publication of customer material, or a new enquiry integration.
+- G0 remains open after the owner's DEC-014 approval of conservative business/content/design decisions. Exact contact and availability values, original logo/asset files, social profile URLs, and publication rights for testimonials/sample artwork remain unresolved.
+- DEC-013 accepts the structural IA/component baseline; DEC-014 approves the conservative web interpretation. Neither decision grants third-party publication rights or supplies missing owner facts.
 - Phase 2 page composition/design-token implementation must wait for required G0 approval and Phase 1 G1 disposition.
 - No production deployment or promotion is included in this review.
 
@@ -104,5 +104,5 @@ On 2026-10-31 the project owner approved DEC-015 and authorized a dedicated npm 
 - A standard-library-only Node inventory for all locked package entries, with exact SPDX allowlist enforcement and a machine-enforced MPL-2.0 development-only restriction.
 - An OSV-Scanner/deps.dev license metadata check and 30-day JSON/Markdown inventory artifacts.
 
-The lockfile snapshot inspected during implementation contains 140 package entries (3 runtime and 137 development); all entries declare license metadata. Twelve MPL-2.0 entries are marked development-only. The candidate's CI result is not asserted here until the dedicated workflow completes. Normative policy and limitations are recorded in [the dependency security and license policy](../security/dependency-audit.md), DEC-015, PP-CON-012, and PP-VER-018.
+The lockfile snapshot inspected during implementation contains 140 package entries (3 runtime and 137 development); all entries declare license metadata. Twelve MPL-2.0 entries are marked development-only. Dedicated workflow run `41171547595` passed on code candidate `98c585c9e7ba79a78c24d7ed621148c32066444c`: all npm advisory, OSV vulnerability, SPDX inventory, deps.dev license, and artifact-upload jobs succeeded. The inventory is PASS for 140 package entries with zero policy violations. Normative policy and limitations are recorded in [the dependency security and license policy](../security/dependency-audit.md), DEC-015, PP-CON-012, and PP-VER-018.
 
