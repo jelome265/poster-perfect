@@ -24,9 +24,9 @@ npm ci
 | `npm run lint` | Strict lint with oxlint; any warning fails (`--deny-warnings`) |
 | `npm test` | Run the unit and component tests once (Vitest, jsdom) |
 | `npm run build` | Type-check, then produce the production bundle in `dist/` |
+| `npm run preview` | Serve the production bundle locally after `npm run build` |
 
 CI (`.github/workflows/app-quality.yml`) runs `npm ci`, strict lint, type-check, unit tests, production build, and a production-preview HTTP/asset smoke on pull requests to `main`.
-| `npm run preview` | Serve the production bundle locally after `npm run build` |
 
 The initial toolchain commands were run on 2026-10-31. Revision-specific results and limitations are recorded in [the Phase 1 verification and gap review](phases/phase-1-verification-gap-review-2026-10-31.md); see the decision log for toolchain rationale.
 

@@ -85,7 +85,7 @@ Phase status is evidence-based. Attempted work is not completed work; accepted r
 ### 5.1 TypeScript and React
 
 - Use TypeScript and TSX for application code.
-- Enable strict TypeScript checking when the application toolchain is established.
+- Keep the selected strict TypeScript configuration enabled; do not weaken it to accommodate implementation shortcuts.
 - Prefer explicit, useful types at public and module boundaries.
 - Avoid `any`; isolate and validate genuinely unsafe boundaries rather than spreading unsound types.
 - Follow React's Rules of Hooks.
