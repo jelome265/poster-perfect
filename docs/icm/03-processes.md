@@ -74,7 +74,7 @@ owner-authorized deployment
 
 **Verification:** PP-VER-001, PP-VER-002, PP-VER-003, PP-VER-004, PP-VER-011.
 
-**Implementation status:** Implemented at foundation level: npm clean install, static checks, tests, Vite production build, and CI workflow are present. Production-preview smoke is added in the Phase 1 verification review branch and remains subject to its PR check result.
+**Implementation status:** Implemented at foundation level: npm clean install, static checks, tests, Vite production build, and CI workflow are present. Production-preview HTTP/asset smoke passed on PR #15 review candidates `da325b2` (Actions run `41169847259`) and `befdefc` (Actions run `41170052269); this verifies document and referenced JS/CSS delivery, not client-side execution in a real browser.
 
 ## 4. PP-PRC-002 — Initial page load and render
 

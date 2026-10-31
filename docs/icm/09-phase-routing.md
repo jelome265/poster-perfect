@@ -125,7 +125,7 @@ Blocks:
 | Gate | Status | Reason |
 |---|---|---|
 | G0 | Awaiting owner approval; limited Phase 1 foundation authorization does not close G0 | Structural IA/component baseline accepted under DEC-013; content, publication permissions, enquiry route, font licensing, and responsive adaptations remain open in `content-structure.md` |
-| G1 | Technical evidence passed on PR #15 candidate `da325b2`; owner disposition pending | Application-quality run `41169847259` and documentation-integrity run `41169847210` passed. Production preview served the built document and referenced assets; manual PP-VER-014/015 foundation reviews are recorded in PP-ART-020 |
+| G1 | Technical evidence passed on initial PR #15 candidate `da325b2` and reconciled head `befdefc`; owner disposition pending | Application-quality runs `41169847259` and `41170052269`, and documentation-integrity runs `41169847210` and `41170052381`, passed. Production preview served the built document and referenced assets; manual PP-VER-014/015 foundation reviews are recorded in PP-ART-020 |
 | G2 | Not started | No application composition |
 | G3 | Not started | No responsive implementation |
 | G4 | Not started | No release candidate or execution evidence |

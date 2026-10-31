@@ -49,7 +49,7 @@ See the [ICM phase routing](icm/09-phase-routing.md) for the mapping between pha
 ## Current project state
 
 - Phase 0 is awaiting owner approval (G0). The owner's Canva export was inspected on 2026-10-30; records are drafted, and the owner decisions in `content-structure.md` remain open.
-- Phase 1 foundation is merged on `main` at `ad45f296b2294e65048cf27d1d5473f54e14e52a`; the neutral React shell, npm lockfile, strict TypeScript configuration, lint/test/build scripts, and CI workflows are present. G1 verification and gap review are in progress.
+- Phase 1 foundation is merged on `main` at `ad45f296b2294e65048cf27d1d5473f54e14e52a`; the neutral React shell, npm lockfile, strict TypeScript configuration, lint/test/build scripts, and CI workflows are present. G1 verification and gap-review evidence passed on PR #15; owner phase disposition remains pending.
 - Phases 2–4 have not started. No designed page composition, final brand styling, responsive implementation, or production deployment has been introduced.
 - The company-level purpose is confirmed: Poster Perfect is a graphic design company portfolio intended to attract prospective customers, not an individual designer's portfolio.
 - Specific customer segments, approved positioning copy, service categories, publishable portfolio material and permissions, current availability wording, enquiry route, and responsive adaptations remain to be confirmed. The one-page/seven-section hierarchy, source copy, approximate visual values, and observed components are drafted from the export and await G0 approval; none is inferred from the project name.
