@@ -56,7 +56,7 @@ Use the five-level ICM (L0–L4) to govern traceability from requirements throug
 
 ### DEC-007 — Phase 0 information architecture and component blueprint
 
-**Status:** Accepted (project owner directive). Content remains blocked until the Canva source is inspected.
+**Status:** Accepted (project owner directive). Source inspection was completed on 2026-10-30; the information architecture and component blueprint are drafted from the export and await owner approval (G0).
 
 Phase 0 produces two canonical specification artifacts: the [information architecture](information-architecture.md) (`PP-ART-018`) and the [component blueprint](component-blueprint.md) (`PP-ART-019`). Both are derived from the inspected source. Neither is populated by inference. Phase 1 routing, rendering, and source-layout decisions use the accepted information architecture as an input.
 
@@ -91,7 +91,7 @@ The three testimonial quotations recorded from the Canva export are retained in 
 **Status:** Accepted (project owner, 2026-10-30).
 
 - `CLAUDE.md` §4 now states that Phase 0 is awaiting owner approval (G0), not blocked. Phase 1 has not started.
-- Branch protection is active on `main`: pull request required, force-push and deletion blocked, enforced for administrators with no bypass.
+- The active `main` ruleset requires pull requests, blocks non-fast-forward updates and branch deletion, and has no bypass actors. Its current approval threshold is zero and no named status check is required yet. Keep that limitation explicit; do not claim CI is enforced until the documentation check is configured as a required check.
 - G0 remains unapproved.
 
 **Authority:** project owner approval under `CLAUDE.md` change control and §8.
@@ -103,7 +103,7 @@ The three testimonial quotations recorded from the Canva export are retained in 
 | Build tool and rendering model | Open | After page and delivery requirements are understood |
 | Package manager and Node.js version | Open | Before application scaffold |
 | Styling approach | Open | After design-system requirements are known |
-| Page and route structure | Open | After source inspection; input: route inventory in `information-architecture.md` (DEC-007) |
+| Page and route structure | Drafted from source; owner approval pending | Accept the route and hierarchy inventory in `information-architecture.md` at G0 (DEC-007) |
 | Test and browser automation stack | Open | During application foundation |
 | Hosting and deployment | Open | Before release planning |
 | Backend or external integrations | Not established | Only if a confirmed requirement needs one |
