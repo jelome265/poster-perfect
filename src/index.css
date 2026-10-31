@@ -1,0 +1,9 @@
+/* Neutral base only. Brand colors, type, and spacing are not defined until
+   the owner approves the Phase 0 design tokens (see docs/design-system.md). */
+body {
+  margin: 0;
+}
+
+main {
+  padding: 1rem;
+}

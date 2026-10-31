@@ -6,6 +6,10 @@ A responsive company portfolio website for a graphic design business, built with
 
 **Documentation baseline established; application implementation not started.** The owner's Canva export was inspected on 2026-10-30. Records drafted from it await owner approval (Phase 0, G0). Visual values are approximate, and several content and publication decisions remain open.
 
+## Application development
+
+See [development setup](docs/development.md) for prerequisites and commands.
+
 ## Documentation
 
 ### Project specification
