@@ -73,7 +73,9 @@ The source-led seven-section baseline is ready for Phase 2 when:
 
 - The reference design can be inspected at sufficient resolution.
 - The company-level purpose and positioning are reflected in the approved project brief.
-- Target customer segments, service information, publishable portfolio work, availability wording, and enquiry path are confirmed or explicitly excluded/recorded as accepted limitations.
+- Source-derived customer groups, services, capabilities, value points and company copy are reconciled with Canva.
+- All seven source sections are present in the IA and each unavailable value/asset/permission has a clearly identified placeholder or publication control.
+- Contact/social destinations are not activated until verified; availability and source office hours are reconfirmed before publication; statistics/testimonials and sample artwork require substantiation/permission.
 - The page and content structure are documented in the information architecture and content inventory.
 - The design tokens and required assets are inventoried.
 - Interactive elements and their expected outcomes and destinations are identified.
