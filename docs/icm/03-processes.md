@@ -2,7 +2,7 @@
 
 **Canonical level:** L2 — Contracts and behaviour  
 **Record class:** Process specification  
-**Status:** Baseline process patterns defined; design-specific user flows pending Phase 0
+**Status:** Baseline process patterns defined; source-visible interactions and seven-section structure inventoried; implementation flows to be completed in Phase 2
 
 ## 1. Process definition
 
