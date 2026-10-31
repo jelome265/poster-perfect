@@ -39,13 +39,18 @@ Every control must specify:
 | `PP-VER-010` | Asset loading and alternative text review | Automated/manual | PP-CON-005 | Does not independently establish copyright/licensing or full design fidelity | Pending asset inventory |
 | `PP-VER-011` | Release artifact and revision provenance | Automated/manual | PP-REQ-008, PP-CON-009 | Establishes traceability, not the artifact's complete security or runtime correctness | Planned |
 | `PP-VER-012` | Owner review and release disposition | Manual approval | PP-REQ-008, PP-CON-009 | Records authorization; it does not replace technical verification | Required for each release |
-| `PP-VER-013` | ICM reference and traceability integrity | Manual initially; automation when justified | All accepted requirements and ICM registers | Proves documentation/link/identifier/traceability integrity only; not application implementation | Failed at `877933a` (PP-ART-017 §10 R4): stale statuses and missing §9 reference; remediation pending. Prior: passed at `76f990f` (§8 R3) for that revision only |
+| `PP-VER-013` | ICM reference and traceability integrity | Automated structural checks plus manual review of authority, ownership, and status semantics | All accepted requirements and ICM registers | Proves documentation/link/identifier/traceability integrity only; not application implementation, visual fidelity, or accessibility | R4 failed at `877933a` (§10). A reproducible validator and CI workflow are now defined; candidate result must pass on the exact PR revision. Prior passes apply only to their named revisions |
 | `PP-VER-014` | Architecture and component-boundary review | Manual/hybrid | PP-REQ-003, PP-CON-003 | Depends on the actual source tree and reviewed revision; a logical map alone is not implementation evidence | Planned; run as the physical architecture is introduced |
 | `PP-VER-015` | Dependency and side-effect surface review | Manual/hybrid | PP-REQ-007, PP-CON-007, PP-EFF-005–010 | Reviews declared/observable dependencies and effects; cannot prove absence of all runtime vulnerabilities | Defined; run at foundation and whenever dependencies/effects change |
 | `PP-VER-016` | Information architecture and component-blueprint reconciliation against inspected source | Manual | PP-REQ-001, PP-REQ-003, PP-REQ-006, PP-REQ-009, PP-CON-002, PP-CON-003, PP-CON-010 | Verifies record completeness and cross-reference consistency against the source; does not prove the implemented DOM, visual fidelity, or accessibility (`PP-VER-005`, `PP-VER-006`, `PP-VER-008`, `PP-VER-014`) | Executed by author 2026-10-30 against the export; owner review pending (audit §9) |
 | `PP-VER-017` | Company positioning, approved portfolio content and prospective-customer journey reconciliation | Manual | PP-REQ-010, PP-CON-011 | Verifies owner-approved company facts, publication permissions, availability and enquiry-path specification; does not measure lead generation, conversion rate, sales, or customer satisfaction | Partially specified; detailed company content and enquiry route pending Phase 0 |
 
 ## 4. Automated controls
+
+### 4.0 Documentation integrity (PP-VER-013)
+
+Run `python3 -B scripts/validate_docs.py` from the repository root. The standard-library-only validator checks repository-relative Markdown links and heading anchors, canonical identifier definitions/references, accepted-requirement traceability, process/effect mappings, stale current-state statements, and withholding of unconfirmed contact values from `content-structure.md`. The same command runs in `.github/workflows/docs-integrity.yml` on pull requests and pushes to `main`. The manual procedure in §10 remains required for authority and semantic judgments that a structural checker cannot prove.
+
 
 ### 4.1 Dependency reproducibility
 

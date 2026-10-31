@@ -258,7 +258,7 @@ Limitations:
 | Testimonial quotations | Do not remove. Quotations restored in `content-structure.md`; no history rewrite | DEC-009 |
 | `CLAUDE.md` §4 Phase 0 status | Approved; replacement applied | DEC-010 |
 | Branch protection on `main` | Active and enforced | GitHub ruleset `26256454`: pull request required, non-fast-forward and deletion blocked, no bypass actors |
-| Contact details | Owner to confirm whether the phone and email remain; they appear in the export footer | Owner decision 8, open |
+| Contact details | Values withheld from the current public content record pending confirmation; older Git revisions are not rewritten | Owner decision 8, open |
 | G0 approval | Deferred ("Wait") | Phase 0 remains awaiting owner approval; Phase 1 not authorized |
 
 PP-VER-013 has not been re-run at the commit that contains this section. Its last formal result is FAIL at `877933a` (§10).

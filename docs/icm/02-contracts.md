@@ -111,7 +111,7 @@ Shared visual values MUST be derived from the inspected and approved source or r
 **Invariants:** No guessed canonical palette, typography, spacing scale, or breakpoints.  
 **Verification:** Design-token inventory reconciliation and rendered comparison.
 
-**Specification:** Blocked on Phase 0  
+**Specification:** Partially specified; source values are inventoried, with measurement and owner approval pending  
 **Implementation:** Not started  
 **Evidence:** Not collected
 
@@ -128,7 +128,7 @@ An included asset MUST have a traceable source, intended use, and appropriate we
 **Invariants:** No unapproved substitutions; no invented brand assets; no unnecessary original-resolution payloads.  
 **Verification:** Asset inventory, visual review, network/resource inspection, accessibility review.
 
-**Specification:** Blocked on Phase 0  
+**Specification:** Partially specified; assets are inventoried from the export, with originals, provenance, and publication permissions pending  
 **Implementation:** Not started  
 **Evidence:** Not collected
 
@@ -145,7 +145,7 @@ Every control MUST have a documented trigger and observable outcome. Navigation 
 **Invariants:** Keyboard operation, visible focus, accessible name, and meaningful failure feedback when an operation can fail.  
 **Verification:** Interaction inventory, keyboard checks, functional tests.
 
-**Specification:** Blocked  
+**Specification:** Partially specified; visible controls are inventoried, with destinations and behavior awaiting owner decisions  
 **Implementation:** Not started  
 **Evidence:** Not collected
 
@@ -198,7 +198,7 @@ The information architecture MUST define every in-scope page or route, section, 
 **Invariants:** Unique identifiers; no orphan nodes; DOM order matches visual reading order unless an owner-approved adaptation says otherwise; no route or section is inferred from the project name.  
 **Verification:** `PP-VER-016`, `PP-VER-005`, `PP-VER-009`, `PP-VER-014` (after composition exists).
 
-**Specification:** Blocked on Phase 0  
+**Specification:** Partially specified; source hierarchy and navigation are drafted, with owner approval and web adaptations pending  
 **Implementation:** Not started  
 **Evidence:** Not collected
 

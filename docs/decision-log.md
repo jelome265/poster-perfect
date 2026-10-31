@@ -56,7 +56,7 @@ Use the five-level ICM (L0–L4) to govern traceability from requirements throug
 
 ### DEC-007 — Phase 0 information architecture and component blueprint
 
-**Status:** Accepted (project owner directive). Content remains blocked until the Canva source is inspected.
+**Status:** Accepted (project owner directive). The Canva export was inspected on 2026-10-30; the information architecture and component blueprint are drafted from that source and await owner approval at G0.
 
 Phase 0 produces two canonical specification artifacts: the [information architecture](information-architecture.md) (`PP-ART-018`) and the [component blueprint](component-blueprint.md) (`PP-ART-019`). Both are derived from the inspected source. Neither is populated by inference. Phase 1 routing, rendering, and source-layout decisions use the accepted information architecture as an input.
 
@@ -82,7 +82,7 @@ The Canva source remains the visual/content reference. Business content or an en
 
 **Status:** Accepted (project owner, 2026-10-30).
 
-The three testimonial quotations recorded from the Canva export are retained in `content-structure.md`. Customer names remain withheld. Publication still requires owner confirmation of permission for each quotation (Owner decision 4). No history rewrite is authorized.
+The three testimonial quotations recorded from the Canva export are retained in `content-structure.md` at the project owner's direction. Customer names remain withheld. This repository-retention decision is not approval to publish the quotations on the website: permission for each quotation and attribution must be confirmed before website publication (Owner decision 4). No history rewrite is authorized.
 
 **Authority:** project owner decision recorded in the remediation PR.
 
@@ -103,7 +103,7 @@ The three testimonial quotations recorded from the Canva export are retained in 
 | Build tool and rendering model | Open | After page and delivery requirements are understood |
 | Package manager and Node.js version | Open | Before application scaffold |
 | Styling approach | Open | After design-system requirements are known |
-| Page and route structure | Open | After source inspection; input: route inventory in `information-architecture.md` (DEC-007) |
+| Page and route structure | Open | After G0 owner approval; the observed one-page/seven-section inventory is drafted in `information-architecture.md` (DEC-007) |
 | Test and browser automation stack | Open | During application foundation |
 | Hosting and deployment | Open | Before release planning |
 | Backend or external integrations | Not established | Only if a confirmed requirement needs one |
