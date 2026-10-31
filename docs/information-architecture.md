@@ -2,7 +2,7 @@
 
 **Artifact:** `PP-ART-018`  
 **Class:** Specification (contract-backed; see `PP-CON-010`)  
-**Status:** Accepted by the project owner on 2026-10-31 (DEC-013) as the structural baseline from the 2026-10-30 export. Content and web-adaptation decisions remain open (`PP-RSK-002`; `content-structure.md` owner decisions)  
+**Status:** Source structure accepted under DEC-013 and profile-only implementation scope approved under DEC-017 (2026-10-31). The seven-section source inventory remains intact; Statistics and Testimonials are documented but excluded from the initial rendered website, and Contact/footer is adapted to a wordmark-only footer.
 **Canonical owner:** Page implementation owner (`PP-MAP-011`, role as defined in `icm/01-architecture-map.md`)  
 **Producer:** Page implementation owner, from the source-inspection record  
 **Approval:** Project owner  
@@ -68,7 +68,7 @@ Every node MUST record the following. A field that does not apply is marked "not
 
 ## 5. Structure (observed in the export, 2026-10-30)
 
-The export is one page with seven sections. The records below are drafted from it and are awaiting owner approval (`PP-VER-016`, G0). No navigation, anchors, or additional pages are observed.
+The export is one page with seven sections. The source records below are retained as the seven-section source inventory and were structurally accepted under DEC-013. DEC-017 approves the initial rendered scope and exclusions; see §5.7. The Canva source has no navigation bar. The About anchor is an owner-approved web adaptation, not an observed source navigation item.
 
 ### 5.1 Page and route inventory
 
@@ -97,9 +97,9 @@ PP-IA-001 Home page (single page)
 | Home (`PP-IA-001`) | 2 | `PP-IA-003` | About, light grey band | Drafted from export |
 | Home (`PP-IA-001`) | 3 | `PP-IA-004` | Value statement, bright blue band | Drafted from export |
 | Home (`PP-IA-001`) | 4 | `PP-IA-005` | Services, dark navy band | Drafted from export; duplicated paragraph under review |
-| Home (`PP-IA-001`) | 5 | `PP-IA-006` | Statistics, three columns | Drafted from export; claims under review |
-| Home (`PP-IA-001`) | 6 | `PP-IA-007` | Testimonials, light grey band | Drafted from export; permissions under review |
-| Home (`PP-IA-001`) | 7 | `PP-IA-008` | Contact and footer, dark navy band | Drafted from export; destinations under review |
+| Home (`PP-IA-001`) | 5 | `PP-IA-006` | Statistics, three columns | Source-observed; excluded from the initial website under DEC-014/DEC-017 |
+| Home (`PP-IA-001`) | 6 | `PP-IA-007` | Testimonials, light grey band | Source-observed; excluded from the initial website under DEC-014/DEC-017 pending individual permissions |
+| Home (`PP-IA-001`) | 7 | `PP-IA-008` | Contact and footer, dark navy band | Source-observed; adapted to text-only wordmark footer under DEC-017; contact data/links excluded |
 
 ### 5.4 Navigation
 
@@ -113,21 +113,27 @@ Navigation entries MUST use semantic links (`PP-CON-006`). A navigation entry wi
 
 | Anchor ID | Target section | Used by | Status |
 | --- | --- | --- | --- |
-| None observed | Not applicable | Not applicable | If the hero button ("LEARN MORE") targets a section, the owner records the anchor here. Anchor identifiers must be unique and must not be generated from display text that may change |
+| `PP-IA-009` | About section | `PP-CNT-10` (LEARN MORE) | About (`PP-IA-003`) | Owner-approved in-page anchor adaptation under PP-CNT-10 / DEC-014 |
 
 ### 5.6 Node references (content, component, responsive, interaction)
 
 | Section ID | Content entry (`content-structure.md`) | Component(s) or local markup (`components.md`) | Responsive rule (`design-system.md`) | Interaction rows (`content-structure.md`) |
 | --- | --- | --- | --- | --- |
-| `PP-IA-002` | Hero, PP-IA-002 section | `PP-CMP-005` (lockup); local markup for headline and button | None in source | "LEARN MORE" (owner decision) |
-| `PP-IA-003` | About, PP-IA-003 section | Local markup | None in source | None |
-| `PP-IA-004` | Value statement, PP-IA-004 section | `PP-CMP-001` (four instances) | None in source | None |
-| `PP-IA-005` | Services, PP-IA-005 section | `PP-CMP-002` (three instances) | None in source | Service cards (owner decision) |
-| `PP-IA-006` | Statistics, PP-IA-006 section | `PP-CMP-003` (three instances) | None in source | None |
-| `PP-IA-007` | Testimonials, PP-IA-007 section | `PP-CMP-004` (three instances) | None in source | None |
-| `PP-IA-008` | Contact and footer, PP-IA-008 section | `PP-CMP-005`; local markup for the contact block and social group | None in source | Email, telephone, social icons, lockup (owner decisions) |
+| `PP-IA-002` | Hero, PP-IA-002 section | Text-only wordmark; local markup for headline and internal link | Approved fluid reflow | LEARN MORE → #about (PP-CNT-10) |
+| `PP-IA-003` | About, PP-IA-003 section | Local markup | Approved fluid reflow | None |
+| `PP-IA-004` | Value statement, PP-IA-004 section | Text-only value-point list; no check-mark asset | Approved fluid reflow | None |
+| `PP-IA-005` | Services, PP-IA-005 section | Text-only service categories; sample-image cards excluded | Approved fluid reflow | None |
+| `PP-IA-006` | Statistics, PP-IA-006 section | Not rendered under DEC-017 | Not applicable | None |
+| `PP-IA-007` | Testimonials, PP-IA-007 section | Not rendered under DEC-017 | Not applicable | None |
+| `PP-IA-008` | Contact and footer, PP-IA-008 section | Text-only brand footer; contact/social/location details excluded | Approved fluid reflow | None |
 
 The export has no navigation bar and no enquiry action. The enquiry path required by `PP-CON-011` is a proposed web adaptation and has no node until it is approved.
+
+### 5.7 Approved initial render scope (DEC-017)
+
+The seven nodes above remain the complete source-derived section inventory. The initial website renders Hero, About, Value statement, and Services, followed by a wordmark-only footer derived from Contact/footer. It does not render Statistics or Testimonials. It does not render contact information, social icons, office hours, or location details. The source hierarchy is preserved as provenance; the profile-only render is an explicitly approved adaptation.
+
+The only initial interaction is the internal LEARN MORE link to the About anchor (PP-IA-009). There are no external navigation destinations or enquiry controls. This does not satisfy the eventual customer-acquisition objective; a verified contact hand-off remains a G4 business-readiness dependency or requires a separate restricted-release decision.
 
 ## 6. Responsive navigation and reflow
 
