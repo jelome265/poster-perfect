@@ -54,7 +54,7 @@ This is the accepted requirement baseline as of DEC-008. New requirements receiv
 **Consumers:** Browser runtime and page composition  
 **Requirement:** PP-REQ-002
 
-The application runtime MUST be built with React and TypeScript/TSX. Its exact entry point, rendering mode, bundler, route model, and build output remain implementation decisions for Phase 1.
+The application runtime MUST be built with React and TypeScript/TSX. Its entry point, rendering mode, bundler, route model, and build output were selected and documented under DEC-012 during Phase 1.
 
 **Inputs:** Browser document and application assets; any runtime configuration only if approved.  
 **Outputs:** Rendered page content and declared browser interactions.  
@@ -97,7 +97,7 @@ Every reusable component MUST expose an explicit typed interface. Props must des
 
 **Specification:** Accepted  
 **Implementation:** No reusable page/section components introduced; neutral application shell only  
-**Evidence:** PP-ART-020; strict type check and shell smoke at `ad45f296`
+**Evidence:** PP-ART-020; exact merge-SHA strict type check, test, production build and preview smoke at `9e81adb7a178db9c48106292b3351d0bafe0a9e8` (run `41172107909`)
 
 ### PP-CON-004 — Design token contract
 
@@ -248,8 +248,8 @@ The audit MUST:
 **Verification:** PP-VER-018.
 
 **Specification:** Accepted under DEC-015  
-**Implementation:** Passed on PR #15 code candidate `98c585c9e7ba79a78c24d7ed621148c32066444c`; npm/OSV/SPDX checks all passed in Actions run `41171547595`  
-**Evidence:** To be recorded after the dedicated workflow passes.
+**Implementation:** Passed on PR #15 merge SHA `9e81adb7a178db9c48106292b3351d0bafe0a9e8`; npm/OSV/SPDX/deps.dev checks passed in Actions run `41172108087`
+**Evidence:** Exact merge-SHA workflow run `41172108087` passed on `9e81adb7a178db9c48106292b3351d0bafe0a9e8`; see PP-ART-021 and PP-VER-018.
 
 
 ## 5. Conditional contracts

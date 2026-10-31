@@ -2,7 +2,7 @@
 
 **Control levels:** L0–L4  
 **Record class:** Artifact ownership and provenance register  
-**Status:** Phase 1 application source, dependency lockfile, CI workflows, and verification-review artifacts are present; design-dependent assets and release artifacts remain pending
+**Status:** Phase 1/G1 is complete under DEC-016; application source, dependency lockfile, CI workflows and verification artifacts are present. Design-dependent assets and release artifacts remain pending their owning gates.
 
 ## 1. Purpose
 
@@ -39,20 +39,20 @@ A file existing in Git does not automatically make it authoritative or prove tha
 | `PP-ART-008` | Delivery phase specifications | `docs/phases/` | Contract | Maintainer / owner approval | Current |
 | `PP-ART-009` | Decision log | `docs/decision-log.md` | Governance | Project owner | Current |
 | `PP-ART-010` | ICM charter and indexes | `docs/icm/README.md` and related files | Architecture/governance | Maintainer / owner approval | Initial baseline |
-| `PP-ART-011` | Application source | `src/` | Implementation | Implementation contributor | Neutral React shell merged on `main` at `ad45f296`; designed page composition not started |
-| `PP-ART-012` | Application dependency manifest and lockfile | `package.json`; `package-lock.json` | Implementation/reproducibility | Toolchain setup | Exact-pinned manifest and lockfile merged on `main`; clean install passed in Actions run `41168683315` |
+| `PP-ART-011` | Application source | `src/` | Implementation | Implementation contributor | Neutral React shell and dependency-audit controls merged on `main` at `9e81adb7a178db9c48106292b3351d0bafe0a9e8`; Phase 1 complete; designed page composition not started |
+| `PP-ART-012` | Application dependency manifest and lockfile | `package.json`; `package-lock.json` | Implementation/reproducibility | Toolchain setup | Exact-pinned manifest and lockfile merged on `main`; clean install, lint, typecheck, tests, build, and preview smoke passed in Actions run `41172107909` on `9e81adb7a178db9c48106292b3351d0bafe0a9e8` |
 | `PP-ART-013` | Approved source assets | `docs/design-reference.md` and owner-supplied originals (not yet received) | Static asset inventory | Project owner/source inspection | Export-derived inventory recorded; originals, provenance, licensing and publication permissions pending |
 | `PP-ART-014` | Visual reference captures | Not yet created | Verification evidence | Phase 0/2/4 | Pending |
-| `PP-ART-015` | Documentation-integrity validator and verification evidence | `scripts/validate_docs.py`; `.github/workflows/docs-integrity.yml` | Verification control/evidence | Maintainer / CI | Validator and workflow implemented; PP-VER-013 passed on `main` at `ad45f296` (run `41168683333`), initial review candidate `da325b2` (run `41169847210`), and reconciled PR #15 head `befdefc` (run `41170052381`) |
+| `PP-ART-015` | Documentation-integrity validator and verification evidence | `scripts/validate_docs.py`; `.github/workflows/docs-integrity.yml` | Verification control/evidence | Maintainer / CI | Validator and workflow implemented; PP-VER-013 passed on PR #15 merge SHA `9e81adb7a178db9c48106292b3351d0bafe0a9e8` (run `41172107907`). The close-out PR must rerun PP-VER-013 against its own documentation revision before merge |
 | `PP-ART-016` | Release build and deployment record | Not yet created | Release artifact | Release pipeline / owner | Not started |
 | `PP-ART-017` | ICM integrity audit (2026-10-30) | `docs/icm/integrity-audit-2026-10-30.md` | Verification evidence | ICM/documentation reviewer | R4 failed at `877933a` (§10); R5 passed at `a3d933c` (§12); R6 passed on `main` commit `486a81b` (§13). Results are revision-specific; later material changes require a new run. Not application verification |
 | `PP-ART-018` | Information architecture | `docs/information-architecture.md` | Specification (contract-backed) | Page implementation owner (`PP-MAP-011`); approval: project owner | Drafted from export 2026-10-30; owner approval pending (G0) |
 | `PP-ART-019` | Component blueprint | `docs/component-blueprint.md` | Contract / architecture | Component maintainer (`PP-MAP-013`); approval: project owner | Drafted from export 2026-10-30; structural baseline accepted 2026-10-31 under DEC-013; G0 content and interaction questions remain open |
-| `PP-ART-020` | Phase 1 verification and gap review | `docs/phases/phase-1-verification-gap-review-2026-10-31.md` | Verification evidence | Maintainer / CI | Review report records `ad45f296` baseline, initial PR #15 candidate `da325b2` (runs `41169847259` / `41169847210`), and reconciled PR #15 head `befdefc` (runs `41170052269` / `41170052381`) |
+| `PP-ART-020` | Phase 1 verification and gap review | `docs/phases/phase-1-verification-gap-review-2026-10-31.md` | Verification evidence | Maintainer / CI | Report retains historical `ad45f296` baseline and PR #15 candidates; final G1 disposition is tied to merge SHA `9e81adb7a178db9c48106292b3351d0bafe0a9e8` and runs `41172107909`, `41172107907`, and `41172108087` |
 
 The registry is a navigation and lifecycle record. Subject-specific details remain in the canonical file listed above.
 
-| `PP-ART-021` | npm dependency security and license inventory | `scripts/audit-licenses.mjs`, `.github/workflows/dependency-audit.yml`, `docs/security/dependency-audit.md` | Verification evidence / generated inventory | Maintainer / CI | Implemented and verified on PR #15 code candidate `98c585c9e7ba79a78c24d7ed621148c32066444c`; SPDX inventory artifact uploaded in Actions run `41171547595` (140 package entries; policy PASS) |
+| `PP-ART-021` | npm dependency security and license inventory | `scripts/audit-licenses.mjs`, `.github/workflows/dependency-audit.yml`, `docs/security/dependency-audit.md` | Verification evidence / generated inventory | Maintainer / CI | Implemented and verified on PR #15 merge SHA `9e81adb7a178db9c48106292b3351d0bafe0a9e8`; SPDX inventory artifact uploaded in Actions run `41172108087` (140 package entries; policy PASS) |
 
 ## 4. Required provenance
 

@@ -170,6 +170,18 @@ Vulnerability and license exceptions require a documented, time-bounded owner de
 
 **Authority:** Project owner instruction dated 2026-10-31; PP-REQ-011; PP-CON-012.
 
+### DEC-016 — Phase 1 application foundation completion
+
+**Status:** Accepted (project owner instruction, 2026-10-31).
+
+The project owner authorized one final Phase 1 close-out commit to reconcile the phase documents, record the exact merged revision and verification evidence, reconcile the gap register, and run PP-VER-013. This instruction records the formal G1 disposition: **Phase 1 is complete**. PR #15 merged to `main` at `9e81adb7a178db9c48106292b3351d0bafe0a9e8`.
+
+On that exact merge commit, Application quality (Actions run `41172107909`), Documentation integrity (run `41172107907`), and Dependency security and license audit (run `41172108087`) all succeeded. The PR #15 candidate head `ecfc625bcc206771bfc1a6b05a20888a51d862ce` passed all six configured required contexts. The active `Protect main` ruleset ID `26256454` requires strict status checks for all six contexts and has no bypass actors. The separate GitHub Advanced Security `osv-scanner` context passed on the PR candidate; the merge SHA's check-run collection contains the five GitHub Actions checks.
+
+This disposition is limited to the Phase 1 G1 foundation. It does not close Phase 0/G0, authorize Phase 2 before G0 completion, approve website content or third-party asset publication rights, or authorize production deployment. The neutral scaffold's single heading test and production-preview HTTP/asset smoke are accepted foundation-level evidence; they are not represented as full browser E2E. No deliberately failing required-check run has been used to prove merge blocking, and the ruleset currently requires zero approving reviews.
+
+**Authority:** Project owner instruction dated 2026-10-31; Phase 1 close-out and verification record in `docs/phases/phase-1-verification-gap-review-2026-10-31.md`.
+
 ## Open decisions
 
 | Decision | Status | Resolution gate |

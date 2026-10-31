@@ -4,7 +4,7 @@ A responsive company portfolio website for a graphic design business, built with
 
 ## Project status
 
-**Phase 1 foundation merged; G1 verification evidence passed on PR #15; owner phase disposition pending.** The React/TypeScript application shell and selected toolchain are on `main` at `ad45f296b2294e65048cf27d1d5473f54e14e52a`. The owner approved conservative business/content/design dispositions under DEC-014. G0 remains open for current contact and availability values, original logo/assets, and publication rights for testimonials and sample artwork.
+**Phase 1 is complete (DEC-016).** PR #15 merged the foundation verification and dependency controls to `main` at `9e81adb7a178db9c48106292b3351d0bafe0a9e8`; exact merge-SHA evidence is recorded in the [Phase 1 close-out report](docs/phases/phase-1-verification-gap-review-2026-10-31.md). Phase 0/G0 remains open for current contact and availability values, original logo/assets, social profile URLs, and publication rights for testimonials and sample artwork. Phase 2 remains gated on G0.
 
 ## Application development
 

@@ -126,7 +126,7 @@ Blocks:
 | Gate | Status | Reason |
 |---|---|---|
 | G0 | In progress; conservative business/content/design dispositions owner-approved under DEC-014 | Exact contact and availability values, original logo/asset files, company social profile URLs, and publication rights for testimonials/sample artwork remain open; responsive adaptation and Aileron source license are recorded |
-| G1 | Technical evidence complete on PR #15 | Application quality and documentation integrity passed on candidate `98c585c` (runs `41171547343` and `41171547377`); npm advisory, OSV vulnerability, SPDX inventory and deps.dev license checks passed in run `41171547595`. Formal owner Phase 1 disposition remains pending |
+| G1 | Complete — owner-authorized Phase 1 close-out under DEC-016 on 2026-10-31 | PR #15 merged at `9e81adb7a178db9c48106292b3351d0bafe0a9e8`. On that exact merge SHA, application quality passed (run `41172107909`), PP-VER-013 passed (run `41172107907`), and npm/OSV/SPDX/deps.dev audit passed (run `41172108087`). Six required contexts passed on PR #15 head `ecfc625bcc206771bfc1a6b05a20888a51d862ce`; ruleset `26256454` is active with strict checks and no bypass actors. The close-out documentation change must pass PP-VER-013 again on its own PR revision. |
 | G2 | Not started | No application composition |
 | G3 | Not started | No responsive implementation |
 | G4 | Not started | No release candidate or execution evidence |
