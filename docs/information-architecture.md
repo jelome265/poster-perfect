@@ -18,7 +18,7 @@ This document is the canonical record of the **structure** of the Poster Perfect
 
 The owner-confirmed company purpose and prospective-customer objective are defined in `docs/project-brief.md` and `PP-CON-011`. The information architecture must support the approved company-level presentation and enquiry journey; it must not turn the site into an individual designer's personal portfolio.
 
-The Canva source supplies observed visual and content structure. If the company objective requires an additional section, page, navigation entry, or enquiry action that is not present in the source, record it as a proposed web adaptation and obtain explicit owner approval before adding it. Do not label an approved adaptation as source-observed. Exact page count and IA nodes remain blocked until the required source inspection and approvals are complete.
+The Canva source supplies observed visual and content structure. If the company objective requires an additional section, page, navigation entry, or enquiry action that is not present in the source, record it as a proposed web adaptation and obtain explicit owner approval before adding it. Do not label an approved adaptation as source-observed. The export-derived page and section nodes are drafted; they remain unaccepted until the owner approves G0. Additional web-adaptation nodes remain prohibited until explicitly approved.
 
 
 ## 2. Ownership split
