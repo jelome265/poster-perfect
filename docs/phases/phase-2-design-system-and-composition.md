@@ -18,7 +18,7 @@ Build the website's primary visual composition from the verified Canva specifica
 - Typography choices and asset-use constraints are known: Aileron Regular/Bold; text wordmark fallback until the original logo symbol is supplied.
 - Phase 1 type checking, development, and production build are operational.
 - All seven source sections are in scope. Preserve the Statistics, Testimonials, Contact/footer and image regions using explicit placeholder states where values, permissions, destinations or originals are unavailable.
-- The PDF source remains owner-held; re-supply it before detailed side-by-side visual comparison and before G2 exit. The exact CSS comparison viewport must be recorded when the source is available.
+- The Canva PDF is committed at `docs/source/Company_Website_Business_Website_in_Dark_Blue_White_Bright_Blue_Simple_Professional_Style.pdf` under DEC-018. Use that file for detailed side-by-side comparison; record the CSS viewport separately because the PDF page dimensions are not a CSS viewport.
 
 ## 3. Scope and workstreams
 
