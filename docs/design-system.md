@@ -2,7 +2,7 @@
 
 ## Status
 
-**Source-derived baseline approved by the owner under DEC-014 (2026-10-31).** Colors and dimensions remain approximate values from a 72 dpi render; they are approved as starting references, not exact measurements. Aileron is approved and its CC0-1.0 source license is recorded in PP-REF-014. The export is a single desktop-width layout; responsive reflow is an approved web adaptation, with implementation and viewport validation deferred to Phases 2–3.
+**Source-derived starting baseline approved under DEC-014/DEC-017 (2026-10-31).** Colors and dimensions remain approximate values from a 72 dpi render, approved only as starting references. Aileron Regular/Bold is approved and its CC0-1.0 source license is recorded in PP-REF-014. The initial site excludes original logo artwork, sample imagery, social icons, and unlicensed customer material. Responsive reflow is an approved web adaptation; detailed implementation and validation remain Phase 2–3 work.
 
 ## Token principles
 
@@ -16,14 +16,14 @@
 
 | Category | Values | Status |
 | --- | --- | --- |
-| Color | Six approximate values (see the color table below) | Approximate: owner to confirm |
-| Typography | Aileron Bold for headings and labels; Aileron Regular for body text. Sizes, weights per role, line heights, and letter spacing pending | Family and CC0-1.0 source license approved; final metrics require rendered validation |
+| Color | Six approximate values (see the color table below) | Owner-approved starting references under DEC-014/DEC-017; not exact brand specifications |
+| Typography | Aileron Bold for headings and labels; Aileron Regular for body text. Sizes, line heights, and letter spacing are not measured | Family and source license approved; exact distribution/license metadata and rendered metrics must be verified during Phase 2 |
 | Spacing | Section gaps, component gaps, padding, and margins not yet measured | Pending measurement |
 | Layout | One page, 1024.5 × 4032 pt. Content width, columns, and alignment not yet measured | Partially measured |
 | Shape | Badge and button corner radii; dividers and rules (a short rule sits above some headings) | Pending measurement |
 | Elevation | Not assessed | Pending |
-| Imagery | Sample images placed in the service row, hero, and footer. Crop, aspect ratio, and focal point pending | Pending |
-| Responsive | No source variant; owner-approved fluid reflow, content-driven breakpoints, and column stacking | Web adaptation approved under DEC-014; implement and verify in Phases 2–3 |
+| Imagery | Source sample images observed in hero, service row, and footer; originals not supplied and excluded under DEC-017 | No imagery in the initial site; no substitutions or recreated brand mark |
+| Responsive | No source variant; owner-approved fluid reflow, content-driven breakpoints, and column stacking | Web adaptation approved under DEC-014/DEC-017; implement in Phase 2 and verify in Phases 2–3 |
 | Motion | Not present in a static export | Not in source |
 
 ## Color values (approximate)
