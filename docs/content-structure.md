@@ -30,13 +30,13 @@ The source export also contains a location and contact details. Those values are
 | --- | --- |
 | Page / route | `PP-IA-001` (see `information-architecture.md` §5.1). Route not assigned |
 | Purpose | Company portfolio and enquiry entry point (DEC-008) |
-| Primary audience | Prospective customers; specific segments pending owner confirmation |
+| Primary audience | Prospective customers: startups, restaurants, salons, and growing businesses (source-derived groups approved under DEC-014) |
 | Main heading | "Your vision, Our design" |
-| Primary action | "LEARN MORE" (hero). Destination not shown in the source |
+| Primary action | "LEARN MORE" (hero); owner-approved in-page link to About (`#about`) under PP-CNT-10 |
 | Secondary actions | The source footer contains email and telephone details; values are withheld here pending owner confirmation |
 | Sections in order | Not recorded here; see `information-architecture.md` §5.3 |
 | Required assets | Hero sample image; logo mark; service samples (brochure, logo, magazine cover); footer sample image; four check icons; three social icons. Originals not yet supplied |
-| Responsive variations | None supplied |
+| Responsive variations | None supplied in the source; fluid reflow and column stacking approved as web adaptations under DEC-014 |
 
 ## Section inventory
 
@@ -54,7 +54,7 @@ Exact text from the export. Line breaks are shown as written in the source.
 - Heading: "Poster Perfect is built to convert visitors into DMs"
 - Body (exact): "Poster Perfect was founded in Blantyre on a simple belief: great businesses deserve great design. Too many brands in Malawi and across Africa are forced to choose between expensive agencies or generic templates that don't fit. We're here to close that gap. As a designer and International Management student specializing in Trade, Tax & International Relations, I built Poster Perfect to give startups, restaurants, salons, and growing businesses access to custom, world-class branding without the corporate price tag. Our mission is to make you look unforgettable: whether it's a logo that defines your legacy, a menu that increases orders, or social media graphics that stop the scroll. Our philosophy is partnership over transaction: we listen first, design second, and don't stop revising until it feels like you. The vision is to help 1,000 African brands compete globally with visuals that command respect. Your vision, our design: let's build something perfect."
 
-Note: the body is written in the first person and includes personal education details. See Owner decisions, item 2.
+Note: the source body is written in the first person and includes personal education details. The approved company voice and removal of personal education details are recorded under PP-CNT-02.
 
 ### Value statement (bright blue band) (`PP-IA-004`)
 
@@ -65,7 +65,7 @@ Note: the body is written in the first person and includes personal education de
 ### Services (dark navy band) (`PP-IA-005`)
 
 - Heading: "Our Services"
-- Body in the left column: the same paragraph as PP-IA-003, repeated verbatim. See Owner decisions, item 1.
+- Body in the left column: the same paragraph as PP-IA-003, repeated verbatim in the source. Remove the duplicate under PP-CNT-04.
 - Service cards (PP-CMP-002): "Brochures" (sample image); "Logos" (sample image); "Magazine covers" (sample image)
 
 ### Statistics (three columns) (`PP-IA-006`)
@@ -74,7 +74,7 @@ Note: the body is written in the first person and includes personal education de
 - "1+" / "Years in Operation"
 - "Worldwide" (no secondary label)
 
-Claims are unverified. See Owner decisions, item 3.
+Claims are unverified and omitted from implementation under PP-CNT-05.
 
 ### Testimonials (light grey band) (`PP-IA-007`)
 
@@ -86,7 +86,7 @@ Claims are unverified. See Owner decisions, item 3.
 - Testimonial 3, role and location: "Event Organizer, Zomba"
   > "Needed last-minute posters for our youth conference. Poster Perfect delivered 2 amazing options in 24 hours. The print quality was perfect and we had record attendance. I don't use anyone else for my event graphics now."
 
-Attribution names are withheld (see Privacy handling). The quoted outcomes need substantiation (see Owner decisions, item 4).
+Attribution names are withheld (see Privacy handling). The testimonials are not approved for website publication under PP-CNT-06; individual customer permissions and material-claim substantiation remain required.
 
 ### Contact and footer (dark navy band) (`PP-IA-008`)
 
@@ -102,13 +102,13 @@ Attribution names are withheld (see Privacy handling). The quoted outcomes need 
 
 | Element | Expected behavior | Destination or outcome | Status |
 | --- | --- | --- | --- |
-| "LEARN MORE" (hero, PP-IA-002) | Pending owner decision | Not shown in the source | Owner decision required |
-| Email text (PP-IA-008) | Mail link only if confirmed | Destination withheld; no `mailto:` value is approved | Not implemented; owner confirmation required |
-| Telephone text (PP-IA-008) | Telephone link only if confirmed | Destination withheld; no `tel:` value is approved | Not implemented; owner confirmation required |
-| Social icons (PP-IA-008), three | Link to the company's profile | Profile URLs not in the source | Owner to supply |
-| Service cards (PP-IA-005), three | Pending: link to a portfolio item, or non-interactive | Not shown in the source | Owner decision required; links depend on portfolio permissions |
-| Logo lockup (PP-IA-002, PP-IA-008) | Pending: home link or none | Not shown in the source | Owner decision required |
-| Enquiry path (PP-CON-011) | Required by the company objective | None in the source (no form or enquiry action observed) | Proposed web adaptation; owner approval required |
+| "LEARN MORE" (hero, PP-IA-002) | In-page navigation | About section (`#about`) | Owner-approved under PP-CNT-10; implement and verify in Phase 2 |
+| Email text (PP-IA-008) | Native mail hand-off only after exact destination is supplied | Destination withheld; no `mailto:` value is approved | Approved pattern, but blocked until current address is supplied and confirmed (PP-CNT-14) |
+| Telephone text (PP-IA-008) | Native telephone hand-off only after exact destination is supplied | Destination withheld; no `tel:` value is approved | Approved pattern, but blocked until current number is supplied and confirmed (PP-CNT-14) |
+| Social icons (PP-IA-008), three | Omit until profile links are supplied | No profile URL present in the source | Excluded from baseline under PP-CNT-11 |
+| Service cards (PP-IA-005), three | Non-interactive service labels; do not use unapproved sample imagery | No approved portfolio destination | Approved under PP-CNT-08; original asset rights remain blocked |
+| Logo lockup (PP-IA-002, PP-IA-008) | Static brand mark, not a control | None | Approved under PP-CNT-11 |
+| Enquiry path (PP-CON-011) | Native email/telephone hand-off; no remote form/backend | Exact contact destination not supplied | Approved pattern under PP-CNT-14; implementation blocked on owner-supplied destination |
 
 Navigation entries are structured in `information-architecture.md` §5.4 and reference rows in this table. Use a link for navigation to a destination. Use a button for an action performed on the current page. Do not create decorative controls that appear interactive but do nothing.
 

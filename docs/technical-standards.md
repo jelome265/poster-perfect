@@ -45,6 +45,7 @@ These standards apply to the implementation once the application scaffold exists
 - Add a dependency only when it provides a clear benefit that justifies its maintenance and security cost.
 - Use the package manager's lockfile and commit it with dependency changes.
 - Avoid unmaintained packages and broad dependency additions for small isolated tasks.
+- Run the dedicated vulnerability and SPDX license audit documented in [the dependency audit policy](security/dependency-audit.md) against the committed npm lockfile. Unknown or new license identifiers must fail closed and receive explicit review; do not add blanket overrides.
 - Record material architectural dependencies in the README or architecture documentation.
 
 ## Code quality

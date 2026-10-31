@@ -2,7 +2,7 @@
 
 **Review baseline:** `main` at `ad45f296b2294e65048cf27d1d5473f54e14e52a`  
 **Scope:** Phase 1 application foundation and G1 evidence only  
-**Disposition:** Foundation implemented; G1 verification and gap-review evidence complete on PR #15; owner phase disposition pending. This review does not close Phase 0 (G0), approve the website's content or design, or authorize production deployment.
+**Disposition:** Foundation implemented; G1 verification evidence and follow-on dependency-audit implementation are recorded on PR #15; owner Phase 1 disposition pending. DEC-014 approves conservative business/content/design decisions but does not close G0 or authorize publication of content whose rights or factual basis remain unconfirmed.
 
 ## 1. Executive disposition
 
@@ -10,7 +10,7 @@ The React/TypeScript foundation is present on `main`. The post-merge application
 
 The original Phase 1 CI built the production bundle but did not start the production preview server or request the generated document/assets. The review added a production-preview HTTP/asset smoke. It passed on the first candidate (`da325b2`, Actions run `41169847259`) and again on PR #15 head `befdefc` (Actions run `41170052269`). The job served the preview document, validated the root mount and JavaScript reference, and fetched each referenced same-origin JavaScript/CSS asset. It does not execute the client bundle in a real browser.
 
-Phase 0 remains awaiting owner approval (G0). DEC-013 accepts the information-architecture and component-inventory baseline only; it does not resolve the owner decisions listed in `content-structure.md`.
+Phase 0 remains in progress (G0 open). DEC-013 accepts the information-architecture and component-inventory baseline; DEC-014 additionally approves conservative business/content/design dispositions. Exact contact and availability values, original logo/asset files, and publication rights for testimonial/sample content remain unresolved.
 
 ## 2. Evidence baseline
 
@@ -61,7 +61,7 @@ Not established by this review: a complete transitive-license inventory, a dedic
 | G1-GAP-01 | P1 | Baseline CI built `dist/` but did not serve the production preview or request generated assets. | Addressed: production-preview HTTP/asset smoke passed on initial candidate `da325b2` (run `41169847259`) and reconciled PR #15 head `befdefc` (run `41170052269`). |
 | G1-GAP-02 | P1 | The active `Protect main` ruleset requires pull requests and blocks force-push/deletion, but has zero required approving reviews and no required status checks. | Not changed. The owner/repository administrator should decide whether to require the application-quality and documentation-integrity checks. Until then, CI is evidence but not an enforced merge gate. |
 | G1-GAP-03 | P2 | The application test suite has one jsdom assertion for the main heading. | Appropriate for a neutral scaffold smoke test; add component/behavior tests when approved features exist. Do not invent tests for unapproved interactions. |
-| G1-GAP-04 | P2 | No dedicated SCA, license inventory, or explicit vulnerability-audit job is recorded. | Not a Phase 1 implementation blocker under the current scope, but complete dependency/license review before production release and decide whether to enforce an audit policy. |
+| G1-GAP-04 | P2 | No dedicated SCA, license inventory, or vulnerability-audit job existed in the initial G1 review. | Addressed in the follow-on PR #15 implementation: npm advisory audit, OSV vulnerability scanning, fail-closed SPDX inventory, and deps.dev license metadata checks are added. Exact-head results are recorded after the dedicated workflow completes. |
 | G1-GAP-05 | P2 | PR #14's historical description still contains a stale “Not merged” statement even though GitHub records it as merged. | Metadata inconsistency only; it does not change repository state. Correct the PR description separately if needed. |
 | G1-GAP-06 | P1 | Several status documents still described the application as absent and the toolchain as undecided after PR #14 merged. | Corrected in this review branch across README, agent guidance, phase registers, decisions, and ICM records. The review candidate passed PP-VER-013 in Actions run `41169847210`; the reconciled PR #15 head `befdefc` also passed in run `41170052381`. |
 
@@ -88,8 +88,21 @@ Not established by this review: a complete transitive-license inventory, a dedic
 - Phase 2 page composition/design-token implementation must wait for required G0 approval and Phase 1 G1 disposition.
 - No production deployment or promotion is included in this review.
 
-## 7. Owner decisions required
+## 7. Owner decisions and remaining evidence dependencies
 
-1. Review and authorize or reject the Phase 1 verification/gap-review PR. No merge was performed by this review.
-2. Decide whether the `Protect main` ruleset should require the application verification and documentation-integrity checks. This review intentionally did not mutate repository rules.
-3. Before release, decide the dependency vulnerability/license policy and hosting/deployment controls.
+1. Record the formal Phase 1 disposition and decide whether `Protect main` should require the application-quality, documentation-integrity, and dependency-audit checks. No repository ruleset mutation or merge is included.
+2. Supply and confirm exact current email and telephone destinations, current availability wording, and any office details that should be published.
+3. Supply original logo and approved asset files, with documented publication rights for every sample/client mark. Obtain customer permissions before publishing testimonials or attributions and substantiate any quantified outcome claims.
+4. Hosting/deployment controls remain unselected and must be approved before production release.
+
+## 8. Follow-on dependency security and license controls
+
+On 2026-10-31 the project owner approved DEC-015 and authorized a dedicated npm dependency security/license audit. The PR candidate adds:
+
+- `npm audit --audit-level=low` against the committed lockfile.
+- OSV-Scanner v2.7.0 against `package-lock.json`, configured to fail on known vulnerabilities.
+- A standard-library-only Node inventory for all locked package entries, with exact SPDX allowlist enforcement and a machine-enforced MPL-2.0 development-only restriction.
+- An OSV-Scanner/deps.dev license metadata check and 30-day JSON/Markdown inventory artifacts.
+
+The lockfile snapshot inspected during implementation contains 140 package entries (3 runtime and 137 development); all entries declare license metadata. Twelve MPL-2.0 entries are marked development-only. The candidate's CI result is not asserted here until the dedicated workflow completes. Normative policy and limitations are recorded in [the dependency security and license policy](../security/dependency-audit.md), DEC-015, PP-CON-012, and PP-VER-018.
+
