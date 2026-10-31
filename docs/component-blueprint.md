@@ -71,7 +71,7 @@ Open questions:        <none | list with owner>
 
 ## 6. Entries and inventory status
 
-Entries below record the source-derived patterns (2026-10-30). The structural inventory is owner-accepted under DEC-013; individual implementation contracts remain partially specified. DEC-017 governs the initial profile-only implementation scope. Fields the source cannot determine remain open questions, not guesses.
+Entries below record the source-derived patterns (2026-10-30). The structural inventory is owner-accepted under DEC-013/DEC-018; individual implementation contracts remain partially specified. All five component regions remain part of the seven-section composition, with explicit placeholder inputs where values, assets, claims or permissions are unavailable.
 
 ### PP-CMP-001 — ValueBadge
 
@@ -157,8 +157,8 @@ Specification: Partially specified | Implementation: Not started | Evidence: Not
 | --- | --- | --- | --- |
 | `PP-CMP-001` | ValueBadge | Partially specified | Reflow and label contrast open |
 | `PP-CMP-002` | ServiceCard | Partially specified | Link decision and alternative text open; permissions pending |
-| `PP-CMP-003` | StatTile | Excluded from initial website under DEC-017 | Source observations retained; unsupported claims omitted |
-| `PP-CMP-004` | TestimonialCard | Excluded from initial website under DEC-017 | Individual permission and claim substantiation not available |
+| `PP-CMP-003` | StatTile | Placeholder tile retained under DEC-018 | Three-column source layout; do not render unsubstantiated source values |
+| `PP-CMP-004` | TestimonialCard | Placeholder card retained under DEC-018 | Three-card source layout; quotes/attributions await permissions and claim substantiation |
 | `PP-CMP-005` | BrandLockup | Partially specified | Text-only wordmark in baseline; original symbol unavailable |
 
 ## 8. Verification
