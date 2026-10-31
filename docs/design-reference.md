@@ -30,17 +30,17 @@ Before design-specific implementation begins, inspect and record:
 - Any existing mobile or alternate-layout variants.
 - Any source content, portfolio work, company claims, or calls to action that need separate owner confirmation or publication permission.
 
-The company-level purpose is established by the project brief and DEC-008, independently of source inspection. If the business objective requires additional web content or an enquiry action not visible in the Canva source, record it as an owner-approved web adaptation; do not represent it as an observed source feature.
+The Canva design is the primary source for company information, page content, section order and visual composition. Use the transcribed source facts as the company baseline. For information not present or values withheld from the public inventory, reserve clearly named update placeholders. Do not replace source content with generic company-site assumptions.
 
 ## Translation rules
 
 1. Treat the inspected Canva design as the visual reference and use owner-approved business requirements as the authority for company purpose and required customer journey.
-2. Record source copy accurately and preserve its hierarchy. Do not silently rewrite, omit, or invent content or company claims.
+2. Record source copy accurately and preserve its hierarchy. Any approved company-voice or editorial adaptation must be traceable to the source and DEC-014/DEC-018; do not add unsupported facts.
 3. Content or enquiry actions required by the approved company objective but absent from the Canva source must be recorded as proposed web adaptations and approved before inclusion.
 4. Recreate layout with HTML and CSS rather than using a full-page screenshot as the website, unless an image-only implementation is explicitly approved.
 5. Use source assets where available and permitted. Do not substitute unrelated stock imagery or approximate brand assets without approval.
 6. Distinguish source properties from web adaptations. Document any change required for responsive behavior or accessibility.
-7. Record deviations from the reference and the reason for each deviation.
+7. Record deviations from the reference and the reason for each deviation. Where original assets or supplementary values are unavailable, preserve their layout region with an explicit update placeholder rather than removing the section.
 
 ## Inspection record
 
