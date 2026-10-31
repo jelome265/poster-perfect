@@ -182,3 +182,83 @@ Limitations:
 - Items 9, 10, and 13 were checked by targeted search and reading, not by a committed checker.
 - Business-level claims introduced by PR #6 (`DEC-008`, `PP-REQ-010`, `PP-RSK-008`) are unverified as company facts; this run checks their traceability only.
 - No waiver granted.
+
+## 9. PP-VER-016 author run against the Canva export (2026-10-30)
+
+This run is by the author and is not independent. It is reported as a structural reconciliation with open items. It does not satisfy the owner's review, and no approval is recorded here.
+
+Source: the export identified in `docs/design-reference.md` (SHA-256 `173bd1a7…baea6`). Not committed.
+
+| Check | Result |
+| --- | --- |
+| Pages in source vs. information architecture | 1 page in source; recorded once (`PP-IA-001`, §5.1) |
+| Sections in source vs. IA | 7 sections; each recorded once in §5.3 and §5.6; each has a content entry in `content-structure.md` |
+| Navigation entries | None observed in source; §5.4 records none, and no link is invented |
+| Anchor targets | None observed; §5.5 records none |
+| Components referenced by IA | 5 of 5 (`PP-CMP-001`–`005`) referenced from §5.6, defined in the blueprint, and listed in the inventory |
+| Repeated or coherent regions without a component | Recorded as local markup with a reason (`components.md`, "Local markup") |
+| Effects declared per component | 5 of 5 declared. 3 are "none". 2 (`PP-CMP-002`, `PP-CMP-005`) depend on the link decision and are open |
+| Keyboard and focus declared | 5 of 5 declared. 3 not applicable. 2 open, on the same link decision |
+| Entries marked Accepted | 0. No approval recorded |
+| Identifiers and links (validator) | 0 errors; 131 identifiers defined |
+| Owner-role check | 0 findings |
+
+Result: structural reconciliation **passes with open items**.
+
+Open items that block G0 approval:
+
+1. Link decisions for service cards (`PP-CMP-002`) and the logo lockup (`PP-CMP-005`).
+2. Responsive reflow for the value badges, service cards, statistics, and testimonials: no source variant exists.
+3. Owner decisions 1–12 in `content-structure.md`: duplicated paragraph, voice, statistics, testimonial permissions, service terms, portfolio permissions, copy typos, contact destinations, hero button, social profile URLs, font licence, and the enquiry path required by PP-CON-011.
+4. Full-resolution assets: the original images, logo vector, and sample artwork are not in the repository.
+5. Approximate color values (`design-system.md`) to be confirmed. Spacing, shape, and elevation not yet measured.
+
+## 10. PP-VER-013 run — revision `877933a` (FAIL)
+
+| Run | Revision (full SHA) | Scope | Result |
+| --- | --- | --- | --- |
+| R4 | `877933a` (`877933ae6be74537b15c886d4bb655e6ac72f40a`, `origin/main` after PR #8 merge) | Full ICM and canonical-document tree; 34 Markdown files; 10 accepted requirements | **FAIL** |
+
+Clean worktree at `877933a` (0 uncommitted changes). Method: one-off stdlib script outside the repository, plus targeted search and reading. Not a committed CI gate.
+
+Passed:
+- Relative links and anchors: 0 broken.
+- Table shape: 0 malformed.
+- Identifiers: 131 defined; 0 referenced but undefined.
+- Owner-role check against the 9 roles in `01-architecture-map.md`: 0 findings.
+- Accepted requirements: 10 in both the contract table and the register, with no mismatch.
+- PP-VER rows: 17.
+
+Failed:
+1. **Stale or contradictory status statements** (ICM status-conflation rule; `07-verification.md` §10 item 9). The source is described as uninspected while the export inspection is recorded. Locations at `877933a`:
+   - `CLAUDE.md:67`
+   - `README.md:7`
+   - `docs/phases/phase-0-source-discovery.md:24`
+   - `docs/implementation-plan.md:51`
+   - `docs/icm/00-system-context.md:5`, `:20`, `:116`
+   - `docs/icm/03-processes.md:32` (`PP-PRC-007`)
+   - `docs/icm/05-artifacts.md:33` (`PP-ART-002`), `:49`–`:50` (`PP-ART-018`, `PP-ART-019`)
+   - `docs/icm/06-references.md:50`–`:51` (`PP-REF-010`, `PP-REF-011`)
+   - `docs/icm/07-verification.md:34` (`PP-VER-005`)
+   - `docs/icm/08-traceability-register.md:41`, `:56`–`:57`, `:75`, `:100`–`:101`
+   - `docs/information-architecture.md` §1 and `docs/component-blueprint.md` §1, where template statements contradict the populated records (manual review)
+2. **Evidence reference does not resolve.** `07-verification.md` (PP-VER-016) cites audit §9, which is absent at this revision. The section was committed in `ea39ec0` and lost in the merge of PR #8 (`394db6f`).
+
+Minor: `information-architecture.md` §5.3 used the page ID in the first column, which the duplicate-definition check reads as a second definition. Addressed in the remediation working tree.
+
+Limitations:
+- `CLAUDE.md` is owner-controlled (§1, §4). Its Phase 0 statement is not changed by this record and needs owner approval.
+- The remediation changes are uncommitted. They must be verified again at the commit that contains them.
+- This record does not establish application verification, visual fidelity, or accessibility conformance.
+
+## 11. Owner decisions and repository governance (2026-10-30)
+
+| Item | Owner decision | Record |
+| --- | --- | --- |
+| Testimonial quotations | Do not remove. Quotations restored in `content-structure.md`; no history rewrite | DEC-009 |
+| `CLAUDE.md` §4 Phase 0 status | Approved; replacement applied | DEC-010 |
+| Branch protection on `main` | Active and enforced | GitHub ruleset `26256454`: pull request required, non-fast-forward and deletion blocked, no bypass actors |
+| Contact details | Owner to confirm whether the phone and email remain; they appear in the export footer | Owner decision 8, open |
+| G0 approval | Deferred ("Wait") | Phase 0 remains awaiting owner approval; Phase 1 not authorized |
+
+PP-VER-013 has not been re-run at the commit that contains this section. Its last formal result is FAIL at `877933a` (§10).

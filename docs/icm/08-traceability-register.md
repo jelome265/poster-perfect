@@ -38,7 +38,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-MAP-001` | Project owner | System context | Confirmed |
 | `PP-MAP-002` | Website visitor | System context | Expected actor |
 | `PP-MAP-003` | Browser runtime | System context | Confirmed boundary |
-| `PP-MAP-004` | Canva source design | System context | Supplied; inspection blocked |
+| `PP-MAP-004` | Canva source design | System context | Inspected 2026-10-30 (export) |
 | `PP-MAP-005` | Build/package ecosystem | System context | Not selected |
 | `PP-MAP-006` | Hosting/delivery | System context | Not selected |
 | `PP-MAP-007` | External destinations/services | System context | Unknown; not assumed |
@@ -53,8 +53,8 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-CON-001` | Application runtime | Accepted | Not started | Not collected |
 | `PP-CON-002` | Page composition | Partially specified; Phase 0 dependent | Not started | Not collected |
 | `PP-CON-003` | Component interface | Accepted | Not started | Not collected |
-| `PP-CON-004` | Design token | Blocked on source | Not started | Not collected |
-| `PP-CON-005` | Asset | Blocked on source | Not started | Not collected |
+| `PP-CON-004` | Design token | Partially specified; values approximate, owner confirmation pending | Not started | Not collected |
+| `PP-CON-005` | Asset | Partially specified; originals and permissions pending | Not started | Not collected |
 | `PP-CON-006` | Interaction | Blocked pending source inventory | Not started | Not collected |
 | `PP-CON-007` | External integration | Excluded from baseline | Not applicable | Not applicable at baseline |
 | `PP-CON-008` | Accessibility/responsive | Partially specified; target accepted, details pending | Not started | Not collected |
@@ -72,7 +72,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-PRC-004` | Local interface interaction | Conditional on source | Not started |
 | `PP-PRC-005` | Remote form/API | Excluded baseline; future extension | Not started |
 | `PP-PRC-006` | Verification/review/release | Target governance process | Applies per change |
-| `PP-PRC-007` | Source inspection/specification | Blocked until source is available | Phase 0 human workflow |
+| `PP-PRC-007` | Source inspection/specification | Source inspected 2026-10-30; owner approval outstanding (G0) | Phase 0 human workflow |
 
 ## 6. Effect registry
 
@@ -97,15 +97,15 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-VER-002` | Strict type check | Planned | G1, G2, G4 |
 | `PP-VER-003` | Lint/static quality | Planned | G1, G2, G4 |
 | `PP-VER-004` | Production build/runtime smoke | Planned | G1, G2, G4 |
-| `PP-VER-005` | Content/source reconciliation | Blocked on source | G0, G2, G4 |
-| `PP-VER-006` | Visual fidelity comparison | Blocked on source and app | G2, G4 |
+| `PP-VER-005` | Content/source reconciliation | Not yet run: copy transcribed from export text; reconciliation pending | G0, G2, G4 |
+| `PP-VER-006` | Visual fidelity comparison | Blocked on application; export is a reference only | G2, G4 |
 | `PP-VER-007` | Responsive viewport matrix | Planned | G3, G4 |
 | `PP-VER-008` | Accessibility manual assessment | Planned | G3, G4 |
 | `PP-VER-009` | Navigation/interaction behavior | Pending interaction inventory | G2, G3, G4 |
 | `PP-VER-010` | Asset loading/alt text | Pending asset inventory | G2, G3, G4 |
 | `PP-VER-011` | Release artifact provenance | Planned | G4 |
 | `PP-VER-012` | Owner review/release disposition | Required | G4 |
-| `PP-VER-013` | ICM reference/traceability integrity | Passed at `76f990f` for that exact revision (PP-ART-017 §8 R3); prior: failed at `9eae0e2` (R1), passed at `86246e1` (R2); rerun required for later ICM changes | All gates and material documentation changes |
+| `PP-VER-013` | ICM reference/traceability integrity | Failed at `877933a` (PP-ART-017 §10 R4): stale statuses and missing §9 reference; remediation pending. Prior: passed at `76f990f` (§8 R3) for that revision only | All gates and material documentation changes |
 | `PP-VER-014` | Architecture/component-boundary review | Planned | G1, G2, G4 |
 | `PP-VER-015` | Dependency/side-effect surface review | Defined; not yet run | G1, G2, G4 |
 | `PP-VER-016` | IA and component-blueprint reconciliation | Executed by author 2026-10-30; owner review pending | G0, G2 |

@@ -12,7 +12,7 @@
 
 The component blueprint records, for each component in `components.md`, the **contract** that its consumers and reviewers depend on: responsibility boundary, typed inputs, owned state, native semantics, browser effects, keyboard and focus behavior, responsive variants, asset dependencies, accessibility obligations, and verification controls.
 
-**No component entry exists yet.** A component is listed here only when the inspected source shows a repeated pattern or a coherent region that justifies it (`components.md` criteria). Do not create entries from the component names in the earlier templates, from typical landing-page patterns, or from the project name.
+**Five component entries are drafted from the export (`PP-CMP-001` to `PP-CMP-005`). None is accepted.** A component is listed only when the inspected source shows a repeated pattern or a coherent region that justifies it (`components.md` criteria). Do not add entries from typical landing-page patterns, from the project name, or from component names the source does not support.
 
 ## 2. Ownership split
 

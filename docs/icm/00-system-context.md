@@ -2,7 +2,7 @@
 
 **Canonical level:** L0 — Intent and context  
 **Record class:** Target-state context map  
-**Status:** Partially specified; source-design facts blocked pending inspection
+**Status:** Partially specified; source inspected 2026-10-30; owner approval pending (G0)
 
 ## 1. System intent
 
@@ -17,7 +17,7 @@ The supplied Canva design is the visual/content reference for the web implementa
 | `PP-MAP-001` | Project owner | Owns source design, scope decisions, approval and release authorization | Authoritative for project intent and approval | Confirmed |
 | `PP-MAP-002` | Prospective customer and other website visitor | Evaluates the company's offering and approved work, then uses an available enquiry route where appropriate | Untrusted input source; user intent must be validated at relevant boundaries | Expected actor |
 | `PP-MAP-003` | Browser runtime | Executes the frontend, layout, rendering and browser-native behavior | Execution environment; behavior varies by browser | Confirmed boundary |
-| `PP-MAP-004` | Source design (Canva) | Visual and content reference for the recreation | Authoritative for owner-approved visual/content facts | Supplied; not yet inspectable |
+| `PP-MAP-004` | Source design (Canva) | Visual and content reference for the recreation | Authoritative for owner-approved visual/content facts | Inspected 2026-10-30 (export; see `design-reference.md`) |
 | `PP-MAP-005` | Build and package ecosystem | Resolves dependencies and produces deployable frontend assets | External supply-chain boundary | Toolchain not selected |
 | `PP-MAP-006` | Hosting/runtime delivery | Serves the built website to visitors | Operational boundary | Provider not selected |
 | `PP-MAP-007` | External destinations or services | Potential contact destinations or other integrations invoked by page controls | External and not trusted by default | Unknown; not assumed |
@@ -113,4 +113,4 @@ L0 is sufficiently specified for implementation when:
 - Non-goals and unresolved questions are recorded.
 - The owner has approved the web interpretation of the source design and the company-facing content/customer-enquiry journey.
 
-Current L0 state: **blocked** by source inspection and the remaining company-content and enquiry-path decisions; the company-level website purpose is accepted.
+Current L0 state: **awaiting owner approval (G0)**. The source was inspected on 2026-10-30. Open items are the company-content decisions and the enquiry-path decision; the company-level website purpose is accepted.

@@ -78,6 +78,24 @@ The Canva source remains the visual/content reference. Business content or an en
 
 **Authority:** Project owner clarification dated 2026-10-30; PP-REQ-010; PP-CON-011.
 
+### DEC-009 — Testimonial content retained in the repository
+
+**Status:** Accepted (project owner, 2026-10-30).
+
+The three testimonial quotations recorded from the Canva export are retained in `content-structure.md`. Customer names remain withheld. Publication still requires owner confirmation of permission for each quotation (Owner decision 4). No history rewrite is authorized.
+
+**Authority:** project owner decision recorded in the remediation PR.
+
+### DEC-010 — Phase 0 status text and repository branch protection
+
+**Status:** Accepted (project owner, 2026-10-30).
+
+- `CLAUDE.md` §4 now states that Phase 0 is awaiting owner approval (G0), not blocked. Phase 1 has not started.
+- Branch protection is active on `main`: pull request required, force-push and deletion blocked, enforced for administrators with no bypass.
+- G0 remains unapproved.
+
+**Authority:** project owner approval under `CLAUDE.md` change control and §8.
+
 ## Open decisions
 
 | Decision | Status | Resolution gate |

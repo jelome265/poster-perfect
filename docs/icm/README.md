@@ -212,8 +212,8 @@ At this baseline:
 - A component-based, maintainable frontend is accepted.
 - Visual fidelity and responsive behavior are project objectives.
 - WCAG 2.2 Level AA is the accessibility target.
-- The actual Canva artwork has not yet been inspected.
-- Page count, page hierarchy, colors, fonts, dimensions, asset inventory, interactions, routing, build tool, styling strategy, hosting, and external integrations remain unknown or undecided.
+- The owner's Canva export was inspected on 2026-10-30 (see `docs/design-reference.md`). Page structure, colors, typeface, and asset inventory are drafted from it with approximate measurements and await owner approval.
+- Canvas dimensions (artboard size not confirmed), interactions, responsive variants, routing, build tool, styling strategy, hosting, and external integrations remain unknown or undecided.
 - No application runtime or executable application verification exists in the repository yet.
 
 This ICM is therefore a target-state control specification, not a claim that the website or its controls have been implemented.

@@ -29,7 +29,7 @@ Do not document every JSX render as a process. A process represents meaningful b
 | `PP-PRC-004` | Local interface interaction | Visitor operates a stateful control | User interaction | Conditional on source inventory |
 | `PP-PRC-005` | Remote form/API operation | Visitor submits or requests remote data | External operation | Not in baseline; future only |
 | `PP-PRC-006` | Verification and release | Candidate revision is submitted for review | Governance lifecycle | Target |
-| `PP-PRC-007` | Source inspection and specification | Owner supplies an inspectable design export or view-only source | Human specification workflow | Blocked until source is available |
+| `PP-PRC-007` | Source inspection and specification | Owner supplies an inspectable design export or view-only source | Human specification workflow | Source inspected 2026-10-30; owner approval outstanding (G0) |
 
 ## 3. PP-PRC-001 — Build and delivery
 
