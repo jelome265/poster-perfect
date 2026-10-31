@@ -273,7 +273,7 @@ This section records the corrective work prepared after the R4 failure. It is no
 | Missing PP-VER-016 evidence reference | Restored audit §9 in the earlier remediation and retained the reference to that author-run record | Reference now resolves; the author run remains non-independent and owner review is still outstanding |
 | PP-VER-013 repeatability | Added `PP-ART-020`: dependency-free `scripts/validate-docs.sh` plus `.github/workflows/docs-integrity.yml` | Workflow added; result pending for the PR revision. Manual identifier/ownership/authority/process/effect checks remain required |
 | Testimonial source text | Retained the three quotations under DEC-009; customer names remain withheld; no history rewrite | Owner decision preserved; publication permission for the website remains unconfirmed |
-| Contact details | Kept source-transcribed contact text unchanged; owner decision 8 remains open | Do not treat the email/phone as confirmed current enquiry destinations or ship them as active links before confirmation |
+| Contact details | Source-derived phone, email and location values are withheld from the current public content record pending owner decision 8; earlier Git history is not rewritten | Do not treat the source values as confirmed public details or enquiry destinations; restore only after owner confirmation |
 | Main-branch governance | Verified active ruleset `26256454`: PR required, non-fast-forward updates and deletion blocked, no bypass actors | Active. Approval threshold is currently zero and no required status check is configured; the new workflow reports evidence but does not yet block merging |
 | Phase gate | G0 deferred; Phase 1 not authorized | No G0 acceptance or implementation authorization is claimed |
 
