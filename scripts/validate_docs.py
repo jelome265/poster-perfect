@@ -127,7 +127,10 @@ def main() -> int:
         rows = []
         for line in matrix.splitlines():
             cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
-            if cells and cells[0].strip(chr(96) + " ") == key:
+            if not cells:
+                continue
+            first_cell = re.match(r"^[\x60]?(PP-REQ-\d{3})[\x60]?(?:\s|$)", cells[0])
+            if first_cell and first_cell.group(1) == key:
                 rows.append(line)
         if len(rows) != 1 or not re.search(r"PP-VER-\d{3}", rows[0]):
             errors.append(f"{key}: missing or invalid verification traceability row")
