@@ -2,7 +2,7 @@
 
 **Artifact:** `PP-ART-019`  
 **Class:** Contract / architecture (see `PP-CON-003`)  
-**Status:** Accepted as the component inventory baseline on 2026-10-31 (DEC-013). Entries remain Partially specified; their open questions are not closed (`PP-RSK-003`)  
+**Status:** Structural inventory accepted under DEC-013; profile-only implementation dispositions approved under DEC-017. Component contracts remain partially specified and must be completed during Phase 2.  
 **Canonical owner:** Component maintainer (`PP-MAP-013`, role as defined in `icm/01-architecture-map.md`)  
 **Producer:** Component maintainer; Section implementation owner (`PP-MAP-012`) for entries in their section  
 **Approval:** Project owner  
@@ -12,7 +12,7 @@
 
 The component blueprint records, for each component in `components.md`, the **contract** that its consumers and reviewers depend on: responsibility boundary, typed inputs, owned state, native semantics, browser effects, keyboard and focus behavior, responsive variants, asset dependencies, accessibility obligations, and verification controls.
 
-**Five component entries are drafted from the export (`PP-CMP-001` to `PP-CMP-005`). None is accepted.** A component is listed only when the inspected source shows a repeated pattern or a coherent region that justifies it (`components.md` criteria). Do not add entries from typical landing-page patterns, from the project name, or from component names the source does not support.
+Five component entries were drafted from the export (`PP-CMP-001` to `PP-CMP-005`) and their structural inventory was accepted under DEC-013. Their implementation contracts remain partially specified; DEC-017 records which entries are included or excluded from the profile-only initial site. A component is listed only when the inspected source shows a repeated pattern or a coherent region that justifies it.
 
 ## 2. Ownership split
 
@@ -71,16 +71,16 @@ Open questions:        <none | list with owner>
 
 ## 6. Entries and inventory status
 
-Entries below are drafted from the export (2026-10-30). Each lists only what the source shows. Fields the source cannot determine are marked as open questions, not guessed. No entry is marked Accepted until the owner approves it.
+Entries below record the source-derived patterns (2026-10-30). The structural inventory is owner-accepted under DEC-013; individual implementation contracts remain partially specified. DEC-017 governs the initial profile-only implementation scope. Fields the source cannot determine remain open questions, not guesses.
 
 ### PP-CMP-001 — ValueBadge
 
 Specification: Partially specified | Implementation: Not started | Evidence: Not collected
 
-- Responsibility: show one value point, a check icon with a short label.
+- Responsibility: show one text-only value point; the original decorative check icon is unavailable and is not recreated.
 - Used in sections: `PP-IA-004`. Reused by: value band only (single instance per point; 4 instances).
 - Native element: list item (`li`) in a list. Not interactive.
-- Typed inputs: `label: string` (source text: "RELIABILITY", "PERSONALIZED APPROACH", "TIMELY DELIVERY", "HIGH STANDARDS"); `icon` (check mark, decorative).
+- Typed inputs: `label: string` (source text: "RELIABILITY", "PERSONALIZED APPROACH", "TIMELY DELIVERY", "HIGH STANDARDS"). No icon input is present in the initial baseline.
 - Owned state: none. Events emitted: none.
 - Browser effects: none (`PP-EFF` not triggered).
 - Keyboard and focus: not applicable (not interactive).
@@ -92,12 +92,12 @@ Specification: Partially specified | Implementation: Not started | Evidence: Not
 
 ### PP-CMP-002 — ServiceCard
 
-Specification: Partially specified | Implementation: Not started | Evidence: Not collected
+Specification: Partially specified | Initial implementation: text-only service labels under DEC-017 | Evidence: pending Phase 2
 
-- Responsibility: show one service with a sample image and its label.
+- Responsibility: source pattern pairs a sample image with its label; the initial baseline renders the approved service names as text only.
 - Used in sections: `PP-IA-005`. Reused by: services only (3 instances).
 - Native element: figure with caption (`figure` / `figcaption`) if non-interactive. A link element if the owner approves links.
-- Typed inputs: `label: string` ("Brochures", "Logos", "Magazine covers"); `image: asset reference`; `altText: string` (owner to supply).
+- Typed inputs for the initial baseline: `label: string` (approved service label). No image or alt-text input is used because no source image is available or authorized for publication.
 - Owned state: none.
 - Browser effects: none if non-interactive. If linked, the destination type is an open question.
 - Keyboard and focus: open question. It depends on whether the card links to portfolio content.
@@ -109,7 +109,7 @@ Specification: Partially specified | Implementation: Not started | Evidence: Not
 
 ### PP-CMP-003 — StatTile
 
-Specification: Partially specified | Implementation: Not started | Evidence: Not collected
+Specification: Partially specified | Implementation: Excluded from initial website under DEC-017 | Evidence: Not applicable to baseline
 
 - Responsibility: show one figure with its label.
 - Used in sections: `PP-IA-006`. Reused by: statistics only (3 instances).
@@ -124,7 +124,7 @@ Specification: Partially specified | Implementation: Not started | Evidence: Not
 
 ### PP-CMP-004 — TestimonialCard
 
-Specification: Partially specified | Implementation: Not started | Evidence: Not collected
+Specification: Partially specified | Implementation: Excluded from initial website under DEC-017 | Evidence: Not applicable to baseline
 
 - Responsibility: show one client quote with role and location.
 - Used in sections: `PP-IA-007`. Reused by: testimonials only (3 instances).
@@ -141,7 +141,7 @@ Specification: Partially specified | Implementation: Not started | Evidence: Not
 
 Specification: Partially specified | Implementation: Not started | Evidence: Not collected
 
-- Responsibility: show the logo mark with the "Poster Perfect" wordmark.
+- Responsibility: source lockup pairs the logo symbol with the “Poster Perfect” wordmark; the initial website uses the text-only wordmark and does not recreate the unavailable symbol.
 - Used in sections: `PP-IA-002` (hero) and `PP-IA-008` (footer). Reused by: hero and footer (2 instances).
 - Native element: open question. A link to the home page, or a plain image group, depending on the owner's decision (`content-structure.md`, Owner decisions 9 and the logo-lockup row).
 - Typed inputs: none. The lockup has a fixed brand asset. Its only variant is the background, and both instances sit on dark navy.
@@ -157,9 +157,9 @@ Specification: Partially specified | Implementation: Not started | Evidence: Not
 | --- | --- | --- | --- |
 | `PP-CMP-001` | ValueBadge | Partially specified | Reflow and label contrast open |
 | `PP-CMP-002` | ServiceCard | Partially specified | Link decision and alternative text open; permissions pending |
-| `PP-CMP-003` | StatTile | Partially specified | "Worldwide" variant open; claims pending confirmation |
-| `PP-CMP-004` | TestimonialCard | Partially specified | Attribution null until permission confirmed |
-| `PP-CMP-005` | BrandLockup | Partially specified | Link decision open; logo vector not supplied |
+| `PP-CMP-003` | StatTile | Excluded from initial website under DEC-017 | Source observations retained; unsupported claims omitted |
+| `PP-CMP-004` | TestimonialCard | Excluded from initial website under DEC-017 | Individual permission and claim substantiation not available |
+| `PP-CMP-005` | BrandLockup | Partially specified | Text-only wordmark in baseline; original symbol unavailable |
 
 ## 8. Verification
 
