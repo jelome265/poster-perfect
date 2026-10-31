@@ -2,11 +2,11 @@
 
 **Canonical level:** L0 — Intent and context  
 **Record class:** Target-state context map  
-**Status:** G0 complete for the owner-approved profile-only baseline with accepted limitations (DEC-017, 2026-10-31)
+**Status:** G0 complete for the Canva-led seven-section company specification and explicit future-update placeholders (DEC-018, 2026-10-31)
 
 ## 1. System intent
 
-Poster Perfect is the company portfolio website for a graphic design business. It represents the company at business level, not an individual designer's personal portfolio. Its full business purpose is to present the company's owner-approved identity, positioning, capabilities and authorized creative work, communicate current availability, and attract prospective customers through an owner-approved enquiry path (DEC-008, PP-REQ-010). The initial profile-only baseline approved under DEC-017 presents the approved company profile and services but intentionally omits current availability, unlicensed work, and external enquiry controls. It is not a completed customer-acquisition solution.
+Poster Perfect is the company portfolio website for a graphic design business. It represents the company at business level, not an individual designer's personal portfolio. Its full business purpose is to present the company's owner-approved identity, positioning, capabilities and authorized creative work, communicate current availability, and attract prospective customers through an owner-approved enquiry path (DEC-008, PP-REQ-010). The initial website baseline approved under DEC-018 preserves all seven Canva sections and source-derived company information. Missing contact/social/availability values and rights-dependent statistics, testimonials and source assets remain as explicit placeholders until verified; their sections are not removed.
 
 The supplied Canva design is the visual/content reference for the web implementation. It does not replace the separately confirmed business purpose. The implementation direction is React with TypeScript/TSX and a maintainable, responsive component-based frontend. The intent is not to reproduce a static canvas as a single screenshot; meaningful content and approved interactions should use semantic web content and native browser behavior where appropriate.
 
@@ -113,4 +113,4 @@ L0 is sufficiently specified for implementation when:
 - Non-goals and unresolved questions are recorded.
 - The owner has approved the web interpretation of the source design and the company-facing content/customer-enquiry journey.
 
-Current L0 state: **G0 complete for the scoped profile-only baseline under DEC-017**. Missing contact/availability values, original assets, company social URLs, and customer/third-party publication rights are explicit exclusions, not resolved facts. A verified enquiry path remains a G4 business-readiness condition or requires a separate owner-authorized restricted-release decision.
+Current L0 state: **G0 complete for the Canva-led seven-section specification under DEC-018**. Company facts, services, source copy and section hierarchy are transcribed from Canva. Missing contact/social/availability values and rights-dependent claims/assets are explicit future-update placeholders, not fabricated facts. Contact/social controls remain inactive until their destinations are verified.
