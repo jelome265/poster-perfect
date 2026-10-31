@@ -56,9 +56,9 @@ Use the five-level ICM (L0–L4) to govern traceability from requirements throug
 
 ### DEC-007 — Phase 0 information architecture and component blueprint
 
-**Status:** Accepted (project owner directive). The Canva export was inspected on 2026-10-30; the information architecture and component blueprint are drafted from that source and await owner approval at G0.
+**Status:** Accepted (project owner directive; structural baseline accepted under DEC-013 on 2026-10-31). The source-derived information architecture and component blueprint are approved as structural inputs; content and publication-rights dependencies remain in G0.
 
-Phase 0 produces two canonical specification artifacts: the [information architecture](information-architecture.md) (`PP-ART-018`) and the [component blueprint](component-blueprint.md) (`PP-ART-019`). Both are derived from the inspected source. Neither is populated by inference. Phase 1 routing, rendering, and source-layout decisions use the accepted information architecture as an input.
+Phase 0 produces two canonical specification artifacts: the [information architecture](information-architecture.md) (`PP-ART-018`) and the [component blueprint](component-blueprint.md) (`PP-ART-019`). Both are derived from the inspected source and accepted as a structural baseline under DEC-013. Neither is populated by inference. Phase 1 routing, rendering, and source-layout decisions use the accepted information architecture as an input.
 
 **Reason:** Foundational technical choices made before the page set and component boundaries are known would create rework and invent structure the source may not contain.
 
@@ -90,9 +90,9 @@ The three testimonial quotations recorded from the Canva export are retained in 
 
 **Status:** Accepted (project owner, 2026-10-30).
 
-- `CLAUDE.md` §4 records Phase 0 as awaiting owner approval (G0). The owner later authorized a limited Phase 1 foundation task under DEC-012/DEC-013; the foundation is now merged, while G0 remains open.
+- At the time of this decision, G0 was unapproved. The owner later approved conservative business/content/design dispositions under DEC-014; G0 remains open for the explicitly listed contact, availability, original-asset, and publication-rights evidence.
+- The owner authorized the limited Phase 1 foundation under DEC-012/DEC-013; it is merged on `main`.
 - Branch protection is active on `main`: pull request required, force-push and deletion blocked, enforced for administrators with no bypass.
-- G0 remains unapproved.
 
 **Authority:** project owner approval under `CLAUDE.md` change control and §8.
 
@@ -135,7 +135,7 @@ The repository may use Python 3's standard library solely for the PP-VER-013 doc
 
 The information architecture (`PP-ART-018`, `PP-CON-010`) and the component inventory and blueprint (`PP-ART-019`) are accepted as the structural baseline drawn from the 2026-10-30 Canva export. Phase 1 may use them as its page-model input.
 
-Not closed by this decision: the content and web-adaptation decisions in `content-structure.md` (duplicated About paragraph, voice, statistics, testimonial permissions, service terms, portfolio permissions, copy typos, hero button destination, social profile URLs, font licence, enquiry path under `PP-CON-011`), the component link decisions (`PP-CMP-002`, `PP-CMP-005`), and responsive reflow. Phase 0 exit criteria therefore remain open, and G0 is not closed.
+Not closed by this decision: the business/content/design dispositions subsequently approved under DEC-014, plus their remaining evidence dependencies. DEC-014 approves conservative editorial choices and responsive adaptation but does not supply contact/availability values, original assets, testimonial/sample-image publication rights, or company social URLs. Phase 0 remains open until those required facts and rights are evidenced.
 
 **Authority:** project owner acceptance, 2026-10-31.
 
