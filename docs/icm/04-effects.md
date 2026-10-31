@@ -37,8 +37,24 @@ Loading a same-origin asset from the deployed build is an expected browser resou
 | `PP-EFF-008` | Build-time dependency retrieval | E3 | Expected only during an approved build | Locked manifest/lockfile, trusted registry configuration, integrity checks, no credentials in repository |
 | `PP-EFF-009` | Build artifact generation | E4 | Expected during an approved build | Clean output directory, known source revision, reproducible build inputs, artifact provenance |
 | `PP-EFF-010` | Repository merge, deployment or production promotion | E5 | Excluded until explicitly authorized | Owner approval, target verification, revision attribution, rollback/recovery plan where supported |
+| `PP-EFF-011` | CI vulnerability advisory and dependency-license metadata retrieval | E3 | Approved for dependency audit only | Read package identifiers/versions from lockfile; query OSV/npm/deps.dev metadata; emit reports; no application runtime calls or secrets |
 
 The expected/conditional/excluded statuses do not claim that these effects already exist in code.
+
+### PP-EFF-011 — CI vulnerability and license metadata retrieval
+
+**Class:** E3 — Network read  
+**Initiator:** PP-PRC-001 build/delivery verification workflow  
+**Targets:** npm advisory service, OSV database, and deps.dev license metadata service  
+**Inputs:** Locked package names, versions, and dependency scope from `package-lock.json`  
+**Outputs:** Vulnerability scan status, SPDX inventory, license-policy status, and SARIF where enabled
+
+This effect is permitted only in GitHub Actions. The local lockfile inventory script is offline. Package names and versions are disclosed to the configured advisory/license metadata services so they can return package security and license information. No application visitor data, credentials, contact details, or runtime content is transmitted by this process.
+
+**Failure policy:** A scanner/API error, missing output, invalid lockfile, or missing license metadata is a failed verification, not a clean result. No automatic dependency mutation is permitted.
+
+**Verification:** PP-VER-018.
+
 
 ## 4. Required effect record
 

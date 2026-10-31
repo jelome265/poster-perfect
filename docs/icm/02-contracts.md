@@ -41,7 +41,8 @@ Not every visual component needs a separate long-form document. The contract mus
 | `PP-REQ-007` | Do not add a backend, API, persistence, analytics, payments, or other external integration without an approved requirement. | Project scope boundary | Accepted | Dependency/effect review and decision log |
 | `PP-REQ-008` | Merge and production-release authorization remain with the project owner. | Project workflow rule | Accepted | Pull request and release disposition |
 | `PP-REQ-009` | Phase 0 produces an information architecture and component blueprint derived from the inspected source and approved requirements, before Phase 1 foundational technical decisions are made. | DEC-007; project owner directive | Accepted | Phase 0 reconciliation (`PP-VER-016`) and `PP-VER-013` |
-| `PP-REQ-010` | Poster Perfect is a company portfolio for a graphic design business, not an individual designer's personal portfolio; it must present the company's approved offering and work, communicate current availability for new projects, and provide a clear owner-approved enquiry path for prospective customers. | DEC-008; project owner clarification dated 2026-10-30 | Accepted; specific company content and enquiry details pending Phase 0 | Company-purpose and customer-journey reconciliation (`PP-VER-017`) |
+| `PP-REQ-010` | Poster Perfect is a company portfolio for a graphic design business, not an individual designer's personal portfolio; it must present the company's approved offering and work, communicate current availability for new projects, and provide a clear owner-approved enquiry path for prospective customers. | DEC-008; project owner clarification dated 2026-10-30 | Accepted; contact/availability and publication-rights evidence remains pending Phase 0 | Company-purpose and customer-journey reconciliation (`PP-VER-017`) |
+| `PP-REQ-011` | The complete locked npm dependency graph must be scanned for known vulnerabilities and inventoried against an explicit SPDX license policy; unknown licenses and scope violations must fail closed. | DEC-015; project owner instruction dated 2026-10-31 | Accepted | Dependency vulnerability and license audit (`PP-VER-018`) |
 
 This is the accepted requirement baseline as of DEC-008. New requirements receive new IDs; do not repurpose an existing ID to mean something different.
 
@@ -225,6 +226,31 @@ A business requirement not represented in the Canva source may be implemented on
 **Specification:** Partially specified; business purpose accepted, detailed content and journey pending Phase 0  
 **Implementation:** Not started  
 **Evidence:** Not collected
+
+### PP-CON-012 — Dependency security and license compliance
+
+**Owner:** Build and delivery process (`PP-PRC-001`)  
+**Consumers:** Maintainers, project owner, and release verification  
+**Requirement:** PP-REQ-011
+
+Every npm dependency represented in the committed `package-lock.json`, including transitive, optional, and development dependencies, MUST be included in the vulnerability and license audit.
+
+The audit MUST:
+- run npm advisory auditing and an independent OSV vulnerability scan against the locked dependency graph;
+- inventory every lockfile package with its exact version, license identifier, and dependency scope;
+- cross-check license metadata against the approved SPDX allowlist;
+- reject missing/unsupported metadata, any unapproved identifier, and a development-only exception in the runtime graph;
+- produce revision-attributable machine-readable and human-readable evidence.
+
+**Inputs:** `package.json`, `package-lock.json`, the accepted SPDX policy in DEC-015, and current advisory/license metadata from configured sources.  
+**Outputs:** CI status, OSV results/SARIF where enabled, and JSON/Markdown package license inventory.  
+**Invariants:** CI does not run automatic dependency fixes; no blanket vulnerability or license ignores; the lockfile is not rewritten by the audit; scanner/network failure is not treated as a clean result; non-npm assets remain subject to separate provenance and rights review.  
+**Verification:** PP-VER-018.
+
+**Specification:** Accepted under DEC-015  
+**Implementation:** Added to PR #15 candidate; exact-head CI evidence pending  
+**Evidence:** To be recorded after the dedicated workflow passes.
+
 
 ## 5. Conditional contracts
 

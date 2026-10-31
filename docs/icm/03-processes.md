@@ -29,12 +29,12 @@ Do not document every JSX render as a process. A process represents meaningful b
 | `PP-PRC-004` | Local interface interaction | Visitor operates a stateful control | User interaction | Conditional on source inventory |
 | `PP-PRC-005` | Remote form/API operation | Visitor submits or requests remote data | External operation | Not in baseline; future only |
 | `PP-PRC-006` | Verification and release | Candidate revision is submitted for review | Governance lifecycle | Target |
-| `PP-PRC-007` | Source inspection and specification | Owner supplies an inspectable design export or view-only source | Human specification workflow | Source inspected 2026-10-30; owner approval outstanding (G0) |
+| `PP-PRC-007` | Source inspection and specification | Owner supplies an inspectable design export or view-only source | Human specification workflow | Source inspected 2026-10-30; conservative dispositions approved under DEC-014; G0 evidence dependencies remain |
 
 ## 3. PP-PRC-001 — Build and delivery
 
 **Purpose:** turn a known source revision into a browser-deliverable artifact.  
-**Contracts:** PP-CON-001, PP-CON-009.
+**Contracts:** PP-CON-001, PP-CON-009, PP-CON-012.
 
 ```text
 reviewed source revision
@@ -55,7 +55,7 @@ artifact/output inspection
 owner-authorized deployment
 ```
 
-**Effects:** PP-EFF-008, PP-EFF-009, and PP-EFF-010 only when deployment/promotion is explicitly authorized.  
+**Effects:** PP-EFF-008, PP-EFF-009, PP-EFF-011, and PP-EFF-010 only when deployment/promotion is explicitly authorized.  
 **Preconditions**
 - Toolchain and package manager have been selected.
 - Lockfile is committed.
@@ -72,9 +72,9 @@ owner-authorized deployment
 - Do not mask a failure with a fallback exit code.
 - Do not deploy an artifact from an unverified or unknown revision.
 
-**Verification:** PP-VER-001, PP-VER-002, PP-VER-003, PP-VER-004, PP-VER-011.
+**Verification:** PP-VER-001, PP-VER-002, PP-VER-003, PP-VER-004, PP-VER-011, PP-VER-018.
 
-**Implementation status:** Implemented at foundation level: npm clean install, static checks, tests, Vite production build, and CI workflow are present. Production-preview HTTP/asset smoke passed on PR #15 review candidates `da325b2` (Actions run `41169847259`) and `befdefc` (Actions run `41170052269`); this verifies document and referenced JS/CSS delivery, not client-side execution in a real browser.
+**Implementation status:** Foundation build pipeline is implemented. Production-preview HTTP/asset smoke passed on earlier PR #15 candidates. Dedicated npm advisory, OSV vulnerability, and SPDX license controls are added to this PR candidate; exact-head security-workflow evidence is pending.
 
 ## 4. PP-PRC-002 — Initial page load and render
 

@@ -33,8 +33,8 @@ A file existing in Git does not automatically make it authoritative or prove tha
 | `PP-ART-002` | Design reference inventory | `docs/design-reference.md` | Specification | Source inspection | Drafted from export 2026-10-30; owner confirmation pending |
 | `PP-ART-003` | Frontend architecture | `docs/architecture.md` | Architecture | Maintainer / owner approval | Current logical baseline |
 | `PP-ART-004` | Technical standards | `docs/technical-standards.md` | Contract | Maintainer / owner approval | Current baseline |
-| `PP-ART-005` | Design-token inventory | `docs/design-system.md` | Specification | Source inspection | Partially measured from export; approximate colors and typeface recorded, owner confirmation and remaining measurements pending |
-| `PP-ART-006` | Content and section inventory | `docs/content-structure.md` | Specification | Source inspection | Drafted from export 2026-10-30; owner confirmations pending; page set and section order owned by `PP-ART-018` |
+| `PP-ART-005` | Design-token inventory | `docs/design-system.md` | Specification | Source inspection | Approximate source palette approved as starting tokens under DEC-014; typography metrics and rendered contrast validation pending |
+| `PP-ART-006` | Content and section inventory | `docs/content-structure.md` | Specification | Source inspection | Conservative content dispositions approved under DEC-014; contact/availability and publication-rights evidence pending; page set and section order owned by `PP-ART-018` |
 | `PP-ART-007` | Component inventory | `docs/components.md` | Architecture/contract | Source inspection and implementation | Drafted from export 2026-10-30; owner approval pending; contract details owned by `PP-ART-019` |
 | `PP-ART-008` | Delivery phase specifications | `docs/phases/` | Contract | Maintainer / owner approval | Current |
 | `PP-ART-009` | Decision log | `docs/decision-log.md` | Governance | Project owner | Current |
@@ -51,6 +51,8 @@ A file existing in Git does not automatically make it authoritative or prove tha
 | `PP-ART-020` | Phase 1 verification and gap review | `docs/phases/phase-1-verification-gap-review-2026-10-31.md` | Verification evidence | Maintainer / CI | Review report records `ad45f296` baseline, initial PR #15 candidate `da325b2` (runs `41169847259` / `41169847210`), and reconciled PR #15 head `befdefc` (runs `41170052269` / `41170052381`) |
 
 The registry is a navigation and lifecycle record. Subject-specific details remain in the canonical file listed above.
+
+| `PP-ART-021` | npm dependency security and license inventory | `scripts/audit-licenses.mjs`, `.github/workflows/dependency-audit.yml`, `docs/security/dependency-audit.md` | Verification evidence / generated inventory | Maintainer / CI | Implemented on PR #15; JSON and Markdown lockfile inventory artifacts uploaded from CI; exact-head evidence pending |
 
 ## 4. Required provenance
 
