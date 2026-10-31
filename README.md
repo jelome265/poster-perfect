@@ -53,6 +53,16 @@ Start with the [system context](docs/icm/00-system-context.md), [architecture ma
 - Visual decisions must be derived from the source design, not guessed.
 - Tooling, routing, styling framework, and deployment target will be selected when implementation requirements are confirmed.
 
+## Documentation integrity
+
+Run the repository documentation validator from the project root:
+
+```bash
+python3 -B scripts/validate_docs.py
+```
+
+GitHub Actions runs the same standard-library-only validator on pull requests targeting `main` and pushes to `main`. It checks documentation links/anchors, canonical identifier definitions and references, accepted-requirement traceability, process/effect mappings, stale Phase 0 status statements, and unconfirmed contact-value hygiene. This is a documentation-integrity control, not an application build, runtime test, visual-fidelity assessment, accessibility assessment, or security audit. The CI-only Python exception is recorded in DEC-011; it does not select Python for application development.
+
 ## Development
 
-The application scaffold and package scripts have not been established yet. Setup and verification commands will be documented here after the toolchain is selected and added to the repository.
+The application scaffold and package scripts have not been established yet. Setup and application verification commands will be documented here after the toolchain is selected and added to the repository.
