@@ -6,7 +6,7 @@ This directory contains the phase-level execution specifications for Poster Perf
 
 | Phase | Name | Current status | Primary exit condition |
 | --- | --- | --- | --- |
-| 0 | [Source discovery and specification](phase-0-source-discovery.md) | Complete for the profile-only baseline with accepted limitations (DEC-017, 2026-10-31) | Approved source and web specification with explicit exclusions |
+| 0 | [Source discovery and specification](phase-0-source-discovery.md) | Source-led seven-section specification complete under DEC-018 (2026-10-31) | Canva company content, source layout and explicit future-update placeholders reconciled |
 | 1 | [Application foundation](phase-1-application-foundation.md) | Complete (DEC-016; owner-authorized G1 close-out on 2026-10-31; merge SHA `9e81adb`) | Reproducible React and TypeScript application foundation |
 | 2 | [Design system and page composition](phase-2-design-system-and-composition.md) | Not started | Approved design translated into complete page composition |
 | 3 | [Responsive and accessible implementation](phase-3-responsive-accessibility.md) | Not started | Agreed viewport and accessibility requirements verified |
