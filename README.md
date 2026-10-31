@@ -4,7 +4,7 @@ A responsive company portfolio website for a graphic design business, built with
 
 ## Project status
 
-**Phase 1 is complete (DEC-016).** PR #15 merged the foundation verification and dependency controls to `main` at `9e81adb7a178db9c48106292b3351d0bafe0a9e8`; exact merge-SHA evidence is recorded in the [Phase 1 close-out report](docs/phases/phase-1-verification-gap-review-2026-10-31.md). Phase 0/G0 remains open for current contact and availability values, original logo/assets, social profile URLs, and publication rights for testimonials and sample artwork. Phase 2 remains gated on G0.
+**Phase 0/G0 is complete for the owner-approved profile-only baseline (DEC-017, 2026-10-31), and Phase 1 is complete (DEC-016).** PR #16 merged the Phase 1 close-out to `main` at `07860b383555d98d6528ba834653cbe83fe172df`, containing close-out commit `5cff148f088a75f5aa8578f04db3727f6ac3765b`. Phase 2 may begin after the G0 decision/inventory update is merged. The initial site excludes unverified contact/availability values, social links, statistics, testimonials, and source artwork/logo files whose provenance or publication rights are unavailable. It is profile-only and has no external enquiry path; a verified path or separate owner-authorized restricted-release decision is required at G4.
 
 ## Application development
 
