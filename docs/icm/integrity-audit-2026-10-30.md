@@ -250,3 +250,15 @@ Limitations:
 - `CLAUDE.md` is owner-controlled (§1, §4). Its Phase 0 statement is not changed by this record and needs owner approval.
 - The remediation changes are uncommitted. They must be verified again at the commit that contains them.
 - This record does not establish application verification, visual fidelity, or accessibility conformance.
+
+## 11. Owner decisions and repository governance (2026-10-30)
+
+| Item | Owner decision | Record |
+| --- | --- | --- |
+| Testimonial quotations | Do not remove. Quotations restored in `content-structure.md`; no history rewrite | DEC-009 |
+| `CLAUDE.md` §4 Phase 0 status | Approved; replacement applied | DEC-010 |
+| Branch protection on `main` | Active and enforced | GitHub ruleset `26256454`: pull request required, non-fast-forward and deletion blocked, no bypass actors |
+| Contact details | Owner to confirm whether the phone and email remain; they appear in the export footer | Owner decision 8, open |
+| G0 approval | Deferred ("Wait") | Phase 0 remains awaiting owner approval; Phase 1 not authorized |
+
+PP-VER-013 has not been re-run at the commit that contains this section. Its last formal result is FAIL at `877933a` (§10).

@@ -64,7 +64,7 @@ Poster Perfect is a company portfolio and customer-acquisition website for a gra
 
 The project owner confirmed this purpose on 2026-10-30. The supplied Canva design is the visual and content reference; it does not replace the separately confirmed business purpose. The approved technical direction is React with TypeScript/TSX and a component-based frontend. Toolchain, package manager, router, styling framework, hosting provider, and any backend or external integrations are not assumed until confirmed by the phase process.
 
-**Phase 0 is currently blocked** because the Canva artwork is not yet inspectable through the supplied reference. The source design or a suitable full-resolution export/view-only reference is required.
+**Phase 0 is awaiting owner approval (G0).** The owner's Canva export was inspected on 2026-10-30, and records are drafted (see `docs/phases/phase-0-source-discovery.md`). Remaining: the owner decisions in `docs/content-structure.md`, full-resolution assets, the logo vector, the font licence, and responsive variants. Phase 1 has not started.
 
 Until Phase 0 exit criteria are met and the project owner approves the web interpretation:
 
