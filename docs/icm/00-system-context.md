@@ -2,11 +2,11 @@
 
 **Canonical level:** L0 — Intent and context  
 **Record class:** Target-state context map  
-**Status:** Partially specified; source inspected 2026-10-30; owner approval pending (G0)
+**Status:** G0 complete for the owner-approved profile-only baseline with accepted limitations (DEC-017, 2026-10-31)
 
 ## 1. System intent
 
-Poster Perfect is the company portfolio website for a graphic design business. It represents the company at business level, not an individual designer's personal portfolio. Its business purpose is to present the company's owner-approved identity, positioning, capabilities and selected creative work, communicate availability for new projects, establish confidence, and attract prospective customers through an owner-approved enquiry path (DEC-008, PP-REQ-010).
+Poster Perfect is the company portfolio website for a graphic design business. It represents the company at business level, not an individual designer's personal portfolio. Its full business purpose is to present the company's owner-approved identity, positioning, capabilities and authorized creative work, communicate current availability, and attract prospective customers through an owner-approved enquiry path (DEC-008, PP-REQ-010). The initial profile-only baseline approved under DEC-017 presents the approved company profile and services but intentionally omits current availability, unlicensed work, and external enquiry controls. It is not a completed customer-acquisition solution.
 
 The supplied Canva design is the visual/content reference for the web implementation. It does not replace the separately confirmed business purpose. The implementation direction is React with TypeScript/TSX and a maintainable, responsive component-based frontend. The intent is not to reproduce a static canvas as a single screenshot; meaningful content and approved interactions should use semantic web content and native browser behavior where appropriate.
 
@@ -113,4 +113,4 @@ L0 is sufficiently specified for implementation when:
 - Non-goals and unresolved questions are recorded.
 - The owner has approved the web interpretation of the source design and the company-facing content/customer-enquiry journey.
 
-Current L0 state: **awaiting owner approval (G0)**. The source was inspected on 2026-10-30. Open items are the company-content decisions and the enquiry-path decision; the company-level website purpose is accepted.
+Current L0 state: **G0 complete for the scoped profile-only baseline under DEC-017**. Missing contact/availability values, original assets, company social URLs, and customer/third-party publication rights are explicit exclusions, not resolved facts. A verified enquiry path remains a G4 business-readiness condition or requires a separate owner-authorized restricted-release decision.
