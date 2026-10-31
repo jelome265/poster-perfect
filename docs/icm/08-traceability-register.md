@@ -59,7 +59,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-CON-007` | External integration | Excluded from baseline | Not applicable | Not applicable at baseline |
 | `PP-CON-008` | Accessibility/responsive | Partially specified; target accepted, details pending | Not started | Not collected |
 | `PP-CON-009` | Change/release | Accepted | Not applicable (governance contract) | Not collected per individual change |
-| `PP-CON-010` | Information architecture and navigation | Partially specified; one-page/seven-section draft exists, owner approval/adaptations pending | Not started | Not collected |
+| `PP-CON-010` | Information architecture and navigation | Accepted 2026-10-31 (DEC-013); web adaptations and content decisions still open | Not started | Not collected |
 | `PP-CON-011` | Company positioning, portfolio and customer engagement | Partially specified; company purpose accepted, details pending Phase 0 | Not started | Not collected |
 
 ## 5. Process registry

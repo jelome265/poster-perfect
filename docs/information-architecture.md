@@ -2,7 +2,7 @@
 
 **Artifact:** `PP-ART-018`  
 **Class:** Specification (contract-backed; see `PP-CON-010`)  
-**Status:** Drafted from the export (2026-10-30); owner approval pending (G0). Source inspection complete; `PP-RSK-001` mitigated (`PP-RSK-002` open for web adaptations)  
+**Status:** Accepted by the project owner on 2026-10-31 (DEC-013) as the structural baseline from the 2026-10-30 export. Content and web-adaptation decisions remain open (`PP-RSK-002`; `content-structure.md` owner decisions)  
 **Canonical owner:** Page implementation owner (`PP-MAP-011`, role as defined in `icm/01-architecture-map.md`)  
 **Producer:** Page implementation owner, from the source-inspection record  
 **Approval:** Project owner  

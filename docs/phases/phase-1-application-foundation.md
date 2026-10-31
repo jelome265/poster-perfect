@@ -2,7 +2,7 @@
 
 | Field | Value |
 | --- | --- |
-| Status | Not started |
+| Status | In progress: foundation implemented on `feat/phase1-application-foundation` and committed for review; exit criteria not yet met (merge into main and the verification record at the merged revision are outstanding) |
 | Objective | Establish a reproducible, minimal React and TypeScript application |
 | Depends on | Phase 0 specification and approved scope |
 | Primary outputs | Application scaffold, dependency lockfile, strict TypeScript configuration, quality scripts, setup documentation |

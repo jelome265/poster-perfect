@@ -2,7 +2,7 @@
 
 **Artifact:** `PP-ART-019`  
 **Class:** Contract / architecture (see `PP-CON-003`)  
-**Status:** Partially specified from the export (2026-10-30); owner approval pending (G0) (`PP-RSK-001` mitigated; `PP-RSK-003` open)  
+**Status:** Accepted as the component inventory baseline on 2026-10-31 (DEC-013). Entries remain Partially specified; their open questions are not closed (`PP-RSK-003`)  
 **Canonical owner:** Component maintainer (`PP-MAP-013`, role as defined in `icm/01-architecture-map.md`)  
 **Producer:** Component maintainer; Section implementation owner (`PP-MAP-012`) for entries in their section  
 **Approval:** Project owner  
