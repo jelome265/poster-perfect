@@ -89,15 +89,19 @@ def main() -> int:
                     errors.append(f"{name}: missing anchor #{fragment} in {destination.relative_to(ROOT)}")
 
     definitions = {}
+    heading_only = {"PP-CON", "PP-PRC", "DEC"}
     for prefix, owners in OWNERS.items():
         for owner in owners:
             if owner not in docs:
                 errors.append(f"missing canonical owner file: {owner}")
                 continue
             for number, line in enumerate(docs[owner].splitlines(), 1):
-                row = ROW_RE.match(line)
-                heading = HEADING_RE.match(line)
-                found = row.group(1) if row else (heading.group(1) if heading else None)
+                if prefix in heading_only:
+                    heading = HEADING_RE.match(line)
+                    found = heading.group(1) if heading else None
+                else:
+                    row = ROW_RE.match(line)
+                    found = row.group(1) if row else None
                 if found and found.startswith(prefix + "-"):
                     definitions.setdefault(found, []).append(f"{owner}:{number}")
     references = set()
@@ -120,7 +124,11 @@ def main() -> int:
             if re.fullmatch(r"PP-REQ-\d{3}", key) and len(cells) > 3 and "accepted" in cells[3].lower():
                 accepted.add(key)
     for key in sorted(accepted):
-        rows = [line for line in matrix.splitlines() if line.lstrip().startswith(f"| \x60{key}\x60 |")]
+        rows = []
+        for line in matrix.splitlines():
+            cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+            if cells and cells[0].strip(chr(96) + " ") == key:
+                rows.append(line)
         if len(rows) != 1 or not re.search(r"PP-VER-\d{3}", rows[0]):
             errors.append(f"{key}: missing or invalid verification traceability row")
     if not accepted:
