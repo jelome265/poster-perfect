@@ -32,7 +32,7 @@ A phase may touch multiple ICM levels, and an ICM level may be revisited across 
 Required:
 - Inspectable source and completed source inventory.
 - PP-PRC-007 source inspection/reconciliation completed.
-- Approved company-level purpose, target customer segments or accepted limitations, positioning, service/capability information, publishable work and permissions, availability wording, and enquiry path (`PP-VER-017`).
+- Approved company-level purpose, customer segments or accepted limitations, positioning, service/capability information, and an owner-approved disposition for portfolio rights, current availability, and enquiry path (`PP-VER-017`). DEC-017 approves a profile-only baseline that excludes unpublished assets, unverified availability, and external enquiry actions.
 - Approved page/content hierarchy.
 - Asset, typography, and design-token inventory.
 - Interaction and responsive interpretation.
@@ -66,20 +66,21 @@ Blocks:
 ### G2 — Composition ready
 
 Required:
-- Approved content and assets integrated.
-- All in-scope sections represented.
-- Typed component interfaces.
+- Profile-only content and exclusions under DEC-017 integrated.
+- All in-scope rendered sections represented; source-only Statistics and Testimonials explicitly excluded.
+- Typed component interfaces for implemented components.
 - Architecture/component-boundary review for implemented page/section components (PP-VER-014).
-- Information architecture and component blueprint reconciled with the implemented composition (`PP-VER-016`).
+- Information architecture and component blueprint reconciled with the implemented composition (PP-VER-016).
 - Source/token reconciliation.
-- Primary viewport visual review.
-- Required interactions implemented or explicitly blocked.
-- Company positioning, approved work, availability content and the customer-enquiry path reconciled with `PP-CON-011` and `PP-VER-017`.
+- Primary viewport visual review against the owner-held PDF; re-supply the PDF and record the CSS comparison viewport before claiming this evidence.
+- The internal About interaction works; no external enquiry control is presented as implemented.
+- The profile-only limitation is carried into release planning; a business-ready customer-acquisition path remains a G4 dependency.
 
 Blocks:
-- Missing core sections or content.
+- Missing in-scope sections or content.
 - Unknown or inert interactive controls.
-- Unapproved deviations from visual source.
+- Unapproved assets/content or visual deviations.
+- A claim of full visual fidelity without source comparison evidence.
 
 ### G3 — Responsive and accessibility ready
 
@@ -125,7 +126,7 @@ Blocks:
 
 | Gate | Status | Reason |
 |---|---|---|
-| G0 | In progress; conservative business/content/design dispositions owner-approved under DEC-014 | Exact contact and availability values, original logo/asset files, company social profile URLs, and publication rights for testimonials/sample artwork remain open; responsive adaptation and Aileron source license are recorded |
+| G0 | Complete for the profile-only baseline with accepted limitations under DEC-017 (2026-10-31) | Source inspected; seven-section source inventory and component structure accepted under DEC-013; owner approved the profile-only rendered subset and explicitly excluded missing contact/availability values, social URLs, original assets, testimonials/statistics, and rights-uncleared artwork. These exclusions are not claims that missing facts or rights exist. |
 | G1 | Complete — owner-authorized Phase 1 close-out under DEC-016 on 2026-10-31 | PR #15 merged at `9e81adb7a178db9c48106292b3351d0bafe0a9e8`. On that exact merge SHA, application quality passed (run `41172107909`), PP-VER-013 passed (run `41172107907`), and npm/OSV/SPDX/deps.dev audit passed (run `41172108087`). Six required contexts passed on PR #15 head `ecfc625bcc206771bfc1a6b05a20888a51d862ce`; ruleset `26256454` is active with strict checks and no bypass actors. The close-out documentation change must pass PP-VER-013 again on its own PR revision. |
 | G2 | Not started | No application composition |
 | G3 | Not started | No responsive implementation |
