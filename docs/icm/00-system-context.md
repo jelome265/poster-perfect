@@ -21,7 +21,7 @@ The supplied Canva design is the visual/content reference for the web implementa
 | `PP-MAP-005` | Build and package ecosystem | Resolves dependencies and produces deployable frontend assets | External supply-chain boundary | Vite 8.3.5, npm lockfile, Node.js 22, React/TypeScript toolchain selected under DEC-012 |
 | `PP-MAP-006` | Hosting/runtime delivery | Serves the built website to visitors | Operational boundary | Provider not selected |
 | `PP-MAP-007` | External destinations or services | Potential contact destinations or other integrations invoked by page controls | External and not trusted by default | Unknown; not assumed |
-| `PP-MAP-008` | Poster Perfect graphic design business | Business represented by the website; supplies owner-approved company identity, offering, portfolio material, availability and enquiry details | Business facts and publication permissions require owner approval; company size/legal structure are not inferred | Company-level purpose confirmed; detailed profile pending Phase 0 |
+| `PP-MAP-008` | Poster Perfect graphic design business | Business represented by the website; supplies owner-approved company identity, offering, portfolio material, availability and enquiry details | Business facts and publication permissions require owner approval; company size/legal structure are not inferred | Canva company content and seven-section source specification accepted under DEC-018; missing values/assets use explicit placeholders |
 
 No additional external provider, CRM, submission service, or organization is part of the approved runtime scope unless separately authorized.
 
