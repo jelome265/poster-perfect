@@ -2,7 +2,7 @@
 
 **Artifact:** `PP-ART-018`  
 **Class:** Specification (contract-backed; see `PP-CON-010`)  
-**Status:** Source structure accepted under DEC-013 and profile-only implementation scope approved under DEC-017 (2026-10-31). The seven-section source inventory remains intact; Statistics and Testimonials are documented but excluded from the initial rendered website, and Contact/footer is adapted to a wordmark-only footer.
+**Status:** Seven-section Canva source hierarchy accepted under DEC-013/DEC-018; the source-led rendered scope includes all seven sections, with explicit future-update placeholders for unavailable values and assets.
 **Canonical owner:** Page implementation owner (`PP-MAP-011`, role as defined in `icm/01-architecture-map.md`)  
 **Producer:** Page implementation owner, from the source-inspection record  
 **Approval:** Project owner  
@@ -12,13 +12,13 @@
 
 This document is the canonical record of the **structure** of the Poster Perfect website: which pages or routes exist, how they nest, how navigation connects them, what order sections appear in, and where in-page anchor targets exist.
 
-**No page, route, section, navigation entry, or anchor is recorded here until it is observed in the inspected Canva source or explicitly approved by the project owner as a web requirement/adaptation.** Sections 5.1 to 5.6 record the structure observed in the 2026-10-30 export. They await owner approval. Do not infer additional pages, routes, sections, or navigation from the project name, from typical company-portfolio patterns, or from component names in `components.md`.
+**No page, route, section, navigation entry, or anchor is recorded here until it is observed in the inspected Canva source or explicitly approved by the project owner as a web requirement/adaptation.** Sections 5.1 to 5.6 record the one-page, seven-section structure observed in the 2026-10-30 Canva export and confirmed as the website baseline under DEC-018. Do not infer additional pages, routes, sections, or navigation from the project name or typical company-portfolio patterns.
 
 ### Business-purpose constraint
 
 The owner-confirmed company purpose and prospective-customer objective are defined in `docs/project-brief.md` and `PP-CON-011`. The information architecture must support the approved company-level presentation and enquiry journey; it must not turn the site into an individual designer's personal portfolio.
 
-The Canva source supplies observed visual and content structure. If the company objective requires an additional section, page, navigation entry, or enquiry action that is not present in the source, record it as a proposed web adaptation and obtain explicit owner approval before adding it. Do not label an approved adaptation as source-observed. Exact page count and IA nodes remain blocked until the required source inspection and approvals are complete.
+The Canva source supplies the company information and observed seven-section visual/content structure. Preserve that structure. Any additional section, page, navigation entry, or enquiry action not present in the source remains a proposed web adaptation and requires explicit owner approval. Do not label an approved adaptation as source-observed.
 
 
 ## 2. Ownership split
@@ -68,7 +68,7 @@ Every node MUST record the following. A field that does not apply is marked "not
 
 ## 5. Structure (observed in the export, 2026-10-30)
 
-The export is one page with seven sections. The source records below are retained as the seven-section source inventory and were structurally accepted under DEC-013. DEC-017 approves the initial rendered scope and exclusions; see §5.7. The Canva source has no navigation bar. The About anchor is an owner-approved web adaptation, not an observed source navigation item.
+The export is one page with seven sections. The source records below define the initial rendered seven-section composition under DEC-018. The Canva source has no navigation bar; the About anchor is an owner-approved web adaptation, not an observed source navigation item. Missing facts/assets remain represented by placeholders inside their source regions; see §5.7.
 
 ### 5.1 Page and route inventory
 
@@ -97,9 +97,9 @@ PP-IA-001 Home page (single page)
 | Home (`PP-IA-001`) | 2 | `PP-IA-003` | About, light grey band | Drafted from export |
 | Home (`PP-IA-001`) | 3 | `PP-IA-004` | Value statement, bright blue band | Drafted from export |
 | Home (`PP-IA-001`) | 4 | `PP-IA-005` | Services, dark navy band | Drafted from export; duplicated paragraph under review |
-| Home (`PP-IA-001`) | 5 | `PP-IA-006` | Statistics, three columns | Source-observed; excluded from the initial website under DEC-014/DEC-017 |
-| Home (`PP-IA-001`) | 6 | `PP-IA-007` | Testimonials, light grey band | Source-observed; excluded from the initial website under DEC-014/DEC-017 pending individual permissions |
-| Home (`PP-IA-001`) | 7 | `PP-IA-008` | Contact and footer, dark navy band | Source-observed; adapted to text-only wordmark footer under DEC-017; contact data/links excluded |
+| Home (`PP-IA-001`) | 5 | `PP-IA-006` | Statistics, three columns | Source-observed; retain three-column layout with unverified values as placeholders under DEC-018 |
+| Home (`PP-IA-001`) | 6 | `PP-IA-007` | Testimonials, light grey band | Source-observed; retain three testimonial-card slots with permission-gated placeholder content under DEC-018 |
+| Home (`PP-IA-001`) | 7 | `PP-IA-008` | Contact and footer, dark navy band | Source-observed; preserve headquarters/contact/office-hours/social regions with explicit update placeholders where values are withheld or need reconfirmation |
 
 ### 5.4 Navigation
 
@@ -119,22 +119,28 @@ Navigation entries MUST use semantic links (`PP-CON-006`). A navigation entry wi
 
 | Section ID | Content entry (`content-structure.md`) | Component(s) or local markup (`components.md`) | Responsive rule (`design-system.md`) | Interaction rows (`content-structure.md`) |
 | --- | --- | --- | --- | --- |
-| `PP-IA-002` | Hero, PP-IA-002 section | Text-only wordmark; local markup for headline and internal link | Approved fluid reflow | LEARN MORE → #about (PP-CNT-10) |
-| `PP-IA-003` | About, PP-IA-003 section | Local markup | Approved fluid reflow | None |
-| `PP-IA-004` | Value statement, PP-IA-004 section | Text-only value-point list; no check-mark asset | Approved fluid reflow | None |
-| `PP-IA-005` | Services, PP-IA-005 section | Text-only service categories; sample-image cards excluded | Approved fluid reflow | None |
-| `PP-IA-006` | Statistics, PP-IA-006 section | Not rendered under DEC-017 | Not applicable | None |
-| `PP-IA-007` | Testimonials, PP-IA-007 section | Not rendered under DEC-017 | Not applicable | None |
-| `PP-IA-008` | Contact and footer, PP-IA-008 section | Text-only brand footer; contact/social/location details excluded | Approved fluid reflow | None |
+| `PP-IA-002` | Hero, PP-IA-002 section | Text wordmark fallback, headline, CTA and magazine-cover image placeholder | Approved fluid reflow | LEARN MORE → #about (PP-CNT-10) |
+| `PP-IA-003` | About, PP-IA-003 section | Company-voice copy derived from Canva | Approved fluid reflow | None |
+| `PP-IA-004` | Value statement, PP-IA-004 section | Source service paragraph and four value-point items | Approved fluid reflow | None |
+| `PP-IA-005` | Services, PP-IA-005 section | Three service cards with image placeholders and source labels | Approved fluid reflow | Non-interactive service labels |
+| `PP-IA-006` | Statistics, PP-IA-006 section | Three source statistic tiles with "to be confirmed" placeholders until substantiated | Approved fluid reflow | None |
+| `PP-IA-007` | Testimonials, PP-IA-007 section | Three source testimonial-card slots with permission-gated placeholder text | Approved fluid reflow | None |
+| `PP-IA-008` | Contact and footer, PP-IA-008 section | Source contact/office-hours/social layout; withheld values and URLs use update placeholders; wordmark fallback | Approved fluid reflow | Contact/social links only after verified destinations are supplied |
 
-The export has no navigation bar and no enquiry action. The enquiry path required by `PP-CON-011` is a proposed web adaptation and has no node until it is approved.
+The export has no navigation bar or separate enquiry CTA. Its footer contains source contact and social regions. Preserve those regions, using update placeholders for withheld values and enabling native hand-off links only after valid destinations are supplied.
 
-### 5.7 Approved initial render scope (DEC-017)
+### 5.7 Source-led render scope and placeholder rules (DEC-018)
 
-The seven nodes above remain the complete source-derived section inventory. The initial website renders Hero, About, Value statement, and Services, followed by a wordmark-only footer derived from Contact/footer. It does not render Statistics or Testimonials. It does not render contact information, social icons, office hours, or location details. The source hierarchy is preserved as provenance; the profile-only render is an explicitly approved adaptation.
+All seven Canva sections are part of the initial page composition, in the source order listed in §5.3. Sections are not removed because content or assets need a later update.
 
-The only initial interaction is the internal LEARN MORE link to the About anchor (PP-IA-009). There are no external navigation destinations or enquiry controls. This does not satisfy the eventual customer-acquisition objective; a verified contact hand-off remains a G4 business-readiness dependency or requires a separate restricted-release decision.
+- Hero, About, Value statement and Services use the approved source-derived company content and the company-voice adaptation in `content-structure.md`.
+- The source's three service examples retain their image-card positions. Render named image placeholders until original, permission-cleared assets are available.
+- Statistics retains its three-column layout; do not publish unsubstantiated values. Use an explicit placeholder state in each tile.
+- Testimonials retains its section and three-card layout; do not publish quotations or attributions without customer permission and substantiation. Use explicit placeholder cards.
+- Contact/footer retains the headquarters, telephone, email, office-hours and social-media regions. Render placeholders for values withheld from this public inventory or awaiting reconfirmation. No placeholder is a live link. The source office-hours text is transcribed in `content-structure.md` and must be reconfirmed before production publication.
+- Use the source wordmark as text while the original logo mark is unavailable. Do not fabricate an image or logo.
 
+The placeholders preserve the source design's hierarchy and reserve places for future updates. They must be distinguishable from real company information, customer endorsements, portfolio work or operational claims. The single observed CTA is the approved internal LEARN MORE link to About (`PP-IA-009`).
 ## 6. Responsive navigation and reflow
 
 For each navigation region and each page that changes structure at a viewport width, record:
