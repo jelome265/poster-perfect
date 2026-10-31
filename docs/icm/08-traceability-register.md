@@ -27,8 +27,8 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-REQ-005` WCAG 2.2 AA target | PP-MAP-002, 003, 012–016 | PP-CON-006, 008 | PP-PRC-003, 004 | PP-EFF-001–004 | PP-ART-004, 007, 015 | PP-REF-006 | PP-VER-007–010, 013 | 2, 3, 4 |
 | `PP-REQ-006` No invented source facts | PP-MAP-001, 004 | PP-CON-002, 004, 005, 010 | PP-PRC-007 | PP-EFF-004 | PP-ART-001, 002, 005, 006, 007, 013, 015, 018, 019 | PP-REF-001, 002, 010, 011 | PP-VER-005, 006, 010, 013, 016 | 0, 2, 4 |
 | `PP-REQ-007` No unapproved backend/integration/persistence | PP-MAP-007, 016 | PP-CON-007 | PP-PRC-005 | PP-EFF-005–007 | PP-ART-004, 011, 012, 015 | PP-REF-004 | PP-VER-013, 015; future integration-specific controls if scope changes | 0–4 |
-| `PP-REQ-008` Owner retains merge/release authority | PP-MAP-001, 017, 018 | PP-CON-009 | PP-PRC-001, 006 | PP-EFF-010 only under owner authorization | PP-ART-008, 009, 010, 016 | PP-REF-003, 005 | PP-VER-011–013 | 0–4 |
-| `PP-REQ-009` Phase 0 IA and component blueprint before foundational decisions | PP-MAP-010–013, 018 | PP-CON-002, 003, 010 | PP-PRC-007 | None (documentation output; no runtime effect) | PP-ART-006, 007, 009, 018, 019 | PP-REF-001, 003, 010, 011 | PP-VER-005, 013, 016 | 0, 1 |
+| `PP-REQ-008` Owner retains merge/release authority | PP-MAP-001, 017, 018 | PP-CON-009 | PP-PRC-001, 006 | PP-EFF-010 only under owner authorization | PP-ART-008, 009, 010, 016, 020 | PP-REF-003, 005 | PP-VER-011–013 | 0–4 |
+| `PP-REQ-009` Phase 0 IA and component blueprint before foundational decisions | PP-MAP-010–013, 018 | PP-CON-002, 003, 010 | PP-PRC-007 | None (documentation output; no runtime effect) | PP-ART-006, 007, 009, 018, 019, 020 | PP-REF-001, 003, 010, 011 | PP-VER-005, 013, 016 | 0, 1 |
 | `PP-REQ-010` Company portfolio and prospective-customer acquisition purpose | PP-MAP-001, 002, 008, 011–013, 015 | PP-CON-002, 005, 006, 010, 011 | PP-PRC-002, 003, 007 | PP-EFF-001, 003, 004; PP-EFF-007 only with separate approval | PP-ART-001, 002, 006, 007, 009, 013, 018, 019 | PP-REF-001, 002, 003, 005, 010, 011 | PP-VER-005, 009, 010, 013, 016, 017 | 0, 2, 3, 4 |
 
 ## 3. Map registry
@@ -105,7 +105,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-VER-010` | Asset loading/alt text | Pending asset inventory | G2, G3, G4 |
 | `PP-VER-011` | Release artifact provenance | Planned | G4 |
 | `PP-VER-012` | Owner review/release disposition | Required | G4 |
-| `PP-VER-013` | ICM reference/traceability integrity | Failed at `877933a` (PP-ART-017 §10 R4): stale statuses and missing §9 reference; remediation pending. Prior: passed at `76f990f` (§8 R3) for that revision only | All gates and material documentation changes |
+| `PP-VER-013` | ICM reference/traceability integrity | Automated link/anchor and accepted-requirement traceability checks are implemented in `PP-ART-020`; workflow result is revision-specific. Manual checks remain for identifier ownership, owner roles, authority, process/effect completeness and status semantics. R4 failed at `877933a`; first automated result is pending on this PR revision | All gates and material documentation changes |
 | `PP-VER-014` | Architecture/component-boundary review | Planned | G1, G2, G4 |
 | `PP-VER-015` | Dependency/side-effect surface review | Defined; not yet run | G1, G2, G4 |
 | `PP-VER-016` | IA and component-blueprint reconciliation | Executed by author 2026-10-30; owner review pending | G0, G2 |
@@ -116,8 +116,8 @@ Do not infer an implementation status from a specification or a verification sta
 | ID | Question/blocker | Owner | Resolution phase | Current disposition |
 |---|---|---|---|---|
 | `PP-RSK-001` | Canva artwork cannot currently be inspected from the supplied URL | Project owner supplies accessible export/reference | Phase 0 | Mitigated 2026-10-30: export inspected (see `design-reference.md`); residual items recorded there |
-| `PP-RSK-002` | Specific customer segments, page count, and section hierarchy are not yet verified; company-level website purpose is owner-confirmed in DEC-008 | Project owner / source inspection | Phase 0 | Partially resolved; do not infer the remaining details |
-| `PP-RSK-003` | Exact copy, destinations, and control behavior are not inventoried | Source inspection / owner | Phase 0 | Unknown; do not implement invented behavior |
+| `PP-RSK-002` | Specific customer segments remain unconfirmed; one-page/seven-section hierarchy is drafted from the export but awaits owner approval, and any additional web adaptation remains unapproved | Project owner / source inspection | Phase 0 | Source structure drafted; customer segments and owner acceptance remain open |
+| `PP-RSK-003` | Copy is transcribed from the export; CTA, service-card, logo, social, email and telephone destinations/outcomes remain unresolved | Project owner / source inspection | Phase 0 | Copy inventory drafted; interaction decisions remain open; do not implement invented behavior |
 | `PP-RSK-004` | Toolchain, routing, styling, package manager, and hosting are undecided | Maintainer / owner decision | Phase 1 | Open; choose from actual requirements |
 | `PP-RSK-005` | Font and asset availability/licensing not verified | Project owner / source inspection | Phase 0 | Pending |
 | `PP-RSK-006` | Responsive source variants or owner-approved adaptations are not known | Project owner / source inspection | Phase 0 | Pending |
