@@ -48,7 +48,7 @@ A file existing in Git does not automatically make it authoritative or prove tha
 | `PP-ART-017` | ICM integrity audit (2026-10-30) | `docs/icm/integrity-audit-2026-10-30.md` | Verification evidence | ICM/documentation reviewer | R4 failed at `877933a` (§10); R5 passed at `a3d933c` (§12); R6 passed on `main` commit `486a81b` (§13). Results are revision-specific; later material changes require a new run. Not application verification |
 | `PP-ART-018` | Information architecture | `docs/information-architecture.md` | Specification (contract-backed) | Page implementation owner (`PP-MAP-011`); approval: project owner | Drafted from export 2026-10-30; owner approval pending (G0) |
 | `PP-ART-019` | Component blueprint | `docs/component-blueprint.md` | Contract / architecture | Component maintainer (`PP-MAP-013`); approval: project owner | Drafted from export 2026-10-30; structural baseline accepted 2026-10-31 under DEC-013; G0 content and interaction questions remain open |
-| `PP-ART-020` | Phase 1 verification and gap review | `docs/phases/phase-1-verification-gap-review-2026-10-31.md` | Verification evidence | Maintainer / CI | Review report for `ad45f296` and subsequent PR candidate; production-preview smoke result must be finalized from PR CI |
+| `PP-ART-020` | Phase 1 verification and gap review | `docs/phases/phase-1-verification-gap-review-2026-10-31.md` | Verification evidence | Maintainer / CI | Review report records `ad45f296` baseline and PR #15 candidate `da325b2`; application-quality run `41169847259` and PP-VER-013 run `41169847210` passed |
 
 The registry is a navigation and lifecycle record. Subject-specific details remain in the canonical file listed above.
 

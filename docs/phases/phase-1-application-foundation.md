@@ -2,7 +2,7 @@
 
 | Field | Value |
 | --- | --- |
-| Status | In progress: foundation merged to `main` at `ad45f296b2294e65048cf27d1d5473f54e14e52a`; G1 verification and gap review are being finalized. See [Phase 1 verification and gap review](phase-1-verification-gap-review-2026-10-31.md). |
+| Status | In progress: foundation merged to `main` at `ad45f296b2294e65048cf27d1d5473f54e14e52a`; G1 verification and gap review passed on PR #15; owner review and merge disposition are pending. See [Phase 1 verification and gap review](phase-1-verification-gap-review-2026-10-31.md). |
 | Objective | Establish a reproducible, minimal React and TypeScript application |
 | Depends on | Phase 0 specification and approved scope |
 | Primary outputs | Application scaffold, dependency lockfile, strict TypeScript configuration, quality scripts, setup documentation |

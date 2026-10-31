@@ -96,7 +96,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-VER-001` | Clean dependency install | Passed on `ad45f296` (Actions run `41168683315`) | G1, G4 |
 | `PP-VER-002` | Strict type check | Passed on `ad45f296` (Actions run `41168683315`) | G1, G2, G4 |
 | `PP-VER-003` | Lint/static quality | Passed on `ad45f296` (Actions run `41168683315`) | G1, G2, G4 |
-| `PP-VER-004` | Production build/runtime smoke | Partial on `ad45f296`; production preview HTTP/asset smoke added in review branch, pending PR CI | G1, G2, G4 |
+| `PP-VER-004` | Production build/runtime smoke | Passed on review candidate `da325b26f8ee1adabf12ef273836cab0b7fc1b0e` (Actions run `41169847259`); HTTP preview fetched HTML and referenced JS/CSS | G1, G2, G4 |
 | `PP-VER-005` | Content/source reconciliation | Not yet run: copy transcribed from export text; reconciliation pending | G0, G2, G4 |
 | `PP-VER-006` | Visual fidelity comparison | Blocked on application; export is a reference only | G2, G4 |
 | `PP-VER-007` | Responsive viewport matrix | Planned | G3, G4 |
@@ -105,7 +105,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-VER-010` | Asset loading/alt text | Pending asset inventory | G2, G3, G4 |
 | `PP-VER-011` | Release artifact provenance | Planned | G4 |
 | `PP-VER-012` | Owner review/release disposition | Required | G4 |
-| `PP-VER-013` | ICM reference/traceability integrity | Passed at `ad45f296` (Actions run `41168683333`); this material review must be rerun on its PR candidate | All gates and material documentation changes |
+| `PP-VER-013` | ICM reference/traceability integrity | Passed on review candidate `da325b26f8ee1adabf12ef273836cab0b7fc1b0e` (Actions run `41169847210`); rerun for later material documentation revisions | All gates and material documentation changes |
 | `PP-VER-014` | Architecture/component-boundary review | Passed by manual foundation review on `ad45f296`; re-run after page/section modules are added | G1, G2, G4 |
 | `PP-VER-015` | Dependency/side-effect surface review | Passed by manual foundation review on `ad45f296`; no SCA/license scan claimed | G1, G2, G4 |
 | `PP-VER-016` | IA and component-blueprint reconciliation | Executed by author 2026-10-30; structural baseline accepted by owner on 2026-10-31 (DEC-013); G0 content remains open | G0, G2 |

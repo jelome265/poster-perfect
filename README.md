@@ -4,7 +4,7 @@ A responsive company portfolio website for a graphic design business, built with
 
 ## Project status
 
-**Phase 1 foundation merged; G1 verification and gap review in progress.** The React/TypeScript application shell and selected toolchain are on `main` at `ad45f296b2294e65048cf27d1d5473f54e14e52a`. Phase 0 remains open: the Canva export was inspected on 2026-10-30, but company-content, asset, typography, interaction, and responsive decisions still await G0 approval. DEC-013 accepts the structural baseline only.
+**Phase 1 foundation merged; G1 verification passed on PR #15; owner review and merge disposition pending.** The React/TypeScript application shell and selected toolchain are on `main` at `ad45f296b2294e65048cf27d1d5473f54e14e52a`. Phase 0 remains open: the Canva export was inspected on 2026-10-30, but company-content, asset, typography, interaction, and responsive decisions still await G0 approval. DEC-013 accepts the structural baseline only.
 
 ## Application development
 
