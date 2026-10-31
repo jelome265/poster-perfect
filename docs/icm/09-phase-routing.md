@@ -124,7 +124,7 @@ Blocks:
 
 | Gate | Status | Reason |
 |---|---|---|
-| G0 | Ready for owner review | Source inspected 2026-10-30. Records drafted from the export. Owner approval outstanding for the decisions and claims in `content-structure.md` (Owner decisions) |
+| G0 | Deferred by owner; not approved | Owner explicitly deferred G0 review (`Wait`) on 2026-10-30. Source-derived records remain drafts; the owner decisions and claims in `content-structure.md` remain open. Phase 1 is not authorized |
 | G1 | Not started | Toolchain not selected; application scaffold absent |
 | G2 | Not started | No application composition |
 | G3 | Not started | No responsive implementation |
