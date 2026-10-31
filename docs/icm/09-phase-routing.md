@@ -32,7 +32,7 @@ A phase may touch multiple ICM levels, and an ICM level may be revisited across 
 Required:
 - Inspectable source and completed source inventory.
 - PP-PRC-007 source inspection/reconciliation completed.
-- Approved company-level purpose, customer segments or accepted limitations, positioning, service/capability information, and an owner-approved disposition for portfolio rights, current availability, and enquiry path (`PP-VER-017`). DEC-017 approves a profile-only baseline that excludes unpublished assets, unverified availability, and external enquiry actions.
+- Canva company information, source-derived customer groups/services, all seven sections, company-voice editorial adaptation, and explicit future-update/publication placeholders are owner-approved under DEC-018 (`PP-VER-017`).
 - Approved page/content hierarchy.
 - Asset, typography, and design-token inventory.
 - Interaction and responsive interpretation.
@@ -66,21 +66,22 @@ Blocks:
 ### G2 — Composition ready
 
 Required:
-- Profile-only content and exclusions under DEC-017 integrated.
-- All in-scope rendered sections represented; source-only Statistics and Testimonials explicitly excluded.
-- Typed component interfaces for implemented components.
-- Architecture/component-boundary review for implemented page/section components (PP-VER-014).
-- Information architecture and component blueprint reconciled with the implemented composition (PP-VER-016).
-- Source/token reconciliation.
-- Primary viewport visual review against the owner-held PDF; re-supply the PDF and record the CSS comparison viewport before claiming this evidence.
-- The internal About interaction works; no external enquiry control is presented as implemented.
-- The profile-only limitation is carried into release planning; a business-ready customer-acquisition path remains a G4 dependency.
+- All seven Canva sections implemented in source order.
+- Source company content and company-voice adaptation integrated.
+- Source image/card/logo regions preserved using original assets or explicit, clearly identified placeholders.
+- Statistics and Testimonials retain their source layouts with non-claim placeholder states until substantiation/permissions are available.
+- Contact/footer/office-hours/social regions retain source structure; withheld values use update placeholders and external controls remain inactive until destinations are verified.
+- Typed component interfaces and architecture/component-boundary review for implemented components (PP-VER-014).
+- Information architecture and component blueprint reconciled with implemented composition (PP-VER-016).
+- Source/token reconciliation and primary viewport visual review. Re-supply owner-held PDF and record the CSS comparison viewport before claiming detailed visual comparison evidence.
+- Internal LEARN MORE → About interaction works.
 
 Blocks:
-- Missing in-scope sections or content.
-- Unknown or inert interactive controls.
+- Missing source section/region without owner approval.
+- Placeholder represented as real customer data, metric, contact detail, testimonial or portfolio work.
 - Unapproved assets/content or visual deviations.
-- A claim of full visual fidelity without source comparison evidence.
+- Dead/fabricated external links or unapproved integrations.
+- Claim of full visual fidelity without source comparison evidence.
 
 ### G3 — Responsive and accessibility ready
 
@@ -126,7 +127,7 @@ Blocks:
 
 | Gate | Status | Reason |
 |---|---|---|
-| G0 | Complete for the profile-only baseline with accepted limitations under DEC-017 (2026-10-31) | Source inspected; seven-section source inventory and component structure accepted under DEC-013; owner approved the profile-only rendered subset and explicitly excluded missing contact/availability values, social URLs, original assets, testimonials/statistics, and rights-uncleared artwork. These exclusions are not claims that missing facts or rights exist. |
+| G0 | Complete for the Canva-led seven-section specification under DEC-018 (2026-10-31) | Canva source inspected; company information, source copy, seven-section order, design tokens, component regions and company-voice adaptation reconciled. Missing supplementary values/assets/permissions have explicit update placeholders and publication controls, not invented data. |
 | G1 | Complete — owner-authorized Phase 1 close-out under DEC-016 on 2026-10-31 | PR #15 merge `9e81adb7a178db9c48106292b3351d0bafe0a9e8` is the foundation baseline. PR #16 close-out commit `5cff148f088a75f5aa8578f04db3727f6ac3765b` is merged to main at `07860b383555d98d6528ba834653cbe83fe172df`; all six required contexts passed on the PR #16 head. |
 | G2 | Not started | No application composition |
 | G3 | Not started | No responsive implementation |
