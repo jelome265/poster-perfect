@@ -225,22 +225,22 @@ The owner clarified that G0 must derive the company and website information from
 
 **Placeholder policy:** A missing value does not remove its source section or layout region. Use a clearly named content/asset slot and record the required owner input, permission or verification. Placeholders must not look like real contact data, real customers, real performance metrics or real portfolio work. They are implementation scaffolding and must be replaced or explicitly accepted before production release.
 
-**Gate disposition:** G0 is complete for the source-led seven-section specification and approved future-update placeholders once the reconciled inventory and ICM changes in the follow-up PR pass PP-VER-013. Phase 2 is authorized after those changes are merged. G2 still requires the seven-section composition, source-led content, documented placeholder states and visual comparison. G4 must not publish unverified claims, unlicensed artwork, customer quotations without permission, or nonfunctional contact/social controls.
+**Gate disposition:** G0 is complete for the source-led seven-section specification and approved future-update placeholders after the reconciled inventory and ICM changes passed PP-VER-013. Phase 2 was authorized after those changes merged. **G2 review passed on 2026-10-31**: the seven-section composition, source-led content, explicit placeholder states and primary-viewport visual comparison are recorded in `docs/phases/phase-2-visual-review-2026-10-31.md`. Responsive verification, contrast, keyboard operation and pixel-level image comparison remain Phase 3 work. G4 must not publish unverified claims, unlicensed artwork, customer quotations without permission, or nonfunctional contact/social controls.
 
 **Authority:** Project-owner clarification in chat on 2026-10-31: use the information from Canva as the company information; reserve a place for details not supplied or ready to be updated later.
 ### DEC-020 — Phase 2 styling approach, reference viewport, and font package
 
-**Status:** Proposed. Implemented for review; owner ratification required.
+**Status:** Accepted (project-owner ratification in chat, 2026-10-31).
 
 | Choice | Selected | Alternative and trade-off |
 | --- | --- | --- |
-| Styling | Plain CSS with custom properties in `src/styles/tokens.css`; page layout in `src/styles/page.css` | CSS Modules or a utility framework. Plain CSS keeps the token set small and avoids a new dependency; Phase 2 §3.1 requires centralised tokens |
-| Tokens | Four colour tokens and two font-weight tokens actually used by the page | No decorative or unused tokens (Phase 2 §3.1). Spacing and type scale remain approximate `clamp()` values until measured |
-| Primary reference viewport | 1024 CSS px | Matches the 1024.5 pt artboard width; a different primary viewport would need a new record |
-| Typeface | `@fontsource/aileron` 5.3.0, weights 400 and 700 | Pinned to the CC0-1.0 record in PP-REF-014; self-hosted, so no third-party request at runtime |
+| Styling | Plain CSS with custom properties in `src/styles/tokens.css`; page layout in `src/styles/page.css` | CSS Modules or a utility framework. Plain CSS keeps the token set small, avoids another dependency, and satisfies Phase 2 §3.1's centralised-token requirement |
+| Tokens | Four approximate source-derived colour tokens and two font-weight tokens currently used by the page | Other observed source colours remain unassigned until their role is evidenced; no decorative or unused tokens are introduced |
+| Primary reference viewport | 1024 CSS px; nearest integer match for the approximately 1025 px-wide raster produced by rendering the Canva PDF at 72 dpi | This is a raster-width comparison choice, not a conversion from the PDF's 1024.5 pt page width. PDF points and CSS pixels are different units; Phase 3 covers other viewports |
+| Typeface | `@fontsource/aileron` 5.3.0, weights 400 and 700, self-hosted | Exact package version and CC0-1.0 license are recorded in the npm lockfile; no runtime font-provider request |
 | Placeholders | Named, visibly dashed placeholders; never links | Per DEC-019 placeholder policy |
 
-**Authority:** pending owner ratification. Recorded in `docs/phases/phase-2-visual-review-2026-10-31.md`.
+**Authority:** Project-owner ratification in chat on 2026-10-31. The owner also directed completion of the G2 review; its disposition and evidence are recorded in `docs/phases/phase-2-visual-review-2026-10-31.md`.
 
 ## Open decisions
 
@@ -248,7 +248,7 @@ The owner clarified that G0 must derive the company and website information from
 | --- | --- | --- |
 | Build tool, runtime, package manager, rendering model, and test runner | Resolved in DEC-012 | Reopen only through an approved change |
 | Route model | One-page baseline; no client router in DEC-012/DEC-013/DEC-014; hero action targets About | Revisit only if the owner changes the accepted page/route inventory |
-| Styling implementation | Neutral CSS foundation; source-derived visual values and responsive adaptations approved under DEC-014; implementation is Phase 2 work | Phase 2 after Phase 1 disposition |
+| Styling implementation | Plain CSS custom properties, four active approximate colour tokens, two font-weight tokens, 1024 CSS px comparison viewport and self-hosted Aileron 400/700 accepted under DEC-020 | Reopen only if an evidenced requirement justifies a different styling model or dependency |
 | Hosting and deployment | Open | Before release planning |
 | Backend or external integrations | Not established; excluded from baseline | Only if a confirmed requirement and owner approval require one |
 
