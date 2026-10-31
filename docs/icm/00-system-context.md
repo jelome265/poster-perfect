@@ -18,7 +18,7 @@ The supplied Canva design is the visual/content reference for the web implementa
 | `PP-MAP-002` | Prospective customer and other website visitor | Evaluates the company's offering and approved work, then uses an available enquiry route where appropriate | Untrusted input source; user intent must be validated at relevant boundaries | Expected actor |
 | `PP-MAP-003` | Browser runtime | Executes the frontend, layout, rendering and browser-native behavior | Execution environment; behavior varies by browser | Confirmed boundary |
 | `PP-MAP-004` | Source design (Canva) | Visual and content reference for the recreation | Authoritative for owner-approved visual/content facts | Inspected 2026-10-30 (export; see `design-reference.md`) |
-| `PP-MAP-005` | Build and package ecosystem | Resolves dependencies and produces deployable frontend assets | External supply-chain boundary | Toolchain not selected |
+| `PP-MAP-005` | Build and package ecosystem | Resolves dependencies and produces deployable frontend assets | External supply-chain boundary | Vite 8.3.5, npm lockfile, Node.js 22, React/TypeScript toolchain selected under DEC-012 |
 | `PP-MAP-006` | Hosting/runtime delivery | Serves the built website to visitors | Operational boundary | Provider not selected |
 | `PP-MAP-007` | External destinations or services | Potential contact destinations or other integrations invoked by page controls | External and not trusted by default | Unknown; not assumed |
 | `PP-MAP-008` | Poster Perfect graphic design business | Business represented by the website; supplies owner-approved company identity, offering, portfolio material, availability and enquiry details | Business facts and publication permissions require owner approval; company size/legal structure are not inferred | Company-level purpose confirmed; detailed profile pending Phase 0 |
@@ -51,7 +51,7 @@ flowchart LR
     Browser -->|Owner-approved contact hand-off, if specified| External
 ```
 
-The diagram shows the intended delivery boundary, not a deployed topology. Build provider, host, route structure, API connectivity, and exact request paths remain undecided.
+The diagram shows the intended delivery boundary, not a deployed topology. Vite is the selected build tool; the route baseline is one page with no client router. Hosting/CDN, route fallback configuration, API connectivity, and third-party request paths remain unselected or excluded.
 
 ## 4. System boundary
 
@@ -99,7 +99,7 @@ Treat external navigation destinations, any future API responses, imported asset
 - No payments, subscriptions, analytics, or third-party form provider is presumed.
 - No specific customer segments, page count, route model, service categories, portfolio entries, client endorsements, contact channels, prices, company size, or team structure are inferred.
 - No company credentials, client relationships, testimonials, awards, metrics, or project outcomes are fabricated.
-- No specific router, styling library, UI component framework, build tool, package manager, or hosting provider is selected.
+- No client router, styling framework, UI component library, or hosting provider is selected. Vite, npm, Node.js 22, React/TypeScript, Vitest, and oxlint are selected under DEC-012.
 - No production deployment is claimed.
 
 ## 7. L0 exit conditions

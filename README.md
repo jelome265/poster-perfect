@@ -4,7 +4,7 @@ A responsive company portfolio website for a graphic design business, built with
 
 ## Project status
 
-**Documentation baseline established; application implementation not started.** The owner's Canva export was inspected on 2026-10-30. Records drafted from it await owner approval (Phase 0, G0). Visual values are approximate, and several content and publication decisions remain open.
+**Phase 1 foundation merged; G1 verification and gap review in progress.** The React/TypeScript application shell and selected toolchain are on `main` at `ad45f296b2294e65048cf27d1d5473f54e14e52a`. Phase 0 remains open: the Canva export was inspected on 2026-10-30, but company-content, asset, typography, interaction, and responsive decisions still await G0 approval. DEC-013 accepts the structural baseline only.
 
 ## Application development
 
@@ -55,7 +55,7 @@ Start with the [system context](docs/icm/00-system-context.md), [architecture ma
 - Component-based implementation with maintainable boundaries.
 - Responsive behavior across supported viewport sizes.
 - Visual decisions must be derived from the source design, not guessed.
-- Tooling, routing, styling framework, and deployment target will be selected when implementation requirements are confirmed.
+- DEC-012 selects React 19.3.1, TypeScript 5.9.3, Vite 8.3.5, npm with an exact lockfile, Node.js 22.12 to below 23, oxlint 1.90.0, Vitest 5.0.5/jsdom, and client-side rendering. The accepted one-page baseline uses no client router. Hosting and external integrations remain unselected.
 
 ## Documentation integrity
 
@@ -69,4 +69,4 @@ GitHub Actions runs the same standard-library-only validator on pull requests ta
 
 ## Development
 
-The application scaffold and package scripts have not been established yet. Setup and application verification commands will be documented here after the toolchain is selected and added to the repository.
+The Phase 1 scaffold and package scripts are present. Follow [development setup](docs/development.md) for the selected runtime, clean install, local commands, and CI verification. The current app is a neutral shell, not the designed website.

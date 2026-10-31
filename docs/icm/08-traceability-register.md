@@ -2,7 +2,7 @@
 
 **Role:** Single reconciliation index for requirements, maps, contracts, processes, effects, artifacts, verification, and phase delivery  
 **Status:** Initial baseline; entries change only through reviewed updates  
-**Last reconciled:** 2026-10-30
+**Last reconciled:** 2026-10-31
 
 ## 1. Register rules
 
@@ -39,20 +39,20 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-MAP-002` | Website visitor | System context | Expected actor |
 | `PP-MAP-003` | Browser runtime | System context | Confirmed boundary |
 | `PP-MAP-004` | Canva source design | System context | Inspected 2026-10-30 (export) |
-| `PP-MAP-005` | Build/package ecosystem | System context | Not selected |
+| `PP-MAP-005` | Build/package ecosystem | System context | Vite/npm/Node 22 selected (DEC-012) |
 | `PP-MAP-006` | Hosting/delivery | System context | Not selected |
 | `PP-MAP-007` | External destinations/services | System context | Unknown; not assumed |
 | `PP-MAP-008` | Poster Perfect graphic design business represented by the website | System context | Company-level purpose confirmed; details pending Phase 0 |
-| `PP-MAP-010`–`PP-MAP-017` | Frontend and engineering-tooling boundaries | Architecture map | Accepted logical boundaries; physical layout pending |
+| `PP-MAP-010`–`PP-MAP-017` | Frontend and engineering-tooling boundaries | Architecture map | Accepted logical boundaries; minimal application topology implemented and reviewed; page topology pending |
 | `PP-MAP-018` | Cross-cutting documentation/ICM governance boundary, not a runtime component | Architecture map | Accepted governance boundary |
 
 ## 4. Contract registry
 
 | ID | Contract | Specification | Implementation | Evidence |
 |---|---|---|---|---|
-| `PP-CON-001` | Application runtime | Accepted | Not started | Not collected |
+| `PP-CON-001` | Application runtime | Accepted | Foundation implemented; neutral shell only | PP-ART-020; CI on `ad45f296` |
 | `PP-CON-002` | Page composition | Partially specified; Phase 0 dependent | Not started | Not collected |
-| `PP-CON-003` | Component interface | Accepted | Not started | Not collected |
+| `PP-CON-003` | Component interface | Accepted | Foundation shell only; reusable page/section component contracts not implemented | PP-ART-020; typecheck and shell smoke on `ad45f296` |
 | `PP-CON-004` | Design token | Partially specified; values approximate, owner confirmation pending | Not started | Not collected |
 | `PP-CON-005` | Asset | Partially specified; originals and permissions pending | Not started | Not collected |
 | `PP-CON-006` | Interaction | Partially specified; visible controls inventoried, destinations/behavior pending owner decisions | Not started | Not collected |
@@ -66,8 +66,8 @@ Do not infer an implementation status from a specification or a verification sta
 
 | ID | Process | Specification | Implementation |
 |---|---|---|---|
-| `PP-PRC-001` | Build and delivery | Target process | Not started |
-| `PP-PRC-002` | Initial page load/render | Target process; runtime decisions pending | Not started |
+| `PP-PRC-001` | Build and delivery | Implemented at foundation level | CI pipeline; production preview smoke pending PR check |
+| `PP-PRC-002` | Initial page load/render | Neutral `App` shell renders; complete page composition held by G0/G2 | Dev-server browser smoke recorded at `ef613375`; preview smoke pending PR check |
 | `PP-PRC-003` | Link/navigation | Conditional on source | Not started |
 | `PP-PRC-004` | Local interface interaction | Conditional on source | Not started |
 | `PP-PRC-005` | Remote form/API | Excluded baseline; future extension | Not started |
@@ -93,10 +93,10 @@ Do not infer an implementation status from a specification or a verification sta
 
 | ID | Control | Current status | Mandatory phase gate |
 |---|---|---|---|
-| `PP-VER-001` | Clean dependency install | Planned | G1, G4 |
-| `PP-VER-002` | Strict type check | Planned | G1, G2, G4 |
-| `PP-VER-003` | Lint/static quality | Planned | G1, G2, G4 |
-| `PP-VER-004` | Production build/runtime smoke | Planned | G1, G2, G4 |
+| `PP-VER-001` | Clean dependency install | Passed on `ad45f296` (Actions run `41168683315`) | G1, G4 |
+| `PP-VER-002` | Strict type check | Passed on `ad45f296` (Actions run `41168683315`) | G1, G2, G4 |
+| `PP-VER-003` | Lint/static quality | Passed on `ad45f296` (Actions run `41168683315`) | G1, G2, G4 |
+| `PP-VER-004` | Production build/runtime smoke | Partial on `ad45f296`; production preview HTTP/asset smoke added in review branch, pending PR CI | G1, G2, G4 |
 | `PP-VER-005` | Content/source reconciliation | Not yet run: copy transcribed from export text; reconciliation pending | G0, G2, G4 |
 | `PP-VER-006` | Visual fidelity comparison | Blocked on application; export is a reference only | G2, G4 |
 | `PP-VER-007` | Responsive viewport matrix | Planned | G3, G4 |
@@ -105,10 +105,10 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-VER-010` | Asset loading/alt text | Pending asset inventory | G2, G3, G4 |
 | `PP-VER-011` | Release artifact provenance | Planned | G4 |
 | `PP-VER-012` | Owner review/release disposition | Required | G4 |
-| `PP-VER-013` | ICM reference/traceability integrity | Passed at PR candidate `a3d933c` (R5, run 41163140407) and on `main` merge commit `486a81b` (R6, run 41163670808); earlier R4 failed at `877933a` (§10). Results are revision-specific and must be rerun after further material changes | All gates and material documentation changes |
-| `PP-VER-014` | Architecture/component-boundary review | Planned | G1, G2, G4 |
-| `PP-VER-015` | Dependency/side-effect surface review | Defined; not yet run | G1, G2, G4 |
-| `PP-VER-016` | IA and component-blueprint reconciliation | Executed by author 2026-10-30; owner review pending | G0, G2 |
+| `PP-VER-013` | ICM reference/traceability integrity | Passed at `ad45f296` (Actions run `41168683333`); this material review must be rerun on its PR candidate | All gates and material documentation changes |
+| `PP-VER-014` | Architecture/component-boundary review | Passed by manual foundation review on `ad45f296`; re-run after page/section modules are added | G1, G2, G4 |
+| `PP-VER-015` | Dependency/side-effect surface review | Passed by manual foundation review on `ad45f296`; no SCA/license scan claimed | G1, G2, G4 |
+| `PP-VER-016` | IA and component-blueprint reconciliation | Executed by author 2026-10-30; structural baseline accepted by owner on 2026-10-31 (DEC-013); G0 content remains open | G0, G2 |
 | `PP-VER-017` | Company positioning, approved portfolio and customer journey reconciliation | Partially specified; details pending Phase 0 | G0, G2, G4 |
 
 ## 8. Open questions and blockers
@@ -118,11 +118,12 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-RSK-001` | Canva editor URL was not inspectable; an export was subsequently supplied | Project owner supplies accessible export/reference | Phase 0 | Mitigated 2026-10-30: export inspected (see `design-reference.md`); residual asset/measurement items recorded there |
 | `PP-RSK-002` | Target customer segments and owner approval of the observed page/section hierarchy remain outstanding | Project owner / source inspection | Phase 0 | One-page/seven-section hierarchy drafted from the export; G0 approval pending |
 | `PP-RSK-003` | Source copy is transcribed; interaction destinations and control behavior remain unresolved | Source inspection / owner | Phase 0 | Copy inventory drafted; CTA, service-card, logo, social and contact behavior await owner decisions |
-| `PP-RSK-004` | Toolchain, routing, styling, package manager, and hosting are undecided | Maintainer / owner decision | Phase 1 | Open; choose from actual requirements |
+| `PP-RSK-004` | Toolchain, styling, and hosting choices were unresolved | Maintainer / owner decision | Phase 1 | Mitigated: core toolchain, rendering model, and no-router baseline selected under DEC-012; styling framework and hosting remain open |
 | `PP-RSK-005` | Font and asset availability/licensing not verified | Project owner / source inspection | Phase 0 | Pending |
 | `PP-RSK-006` | Responsive source variants or owner-approved adaptations are not known | Project owner / source inspection | Phase 0 | Pending |
 | `PP-RSK-007` | Foundational tooling (router, rendering model, source layout) could be chosen before the page set and component boundaries are known | Maintainer / project owner | Phase 1 entry | Mitigated by `PP-REQ-009` and DEC-007: foundational decisions wait for the accepted information architecture |
 | `PP-RSK-008` | Specific positioning, customer segments, service offering, publishable portfolio items/permissions, availability wording, contact details and enquiry destination remain unconfirmed | Project owner | Phase 0 | Blocks company-content and customer-journey acceptance. Source contact values are withheld from the current public content record until confirmed; do not invent or restore them without approval |
+| `PP-RSK-009` | `main` ruleset has no required status checks and requires zero approving reviews | Project owner / repository administrator | Continuous governance | Active pull-request rule exists, but CI remains advisory until the application-quality and documentation-integrity checks are required; no ruleset change made in this review |
 
 These are risk/blocker records, not claims that the listed conditions have caused implementation defects.
 

@@ -2,7 +2,7 @@
 
 | Field | Value |
 | --- | --- |
-| Status | In progress: foundation implemented on `feat/phase1-application-foundation` and committed for review; exit criteria not yet met (merge into main and the verification record at the merged revision are outstanding) |
+| Status | In progress: foundation merged to `main` at `ad45f296b2294e65048cf27d1d5473f54e14e52a`; G1 verification and gap review are being finalized. See [Phase 1 verification and gap review](phase-1-verification-gap-review-2026-10-31.md). |
 | Objective | Establish a reproducible, minimal React and TypeScript application |
 | Depends on | Phase 0 specification and approved scope |
 | Primary outputs | Application scaffold, dependency lockfile, strict TypeScript configuration, quality scripts, setup documentation |
@@ -11,7 +11,7 @@
 
 Create the smallest sound technical foundation needed to implement the approved design. The result must be reproducible on a clean environment, straightforward to develop, and verifiable through documented commands.
 
-React and TypeScript with TSX are confirmed. The build tool, package manager, rendering model, styling approach, and other implementation dependencies remain open until their requirements are understood.
+React and TypeScript with TSX are confirmed. The owner-selected toolchain and delivery decisions are recorded in [DEC-012](../decision-log.md); brand tokens and the styling framework remain deferred to Phase 2.
 
 ## 2. Entry conditions
 

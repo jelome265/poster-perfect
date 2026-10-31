@@ -23,12 +23,12 @@ npm ci
 | `npm run typecheck` | Type-check with strict TypeScript (`tsc -b`) |
 | `npm run lint` | Strict lint with oxlint; any warning fails (`--deny-warnings`) |
 | `npm test` | Run the unit and component tests once (Vitest, jsdom) |
-
-CI (`.github/workflows/app-quality.yml`) runs strict lint, type-check, unit tests, and build on each pull request to `main`.
 | `npm run build` | Type-check, then produce the production bundle in `dist/` |
+
+CI (`.github/workflows/app-quality.yml`) runs `npm ci`, strict lint, type-check, unit tests, production build, and a production-preview HTTP/asset smoke on pull requests to `main`.
 | `npm run preview` | Serve the production bundle locally after `npm run build` |
 
-Each command was run against the working tree on 2026-10-31. Results are recorded in the pull request that introduces this file; see the decision log for the toolchain rationale.
+The initial toolchain commands were run on 2026-10-31. Revision-specific results and limitations are recorded in [the Phase 1 verification and gap review](phases/phase-1-verification-gap-review-2026-10-31.md); see the decision log for toolchain rationale.
 
 ## Repository layout
 

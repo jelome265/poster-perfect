@@ -90,7 +90,7 @@ The three testimonial quotations recorded from the Canva export are retained in 
 
 **Status:** Accepted (project owner, 2026-10-30).
 
-- `CLAUDE.md` §4 now states that Phase 0 is awaiting owner approval (G0), not blocked. Phase 1 has not started.
+- `CLAUDE.md` §4 records Phase 0 as awaiting owner approval (G0). The owner later authorized a limited Phase 1 foundation task under DEC-012/DEC-013; the foundation is now merged, while G0 remains open.
 - Branch protection is active on `main`: pull request required, force-push and deletion blocked, enforced for administrators with no bypass.
 - G0 remains unapproved.
 
@@ -101,7 +101,7 @@ The three testimonial quotations recorded from the Canva export are retained in 
 
 **Status:** Accepted (project owner, through merge of PR #10 on 2026-10-31).
 
-The repository may use Python 3's standard library solely for the PP-VER-013 documentation validator executed by GitHub Actions (`scripts/validate_docs.py`). This is a CI-runner tooling exception; it adds no third-party package, application runtime, website dependency, package manifest or lockfile. The React/TypeScript application toolchain remains undecided until Phase 1. This decision does not authorize Python for application code or unrelated repository tooling.
+The repository may use Python 3's standard library solely for the PP-VER-013 documentation validator executed by GitHub Actions (`scripts/validate_docs.py`). This is a CI-runner tooling exception; it adds no third-party package, application runtime, website dependency, package manifest or lockfile. The React/TypeScript application toolchain is separately selected under DEC-012. This decision does not authorize Python for application code or unrelated repository tooling.
 
 **Reason:** The validator needs deterministic repository/document parsing and runs without installing packages on the GitHub-hosted Ubuntu runner. Keeping the exception narrow avoids turning a documentation check into an application-toolchain decision.
 
@@ -109,7 +109,7 @@ The repository may use Python 3's standard library solely for the PP-VER-013 doc
 
 ### DEC-012 — Phase 1 application toolchain
 
-**Status:** Accepted (project owner, 2026-10-31). Implemented on `feat/phase1-application-foundation`.
+**Status:** Accepted (project owner, 2026-10-31). Implemented and merged to `main` at `ad45f296b2294e65048cf27d1d5473f54e14e52a` through PR #14.
 
 | Choice | Selected | Alternative and trade-off |
 | --- | --- | --- |
@@ -117,7 +117,7 @@ The repository may use Python 3's standard library solely for the PP-VER-013 doc
 | React | React 19.3.1 and react-dom 19.3.1 | Confirmed in `CLAUDE.md` §4 |
 | TypeScript | 5.9.3, strict mode enabled explicitly | TypeScript 7.0.2 (native) was resolved by the template and tested. 5.9 chosen for a mature stable line; revisit when 7.x is established |
 | Package manager | npm with `package-lock.json`, exact pins | pnpm or yarn would be equally valid; npm needs no additional tooling |
-| Node.js | 22.12 to below 23 (`.nvmrc` 22) | Node 24 was not evaluated for this runtime. Owner to confirm the CI runtime |
+| Node.js | 22.12 to below 23 (`.nvmrc` 22) | Node 24 is not selected for this project baseline; CI follows `.nvmrc` |
 | Lint | oxlint 1.90.0 | ESLint would add plugin and configuration cost; oxlint suffices for the foundation |
 | Test runner | Vitest 5.0.5, jsdom 30.1.3, Testing Library (React 16.3.3, DOM 10.4.2) | Required by Phase 1 §3.4 for unit and component testing; the smallest set that renders and queries components |
 | Routing | None | Single page in the IA draft. Revisit only if the accepted IA defines more than one route |
@@ -143,13 +143,11 @@ Not closed by this decision: the content and web-adaptation decisions in `conten
 
 | Decision | Status | Resolution gate |
 | --- | --- | --- |
-| Build tool and rendering model | Open | After page and delivery requirements are understood |
-| Package manager and Node.js version | Open | Before application scaffold |
-| Styling approach | Open | After design-system requirements are known |
-| Page and route structure | Open | After G0 owner approval; the observed one-page/seven-section inventory is drafted in `information-architecture.md` (DEC-007) |
-| Test and browser automation stack | Open | During application foundation |
+| Build tool, runtime, package manager, rendering model, and test runner | Resolved in DEC-012 | Reopen only through an approved change |
+| Route model | One-page baseline; no client router in DEC-012/DEC-013 | Revisit only if G0 changes the accepted page/route inventory |
+| Styling implementation | Neutral CSS only; design tokens/framework deferred | Phase 2 after G0 design approval |
 | Hosting and deployment | Open | Before release planning |
-| Backend or external integrations | Not established | Only if a confirmed requirement needs one |
+| Backend or external integrations | Not established; excluded from baseline | Only if a confirmed requirement and owner approval require one |
 
 ## Decision policy
 

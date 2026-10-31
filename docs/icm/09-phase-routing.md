@@ -124,8 +124,8 @@ Blocks:
 
 | Gate | Status | Reason |
 |---|---|---|
-| G0 | Deferred by owner; awaiting further direction | Source inspected 2026-10-30. Records are drafted, but the owner deferred G0 ("Wait"). Phase 1 is not authorized; outstanding items remain in `content-structure.md` |
-| G1 | Not started | Toolchain not selected; application scaffold absent |
+| G0 | Awaiting owner approval; limited Phase 1 foundation authorization does not close G0 | Structural IA/component baseline accepted under DEC-013; content, publication permissions, enquiry route, font licensing, and responsive adaptations remain open in `content-structure.md` |
+| G1 | In progress; foundation merged and verification/gap review underway | Core automated checks and manual PP-VER-014/015 foundation reviews passed on `ad45f296`; production-preview HTTP/asset smoke is added in the review branch and awaits its PR CI result |
 | G2 | Not started | No application composition |
 | G3 | Not started | No responsive implementation |
 | G4 | Not started | No release candidate or execution evidence |

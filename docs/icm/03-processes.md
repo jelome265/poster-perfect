@@ -74,7 +74,7 @@ owner-authorized deployment
 
 **Verification:** PP-VER-001, PP-VER-002, PP-VER-003, PP-VER-004, PP-VER-011.
 
-**Implementation status:** Not started; build tool is undecided.
+**Implementation status:** Implemented at foundation level: npm clean install, static checks, tests, Vite production build, and CI workflow are present. Production-preview smoke is added in the Phase 1 verification review branch and remains subject to its PR check result.
 
 ## 4. PP-PRC-002 — Initial page load and render
 
@@ -120,7 +120,7 @@ This is a logical target flow. Exact document delivery, route fallback, renderin
 
 **Verification:** PP-VER-004, PP-VER-005, PP-VER-006, PP-VER-010.
 
-**Implementation status:** Not started; page structure is drafted from the export and awaits owner approval (G0).
+**Implementation status:** Partially implemented: the neutral `App` shell renders through the selected React/Vite runtime. The approved content/page composition remains blocked on G0/G2; no business content or designed sections are implemented.
 
 ## 5. PP-PRC-003 — Link and navigation activation
 

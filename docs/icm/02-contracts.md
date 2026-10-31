@@ -95,8 +95,8 @@ Every reusable component MUST expose an explicit typed interface. Props must des
 **Verification:** Type checks, component review, interaction tests where applicable.
 
 **Specification:** Accepted  
-**Implementation:** Not started  
-**Evidence:** Not collected
+**Implementation:** No reusable page/section components introduced; neutral application shell only  
+**Evidence:** PP-ART-020; strict type check and shell smoke at `ad45f296`
 
 ### PP-CON-004 — Design token contract
 

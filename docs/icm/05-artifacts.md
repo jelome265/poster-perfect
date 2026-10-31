@@ -2,7 +2,7 @@
 
 **Control levels:** L0–L4  
 **Record class:** Artifact ownership and provenance register  
-**Status:** Documentation artifacts current; application artifacts not yet produced
+**Status:** Phase 1 application source, dependency lockfile, CI workflows, and verification-review artifacts are present; design-dependent assets and release artifacts remain pending
 
 ## 1. Purpose
 
@@ -39,15 +39,16 @@ A file existing in Git does not automatically make it authoritative or prove tha
 | `PP-ART-008` | Delivery phase specifications | `docs/phases/` | Contract | Maintainer / owner approval | Current |
 | `PP-ART-009` | Decision log | `docs/decision-log.md` | Governance | Project owner | Current |
 | `PP-ART-010` | ICM charter and indexes | `docs/icm/README.md` and related files | Architecture/governance | Maintainer / owner approval | Initial baseline |
-| `PP-ART-011` | Application source | Not yet created | Implementation | Implementation contributor | Not started |
-| `PP-ART-012` | Application dependency manifest and lockfile | Not yet created | Implementation/reproducibility | Toolchain setup | Not started |
+| `PP-ART-011` | Application source | `src/` | Implementation | Implementation contributor | Neutral React shell merged on `main` at `ad45f296`; designed page composition not started |
+| `PP-ART-012` | Application dependency manifest and lockfile | `package.json`; `package-lock.json` | Implementation/reproducibility | Toolchain setup | Exact-pinned manifest and lockfile merged on `main`; clean install passed in Actions run `41168683315` |
 | `PP-ART-013` | Approved source assets | `docs/design-reference.md` and owner-supplied originals (not yet received) | Static asset inventory | Project owner/source inspection | Export-derived inventory recorded; originals, provenance, licensing and publication permissions pending |
 | `PP-ART-014` | Visual reference captures | Not yet created | Verification evidence | Phase 0/2/4 | Pending |
-| `PP-ART-015` | Documentation-integrity validator and verification evidence | `scripts/validate_docs.py`; `.github/workflows/docs-integrity.yml` | Verification control/evidence | Maintainer / CI | Validator and workflow implemented; PP-VER-013 passed at PR candidate `a3d933c` and on `main` merge commit `486a81b` (R5/R6). Application verification remains not started |
+| `PP-ART-015` | Documentation-integrity validator and verification evidence | `scripts/validate_docs.py`; `.github/workflows/docs-integrity.yml` | Verification control/evidence | Maintainer / CI | Validator and workflow implemented; PP-VER-013 passed on `main` at `ad45f296` in Actions run `41168683333`. This material review must be revalidated on its PR candidate |
 | `PP-ART-016` | Release build and deployment record | Not yet created | Release artifact | Release pipeline / owner | Not started |
 | `PP-ART-017` | ICM integrity audit (2026-10-30) | `docs/icm/integrity-audit-2026-10-30.md` | Verification evidence | ICM/documentation reviewer | R4 failed at `877933a` (§10); R5 passed at `a3d933c` (§12); R6 passed on `main` commit `486a81b` (§13). Results are revision-specific; later material changes require a new run. Not application verification |
 | `PP-ART-018` | Information architecture | `docs/information-architecture.md` | Specification (contract-backed) | Page implementation owner (`PP-MAP-011`); approval: project owner | Drafted from export 2026-10-30; owner approval pending (G0) |
-| `PP-ART-019` | Component blueprint | `docs/component-blueprint.md` | Contract / architecture | Component maintainer (`PP-MAP-013`); approval: project owner | Drafted from export 2026-10-30; owner approval pending (G0) |
+| `PP-ART-019` | Component blueprint | `docs/component-blueprint.md` | Contract / architecture | Component maintainer (`PP-MAP-013`); approval: project owner | Drafted from export 2026-10-30; structural baseline accepted 2026-10-31 under DEC-013; G0 content and interaction questions remain open |
+| `PP-ART-020` | Phase 1 verification and gap review | `docs/phases/phase-1-verification-gap-review-2026-10-31.md` | Verification evidence | Maintainer / CI | Review report for `ad45f296` and subsequent PR candidate; production-preview smoke result must be finalized from PR CI |
 
 The registry is a navigation and lifecycle record. Subject-specific details remain in the canonical file listed above.
 

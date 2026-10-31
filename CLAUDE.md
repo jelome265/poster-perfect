@@ -62,9 +62,9 @@ When facts conflict or are uncertain, state the conflict and obtain the required
 
 Poster Perfect is a company portfolio and customer-acquisition website for a graphic design business. It represents the company at business level, not an individual designer's personal portfolio. Its purpose is to present owner-approved company identity, positioning, capabilities and selected creative work, communicate current availability for new projects, and provide prospective customers with a clear enquiry path.
 
-The project owner confirmed this purpose on 2026-10-30. The supplied Canva design is the visual and content reference; it does not replace the separately confirmed business purpose. The approved technical direction is React with TypeScript/TSX and a component-based frontend. Toolchain, package manager, router, styling framework, hosting provider, and any backend or external integrations are not assumed until confirmed by the phase process.
+The project owner confirmed this purpose on 2026-10-30. The supplied Canva design is the visual and content reference; it does not replace the separately confirmed business purpose. The approved technical direction is React with TypeScript/TSX and a component-based frontend. DEC-012 selects React 19.3.1, TypeScript 5.9.3, Vite 8.3.5, npm with an exact lockfile, Node.js 22.12 to below 23, oxlint 1.90.0, Vitest 5.0.5/jsdom, and client-side rendering. The one-page baseline uses no router. Hosting remains unselected; backend and external integrations remain excluded unless separately approved.
 
-**Phase 0 is awaiting owner approval (G0).** The owner's Canva export was inspected on 2026-10-30, and records are drafted (see `docs/phases/phase-0-source-discovery.md`). Remaining: the owner decisions in `docs/content-structure.md`, full-resolution assets, the logo vector, the font licence, and responsive variants. Phase 1 has not started.
+**Phase 0 remains awaiting owner approval (G0).** The Canva export was inspected on 2026-10-30; content and design records remain drafts pending owner decisions in `docs/content-structure.md`, full-resolution assets, the logo vector, font licensing, and responsive variants. The owner authorized a limited Phase 1 foundation under DEC-012/DEC-013 on 2026-10-31. That foundation is merged on `main` at `ad45f296b2294e65048cf27d1d5473f54e14e52a`; G1 verification and gap review are tracked in `docs/phases/phase-1-verification-gap-review-2026-10-31.md`. This limited authorization does not close G0.
 
 Until Phase 0 exit criteria are met and the project owner approves the web interpretation:
 
@@ -72,7 +72,7 @@ Until Phase 0 exit criteria are met and the project owner approves the web inter
 - Do not invent company services, customer segments, portfolio projects, client relationships, testimonials, awards, metrics, credentials, team size, prices, guarantees, or contact destinations. Use only owner-approved business facts and publication-authorized work.
 - Treat availability for new work as time-sensitive content: reconfirm it with the project owner before publication or release.
 - Where the company-acquisition objective requires content or an enquiry action not present in the Canva source, document it as a proposed web adaptation and obtain owner approval rather than adding it silently.
-- Do not start application scaffolding or production implementation on the assumption that unknown design facts are settled.
+- Do not extend the neutral foundation into the designed page, invent content, or implement unapproved interactions on the assumption that unresolved G0 facts are settled. Phase 1 authorization is limited to the reproducible application foundation and its verification.
 - Do not treat a Canva editor URL that cannot be inspected as evidence of its visual contents.
 - Documentation, source-access investigation, governance, and other explicitly approved discovery work may proceed without pretending Phase 0 is complete.
 
