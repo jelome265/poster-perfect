@@ -11,6 +11,7 @@ on:
   push:
     branches:
       - main
+      - "docs/**"
     paths:
       - "**/*.md"
       - "scripts/validate_docs.py"

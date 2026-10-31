@@ -57,4 +57,4 @@ Start with the [system context](docs/icm/00-system-context.md), [architecture ma
 
 The application scaffold and package scripts have not been established yet. Setup and application verification commands will be documented here after the toolchain is selected and added to the repository.
 
-Documentation integrity can be checked locally with `python3 scripts/validate_docs.py`. The same standard-library validator runs on documentation pull requests and pushes to `main` through the `Documentation integrity` GitHub Actions workflow.
+Documentation integrity can be checked locally with `python3 scripts/validate_docs.py`. The same standard-library validator runs on documentation pull requests targeting `main` and pushes to `main` or `docs/*` branches through the `Documentation integrity` GitHub Actions workflow.

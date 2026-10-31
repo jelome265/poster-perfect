@@ -89,7 +89,7 @@ Before merge of a documentation change:
 - Verify any new external standard/platform assertion against its primary source.
 - Inspect for stale status claims and ungrounded links.
 
-Mechanical checks are implemented by `scripts/validate_docs.py` (`PP-ART-020`) and run through `.github/workflows/documentation-integrity.yml` (`PP-ART-021`) for pull requests targeting `main` and pushes to `main`. The workflow checks internal Markdown links and anchors, table shape, identifier references, requirement-to-register coverage, stale source-status statements, and accidental publication of unconfirmed contact values. The workflow checks out the PR head SHA on pull requests and logs the checked-out source revision; pushes are validated at the pushed commit. Semantic authority, owner approval, source fidelity, publication permission, and accessibility remain human-review obligations; the workflow does not prove them.
+Mechanical checks are implemented by `scripts/validate_docs.py` (`PP-ART-020`) and run through `.github/workflows/documentation-integrity.yml` (`PP-ART-021`) for pull requests targeting `main` and pushes to `main` or `docs/*` branches. The workflow checks internal Markdown links and anchors, table shape, identifier references, requirement-to-register coverage, stale source-status statements, and accidental publication of unconfirmed contact values. The workflow checks out the PR head SHA on pull requests and logs the checked-out source revision; pushes are validated at the pushed commit. Semantic authority, owner approval, source fidelity, publication permission, and accessibility remain human-review obligations; the workflow does not prove them.
 
 ## 8. Liveness and ownership
 
