@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """PP-VER-013 structural validator. Standard library only."""
 from __future__ import annotations
+import html
 import re
 import sys
 from pathlib import Path
@@ -69,6 +70,23 @@ def main() -> int:
                 destination = destination / "README.md"
             if not destination.is_file():
                 errors.append(f"{name}: missing link target: {target}")
+                continue
+            if parsed.fragment and destination.suffix.lower() == ".md":
+                fragment = unquote(parsed.fragment).lower()
+                heading_text = destination.read_text(encoding="utf-8")
+                heading_ids = set()
+                duplicate_counts = {}
+                for heading in re.finditer(r"^#{1,6}\s+(.+?)\s*#*\s*$", heading_text, re.M):
+                    label = html.unescape(re.sub(r"<[^>]+>", "", heading.group(1)))
+                    label = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", label)
+                    label = re.sub(r"[\x60*_~]", "", label).lower()
+                    label = re.sub(r"[^\w\- ]", "", label, flags=re.UNICODE)
+                    base = re.sub(r"\s+", "-", label.strip())
+                    count = duplicate_counts.get(base, 0)
+                    duplicate_counts[base] = count + 1
+                    heading_ids.add(base if count == 0 else f"{base}-{count}")
+                if fragment not in heading_ids:
+                    errors.append(f"{name}: missing anchor #{fragment} in {destination.relative_to(ROOT)}")
 
     definitions = {}
     for prefix, owners in OWNERS.items():
