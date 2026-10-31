@@ -2,7 +2,7 @@
 
 ## Status
 
-**Source content captured from the export (2026-10-30); conservative implementation dispositions approved under DEC-014 (2026-10-31).** The export is one page with seven sections. The company-level purpose is owner-confirmed (DEC-008, PP-REQ-010). The source transcript remains preserved; owner-approved implementation decisions and publication restrictions are recorded below. Exact contact values, current availability, customer permissions, and rights to supplied sample artwork remain evidence-gated.
+**Source content captured from the export (2026-10-30); profile-only implementation scope approved under DEC-014/DEC-017 (2026-10-31).** The source is one page with seven sections. The seven-section hierarchy remains the source inventory; the initial rendered website includes Hero, About, Value statement, Services, and a text-only brand footer. Statistics and Testimonials remain documented source observations but are excluded from the initial website. Exact contact/availability data, social URLs, original assets, and customer/third-party publication rights were not supplied and are explicitly excluded, not inferred.
 
 Ownership: the page set, hierarchy, section order, and navigation structure are canonical in [the information architecture](information-architecture.md) (`PP-ART-018`). This document owns section content and the interaction inventory. Each fact has one home; reference IDs rather than copying values.
 
@@ -125,17 +125,25 @@ The project owner authorized the maintainer to resolve the source-derived busine
 | PP-CNT-05 | Statistics | Omit “99% Projects completed”, “1+ Years in Operation”, and “Worldwide”. | Reintroduce only with substantiation and dated owner approval. |
 | PP-CNT-06 | Testimonials | Do not publish the three retained quotations or attributions in the website baseline. | Obtain each customer's permission and substantiate “Orders went up 30%” before publication. |
 | PP-CNT-07 | Service commitments | Omit “unlimited minor revisions”, “fast turnaround”, “24 hours”, and “3 concepts” as public promises. | Reintroduce only after exact service terms are confirmed. |
-| PP-CNT-08 | Portfolio imagery | Do not publish the brochure, logo, magazine-cover, hero-cover, or footer samples in the baseline. Do not link service cards to those samples. | Obtain original assets and documented publication rights for each item, client mark, and identifiable work. |
+| PP-CNT-08 | Portfolio imagery | Exclude all hero, service, logo-cover, and footer sample artwork from the initial site; render approved service names as text only. | Reconsider only after original files, provenance, and item-specific publication rights are supplied and approved. |
 | PP-CNT-09 | Editorial wording | Correct “brochures,websites” to “brochures, websites”. Replace the “DMs” heading with “Distinctive design for growing businesses”. | Review final rendered hierarchy and line breaks. |
 | PP-CNT-10 | Hero action | Make “LEARN MORE” an in-page link to About (`#about`). | Verify keyboard operation and target existence in Phase 2. |
-| PP-CNT-11 | Logo and social links | Render the logo lockup as a non-interactive brand mark. Omit social icons until exact company profile URLs are supplied. | Original logo vector and profile URLs remain to be supplied. |
+| PP-CNT-11 | Logo and social links | Render a text-only “Poster Perfect” wordmark; omit the original logo symbol and all social icons/links. | Original vector and exact company profile URLs may be added only after supply and review. |
 | PP-CNT-12 | Typography | Aileron is approved as the source typeface; its CC0-1.0 source license is recorded in PP-REF-014. | Verify the exact font distribution and preserve its license metadata when font files are added. |
 | PP-CNT-13 | Responsive interpretation | Preserve source reading order and hierarchy. Use fluid sizing and content-driven reflow; stack columns/cards on narrow viewports without hiding essential content. | Validate breakpoints, zoom, and overflow during Phases 2–3. |
-| PP-CNT-14 | Contact and enquiry | Approve a simple native email/telephone hand-off after a current owner-approved destination is supplied. Do not add a form, backend, CRM, or tracking. | Exact current email and telephone values remain withheld; no contact link may be published until supplied and confirmed. |
-| PP-CNT-15 | Availability and office details | Do not assert current availability, office hours, or public headquarters/street details in the baseline. | Owner must provide and confirm current values before publication. |
-| PP-CNT-16 | Visual values | Use the measured palette as approximate source-derived starting tokens, not exact canonical measurements. Maintain contrast and legibility during web adaptation. | Compare rendered page to the source and validate contrast before release. |
+| PP-CNT-14 | Contact and enquiry | No external contact action in the initial profile-only site; no mailto, tel, form, backend, CRM, or tracking. | A verified owner-approved destination and hand-off behaviour are required for a business-ready release, or the owner must separately authorize a restricted profile-only release at G4. |
+| PP-CNT-15 | Availability and office details | Omit current availability, office hours, and public headquarters/location details from the initial site. The source's office-hours text is not current-state evidence. | Supply and date a current owner confirmation before any such content is added. |
+| PP-CNT-16 | Visual values | Use the measured palette as approximate source-derived starting tokens, not exact canonical measurements. | Reconcile actual rendered values with the source PDF and validate contrast before G2/G3 acceptance. |
 
 The source copy and visual observations remain a faithful record of the Canva export. The dispositions above govern the web implementation where they intentionally differ from that source.
+
+## G0 scope and publication boundary (DEC-017)
+
+The approved initial website is profile-only. Its rendered section set is Hero, About, Value statement, and Services, followed by a text-only Poster Perfect footer. The source Statistics and Testimonials sections remain in this inventory for traceability but are not rendered. The Contact/footer source section is adapted to a wordmark-only footer: no contact values, office hours, location, social links, or external enquiry action are included. The hero action is the only interactive link and targets the About section.
+
+No source sample images, client logos, original logo symbol, testimonials, attributions, quantified results, or other third-party/customer material may appear in the initial website. No missing rights or consent are assumed. Service categories and customer groups approved under DEC-014 may be shown as text. This disposition is an owner-approved exclusion, not a rights determination.
+
+The profile-only website does not provide an enquiry path and is not a completed customer-acquisition solution. A verified contact destination remains a G4 business-readiness dependency unless the owner separately authorizes a restricted profile-only release. The source PDF remains owner-held; its SHA-256 and inspection history are recorded in design-reference.md.
 
 ## Content review
 

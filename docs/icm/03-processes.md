@@ -29,7 +29,7 @@ Do not document every JSX render as a process. A process represents meaningful b
 | `PP-PRC-004` | Local interface interaction | Visitor operates a stateful control | User interaction | Conditional on source inventory |
 | `PP-PRC-005` | Remote form/API operation | Visitor submits or requests remote data | External operation | Not in baseline; future only |
 | `PP-PRC-006` | Verification and release | Candidate revision is submitted for review | Governance lifecycle | Target |
-| `PP-PRC-007` | Source inspection and specification | Owner supplies an inspectable design export or view-only source | Human specification workflow | Source inspected 2026-10-30; conservative dispositions approved under DEC-014; G0 evidence dependencies remain |
+| `PP-PRC-007` | Source inspection and specification | Owner supplies inspectable Canva export or view-only source | Human specification workflow | Source inspected 2026-10-30; profile-only scope and limitations owner-approved under DEC-017 |
 
 ## 3. PP-PRC-001 — Build and delivery
 
@@ -124,7 +124,7 @@ This is a logical target flow. Exact document delivery, route fallback, renderin
 
 ## 5. PP-PRC-003 — Link and navigation activation
 
-**Purpose:** move a visitor to an approved destination, including the company-approved prospective-customer enquiry destination where applicable.  
+**Purpose:** move a visitor to a destination explicitly represented in the approved interaction inventory. The initial profile-only baseline has one internal About link and no external enquiry destination.  
 **Contracts:** PP-CON-006, PP-CON-011.
 
 **Preconditions**
@@ -145,7 +145,7 @@ This is a logical target flow. Exact document delivery, route fallback, renderin
 **Effects:** PP-EFF-003.  
 **Verification:** PP-VER-008, PP-VER-009 and PP-VER-017.
 
-**Implementation status:** Conditional; actual links unknown.
+**Implementation status:** Phase 2 scope is limited to the internal LEARN MORE → About link. No external contact or social links are approved in the profile-only baseline; do not create inert external controls.
 
 ## 6. PP-PRC-004 — Local interface interaction
 
@@ -281,8 +281,8 @@ merge / release only as explicitly authorized
 7. Update canonical source, design-token, content, asset, interaction, and decision records.
 8. Obtain owner approval for material adaptations and scope.
 
-**Success:** all in-scope source facts are recorded and unresolved questions are explicit; the owner approves the web interpretation.  
-**Failure/blocking:** if the source is inaccessible or material assets/requirements cannot be established, keep Phase 0 blocked. Do not substitute guesses.
+**Success:** source facts and limitations are recorded, the approved baseline is internally consistent, and the owner approves the web interpretation. DEC-017 records this approval for the profile-only scope; excluded facts and third-party rights remain unknown and are not published.  
+**Failure/blocking:** if source facts needed by the approved baseline cannot be established, keep the affected work blocked. A missing asset may be excluded only through an explicit owner-approved scope disposition; do not substitute guesses or treat missing publication rights as granted.
 
 **Effects:** no website runtime effect. Outputs are documentation and source-inventory artifacts, not application behavior.  
 **Verification:** PP-VER-005, PP-VER-006, PP-VER-010, PP-VER-013, and PP-VER-017.

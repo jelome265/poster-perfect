@@ -182,6 +182,33 @@ This disposition is limited to the Phase 1 G1 foundation. It does not close Phas
 
 **Authority:** Project owner instruction dated 2026-10-31; Phase 1 close-out and verification record in `docs/phases/phase-1-verification-gap-review-2026-10-31.md`.
 
+### DEC-017 — G0 owner approval: profile-only baseline with accepted limitations
+
+**Status:** Accepted by the project owner on 2026-10-31. This decision completes G0 for the explicitly bounded initial website baseline. It does not certify missing contact data, current availability, third-party ownership, customer consent, or unprovided assets.
+
+The owner approves proceeding to Phase 2 on the following profile-only scope:
+
+1. Present Poster Perfect as a company-level graphic design business, using the source-derived company voice, customer groups (startups, restaurants, salons, and growing businesses), and capabilities already recorded in content-structure.md.
+2. Retain the seven-section Canva export as the source-of-truth inventory. The initial rendered page includes Hero, About, Value statement, Services, and a text-only brand footer. Statistics and Testimonials remain documented source observations but are excluded from the initial website.
+3. Keep the hero action as the internal #about link. Do not add external enquiry controls, mail or telephone links, forms, social links, or other external destinations while their exact destinations remain unconfirmed.
+4. Omit current availability, office hours, headquarters/location details, and telephone/email values. The source export's office-hours text is not treated as current business information.
+5. Exclude all source sample photographs/artwork, client marks, the original logo symbol, and social icons from the initial website. No substitute stock imagery or recreated brand symbol is authorized. A text-only Poster Perfect wordmark may be used.
+6. Render the approved service categories as text without the unlicensed sample artwork. Retain no unsubstantiated statistics, testimonials, customer attributions, or service promises.
+7. Use Aileron Regular and Bold as the approved type family, subject to verifying the exact font distribution and preserving its CC0-1.0 license metadata when integrated. Use the recorded color values only as approximate starting tokens. Unmeasured typography metrics, spacing, geometry, and responsive details must be validated during implementation; they must not be represented as exact source measurements.
+8. Preserve the owner-approved responsive reflow and semantic reading order. No new pages, backend, form service, analytics, tracking, or persistence are authorized.
+
+**Accepted limitations and release controls:**
+
+- This profile-only baseline does not provide a customer enquiry path and does not satisfy the full customer-acquisition objective in DEC-008 / PP-REQ-010. A verified owner-approved contact destination and behaviour remain required before a business-ready release. Any release without that path requires a separate, explicit owner decision at G4.
+- Current availability is not stated. It must be reconfirmed before being added to the site; a historical confirmation is not current publication evidence.
+- Third-party artwork and customer proof remain unpublished. Their rights/consents are unknown, not presumed granted. They may be added only after item-specific evidence and a reviewed scope change.
+- The owner-supplied PDF is retained by the owner and is not committed to the repository. The source identity and SHA-256 remain recorded in design-reference.md. Re-supply it before any detailed side-by-side visual comparison that requires the source image; the existing 72 dpi inspection does not prove pixel-level fidelity.
+- The original logo vector and standalone image files are recorded as unavailable to the implementation baseline. The wordmark-only treatment is an approved adaptation, not a reconstruction of the original logo.
+
+**Gate disposition:** G0 is complete for this documented profile-only scope with accepted limitations. Phase 2 may begin after this decision and the reconciled inventories are merged to main. G2 must not be marked complete without the applicable content, asset, interaction, and visual evidence. G4 must resolve the enquiry-path limitation through verified contact details or a separate owner-authorized restricted-release decision.
+
+**Authority:** Explicit project-owner approval in chat on 2026-10-31 ("I approve"), recorded by the maintainer in this decision.
+
 ## Open decisions
 
 | Decision | Status | Resolution gate |

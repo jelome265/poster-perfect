@@ -2,7 +2,7 @@
 
 | Field | Value |
 | --- | --- |
-| Status | Not started |
+| Status | Authorized to start after DEC-017 G0 approval; G2 visual acceptance remains evidence-gated |
 | Objective | Translate the approved visual reference into design tokens, semantic page structure, and working React components |
 | Depends on | Phase 0 approval and Phase 1 application foundation |
 | Primary outputs | Implemented design tokens, asset integration, page composition, typed components |
@@ -13,11 +13,11 @@ Build the website's primary visual composition from the verified Canva specifica
 
 ## 2. Entry conditions
 
-- Phase 0 inventories are complete and owner-approved.
-- Required source assets are available or documented as unavailable.
-- Typography choices and asset usage constraints are known.
+- Phase 0 inventories are owner-approved for the profile-only baseline under DEC-017.
+- Unavailable source assets and their exclusion are recorded; no unapproved substitute is permitted.
+- Typography choices and asset-use constraints are known: Aileron Regular/Bold; no original logo symbol or sample artwork in the initial implementation.
 - Phase 1 type checking, development, and production build are operational.
-- The in-scope pages, content, interactions, and primary reference viewport are identified.
+- The in-scope rendered sections and interactions are identified. The PDF source remains owner-held; re-supply it before detailed side-by-side visual comparison and before G2 exit. The exact CSS comparison viewport is not established by the PDF page dimensions alone and must be recorded when the source is available.
 
 ## 3. Scope and workstreams
 

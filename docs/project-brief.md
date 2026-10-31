@@ -35,7 +35,7 @@ These objectives define the business purpose. They do not prescribe a page count
 | Business type | Graphic design company / business |
 | Website purpose | Company portfolio and prospective-customer acquisition |
 | Positioning | Company-level presentation; not an individual designer's personal portfolio |
-| Availability | Open to new work as confirmed by the project owner on 2026-10-30; reconfirm before publication |
+| Availability | No current availability statement approved for publication under DEC-017; the 2026-10-30 note is historical and not relied on as current status |
 | Repository | jelome265/poster-perfect |
 | Frontend | React |
 | Language | TypeScript, including TSX |
@@ -43,20 +43,9 @@ These objectives define the business purpose. They do not prescribe a page count
 | Primary quality goals | Accurate company presentation, design fidelity, responsive behavior, accessibility, maintainability |
 | Design source | Canva design supplied by the project owner |
 
-## Business details to confirm in Phase 0
+## Business details excluded from the initial baseline (DEC-017)
 
-The following are not established by the company-level clarification and must not be invented:
-
-- Specific target customer segments, industries, or geographic markets.
-- Approved company description, positioning statement, and differentiators.
-- Exact services, specializations, and the wording used to describe capabilities.
-- Which portfolio projects, images, client names, or logos may be published, and the required permissions or confidentiality restrictions.
-- Whether testimonials, case studies, awards, credentials, client lists, metrics, or other proof are available and authorized for publication.
-- Current availability wording and the date on which it was reconfirmed.
-- Preferred enquiry action, contact channel, destination, and expected hand-off.
-- Whether any additional company information or website content is required beyond what appears in the Canva source.
-
-Do not infer company registration status, size, team structure, individual biographies, client relationships, project outcomes, prices, turnaround times, or service guarantees.
+The following facts were not supplied and are explicitly excluded from the profile-only implementation: exact email/telephone destinations, current availability, office hours, headquarters/location details, company social profile URLs, original logo vector, standalone source artwork, customer testimonials and attributions, and substantiation for quantified claims. These are unknown or unavailable, not implicitly approved. The source-derived customer groups, company voice, and service categories are approved in DEC-014/DEC-017. Add any excluded item only after evidence is supplied and the project owner approves the scope change.
 
 ## Not yet specified
 
@@ -74,13 +63,13 @@ The following implementation and content details must be confirmed from the sour
 
 ## Scope boundary
 
-The initial product scope is a responsive frontend company portfolio for a graphic design business, based on the supplied Canva design and the owner-approved business requirements. It is intended to help prospective customers understand the company and make contact about work.
+The initial product scope is a responsive, profile-only frontend for a graphic design business, based on the supplied Canva design and the owner-approved DEC-017 scope. It presents the company, approved customer groups and services. It intentionally has no external enquiry path and does not fulfil the full customer-acquisition objective. A verified contact destination or separate owner-authorized restricted-release decision is required at G4.
 
-Backend services, authentication, persistence, payment processing, CMS integration, analytics, remote form submission, CRM integration, and other external services are not assumed. A contact link or external hand-off may be included only after its destination and behavior are confirmed. Add a remote integration only when a separate requirement and owner approval make it necessary.
+Backend services, authentication, persistence, payment processing, CMS integration, analytics, remote form submission, CRM integration, and other external services are not assumed. No contact link or external hand-off is included in the initial profile-only baseline. Add one only after its destination and behavior are confirmed and approved. Add a remote integration only when a separate requirement and owner approval make it necessary.
 
 ## Acceptance criteria
 
-The project is ready for implementation when:
+The profile-only baseline is ready for Phase 2 when:
 
 - The reference design can be inspected at sufficient resolution.
 - The company-level purpose and positioning are reflected in the approved project brief.

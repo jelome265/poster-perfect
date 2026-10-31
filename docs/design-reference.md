@@ -59,9 +59,13 @@ The company-level purpose is established by the project brief and DEC-008, indep
 | Responsive variants supplied | None. Single desktop-width layout; responsive reflow is an owner-approved web adaptation under DEC-014 |
 | Owner-approved adaptations | DEC-014 approves company voice, conservative content exclusions, an in-page About action, and responsive reflow. Contact hand-off details and publication rights remain gated (see `content-structure.md`) |
 
-## Residual dependencies
+## Residual dependencies and accepted limitations (DEC-017)
 
-- Full-resolution original image files and the logo vector, which the owner must supply separately (the export is a rendered PDF).
-- Confirmation of approximate color and type values. Aileron CC0-1.0 licensing is recorded under DEC-014/PP-REF-014; preserve license metadata when the font is added.
-- Responsive variants, if the owner wants them (none supplied).
-- Owner confirmation of the claims, testimonials, portfolio permissions, and contact destinations recorded in `content-structure.md`.
+- The owner-held PDF was inspected on 2026-10-30 and is identified above by filename and SHA-256. It is not committed to the repository. Re-supply the PDF before detailed side-by-side visual comparison or any review that requires access to the actual source image.
+- Original image files, the original logo vector, and standalone icon files were not extracted or supplied. They are unavailable to the initial implementation and are excluded under DEC-017. Do not recreate the mark or substitute stock/AI imagery.
+- No rights evidence was supplied for third-party/sample artwork, customer work, or testimonials. Their publication status is **not authorized**; exclude them unless item-specific permissions and provenance are later recorded.
+- Aileron Regular/Bold and its CC0-1.0 source license are identified. Verify the exact font distribution and preserve its license metadata when the font files are added.
+- Six dominant color values are recorded as approximate starting references in design-system.md; they are not precise brand specifications. Typography metrics, spacing, detailed geometry, crop/focal points, and the CSS comparison viewport remain unmeasured or uncertain and must be validated during Phase 2 with the source available.
+- No responsive source variants were supplied. The owner-approved responsive reflow is a web adaptation and is specified in design-system.md.
+
+The known absences above satisfy the G0 inventory requirement for the scoped baseline; they do not establish ownership, consent, or availability.
