@@ -32,16 +32,12 @@ These are logical boundaries. They do not require a separate folder or abstracti
 
 ## Decisions deliberately deferred
 
-The following choices remain open until implementation requirements justify them:
+The Phase 1 foundation decisions are recorded in [DEC-012](decision-log.md): Vite, npm/lockfile, Node 22, React/TypeScript, oxlint, Vitest/jsdom, and a client-rendered single-page application with no router. The following remain open until an approved requirement justifies a decision:
 
-- Vite, another build tool, or a framework with server rendering.
-- Client-side-only rendering versus server rendering.
-- Routing library and route structure (inputs: `information-architecture.md`, DEC-007).
-- CSS approach or styling framework.
-- Package manager and Node.js version.
-- Testing libraries and browser automation.
-- Deployment provider and hosting configuration.
-- Any backend or external service.
+- CSS framework and brand-token implementation (Phase 2; current CSS is deliberately neutral).
+- Browser automation beyond the current jsdom shell test and production-preview HTTP/asset smoke.
+- Deployment provider, hosting configuration, and production promotion.
+- Any backend, API, persistence, analytics, or external service.
 
 Do not add a router, state-management package, component library, backend, or other infrastructure without a demonstrated requirement.
 

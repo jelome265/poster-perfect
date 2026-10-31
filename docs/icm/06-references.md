@@ -49,6 +49,9 @@ For external requirements, cite the authoritative source close to the relevant c
 | `PP-REF-009` | Selected build/package tool documentation | External platform reference | Build and dependency behavior | Not selected |
 | `PP-REF-010` | [Information architecture](../information-architecture.md) | Canonical | Page set, hierarchy, navigation, section order | Accepted 2026-10-31 (DEC-013) |
 | `PP-REF-011` | [Component blueprint](../component-blueprint.md) | Contract | Per-component contract details | Accepted as baseline 2026-10-31 (DEC-013) |
+| `PP-REF-012` | [OSV-Scanner usage and license scanning](https://google.github.io/osv-scanner/usage/) | External security/tool reference | OSV vulnerability matching and SPDX license metadata scanning | Adopted in DEC-015; scanner action pinned to v2.7.0 commit |
+| `PP-REF-013` | [npm audit documentation](https://docs.npmjs.com/cli/commands/npm-audit/) | External package-manager reference | npm registry advisory audit and severity threshold semantics | Adopted in DEC-015 |
+| `PP-REF-014` | [Fontsource Aileron license record](https://fontsource.org/fonts/aileron/about) | External asset/license reference | Aileron font provenance and CC0-1.0 source license | Recorded under DEC-014; verify exact distribution metadata when font files are added |
 
 Do not add a reference solely to make the register look complete. Add a specific official documentation page when it materially governs a decision or contract.
 

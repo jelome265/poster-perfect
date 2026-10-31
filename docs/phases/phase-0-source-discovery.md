@@ -2,7 +2,7 @@
 
 | Field | Value |
 | --- | --- |
-| Status | Awaiting owner approval (G0); records drafted from the export, 2026-10-30 |
+| Status | Conservative business/content/design dispositions owner-approved under DEC-014 (2026-10-31); G0 remains open for contact, availability, original assets, and publication-rights evidence |
 | Objective | Produce an owner-approved company portfolio and customer-journey specification alongside the verified Canva-to-web design specification |
 | Depends on | Project brief and accessible source material |
 | Primary outputs | Company positioning and customer-journey specification, source inventory, page/content specification, information architecture, component inventory and blueprint, design-token inventory, interaction inventory, approved web interpretation |
@@ -21,7 +21,7 @@ Poster Perfect is a company portfolio for a graphic design business, not an indi
 
 A PNG or equivalent image export is suitable for visual inspection. A PDF is suitable for a multi-page design. Where the source uses separate logos, illustrations, icons, or photographs, provide those assets separately when possible.
 
-**Current status:** the owner's export was inspected on 2026-10-30 (see `design-reference.md`). Records are drafted and await owner approval at G0. Phase 1 has not started. Remaining dependencies: the owner decisions in `content-structure.md`, full-resolution assets, the logo vector, the font licence, and responsive variants.
+**Current status:** the owner's export was inspected on 2026-10-30 (see `design-reference.md`). The owner approved conservative business/content/design dispositions under DEC-014 on 2026-10-31, alongside the earlier Phase 1 foundation authorization under DEC-012/DEC-013. G0 remains open: exact current contact and availability values, original logo/asset files, and publication rights for testimonials and sample artwork remain unresolved. Aileron CC0-1.0 licensing is recorded and responsive reflow is approved as a web adaptation. This approval does not authorize publication of material whose rights are unconfirmed.
 
 ## 3. Scope
 
@@ -71,7 +71,7 @@ For each interaction, record the trigger, expected result, destination or state 
 - Identify content that must remain visible and its semantic reading order.
 - Record which regions can naturally reflow, stack, resize, or change alignment.
 - Identify any desktop composition that cannot be preserved literally on a narrow viewport.
-- Propose web-specific adaptations and obtain owner approval where they materially change hierarchy, order, or behavior.
+- Apply the owner-approved responsive reflow in DEC-014 while preserving the source reading order; materially different hierarchy, order, or behavior still requires a new owner decision.
 
 Do not invent fixed breakpoint values during discovery. Breakpoints should be derived from content constraints and validated in later phases.
 
@@ -81,7 +81,7 @@ Do not invent fixed breakpoint values during discovery. Breakpoints should be de
 - Confirm whether the source maps to one page, multiple pages, or a reusable template.
 - Confirm the in-scope content and required behavior.
 - Record non-goals and explicitly out-of-scope functionality.
-- Resolve important unknowns with the project owner.
+- Resolve material unknowns with the project owner; the remaining contact, availability, original-asset, and publication-rights evidence is listed in DEC-014 and `content-structure.md`.
 - Update the project brief, design reference, content structure, design system, component inventory, decision log, and ICM records affected by accepted company requirements.
 
 ### 3.7 Information architecture and component blueprint
@@ -99,7 +99,7 @@ Derived from the inspected source and owner-approved requirements (`PP-REQ-009`,
 
 Apply DEC-008, PP-REQ-010, and PP-CON-011.
 
-- Confirm the company description and positioning approved for public presentation. Do not assume legal registration, company size, ownership structure, or team composition.
+- Use the source-derived company voice, customer groups, and service categories approved under DEC-014. Do not assume legal registration, company size, ownership structure, or team composition.
 - Confirm the target customer segments and the design problems or needs the company wants to serve.
 - Confirm the services and capabilities the company actually offers; do not infer categories or guarantees from common industry practice.
 - Identify the creative work the company wants to showcase. Record the source, client/confidentiality constraints, and owner-confirmed permission for each item, client name, or logo before publication.
@@ -156,7 +156,7 @@ Phase 0 is complete only when:
 - The information architecture (`PP-ART-018`) is accepted and reconciled with the source inventory (`PP-VER-016`).
 - The component inventory and blueprint are recorded for every component the source justifies. Each entry is accepted, or it is explicitly marked partially specified with its open questions.
 - Company positioning, target customer segments, approved services/capabilities, publishable portfolio work and permissions, current availability, and enquiry route are specified and owner-approved, or explicitly excluded/recorded as accepted limitations (`PP-VER-017`).
-- Material ambiguities and scope questions are resolved or recorded as accepted limitations.
+- Material ambiguities and scope questions are resolved or recorded as accepted limitations; unresolved contact and rights dependencies must not be presented as completed evidence.
 - The project owner approves the web interpretation and implementation scope.
 
 ## 7. Out of scope

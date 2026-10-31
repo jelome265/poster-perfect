@@ -1,0 +1,74 @@
+name: Dependency security and license audit
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  schedule:
+    - cron: "23 4 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  npm-advisory-audit:
+    name: npm advisory audit
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Node.js from .nvmrc
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version-file: .nvmrc
+      - name: Audit complete locked dependency graph
+        run: npm audit --audit-level=low
+
+  osv-vulnerability-audit:
+    name: OSV vulnerability audit
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    uses: google/osv-scanner-action/.github/workflows/osv-scanner-reusable.yml@b1d267aea5211fa648d9d442fa64b90dbdcbdd36 # v2.7.0
+    with:
+      scan-args: |-
+        -L
+        package-lock.json
+      fail-on-vuln: true
+      upload-sarif: true
+
+  license-compliance:
+    name: SPDX inventory and license policy
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up Node.js from .nvmrc
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version-file: .nvmrc
+      - name: Build and enforce the lockfile SPDX inventory
+        run: npm run audit:licenses
+      - name: Cross-check SPDX licenses with OSV-Scanner and deps.dev
+        uses: google/osv-scanner-action/osv-scanner-action@0a65f82af05cd58cf587827b0bb0489548c18346 # v2.7.0
+        with:
+          scan-args: |-
+            --licenses=Apache-2.0,BSD-2-Clause,BSD-3-Clause,BlueOak-1.0.0,CC0-1.0,ISC,MIT,MIT-0,MPL-2.0
+            .
+      - name: Upload machine-readable and human-readable license inventory
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: dependency-license-inventory-${{ github.sha }}
+          path: artifacts/dependency-audit/
+          if-no-files-found: error
+          retention-days: 30

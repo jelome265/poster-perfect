@@ -12,7 +12,8 @@
     "lint": "oxlint --deny-warnings",
     "test": "vitest run",
     "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "audit:licenses": "node scripts/audit-licenses.mjs"
   },
   "dependencies": {
     "react": "19.3.1",

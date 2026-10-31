@@ -213,7 +213,7 @@ At this baseline:
 - Visual fidelity and responsive behavior are project objectives.
 - WCAG 2.2 Level AA is the accessibility target.
 - The owner's Canva export was inspected on 2026-10-30 (see `docs/design-reference.md`). Page structure, colors, typeface, and asset inventory are drafted from it with approximate measurements and await owner approval.
-- Canvas dimensions (artboard size not confirmed), interactions, responsive variants, routing, build tool, styling strategy, hosting, and external integrations remain unknown or undecided.
+- Canvas dimensions, owner-approved interaction destinations, responsive variants, styling strategy, hosting, and external integrations remain open. The baseline route model is one page with no client router; Vite/npm/Node 22/React/TypeScript/Vitest/oxlint are selected under DEC-012.
 - No application runtime or executable application verification exists in the repository yet.
 
 This ICM is therefore a target-state control specification, not a claim that the website or its controls have been implemented.

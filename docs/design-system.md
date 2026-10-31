@@ -2,7 +2,7 @@
 
 ## Status
 
-**Partially measured from the export (2026-10-30).** Colors are approximate values from a 72 dpi render. The typeface family is identified; sizes, spacing, and layout are not yet measured. No breakpoints are defined: the export is a single desktop-width layout. All values below are estimates until the owner confirms them, as required by the token principles.
+**Source-derived baseline approved by the owner under DEC-014 (2026-10-31).** Colors and dimensions remain approximate values from a 72 dpi render; they are approved as starting references, not exact measurements. Aileron is approved and its CC0-1.0 source license is recorded in PP-REF-014. The export is a single desktop-width layout; responsive reflow is an approved web adaptation, with implementation and viewport validation deferred to Phases 2–3.
 
 ## Token principles
 
@@ -17,13 +17,13 @@
 | Category | Values | Status |
 | --- | --- | --- |
 | Color | Six approximate values (see the color table below) | Approximate: owner to confirm |
-| Typography | Aileron Bold for headings and labels; Aileron Regular for body text. Sizes, weights per role, line heights, and letter spacing pending | Family identified; licence and sizes pending |
+| Typography | Aileron Bold for headings and labels; Aileron Regular for body text. Sizes, weights per role, line heights, and letter spacing pending | Family and CC0-1.0 source license approved; final metrics require rendered validation |
 | Spacing | Section gaps, component gaps, padding, and margins not yet measured | Pending measurement |
 | Layout | One page, 1024.5 × 4032 pt. Content width, columns, and alignment not yet measured | Partially measured |
 | Shape | Badge and button corner radii; dividers and rules (a short rule sits above some headings) | Pending measurement |
 | Elevation | Not assessed | Pending |
 | Imagery | Sample images placed in the service row, hero, and footer. Crop, aspect ratio, and focal point pending | Pending |
-| Responsive | None supplied | Not in source |
+| Responsive | No source variant; owner-approved fluid reflow, content-driven breakpoints, and column stacking | Web adaptation approved under DEC-014; implement and verify in Phases 2–3 |
 | Motion | Not present in a static export | Not in source |
 
 ## Color values (approximate)
@@ -58,14 +58,14 @@ For each meaningful layout change, record:
 - Any typography or spacing changes.
 - Whether the change is directly represented in the source or is a web-specific adaptation.
 
-No responsive variant is in the source. Any reflow for the four value badges, three service cards, three statistics, and three testimonials is a web adaptation and needs owner approval.
+No responsive variant is in the source. DEC-014 approves content-driven reflow that preserves semantic order. Statistics and testimonials are excluded from the baseline until substantiated/permission-cleared, so no layout may imply they are approved content.
 
 ## Review checklist
 
-- [ ] Colors are recorded with source references and semantic roles. (Values recorded; roles and confirmation pending.)
-- [ ] Font files, licensing, weights, and fallback behavior are known. (Family and weights identified; licence and fallback pending.)
+- [x] Colors are recorded as approximate source-derived values and approved as starting tokens; validate contrast in the rendered site.
+- [ ] Font files and fallback behavior are not integrated. Aileron CC0-1.0 source licensing is recorded; verify the exact package/files and preserve its license metadata when added.
 - [ ] Typography hierarchy is recorded.
 - [ ] Spacing and alignment measurements are recorded.
 - [ ] Image crop and focal-point behavior are documented.
-- [ ] Responsive changes are explicit and tested.
+- [ ] Approved responsive changes are implemented and tested in Phases 2–3.
 - [ ] All estimates are identified and approved.

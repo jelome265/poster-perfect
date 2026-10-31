@@ -20,7 +20,7 @@ A phase may touch multiple ICM levels, and an ICM level may be revisited across 
 | Delivery phase | L0 Intent | L1 Structure | L2 Contracts/processes | L3 Effects | L4 Evidence | Gate |
 |---|---|---|---|---|---|---|
 | Phase 0 — Source discovery | Primary | Define company purpose and customer context; record page/route hierarchy (`PP-ART-018`) and component boundaries (`PP-ART-019`) | Specify company positioning, approved portfolio content, availability and enquiry path (`PP-CON-011`); accept `PP-CON-010` and component contracts | Identify possible effects; exclude unapproved remote submission and integrations | Source reconciliation, PP-PRC-007, PP-VER-016, PP-VER-017 and owner approval | G0 |
-| Phase 1 — Application foundation | Confirm scope | Primary | Define runtime/build contracts | Control package-registry access and build artifact writes; deployment remains excluded unless authorized | Install, type, static checks, architecture/dependency review, build, smoke test | G1 |
+| Phase 1 — Application foundation | Confirm scope | Primary | Define runtime/build contracts | Control package-registry access, advisory/license metadata reads, and build artifact writes; deployment remains excluded unless authorized | Install, type, static checks, architecture/dependency review, SCA/license audit, build, smoke test | G1 |
 | Phase 2 — Design system/composition | Preserve approved design intent | Implement page/component boundaries | Implement page/section/component contracts | Implement only required local/browser effects | Content, asset, functional and primary visual checks | G2 |
 | Phase 3 — Responsive/accessibility | Validate visitor scope across contexts | Refine responsive responsibility | Verify semantic and interaction behavior | Verify focus, navigation, and other browser effects | Viewport and accessibility evidence | G3 |
 | Phase 4 — Verification/release | Confirm final approved scope | Reconcile final topology | Verify all required flows | Verify all effects and failure handling | Revision-bound evidence and owner disposition | G4 |
@@ -55,6 +55,7 @@ Required:
 - Configured static checks.
 - Architecture/component-boundary review (PP-VER-014) for the established scaffold.
 - Dependency and side-effect surface review (PP-VER-015), including package manifest/lockfile and build scripts.
+- Automated npm/OSV vulnerability and SPDX license audit (PP-VER-018).
 - Successful production build and runtime smoke test.
 - Documented setup commands and dependency decisions.
 
@@ -124,8 +125,8 @@ Blocks:
 
 | Gate | Status | Reason |
 |---|---|---|
-| G0 | Deferred by owner; awaiting further direction | Source inspected 2026-10-30. Records are drafted, but the owner deferred G0 ("Wait"). Phase 1 is not authorized; outstanding items remain in `content-structure.md` |
-| G1 | Not started | Toolchain not selected; application scaffold absent |
+| G0 | In progress; conservative business/content/design dispositions owner-approved under DEC-014 | Exact contact and availability values, original logo/asset files, company social profile URLs, and publication rights for testimonials/sample artwork remain open; responsive adaptation and Aileron source license are recorded |
+| G1 | Technical evidence complete on PR #15 | Application quality and documentation integrity passed on candidate `98c585c` (runs `41171547343` and `41171547377`); npm advisory, OSV vulnerability, SPDX inventory and deps.dev license checks passed in run `41171547595`. Formal owner Phase 1 disposition remains pending |
 | G2 | Not started | No application composition |
 | G3 | Not started | No responsive implementation |
 | G4 | Not started | No release candidate or execution evidence |

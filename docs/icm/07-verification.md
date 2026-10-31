@@ -2,7 +2,7 @@
 
 **Canonical level:** L4 — Verification and evidence  
 **Record class:** Verification contract  
-**Status:** Controls specified; executable verification not yet available
+**Status:** Phase 1 foundation controls executed on `ad45f296`; application/design-specific controls remain pending their owning phases
 
 ## 1. Purpose
 
@@ -27,10 +27,10 @@ Every control must specify:
 
 | ID | Control | Type | Covers | Known limitation | Status |
 |---|---|---|---|---|---|
-| `PP-VER-001` | Clean dependency install | Automated | PP-REQ-002, PP-CON-001 | Does not establish dependency safety or application runtime correctness | Planned; toolchain not selected |
-| `PP-VER-002` | TypeScript strict type check | Automated | PP-REQ-002, PP-CON-001, PP-CON-003 | Does not prove runtime behavior, semantic correctness, or visual fidelity | Planned |
-| `PP-VER-003` | Lint/format/static quality checks | Automated | PP-REQ-003, technical standards | Only detects configured static rules; does not prove functional correctness or complete security | Planned |
-| `PP-VER-004` | Production build and runtime smoke test | Automated/manual | PP-REQ-002, PP-CON-001 | Smoke test covers startup/basic rendering, not full page behavior or visual acceptance | Planned |
+| `PP-VER-001` | Clean dependency install | Automated | PP-REQ-002, PP-CON-001 | Does not establish dependency safety or application runtime correctness | Passed on `ad45f296`; `npm ci` succeeded in Actions run `41168683315` |
+| `PP-VER-002` | TypeScript strict type check | Automated | PP-REQ-002, PP-CON-001, PP-CON-003 | Does not prove runtime behavior, semantic correctness, or visual fidelity | Passed on `ad45f296`; `npm run typecheck` succeeded in Actions run `41168683315` |
+| `PP-VER-003` | Lint/format/static quality checks | Automated | PP-REQ-003, technical standards | Only detects configured static rules; does not prove functional correctness or complete security | Passed on `ad45f296`; `npm run lint` succeeded with `--deny-warnings` in Actions run `41168683315` |
+| `PP-VER-004` | Production build and runtime smoke test | Automated/manual | PP-REQ-002, PP-CON-001 | HTTP preview/asset smoke does not execute client JavaScript or prove browser rendering; jsdom smoke does not replace browser testing | Partial on `ad45f296`: production build and 1/1 Vitest shell test passed; PR #14 records a headless Chromium development-server smoke on `ef613375` (application source unchanged through `ad45f296`). Production-preview HTTP/asset smoke passed on initial PR candidate `da325b26f8ee1adabf12ef273836cab0b7fc1b0e` (Actions run `41169847259`) and reconciled PR #15 head `befdefc6bc06b0ccb9c345487723402bf69664fd` (Actions run `41170052269`); both jobs served the preview document and fetched each referenced same-origin JS/CSS asset. This does not execute client JavaScript in a browser |
 | `PP-VER-005` | Source-to-page content reconciliation | Manual | PP-REQ-001, PP-REQ-006, PP-CON-002 | Verifies inventoried source content; does not prove pixel-level visual fidelity | Not yet run; copy transcribed from export text; reconciliation pending |
 | `PP-VER-006` | Visual fidelity comparison | Manual/hybrid | PP-REQ-001, PP-REQ-004, PP-CON-004, PP-CON-005 | Limited to captured references, selected viewports, browser and rendering conditions | Blocked on implementation; export available as the reference |
 | `PP-VER-007` | Responsive viewport matrix | Manual/hybrid | PP-REQ-004, PP-CON-008 | Evidence covers tested widths/browsers, not every possible device or viewport | Planned |
@@ -39,11 +39,12 @@ Every control must specify:
 | `PP-VER-010` | Asset loading and alternative text review | Automated/manual | PP-CON-005 | Does not independently establish copyright/licensing or full design fidelity | Pending asset inventory |
 | `PP-VER-011` | Release artifact and revision provenance | Automated/manual | PP-REQ-008, PP-CON-009 | Establishes traceability, not the artifact's complete security or runtime correctness | Planned |
 | `PP-VER-012` | Owner review and release disposition | Manual approval | PP-REQ-008, PP-CON-009 | Records authorization; it does not replace technical verification | Required for each release |
-| `PP-VER-013` | ICM reference and traceability integrity | Automated structural checks plus manual review of authority, ownership, and status semantics | All accepted requirements and ICM registers | Proves documentation/link/identifier/traceability integrity only; not application implementation, visual fidelity, or accessibility | R4 failed at `877933a` (§10). R5 passed at `a3d933c` (§12) and R6 passed on the `main` merge commit `486a81b` (§13); each result applies only to its exact tested revision. Rerun on every subsequent material documentation revision. This control is documentation integrity only |
-| `PP-VER-014` | Architecture and component-boundary review | Manual/hybrid | PP-REQ-003, PP-CON-003 | Depends on the actual source tree and reviewed revision; a logical map alone is not implementation evidence | Planned; run as the physical architecture is introduced |
-| `PP-VER-015` | Dependency and side-effect surface review | Manual/hybrid | PP-REQ-007, PP-CON-007, PP-EFF-005–010 | Reviews declared/observable dependencies and effects; cannot prove absence of all runtime vulnerabilities | Defined; run at foundation and whenever dependencies/effects change |
-| `PP-VER-016` | Information architecture and component-blueprint reconciliation against inspected source | Manual | PP-REQ-001, PP-REQ-003, PP-REQ-006, PP-REQ-009, PP-CON-002, PP-CON-003, PP-CON-010 | Verifies record completeness and cross-reference consistency against the source; does not prove the implemented DOM, visual fidelity, or accessibility (`PP-VER-005`, `PP-VER-006`, `PP-VER-008`, `PP-VER-014`) | Executed by author 2026-10-30 against the export; owner review pending (audit §9) |
+| `PP-VER-013` | ICM reference and traceability integrity | Automated structural checks plus manual review of authority, ownership, and status semantics | All accepted requirements and ICM registers | Proves documentation/link/identifier/traceability integrity only; not application implementation, visual fidelity, or accessibility | R4 failed at `877933a` (§10). R5 passed at `a3d933c` (§12), R6 passed on `main` at `486a81b`, and the post-merge check passed on `ad45f296` in Actions run `41168683333`. Each result applies only to its tested revision. The documentation-integrity check passed on initial PR candidate `da325b26f8ee1adabf12ef273836cab0b7fc1b0e` (Actions run `41169847210`) and reconciled PR #15 head `befdefc6bc06b0ccb9c345487723402bf69664fd` (Actions run `41170052381`); rerun after later material documentation changes |
+| `PP-VER-014` | Architecture and component-boundary review | Manual/hybrid | PP-REQ-003, PP-CON-003 | Review covers only the neutral application foundation, not the future page/section composition | Passed by manual review on `ad45f296`; findings and limits recorded in PP-ART-020. Re-run after Phase 2 introduces page/section modules |
+| `PP-VER-015` | Dependency and side-effect surface review | Manual/hybrid | PP-REQ-007, PP-CON-007, PP-EFF-005–010 | Surface review does not replace software-composition analysis, license review, or vulnerability scanning | Passed by manual review on `ad45f296`; locked dependency/effect inventory and limitations recorded in PP-ART-020. Dedicated automated SCA/license scan is PP-VER-018; rerun whenever the dependency graph or audit policy changes |
+| `PP-VER-016` | Information architecture and component-blueprint reconciliation against inspected source | Manual | PP-REQ-001, PP-REQ-003, PP-REQ-006, PP-REQ-009, PP-CON-002, PP-CON-003, PP-CON-010 | Verifies record completeness and cross-reference consistency against the source; does not prove the implemented DOM, visual fidelity, or accessibility (`PP-VER-005`, `PP-VER-006`, `PP-VER-008`, `PP-VER-014`) | Executed by author 2026-10-30 against the export; structural baseline accepted by owner on 2026-10-31 under DEC-013. G0 content/adaptation questions remain open |
 | `PP-VER-017` | Company positioning, approved portfolio content and prospective-customer journey reconciliation | Manual | PP-REQ-010, PP-CON-011 | Verifies owner-approved company facts, publication permissions, availability and enquiry-path specification; does not measure lead generation, conversion rate, sales, or customer satisfaction | Partially specified; detailed company content and enquiry route pending Phase 0 |
+| `PP-VER-018` | npm dependency vulnerability and SPDX license audit | Automated | PP-REQ-011, PP-CON-012, PP-EFF-011 | Scans the locked npm graph against known advisory and license metadata; cannot establish absence of unknown vulnerabilities, legal compatibility for every distribution, or rights to non-npm assets | Passed on PR #15 code candidate `98c585c9e7ba79a78c24d7ed621148c32066444c` in Actions run `41171547595`: npm audit, OSV vulnerability scan, lockfile SPDX inventory, deps.dev license check, and artifact upload all succeeded. The Node inventory enforces MPL-2.0 as development-only. |
 
 ## 4. Automated controls
 
@@ -72,7 +73,19 @@ Build from the committed lockfile and intended environment. Verify output exists
 
 Test meaningful behavior and component contracts rather than asserting implementation details. Add browser automation for critical flows where it creates real value. Do not introduce tests for hypothetical interactions that have not been approved.
 
-Exact commands remain undefined until Phase 1 selects the toolchain.
+Exact commands are recorded in `docs/development.md` and the `package.json` scripts. Their revision-specific results are tracked in PP-ART-020 and the CI run history.
+
+### 4.6 Dependency vulnerability and license audit (PP-VER-018)
+
+Run `npm run audit:licenses` from the repository root. This Node.js built-in-only script reads the committed lockfile, inventories every package entry (including transitive, optional, runtime, and development entries), validates exact SPDX identifiers against DEC-015, and writes JSON/Markdown artifacts under `artifacts/dependency-audit/`.
+
+The dedicated workflow `.github/workflows/dependency-audit.yml` additionally:
+- runs `npm audit --audit-level=low` against the complete locked graph;
+- runs the pinned OSV-Scanner v2.7.0 reusable workflow against `package-lock.json`, failing on any known vulnerability;
+- runs the OSV-Scanner/deps.dev license metadata check using the approved SPDX identifiers;
+- uploads the complete lockfile inventory as a 30-day workflow artifact.
+
+The workflow runs on pull requests to `main`, pushes to `main`, weekly, and on manual dispatch. Scanner failure, missing scan output, missing license metadata, an unapproved identifier, or MPL-2.0 outside development scope MUST fail the audit. CI MUST NOT apply automatic package upgrades or unreviewed ignore rules.
 
 ## 5. Visual verification protocol
 
@@ -179,7 +192,7 @@ The purpose of this control is to detect an internally inconsistent ICM before i
 
 ### Automation policy
 
-The application toolchain remains undecided until Phase 1. A narrow exception is accepted under DEC-011: the PP-VER-013 documentation validator uses Python 3's standard library only on the GitHub Actions runner. It adds no third-party package, application dependency, package manifest, lockfile, browser runtime, or Python requirement for the website. This exception is limited to `scripts/validate_docs.py`; it does not authorize Python for application code or other repository scripts.
+The application toolchain is selected under DEC-012. A narrow Python tooling exception is accepted under DEC-011: the PP-VER-013 documentation validator uses Python 3's standard library only on the GitHub Actions runner. It adds no third-party package, application dependency, package manifest, lockfile, browser runtime, or Python requirement for the website. This exception is limited to `scripts/validate_docs.py`; it does not authorize Python for application code or other repository scripts.
 
 The validator must fail non-zero for mandatory structural failures and report diagnostics. Its successful workflow result proves only the automated subset described in §4.0. Manual review of authority, ownership, dependency direction, process semantics, status distinctions, and unsupported completion claims remains required. Automation of PP-VER-016 is still deferred until its source-reconciliation criteria can be justified against the selected Phase 1 toolchain.
 
@@ -229,7 +242,7 @@ Checks:
 - Every `PP-IA`, `PP-CMP`, `PP-CON`, and `PP-VER` reference resolves to an existing record.
 - No identifier is reused. No record marked Accepted contains a Pending field or an unresolved open question.
 
-Method: manual reconciliation against the inspected export (`PP-REF-001`). Record the export identity, the IA and blueprint revision, and the date in the report template (§13). Automation is deferred until Phase 1 establishes a toolchain, per the automation policy in §10.
+Method: manual reconciliation against the inspected export (`PP-REF-001`). Record the export identity, the IA and blueprint revision, and the date in the report template (§13). This remains a manual control because owner approval and visual-source judgments are not safely reducible to identifier checks.
 
 Limitation: validates the records against the source only. It does not prove that the implementation matches them (`PP-VER-014`) or that the rendered page matches the design (`PP-VER-006`).
 

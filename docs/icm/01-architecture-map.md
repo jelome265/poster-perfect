@@ -2,7 +2,7 @@
 
 **Canonical level:** L1 — Structure and ownership  
 **Record class:** Target-state architecture map  
-**Status:** Logical boundaries accepted; concrete module topology pending source and toolchain decisions
+**Status:** Logical boundaries accepted; minimal application topology implemented and reviewed; page/section topology remains dependent on Phase 0 approval and Phase 2 implementation
 
 ## 1. Architecture objective
 
@@ -85,13 +85,16 @@ Every cross-boundary interaction must be visible in the contract inventory. Inte
 
 ## 6. Physical topology decision
 
-Pending Phase 1:
-- Build tool and source layout.
-- Whether multiple pages require a router.
-- Whether a styling convention requires dedicated directories.
-- Asset loading strategy.
-- Test organization.
-- Hosting output contract.
+Selected and implemented under DEC-012:
+- Vite 8.3.5 build/dev server, npm lockfile, Node.js 22, React 19.3.1, TypeScript 5.9.3 strict mode.
+- Client-rendered one-page baseline; no router.
+- Vitest/jsdom tests and oxlint static checks.
+
+Still deferred:
+- Page and section modules until G0/G2 permits designed composition.
+- Brand tokens and any styling framework until Phase 2.
+- Original asset loading/provenance until owner-supplied assets and rights are confirmed.
+- Hosting/deployment output contract until release planning.
 
 Do not pre-create packages, feature modules, or infrastructure to fill this map.
 

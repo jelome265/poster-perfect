@@ -4,7 +4,7 @@ A responsive company portfolio website for a graphic design business, built with
 
 ## Project status
 
-**Documentation baseline established; application implementation not started.** The owner's Canva export was inspected on 2026-10-30. Records drafted from it await owner approval (Phase 0, G0). Visual values are approximate, and several content and publication decisions remain open.
+**Phase 1 foundation merged; G1 verification evidence passed on PR #15; owner phase disposition pending.** The React/TypeScript application shell and selected toolchain are on `main` at `ad45f296b2294e65048cf27d1d5473f54e14e52a`. The owner approved conservative business/content/design dispositions under DEC-014. G0 remains open for current contact and availability values, original logo/assets, and publication rights for testimonials and sample artwork.
 
 ## Application development
 
@@ -26,6 +26,7 @@ See [development setup](docs/development.md) for prerequisites and commands.
 - [Accessibility requirements](docs/accessibility.md)
 - [Implementation plan](docs/implementation-plan.md)
 - [Decision log](docs/decision-log.md)
+- [Dependency security and license policy](docs/security/dependency-audit.md)
 
 ### Delivery phases
 
@@ -55,7 +56,7 @@ Start with the [system context](docs/icm/00-system-context.md), [architecture ma
 - Component-based implementation with maintainable boundaries.
 - Responsive behavior across supported viewport sizes.
 - Visual decisions must be derived from the source design, not guessed.
-- Tooling, routing, styling framework, and deployment target will be selected when implementation requirements are confirmed.
+- DEC-012 selects React 19.3.1, TypeScript 5.9.3, Vite 8.3.5, npm with an exact lockfile, Node.js 22.12 to below 23, oxlint 1.90.0, Vitest 5.0.5/jsdom, and client-side rendering. The accepted one-page baseline uses no client router. Hosting and external integrations remain unselected.
 
 ## Documentation integrity
 
@@ -67,6 +68,8 @@ python3 -B scripts/validate_docs.py
 
 GitHub Actions runs the same standard-library-only validator on pull requests targeting `main` and pushes to `main`. It checks documentation links/anchors, canonical identifier definitions and references, accepted-requirement traceability, process/effect mappings, stale Phase 0 status statements, and unconfirmed contact-value hygiene. This is a documentation-integrity control, not an application build, runtime test, visual-fidelity assessment, accessibility assessment, or security audit. The CI-only Python exception is recorded in DEC-011; it does not select Python for application development.
 
+The dedicated npm vulnerability and SPDX license controls are documented in [the dependency audit policy](docs/security/dependency-audit.md). Run `npm run audit:licenses` to generate and enforce the exact lockfile license inventory locally; CI also runs npm advisory audit and OSV-Scanner vulnerability/license checks.
+
 ## Development
 
-The application scaffold and package scripts have not been established yet. Setup and application verification commands will be documented here after the toolchain is selected and added to the repository.
+The Phase 1 scaffold and package scripts are present. Follow [development setup](docs/development.md) for the selected runtime, clean install, local commands, and CI verification. The current app is a neutral shell, not the designed website.
