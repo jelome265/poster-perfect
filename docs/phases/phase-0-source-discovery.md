@@ -2,7 +2,7 @@
 
 | Field | Value |
 | --- | --- |
-| Status | Conservative business/content/design dispositions owner-approved under DEC-014 (2026-10-31); G0 remains open for contact, availability, original assets, and publication-rights evidence |
+| Status | Complete for the owner-approved profile-only baseline with accepted limitations (DEC-017, 2026-10-31) |
 | Objective | Produce an owner-approved company portfolio and customer-journey specification alongside the verified Canva-to-web design specification |
 | Depends on | Project brief and accessible source material |
 | Primary outputs | Company positioning and customer-journey specification, source inventory, page/content specification, information architecture, component inventory and blueprint, design-token inventory, interaction inventory, approved web interpretation |
@@ -21,8 +21,7 @@ Poster Perfect is a company portfolio for a graphic design business, not an indi
 
 A PNG or equivalent image export is suitable for visual inspection. A PDF is suitable for a multi-page design. Where the source uses separate logos, illustrations, icons, or photographs, provide those assets separately when possible.
 
-**Current status:** the owner's export was inspected on 2026-10-30 (see `design-reference.md`). The owner approved conservative business/content/design dispositions under DEC-014 on 2026-10-31, alongside the earlier Phase 1 foundation authorization under DEC-012/DEC-013. G0 remains open: exact current contact and availability values, original logo/asset files, and publication rights for testimonials and sample artwork remain unresolved. Aileron CC0-1.0 licensing is recorded and responsive reflow is approved as a web adaptation. This approval does not authorize publication of material whose rights are unconfirmed.
-
+**Current status:** the owner-supplied Canva export was inspected on 2026-10-30 (see design-reference.md). The source-derived structure, company voice, customer groups, service categories, conservative content exclusions, text-only wordmark adaptation, internal About action, Aileron type family, approximate palette, and responsive reflow are approved under DEC-014/DEC-017. The project owner approved a profile-only initial website on 2026-10-31. G0 is complete for that bounded scope. Exact contact details, current availability, company social URLs, original logo/image files, and third-party/customer publication rights were not supplied and are explicitly excluded from the initial website; they are not represented as resolved facts. The PDF remains owner-held, identified by its SHA-256 in design-reference.md, and must be re-supplied for detailed visual comparison.
 ## 3. Scope
 
 ### 3.1 Source capture and inventory
@@ -145,7 +144,9 @@ The relevant project documents are the authoritative records; avoid maintaining 
 
 ## 6. Exit criteria
 
-Phase 0 is complete only when:
+Phase 0 is complete for an owner-approved scope when its required source and specification outputs are reconciled, material unknowns are either resolved or explicitly accepted as limitations, and the project owner approves the web interpretation. DEC-017 records that approval for the profile-only baseline; it does not imply that excluded facts or rights have been obtained.
+
+
 
 - Every in-scope artboard/page has been inspected at sufficient resolution.
 - The page, section, and content structure is documented.
