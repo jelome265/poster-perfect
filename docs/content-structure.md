@@ -2,8 +2,7 @@
 
 ## Status
 
-**Source content captured from the export (2026-10-30); profile-only implementation scope approved under DEC-014/DEC-017 (2026-10-31).** The source is one page with seven sections. The seven-section hierarchy remains the source inventory; the initial rendered website includes Hero, About, Value statement, Services, and a text-only brand footer. Statistics and Testimonials remain documented source observations but are excluded from the initial website. Exact contact/availability data, social URLs, original assets, and customer/third-party publication rights were not supplied and are explicitly excluded, not inferred.
-
+**Source content captured from the Canva export (2026-10-30); source-led seven-section website scope confirmed under DEC-014/DEC-018 (2026-10-31).** The Canva export is the company-content and visual reference. Use its approved company facts, company voice, customer groups, service categories, value points and section hierarchy. Preserve sections whose values or assets need a later update by using explicit placeholders rather than deleting the section. Statistics, testimonials, source imagery and contact destinations remain in the source inventory but require substantiation, permission, original files or verified values before public use.
 Ownership: the page set, hierarchy, section order, and navigation structure are canonical in [the information architecture](information-architecture.md) (`PP-ART-018`). This document owns section content and the interaction inventory. Each fact has one home; reference IDs rather than copying values.
 
 ## Content capture rules
@@ -51,11 +50,13 @@ Exact text from the export. Line breaks are shown as written in the source.
 
 ### About (light grey band) (`PP-IA-003`)
 
-- Heading: "Poster Perfect is built to convert visitors into DMs"
-- Body (exact): "Poster Perfect was founded in Blantyre on a simple belief: great businesses deserve great design. Too many brands in Malawi and across Africa are forced to choose between expensive agencies or generic templates that don't fit. We're here to close that gap. As a designer and International Management student specializing in Trade, Tax & International Relations, I built Poster Perfect to give startups, restaurants, salons, and growing businesses access to custom, world-class branding without the corporate price tag. Our mission is to make you look unforgettable: whether it's a logo that defines your legacy, a menu that increases orders, or social media graphics that stop the scroll. Our philosophy is partnership over transaction: we listen first, design second, and don't stop revising until it feels like you. The vision is to help 1,000 African brands compete globally with visuals that command respect. Your vision, our design: let's build something perfect."
+- Heading in source: "Poster Perfect is built to convert visitors into DMs". Approved editorial heading under PP-CNT-09: "Distinctive design for growing businesses".
+- The exact source body is retained above in the original source record. Public copy removes the personal education/student biography and reframes the same company facts in company voice under DEC-014/DEC-018.
+- Approved company copy for implementation:
 
-Note: the source body is written in the first person and includes personal education details. The approved company voice and removal of personal education details are recorded under PP-CNT-02.
+  "Founded in Blantyre, Poster Perfect is built on a simple belief: great businesses deserve great design. We help startups, restaurants, salons and growing businesses in Malawi and across Africa access custom branding and visual design without the cost of a traditional agency. Our services span custom logos and brand kits, social media graphics, restaurant menus, posters, flyers, business cards, brochures, websites, packaging and labels. Our approach is partnership over transaction: we listen first, design second, and refine the work together so it reflects each client's vision. Our vision is to help 1,000 African brands compete globally with visuals that command respect."
 
+  This is a company-voice editorial adaptation of the Canva copy, not a claim that the 1,000-brand vision has already been achieved. It removes the owner's personal education details and retains the source-derived business facts.
 ### Value statement (bright blue band) (`PP-IA-004`)
 
 - Heading: "Count on Poster Perfect to look after your brand needs"
@@ -125,26 +126,30 @@ The project owner authorized the maintainer to resolve the source-derived busine
 | PP-CNT-05 | Statistics | Omit “99% Projects completed”, “1+ Years in Operation”, and “Worldwide”. | Reintroduce only with substantiation and dated owner approval. |
 | PP-CNT-06 | Testimonials | Do not publish the three retained quotations or attributions in the website baseline. | Obtain each customer's permission and substantiate “Orders went up 30%” before publication. |
 | PP-CNT-07 | Service commitments | Omit “unlimited minor revisions”, “fast turnaround”, “24 hours”, and “3 concepts” as public promises. | Reintroduce only after exact service terms are confirmed. |
-| PP-CNT-08 | Portfolio imagery | Exclude all hero, service, logo-cover, and footer sample artwork from the initial site; render approved service names as text only. | Reconsider only after original files, provenance, and item-specific publication rights are supplied and approved. |
+| PP-CNT-08 | Portfolio imagery | Preserve the source hero/service/footer image regions and their layout using named asset placeholders until original files and publication rights are available. | Replace placeholders only with owner-supplied or rights-cleared assets; do not use unrelated stock or fabricated portfolio work. |
 | PP-CNT-09 | Editorial wording | Correct “brochures,websites” to “brochures, websites”. Replace the “DMs” heading with “Distinctive design for growing businesses”. | Review final rendered hierarchy and line breaks. |
 | PP-CNT-10 | Hero action | Make “LEARN MORE” an in-page link to About (`#about`). | Verify keyboard operation and target existence in Phase 2. |
-| PP-CNT-11 | Logo and social links | Render a text-only “Poster Perfect” wordmark; omit the original logo symbol and all social icons/links. | Original vector and exact company profile URLs may be added only after supply and review. |
+| PP-CNT-11 | Logo and social links | Preserve the source wordmark/logo region and social-media group. Use a text wordmark fallback and explicit destination placeholders; no fake or dead links. | Add the original logo symbol and exact social URLs when supplied and approved. |
 | PP-CNT-12 | Typography | Aileron is approved as the source typeface; its CC0-1.0 source license is recorded in PP-REF-014. | Verify the exact font distribution and preserve its license metadata when font files are added. |
 | PP-CNT-13 | Responsive interpretation | Preserve source reading order and hierarchy. Use fluid sizing and content-driven reflow; stack columns/cards on narrow viewports without hiding essential content. | Validate breakpoints, zoom, and overflow during Phases 2–3. |
-| PP-CNT-14 | Contact and enquiry | No external contact action in the initial profile-only site; no mailto, tel, form, backend, CRM, or tracking. | A verified owner-approved destination and hand-off behaviour are required for a business-ready release, or the owner must separately authorize a restricted profile-only release at G4. |
-| PP-CNT-15 | Availability and office details | Omit current availability, office hours, and public headquarters/location details from the initial site. The source's office-hours text is not current-state evidence. | Supply and date a current owner confirmation before any such content is added. |
+| PP-CNT-14 | Contact and enquiry | Preserve headquarters, telephone and email fields in the footer. Render explicit update placeholders where values are withheld; create native mail/tel links only after verified destinations are entered. | Owner supplies/verifies public contact values and confirms the expected hand-off before link activation. |
+| PP-CNT-15 | Availability and office details | Preserve the source office-hours copy (Monday to Friday, 9:00 am to 5:00 pm; weekends by appointment) as source-derived content, with a currentness review before publication. Reserve a placeholder for current availability for new work. | Owner reconfirms current office hours and availability before production publication. |
 | PP-CNT-16 | Visual values | Use the measured palette as approximate source-derived starting tokens, not exact canonical measurements. | Reconcile actual rendered values with the source PDF and validate contrast before G2/G3 acceptance. |
 
 The source copy and visual observations remain a faithful record of the Canva export. The dispositions above govern the web implementation where they intentionally differ from that source.
+## Source-led implementation and future-update placeholders (DEC-018)
 
-## G0 scope and publication boundary (DEC-017)
+The initial page preserves all seven source sections and their order. The Canva-derived company information is the public website baseline; missing supplementary details do not justify removing a section.
 
-The approved initial website is profile-only. Its rendered section set is Hero, About, Value statement, and Services, followed by a text-only Poster Perfect footer. The source Statistics and Testimonials sections remain in this inventory for traceability but are not rendered. The Contact/footer source section is adapted to a wordmark-only footer: no contact values, office hours, location, social links, or external enquiry action are included. The hero action is the only interactive link and targets the About section.
+- **Hero:** source heading "Your vision, Our design"; Poster Perfect text wordmark; `LEARN MORE` → About (`#about`); retain the source magazine-cover image region as a placeholder until the original, permission-cleared asset is supplied.
+- **About:** use the approved company-voice adaptation above, retaining the Blantyre origin, source customer groups, Malawi/Africa context, source-listed capabilities and vision.
+- **Value statement:** retain the source heading, corrected service paragraph and four source value points. Exclude only the unapproved service promises listed in PP-CNT-07.
+- **Services:** retain the three source examples (Brochures, Logos, Magazine covers) and their image-card geometry. Use named image placeholders until original files and usage rights are available. The full capability list remains in the company copy.
+- **Statistics:** retain the three-column source layout as placeholder tiles. Do not display the unsubstantiated values "99%", "1+" or "Worldwide" as live claims until supported and approved; use an explicit "Statistic to be confirmed" state in the interim.
+- **Testimonials:** retain the heading and three-card layout as placeholder cards. Do not publish source quotations or customer attributions until each customer's permission and any material-claim substantiation are recorded. Use "Client testimonial to be added" as the interim state.
+- **Contact and footer:** retain the source headquarters, telephone, email, office-hours and social-media regions. Use update placeholders for withheld headquarters/contact values and social URLs; never invent a value or create a dead link. The source office-hours text is "Monday to Friday, 9:00 am to 5:00 pm" and "Weekends by appointment"; confirm that it is still current before production publication. Keep the logo as text until the original symbol is supplied.
 
-No source sample images, client logos, original logo symbol, testimonials, attributions, quantified results, or other third-party/customer material may appear in the initial website. No missing rights or consent are assumed. Service categories and customer groups approved under DEC-014 may be shown as text. This disposition is an owner-approved exclusion, not a rights determination.
-
-The profile-only website does not provide an enquiry path and is not a completed customer-acquisition solution. A verified contact destination remains a G4 business-readiness dependency unless the owner separately authorizes a restricted profile-only release. The source PDF remains owner-held; its SHA-256 and inspection history are recorded in design-reference.md.
-
+The placeholders preserve the Canva composition and reserve a clear place for later owner updates. They must be visibly distinguishable from verified facts and must not be published as fabricated business data. The source PDF remains owner-held; its identity and SHA-256 are recorded in `design-reference.md`.
 ## Content review
 
 Before implementation is considered complete, verify that all source content and owner-approved company content are represented, the reading order is sensible, every customer-facing action has an agreed outcome and destination, portfolio publication permissions are recorded, availability is current, and no company claim or contact destination was invented during translation.
