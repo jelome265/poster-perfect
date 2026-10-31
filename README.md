@@ -4,8 +4,7 @@ A responsive company portfolio website for a graphic design business, built with
 
 ## Project status
 
-**Phase 0/G0 is complete for the owner-approved profile-only baseline (DEC-017, 2026-10-31), and Phase 1 is complete (DEC-016).** PR #16 merged the Phase 1 close-out to `main` at `07860b383555d98d6528ba834653cbe83fe172df`, containing close-out commit `5cff148f088a75f5aa8578f04db3727f6ac3765b`. Phase 2 may begin after the G0 decision/inventory update is merged. The initial site excludes unverified contact/availability values, social links, statistics, testimonials, and source artwork/logo files whose provenance or publication rights are unavailable. It is profile-only and has no external enquiry path; a verified path or separate owner-authorized restricted-release decision is required at G4.
-
+**Phase 0/G0 is complete for the owner-approved Canva-led seven-section baseline (DEC-018, 2026-10-31), and Phase 1 is complete (DEC-016).** PR #17 merged the Phase 1 close-out follow-up, but its initial profile-only interpretation is superseded by DEC-018. The follow-up documentation correction is tracked in PR #18. The website must use the company information and all seven sections from the Canva export; values, permissions or assets that need later updates retain explicit placeholders rather than being removed or fabricated.
 ## Application development
 
 See [development setup](docs/development.md) for prerequisites and commands.
