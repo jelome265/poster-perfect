@@ -74,7 +74,7 @@ owner-authorized deployment
 
 **Verification:** PP-VER-001, PP-VER-002, PP-VER-003, PP-VER-004, PP-VER-011, PP-VER-018.
 
-**Implementation status:** Foundation build pipeline and production-preview HTTP/asset smoke are implemented. Dedicated npm advisory, OSV vulnerability, SPDX inventory, and deps.dev license checks passed on PR #15 code candidate `98c585c9e7ba79a78c24d7ed621148c32066444c` in Actions run `41171547595`.
+**Implementation status:** Foundation build pipeline and production-preview HTTP/asset smoke are implemented. Dedicated npm advisory, OSV vulnerability, SPDX inventory, and deps.dev license checks passed on PR #15 merge SHA `9e81adb7a178db9c48106292b3351d0bafe0a9e8` in Actions run `41172108087`.
 
 ## 4. PP-PRC-002 — Initial page load and render
 

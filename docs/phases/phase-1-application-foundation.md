@@ -2,7 +2,7 @@
 
 | Field | Value |
 | --- | --- |
-| Status | In progress: foundation merged to `main` at `ad45f296b2294e65048cf27d1d5473f54e14e52a`; G1 verification and gap review passed on PR #15; owner review and merge disposition are pending. See [Phase 1 verification and gap review](phase-1-verification-gap-review-2026-10-31.md). |
+| Status | Complete: G1 accepted by the project owner under DEC-016 on 2026-10-31. Foundation and verification follow-up merged to `main` at `9e81adb7a178db9c48106292b3351d0bafe0a9e8` through PR #15. See [Phase 1 verification and gap review](phase-1-verification-gap-review-2026-10-31.md). |
 | Objective | Establish a reproducible, minimal React and TypeScript application |
 | Depends on | Phase 0 specification and approved scope |
 | Primary outputs | Application scaffold, dependency lockfile, strict TypeScript configuration, quality scripts, setup documentation |
@@ -130,4 +130,21 @@ Phase 1 is complete only when:
 
 ## 8. Handoff to Phase 2
 
-Phase 2 receives a reproducible application foundation, the approved page/content specification, source assets, and the measured design-token inventory. If a source dependency changes, update Phase 0 artifacts before proceeding.
+Phase 2 receives the reproducible application foundation and Phase 0 specification outputs. **Phase 2 remains blocked while G0 is open**: exact contact/availability facts, original asset files and rights, social URLs, and publication permissions must be supplied or explicitly excluded/accepted by the owner. If a source dependency changes, update Phase 0 artifacts before proceeding.
+
+## 9. Final G1 disposition
+
+**Disposition:** Complete, owner-authorized on 2026-10-31 under [DEC-016](../decision-log.md).
+
+**Merged baseline:** PR #15 merged to `main` at [`9e81adb7a178db9c48106292b3351d0bafe0a9e8`](https://github.com/jelome265/poster-perfect/commit/9e81adb7a178db9c48106292b3351d0bafe0a9e8).
+
+**Verification on the exact merge commit:**
+- [Application quality — run 41172107909](https://github.com/jelome265/poster-perfect/actions/runs/41172107909): PASS — `npm ci`, lint, strict TypeScript, 1/1 shell test, production build, and production-preview HTTP/asset smoke.
+- [Documentation integrity — run 41172107907](https://github.com/jelome265/poster-perfect/actions/runs/41172107907): PASS on the merge revision. This close-out documentation change must independently pass PP-VER-013 on its pull request.
+- [Dependency security and license audit — run 41172108087](https://github.com/jelome265/poster-perfect/actions/runs/41172108087): PASS — npm advisory audit, OSV vulnerability audit, SPDX inventory/license policy, and deps.dev metadata check.
+
+PR #15 candidate `ecfc625bcc206771bfc1a6b05a20888a51d862ce` passed all six configured required contexts. The merge commit reports five GitHub Actions check runs; the separate GitHub Advanced Security `osv-scanner` context passed on the PR candidate. The active `Protect main` ruleset (ID `26256454`) targets `main`, enforces strict required checks, and has no bypass actors. It requires six contexts: `Strict lint, type check, and build`, `PP-VER-013 / documentation integrity`, `npm advisory audit`, `OSV vulnerability audit / osv-scan`, `SPDX inventory and license policy` (GitHub Actions app ID `15368`), and `osv-scanner` (GitHub Advanced Security app ID `57789`).
+
+**Accepted limitations:** the shell test suite contains one heading assertion; the production-preview smoke requests HTML and same-origin JS/CSS assets but does not execute the client bundle in a real browser. A historical headless Chromium smoke was recorded against the development server at `ef613375`. No production deployment was performed. A deliberately failing PR check was not used to test merge blocking, and the ruleset requires zero approving reviews. These limits do not invalidate the Phase 1 exit criteria; they remain explicit verification/governance boundaries.
+
+**Phase boundary:** G1 is complete. G0 remains open, so Phase 2 is not authorized to start. This disposition does not authorize production deployment or publication of unverified contact details, assets, testimonials, or client work.
