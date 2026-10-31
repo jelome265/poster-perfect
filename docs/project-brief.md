@@ -60,17 +60,18 @@ Do not infer company registration status, size, team structure, individual biogr
 
 ## Not yet specified
 
-The following implementation and content details must be confirmed from the source design or an explicit owner decision:
+The Canva export was inspected on 2026-10-30. The following remain unapproved or incomplete; a source-derived draft is not an accepted web specification:
 
-- Whether the source represents one page, multiple pages, or a reusable page template.
-- The exact page, section, and navigation structure.
-- Exact copy, calls to action, links, destinations, and interactive behavior.
-- Colors, typography, spacing, dimensions, assets, and responsive adaptations.
-- Portfolio categories and the specific work samples to publish.
-- The final service list and target customer segments.
-- Contact channel and whether enquiry handling is a simple external hand-off or requires a separately approved integration.
-- Routing, rendering model, styling approach, bundler, package manager, hosting, and browser support.
-- Whether any backend, API, form submission, analytics, or content-management capability is required.
+- A one-page, seven-section hierarchy is recorded in the information architecture; the route is unassigned and the owner has not accepted the IA at G0.
+- No source navigation or anchor targets were observed. Any added navigation or enquiry section is a proposed web adaptation requiring owner approval.
+- Source copy is transcribed, but edits, CTA destinations, link behavior, social profile URLs, and service-card/logo behavior remain open.
+- Six dominant colors are approximate estimates from a 72 dpi render; Aileron is identified, but full typography measurements and font licensing remain open.
+- Spacing, dimensions, shape, elevation, original asset files, logo vector, image crops, and publication permissions remain incomplete.
+- Responsive variants were not supplied; responsive reflow rules and adaptations remain to be approved.
+- Portfolio publication choices, the final service list, customer segments, availability wording, and proof/claims require owner confirmation.
+- Contact details appear in the source footer but have not been confirmed as current public enquiry destinations.
+- Routing, rendering model, styling approach, bundler, package manager, hosting, and browser support remain open for Phase 1.
+- No backend, API, form submission, analytics, or content-management requirement has been approved.
 
 ## Scope boundary
 
@@ -82,7 +83,7 @@ Backend services, authentication, persistence, payment processing, CMS integrati
 
 The project is ready for implementation when:
 
-- The reference design can be inspected at sufficient resolution.
+- The supplied 2026-10-30 PDF export has been inspected; any additional full-resolution originals needed for asset extraction and final measurement are supplied or accepted as limitations.
 - The company-level purpose and positioning are reflected in the approved project brief.
 - Target customer segments, service information, publishable portfolio work, availability wording, and enquiry path are confirmed or explicitly excluded/recorded as accepted limitations.
 - The page and content structure are documented in the information architecture and content inventory.
