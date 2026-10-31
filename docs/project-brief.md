@@ -69,7 +69,7 @@ Backend services, authentication, persistence, payment processing, CMS integrati
 
 ## Acceptance criteria
 
-The profile-only baseline is ready for Phase 2 when:
+The source-led seven-section baseline is ready for Phase 2 when:
 
 - The reference design can be inspected at sufficient resolution.
 - The company-level purpose and positioning are reflected in the approved project brief.
