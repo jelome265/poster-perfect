@@ -312,4 +312,4 @@ The PR #15 head `ecfc625bcc206771bfc1a6b05a20888a51d862ce` had six successful re
 
 The production-preview smoke verifies HTTP delivery of the preview document and referenced same-origin JavaScript/CSS assets. It does not execute the client bundle in a real browser. The current neutral-shell suite contains one heading assertion; behavior/component tests are required as features are introduced. No deliberately failing PR was used to demonstrate required-check merge blocking. The ruleset requires zero approving reviews. No production deployment was performed.
 
-**G1 is complete. G0 remains open and blocks Phase 2.**
+**G1 is complete under DEC-016. G0 is complete for the Canva-led seven-section specification under DEC-018; Phase 2 may begin after the DEC-018 documentation correction is merged.**
