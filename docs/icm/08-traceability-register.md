@@ -30,6 +30,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-REQ-008` Owner retains merge/release authority | PP-MAP-001, 017, 018 | PP-CON-009 | PP-PRC-001, 006 | PP-EFF-010 only under owner authorization | PP-ART-008, 009, 010, 016 | PP-REF-003, 005 | PP-VER-011–013 | 0–4 |
 | `PP-REQ-009` Phase 0 IA and component blueprint before foundational decisions | PP-MAP-010–013, 018 | PP-CON-002, 003, 010 | PP-PRC-007 | None (documentation output; no runtime effect) | PP-ART-006, 007, 009, 018, 019 | PP-REF-001, 003, 010, 011 | PP-VER-005, 013, 016 | 0, 1 |
 | `PP-REQ-010` Company portfolio and prospective-customer acquisition purpose | PP-MAP-001, 002, 008, 011–013, 015 | PP-CON-002, 005, 006, 010, 011 | PP-PRC-002, 003, 007 | PP-EFF-001, 003, 004; PP-EFF-007 only with separate approval | PP-ART-001, 002, 006, 007, 009, 013, 018, 019 | PP-REF-001, 002, 003, 005, 010, 011 | PP-VER-005, 009, 010, 013, 016, 017 | 0, 2, 3, 4 |
+| `PP-REQ-011` npm dependency vulnerability and SPDX license assurance | PP-MAP-005, PP-MAP-017 | PP-CON-012 | PP-PRC-001 | PP-EFF-008, PP-EFF-011 | PP-ART-003, PP-ART-004, PP-ART-015, PP-ART-021 | PP-REF-012, PP-REF-013 | PP-VER-018 | 1, 4 |
 
 ## 3. Map registry
 
@@ -61,18 +62,19 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-CON-009` | Change/release | Accepted | Not applicable (governance contract) | Not collected per individual change |
 | `PP-CON-010` | Information architecture and navigation | Accepted 2026-10-31 (DEC-013); web adaptations and content decisions still open | Not started | Not collected |
 | `PP-CON-011` | Company positioning, portfolio and customer engagement | Partially specified; company purpose accepted, details pending Phase 0 | Not started | Not collected |
+| `PP-CON-012` | npm dependency security and license compliance | Accepted under DEC-015 | Implemented on PR #15 candidate; exact-head CI evidence pending | PP-ART-021; PP-VER-018 |
 
 ## 5. Process registry
 
 | ID | Process | Specification | Implementation |
 |---|---|---|---|
-| `PP-PRC-001` | Build and delivery | Implemented at foundation level | CI pipeline; production-preview HTTP/asset smoke passed on PR #15 head `befdefc` (Actions run `41170052269`) |
+| `PP-PRC-001` | Build and delivery | Implemented at foundation level | CI pipeline includes production-preview smoke and dedicated npm/OSV/SPDX audit; exact-head security-workflow evidence pending |
 | `PP-PRC-002` | Initial page load/render | Neutral `App` shell renders; complete page composition held by G0/G2 | Dev-server browser smoke recorded at `ef613375`; production-preview HTTP/asset smoke passed on PR #15 head `befdefc` (Actions run `41170052269`) |
 | `PP-PRC-003` | Link/navigation | Conditional on source | Not started |
 | `PP-PRC-004` | Local interface interaction | Conditional on source | Not started |
 | `PP-PRC-005` | Remote form/API | Excluded baseline; future extension | Not started |
 | `PP-PRC-006` | Verification/review/release | Target governance process | Applies per change |
-| `PP-PRC-007` | Source inspection/specification | Source inspected 2026-10-30; owner approval outstanding (G0) | Phase 0 human workflow |
+| `PP-PRC-007` | Source inspection/specification | Source inspected 2026-10-30; owner dispositions approved under DEC-014; G0 evidence dependencies remain | Phase 0 human workflow |
 
 ## 6. Effect registry
 
@@ -88,6 +90,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-EFF-008` | Build-time dependency retrieval | E3 | Expected only during approved build |
 | `PP-EFF-009` | Build artifact generation | E4 | Expected only during approved build |
 | `PP-EFF-010` | Repository merge, deployment or production promotion | E5 | Excluded until explicitly authorized |
+| `PP-EFF-011` | CI vulnerability advisory and license metadata retrieval | E3 | Approved only for dependency audit; no application runtime use |
 
 ## 7. Verification registry
 
@@ -110,6 +113,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-VER-015` | Dependency/side-effect surface review | Passed by manual foundation review on `ad45f296`; no SCA/license scan claimed | G1, G2, G4 |
 | `PP-VER-016` | IA and component-blueprint reconciliation | Executed by author 2026-10-30; structural baseline accepted by owner on 2026-10-31 (DEC-013); G0 content remains open | G0, G2 |
 | `PP-VER-017` | Company positioning, approved portfolio and customer journey reconciliation | Partially specified; details pending Phase 0 | G0, G2, G4 |
+| `PP-VER-018` | npm dependency vulnerability and SPDX license audit | Implemented on PR #15 candidate; exact-head CI evidence pending | G1, G4 |
 
 ## 8. Open questions and blockers
 
@@ -124,6 +128,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-RSK-007` | Foundational tooling (router, rendering model, source layout) could be chosen before the page set and component boundaries are known | Maintainer / project owner | Phase 1 entry | Mitigated by `PP-REQ-009` and DEC-007: foundational decisions wait for the accepted information architecture |
 | `PP-RSK-008` | Specific positioning, customer segments, service offering, publishable portfolio items/permissions, availability wording, contact details and enquiry destination remain unconfirmed | Project owner | Phase 0 | Blocks company-content and customer-journey acceptance. Source contact values are withheld from the current public content record until confirmed; do not invent or restore them without approval |
 | `PP-RSK-009` | `main` ruleset has no required status checks and requires zero approving reviews | Project owner / repository administrator | Continuous governance | Active pull-request rule exists, but CI remains advisory until the application-quality and documentation-integrity checks are required; no ruleset change made in this review |
+| `PP-RSK-010` | License metadata can be missing/inaccurate or a development-only license can enter runtime scope | Maintainer / project owner | Continuous; before release | Missing/unknown identifiers fail closed; MPL-2.0 is machine-restricted to development scope; actual license text and non-npm asset rights still need release review |
 
 These are risk/blocker records, not claims that the listed conditions have caused implementation defects.
 

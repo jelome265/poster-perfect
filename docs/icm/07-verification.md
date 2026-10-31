@@ -44,6 +44,7 @@ Every control must specify:
 | `PP-VER-015` | Dependency and side-effect surface review | Manual/hybrid | PP-REQ-007, PP-CON-007, PP-EFF-005–010 | Surface review does not replace software-composition analysis, license review, or vulnerability scanning | Passed by manual review on `ad45f296`; locked dependency/effect inventory and limitations recorded in PP-ART-020. No dedicated SCA/license audit is claimed; re-run when dependencies/effects change |
 | `PP-VER-016` | Information architecture and component-blueprint reconciliation against inspected source | Manual | PP-REQ-001, PP-REQ-003, PP-REQ-006, PP-REQ-009, PP-CON-002, PP-CON-003, PP-CON-010 | Verifies record completeness and cross-reference consistency against the source; does not prove the implemented DOM, visual fidelity, or accessibility (`PP-VER-005`, `PP-VER-006`, `PP-VER-008`, `PP-VER-014`) | Executed by author 2026-10-30 against the export; structural baseline accepted by owner on 2026-10-31 under DEC-013. G0 content/adaptation questions remain open |
 | `PP-VER-017` | Company positioning, approved portfolio content and prospective-customer journey reconciliation | Manual | PP-REQ-010, PP-CON-011 | Verifies owner-approved company facts, publication permissions, availability and enquiry-path specification; does not measure lead generation, conversion rate, sales, or customer satisfaction | Partially specified; detailed company content and enquiry route pending Phase 0 |
+| `PP-VER-018` | npm dependency vulnerability and SPDX license audit | Automated | PP-REQ-011, PP-CON-012, PP-EFF-011 | Scans the locked npm graph against known advisory and license metadata; cannot establish absence of unknown vulnerabilities, legal compatibility for every distribution, or rights to non-npm assets | Implemented in `.github/workflows/dependency-audit.yml`; exact-head CI result pending. The Node inventory fails closed on missing/unapproved SPDX metadata and enforces MPL-2.0 as development-only. |
 
 ## 4. Automated controls
 
@@ -73,6 +74,18 @@ Build from the committed lockfile and intended environment. Verify output exists
 Test meaningful behavior and component contracts rather than asserting implementation details. Add browser automation for critical flows where it creates real value. Do not introduce tests for hypothetical interactions that have not been approved.
 
 Exact commands are recorded in `docs/development.md` and the `package.json` scripts. Their revision-specific results are tracked in PP-ART-020 and the CI run history.
+
+### 4.6 Dependency vulnerability and license audit (PP-VER-018)
+
+Run `npm run audit:licenses` from the repository root. This Node.js built-in-only script reads the committed lockfile, inventories every package entry (including transitive, optional, runtime, and development entries), validates exact SPDX identifiers against DEC-015, and writes JSON/Markdown artifacts under `artifacts/dependency-audit/`.
+
+The dedicated workflow `.github/workflows/dependency-audit.yml` additionally:
+- runs `npm audit --audit-level=low` against the complete locked graph;
+- runs the pinned OSV-Scanner v2.7.0 reusable workflow against `package-lock.json`, failing on any known vulnerability;
+- runs the OSV-Scanner/deps.dev license metadata check using the approved SPDX identifiers;
+- uploads the complete lockfile inventory as a 30-day workflow artifact.
+
+The workflow runs on pull requests to `main`, pushes to `main`, weekly, and on manual dispatch. Scanner failure, missing scan output, missing license metadata, an unapproved identifier, or MPL-2.0 outside development scope MUST fail the audit. CI MUST NOT apply automatic package upgrades or unreviewed ignore rules.
 
 ## 5. Visual verification protocol
 
