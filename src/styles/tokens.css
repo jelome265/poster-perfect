@@ -1,0 +1,13 @@
+/* Design tokens. Values are approximate starting references measured from the
+   source render (docs/design-system.md; DEC-014 PP-CNT-16). Only tokens used by
+   the page are defined; see docs/design-system.md for the mapping. */
+:root {
+  --color-brand-primary: #002f69; /* source dark navy */
+  --color-accent: #0087ff; /* source bright blue */
+  --color-surface: #eeeef0; /* source light grey */
+  --color-text-inverse: #fefefd; /* source near-white on dark bands */
+
+  --font-family-base: "Aileron", "Helvetica Neue", Arial, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}

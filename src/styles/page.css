@@ -1,0 +1,386 @@
+/* Page composition at the primary reference viewport of 1024 CSS px (the source
+   artboard width is 1024.5 pt). Fluid sizing with clamp(); columns stack below
+   760 px. Sizes are approximate and recorded in the Phase 2 visual review. */
+
+.wordmark {
+  font-size: clamp(20px, 2.2vw, 26px);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: 0.01em;
+}
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 47.6%) minmax(0, 1fr);
+  align-items: center;
+  gap: 5%;
+  min-height: 576px;
+  padding: 54px 5.7%;
+  background: var(--color-brand-primary);
+  color: var(--color-text-inverse);
+}
+
+.hero .placeholder--image {
+  aspect-ratio: 487 / 465;
+  width: 100%;
+  border-color: var(--color-text-inverse);
+  border-left: 21px solid var(--color-accent);
+}
+
+.hero .wordmark {
+  margin-bottom: clamp(40px, 9vw, 96px);
+}
+
+.hero__heading {
+  font-size: clamp(40px, 5.9vw, 62px);
+  line-height: 1.02;
+  font-weight: var(--font-weight-bold);
+}
+
+.hero__heading-line {
+  display: block;
+}
+
+.hero__content .button {
+  margin-top: clamp(40px, 6vw, 60px);
+}
+
+/* About */
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 50%) minmax(0, 1fr);
+  column-gap: 4%;
+  padding: 150px 12.8% 64px;
+  background: var(--color-surface);
+  color: var(--color-brand-primary);
+}
+
+.about__rule {
+  grid-column: 1;
+  grid-row: 1;
+  width: 180px;
+  height: 4px;
+  background: var(--color-brand-primary);
+  margin-bottom: 28px;
+}
+
+.about__heading {
+  grid-column: 1;
+  grid-row: 2;
+  font-size: clamp(28px, 3.7vw, 38px);
+  line-height: 1.05;
+  font-weight: var(--font-weight-bold);
+}
+
+.about__body {
+  grid-column: 2;
+  grid-row: 2;
+  margin-top: 64px;
+  max-width: 400px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+/* Value statement */
+.value {
+  padding: 92px 12% 84px;
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+  text-align: center;
+}
+
+.value__heading {
+  max-width: 690px;
+  margin: 0 auto;
+  font-size: clamp(30px, 3.9vw, 40px);
+  line-height: 1.05;
+  font-weight: var(--font-weight-bold);
+}
+
+.value__body {
+  max-width: 470px;
+  margin: 28px auto 0;
+  font-size: 15px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.45;
+}
+
+.value__points {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 172px));
+  justify-content: center;
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.value-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 153px;
+  padding: 26px 14px;
+  background: var(--color-surface);
+  color: var(--color-brand-primary);
+}
+
+.value-badge__icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--color-brand-primary);
+  color: var(--color-text-inverse);
+}
+
+.value-badge__icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+.value-badge__label {
+  font-size: 17px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+/* Services */
+.services {
+  display: grid;
+  grid-template-columns: minmax(0, 28%) minmax(0, 1fr);
+  column-gap: 2%;
+  align-items: start;
+  padding: 110px 5.7% 110px;
+  background: var(--color-brand-primary);
+  color: var(--color-text-inverse);
+}
+
+.services__header {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.services__heading {
+  font-size: clamp(30px, 3.7vw, 40px);
+  font-weight: var(--font-weight-bold);
+}
+
+.services__intro {
+  margin-top: 16px;
+  font-size: 13px;
+}
+
+.services__grid {
+  grid-column: 2;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 183px);
+  justify-content: start;
+  gap: 33px;
+  margin-top: 0;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.service-card__image {
+  aspect-ratio: 183 / 265;
+  width: 183px;
+}
+
+.service-card__label {
+  font-size: clamp(20px, 2.3vw, 24px);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+}
+
+/* Statistics (placeholder tiles) */
+.statistics__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  min-height: 460px;
+}
+
+.statistics__tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  text-align: center;
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: var(--font-weight-bold);
+}
+
+.statistics__tile--1 {
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+
+.statistics__tile--2 {
+  background: var(--color-surface);
+  color: var(--color-brand-primary);
+}
+
+.statistics__tile--3 {
+  background: var(--color-brand-primary);
+  color: var(--color-accent);
+}
+
+/* Testimonials (placeholder cards) */
+.testimonials {
+  padding: 96px 10.5% 130px;
+  background: var(--color-surface);
+  color: var(--color-brand-primary);
+}
+
+.testimonials__heading {
+  font-size: clamp(30px, 3.7vw, 40px);
+  font-weight: var(--font-weight-bold);
+}
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  justify-content: start;
+  gap: 100px;
+  margin-top: 60px;
+  min-height: 230px;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 200px;
+}
+
+.testimonial-card__rule {
+  display: block;
+  width: 56px;
+  height: 4px;
+  background: var(--color-brand-primary);
+}
+
+.testimonial-card__quote {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.testimonial-card__attribution {
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+}
+
+/* Contact and footer */
+.contact {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 6%;
+  padding: 56px 12% 36px;
+  background: var(--color-brand-primary);
+  color: var(--color-text-inverse);
+}
+
+.contact__visual {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 373px;
+}
+
+.contact__image {
+  aspect-ratio: 373 / 338;
+  width: 100%;
+  border-color: var(--color-text-inverse);
+}
+
+.contact__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-field__label {
+  font-size: 20px;
+  font-weight: var(--font-weight-bold);
+}
+
+.contact-field__value {
+  font-size: 14px;
+}
+
+.contact__subheading {
+  margin-top: 36px;
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+}
+
+.contact__hours {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.contact__social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.contact__social-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+}
+
+.contact__social-name {
+  font-weight: var(--font-weight-bold);
+}
+
+/* Narrow viewports: stack columns without hiding essential content */
+@media (max-width: 760px) {
+  .hero,
+  .about,
+  .contact {
+    grid-template-columns: minmax(0, 1fr);
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .about__rule,
+  .about__heading,
+  .about__body {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .value__points {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .services__grid,
+  .statistics__grid,
+  .testimonials__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .testimonial-card {
+    max-width: none;
+  }
+}

@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-brand-primary);
+  background: var(--color-surface);
+  line-height: 1.4;
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+dl,
+dd,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 14px 32px;
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+  font-weight: var(--font-weight-bold);
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--color-text-inverse);
+  outline-offset: 3px;
+}
+
+.placeholder {
+  display: block;
+}
+
+.placeholder--image {
+  background: var(--color-surface);
+  border: 2px dashed var(--color-brand-primary);
+}
+
+.placeholder--text {
+  display: inline;
+  font-style: italic;
+  opacity: 0.85;
+}

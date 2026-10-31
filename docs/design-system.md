@@ -2,7 +2,7 @@
 
 ## Status
 
-**Source-derived design baseline approved under DEC-014/DEC-019 (2026-10-31).** Colors and dimensions remain approximate values from a 72 dpi render, approved as starting references rather than exact measurements. Aileron Regular/Bold is approved and its CC0-1.0 source license is recorded in PP-REF-014. Preserve all seven source sections and image/card/logo regions; use named placeholders for original assets, statistics, testimonials, contact values and social URLs that require later updates or permission. Responsive reflow is approved; detailed implementation and validation remain Phase 2–3 work.
+**Source-derived design baseline approved under DEC-014/DEC-019 and styling implementation ratified under DEC-020 (2026-10-31).** Colors and dimensions remain approximate values from a 72 dpi render, not exact brand specifications. Four colour values and two font weights are implemented as CSS custom-property tokens. Aileron Regular/Bold is self-hosted through `@fontsource/aileron` 5.3.0; the lockfile records CC0-1.0. Preserve all seven source sections and image/card/logo regions; use named placeholders for original assets, statistics, testimonials, contact values and social URLs that require later updates or permission. Responsive reflow is approved; full viewport and accessibility verification remain Phase 3 work.
 
 ## Token principles
 
@@ -16,10 +16,10 @@
 
 | Category | Values | Status |
 | --- | --- | --- |
-| Color | Six approximate values (see the color table below) | Owner-approved starting references under DEC-014/DEC-019; not exact brand specifications |
-| Typography | Aileron Bold for headings and labels; Aileron Regular for body text. Sizes, line heights, and letter spacing are not measured | Family and source license approved; exact distribution/license metadata and rendered metrics must be verified during Phase 2 |
+| Color | Six approximate design values (see the table below); four are active CSS tokens under DEC-020 | Owner-approved starting references; active token mapping is explicit, other observed values remain unassigned |
+| Typography | Aileron Bold for headings and labels; Aileron Regular for body text. Sizes, line heights, and letter spacing remain approximate | Aileron 400/700 is integrated and self-hosted via `@fontsource/aileron` 5.3.0; lockfile SPDX metadata records CC0-1.0; the primary-viewport preview reports the Bold face loaded |
 | Spacing | Section gaps, component gaps, padding, and margins not yet measured | Pending measurement |
-| Layout | One page, 1024.5 × 4032 pt. Content width, columns, and alignment not yet measured | Partially measured |
+| Layout | One page, 1024.5 × 4032 pt; 72 dpi raster approximately 1025 × 4032 px. Primary web comparison uses 1024 CSS px | Source page dimensions are PDF points; the CSS viewport was selected to approximate raster width, not by equating pt and CSS px |
 | Shape | Badge and button corner radii; dividers and rules (a short rule sits above some headings) | Pending measurement |
 | Elevation | Not assessed | Pending |
 | Imagery | Hero magazine-cover image, three service images, and footer sample image are observed in the source | Preserve each image region with a named placeholder until original or rights-cleared assets are supplied |
@@ -30,19 +30,19 @@
 
 Values were measured from a quantized 72 dpi render of the export. Use locations describe what the render shows and are for review only; they are not approved token roles.
 
-| Approximate value | Share of page (render) | Where it appears in the render | Proposed token role (pending approval) |
+| Approximate value | Share of page (render) | Where it appears in the render | Implemented token role or disposition |
 | --- | --- | --- | --- |
-| `#002F69` | about 33% | Hero, services band, contact and footer band | `color-brand-primary` (dark navy) |
-| `#0087FF` | about 16% | Value band background, left statistic, button | `color-accent` (bright blue) |
-| `#EEEEF0` | about 35% | About band, middle statistic, testimonials | `color-surface` (light grey) |
-| `#FEFEFD` | about 3% | Badge cards and text on dark bands | `color-surface-raised` or `color-text-inverse`, to confirm |
-| `#595459` | about 3% | Body text on light bands | `color-text-muted`, to confirm |
-| `#B1BEC9` | about 2% | Location not confirmed | Not assigned |
+| `#002F69` | about 33% | Hero, services band, contact and footer band | `--color-brand-primary` (dark navy; DEC-020) |
+| `#0087FF` | about 16% | Value band background, left statistic, button | `--color-accent` (bright blue; DEC-020) |
+| `#EEEEF0` | about 35% | About band, middle statistic, testimonials | `--color-surface` (light grey; DEC-020) |
+| `#FEFEFD` | about 3% | Badge cards and text on dark bands | `--color-text-inverse` (DEC-020) |
+| `#595459` | about 3% | Body text on light bands | Unassigned; no token until role is verified |
+| `#B1BEC9` | about 2% | Location not confirmed | Unassigned; no token until location and role are verified |
 | `#141010` | about 7% | Mostly inside sample images, not as a brand color | Not a token unless the owner confirms it as a brand color |
 
 ## Token naming
 
-Use semantic names based on purpose rather than values or appearance alone. For example, a text color token should describe its role, not its hexadecimal value. The final naming convention should be consistent with the selected styling approach.
+Use semantic names based on purpose rather than values or appearance alone. The active names and roles are recorded in DEC-020 and `src/styles/tokens.css`; new tokens require an evidenced role and a corresponding inventory update.
 
 Do not create tokens for one-off values unless doing so improves consistency, clarity, or future adjustment.
 
@@ -63,7 +63,7 @@ No responsive variant is in the source. DEC-014/DEC-019 approve content-driven r
 ## Review checklist
 
 - [x] Colors are recorded as approximate source-derived values and approved as starting tokens; validate contrast in the rendered site.
-- [ ] Font files and fallback behavior are not integrated. Aileron CC0-1.0 source licensing is recorded; verify the exact package/files and preserve its license metadata when added.
+- [x] Aileron Regular (400) and Bold (700) are integrated and self-hosted through `@fontsource/aileron` 5.3.0; the exact version and CC0-1.0 license are recorded in `package-lock.json` and passed the dependency/license CI audit. The fallback stack is declared in `src/styles/tokens.css`; behavior when the font files are unavailable is not separately fault-injected.
 - [ ] Typography hierarchy is recorded.
 - [ ] Spacing and alignment measurements are recorded.
 - [ ] Image crop and focal-point behavior are documented.

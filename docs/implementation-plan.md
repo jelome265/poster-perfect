@@ -10,7 +10,7 @@ The project follows gated phase progression. A phase is not complete because wor
 | --- | --- | --- | --- |
 | 0 | [Source discovery and specification](phases/phase-0-source-discovery.md) | Complete — Canva-led source and seven-section scope approved under DEC-019; explicit update placeholders recorded | Complete company information and verified Canva-to-web specification |
 | 1 | [Application foundation](phases/phase-1-application-foundation.md) | Complete — owner-authorized G1 close-out under DEC-016; merge SHA `9e81adb7a178db9c48106292b3351d0bafe0a9e8` | Establish a minimal, reproducible React + TypeScript application |
-| 2 | [Design system and page composition](phases/phase-2-design-system-and-composition.md) | Not started | Translate the approved design into page structure and components |
+| 2 | [Design system and page composition](phases/phase-2-design-system-and-composition.md) | In progress on PR #20; G2 PASS and DEC-020 accepted on 2026-10-31; phase close-out pending merge | Translate the approved design into page structure and components |
 | 3 | [Responsive and accessible implementation](phases/phase-3-responsive-accessibility.md) | Not started | Verify responsive behavior and accessibility requirements |
 | 4 | [Verification and release readiness](phases/phase-4-verification-release.md) | Not started | Establish final quality evidence and owner-authorized release readiness |
 
@@ -50,7 +50,7 @@ See the [ICM phase routing](icm/09-phase-routing.md) for the mapping between pha
 
 - Phase 0/G0 is complete for the owner-approved Canva-led seven-section baseline under DEC-019. All source-derived company content is used; unavailable contact/social/availability values and rights-dependent assets, statistics and testimonials retain explicit placeholders rather than being removed or fabricated.
 - Phase 1 is complete. The neutral React shell, npm lockfile, strict TypeScript configuration, lint/test/build scripts, and CI controls are merged through PR #15 at `9e81adb7a178db9c48106292b3351d0bafe0a9e8`. Exact merge-SHA evidence: application quality run `41172107909`, documentation integrity run `41172107907`, and dependency/security/license run `41172108087`. Owner disposition is recorded in DEC-016.
-- Phases 2–4 have not started. No designed page composition, final brand styling, responsive implementation, or production deployment has been introduced.
+- Phase 2 is in progress on PR #20: the seven-section, placeholder-led composition and CSS design tokens are implemented; G2 review passed on 2026-10-31 and DEC-020 is accepted. The change is not merged. Phase 3 responsive/accessibility verification and Phase 4 release readiness have not started.
 - The company-level purpose is confirmed: Poster Perfect is a graphic design company portfolio intended to attract prospective customers, not an individual designer's portfolio.
 - Source-derived company facts, customer groups, services, value points, company-voice copy, seven-section source hierarchy, About anchor, approximate palette, Aileron type family, and responsive reflow are approved under DEC-014/DEC-019. Missing contact/social/availability values, original assets and rights-dependent claims use update placeholders; do not remove their source section or infer their values.
 
