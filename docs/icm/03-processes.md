@@ -120,7 +120,7 @@ This is a logical target flow. Exact document delivery, route fallback, renderin
 
 **Verification:** PP-VER-004, PP-VER-005, PP-VER-006, PP-VER-010.
 
-**Implementation status:** Not started; page structure unknown.
+**Implementation status:** Not started; one-page/seven-section source structure is drafted, but the owner has not approved G0.
 
 ## 5. PP-PRC-003 — Link and navigation activation
 
