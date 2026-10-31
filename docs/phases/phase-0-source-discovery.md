@@ -2,7 +2,7 @@
 
 | Field | Value |
 | --- | --- |
-| Status | Complete for the owner-approved profile-only baseline with accepted limitations (DEC-017, 2026-10-31) |
+| Status | Source-led G0 specification complete under DEC-014/DEC-019 (2026-10-31); future-update placeholders explicitly inventoried |
 | Objective | Produce an owner-approved company portfolio and customer-journey specification alongside the verified Canva-to-web design specification |
 | Depends on | Project brief and accessible source material |
 | Primary outputs | Company positioning and customer-journey specification, source inventory, page/content specification, information architecture, component inventory and blueprint, design-token inventory, interaction inventory, approved web interpretation |
@@ -21,7 +21,7 @@ Poster Perfect is a company portfolio for a graphic design business, not an indi
 
 A PNG or equivalent image export is suitable for visual inspection. A PDF is suitable for a multi-page design. Where the source uses separate logos, illustrations, icons, or photographs, provide those assets separately when possible.
 
-**Current status:** the owner-supplied Canva export was inspected on 2026-10-30 (see design-reference.md). The source-derived structure, company voice, customer groups, service categories, conservative content exclusions, text-only wordmark adaptation, internal About action, Aileron type family, approximate palette, and responsive reflow are approved under DEC-014/DEC-017. The project owner approved a profile-only initial website on 2026-10-31. G0 is complete for that bounded scope. Exact contact details, current availability, company social URLs, original logo/image files, and third-party/customer publication rights were not supplied and are explicitly excluded from the initial website; they are not represented as resolved facts. The PDF remains owner-held, identified by its SHA-256 in design-reference.md, and must be re-supplied for detailed visual comparison.
+**Current status:** the owner-supplied Canva export was inspected on 2026-10-30 (see `design-reference.md`) and its source copy, seven-section hierarchy, visual inventory and company information are transcribed in the canonical inventories. The owner clarified on 2026-10-31 that the Canva content is the company's information and must form the website baseline. DEC-019 supersedes the narrower profile-only interpretation in DEC-017. All seven source sections remain in scope. Missing supplementary details (withheld contact values, social URLs, current availability, original asset files) and rights-dependent claims/artwork are represented by explicit update placeholders rather than removed sections or fabricated values. The company-voice copy removes personal education details while retaining source-derived facts and positioning.
 ## 3. Scope
 
 ### 3.1 Source capture and inventory
@@ -144,7 +144,7 @@ The relevant project documents are the authoritative records; avoid maintaining 
 
 ## 6. Exit criteria
 
-Phase 0 is complete for an owner-approved scope when its required source and specification outputs are reconciled, material unknowns are either resolved or explicitly accepted as limitations, and the project owner approves the web interpretation. DEC-017 records that approval for the profile-only baseline; it does not imply that excluded facts or rights have been obtained.
+Phase 0 is complete when the Canva source has been inspected, the company information and all seven sections have been transcribed/reconciled, company-voice adaptations are approved, and missing supplementary facts/assets/permissions have explicit placeholder or publication controls. DEC-019 records the owner's source-led clarification; it does not imply that absent contact values, third-party rights or unverified claims have been obtained.
 
 
 
@@ -156,7 +156,7 @@ Phase 0 is complete for an owner-approved scope when its required source and spe
 - Responsive interpretation is documented.
 - The information architecture (`PP-ART-018`) is accepted and reconciled with the source inventory (`PP-VER-016`).
 - The component inventory and blueprint are recorded for every component the source justifies. Each entry is accepted, or it is explicitly marked partially specified with its open questions.
-- Company positioning, target customer segments, approved services/capabilities, publishable portfolio work and permissions, current availability, and enquiry route are specified and owner-approved, or explicitly excluded/recorded as accepted limitations (`PP-VER-017`).
+- Company positioning, source-derived customer groups, services/capabilities, all seven sections, source copy, and available source-visible office-hours content are recorded. Missing contact/social/availability values and rights-dependent assets, testimonials and statistics have explicit update placeholders and publication controls (`PP-VER-017`).
 - Material ambiguities and scope questions are resolved or recorded as accepted limitations; unresolved contact and rights dependencies must not be presented as completed evidence.
 - The project owner approves the web interpretation and implementation scope.
 

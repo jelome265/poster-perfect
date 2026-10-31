@@ -2,7 +2,7 @@
 
 **Artifact:** `PP-ART-019`  
 **Class:** Contract / architecture (see `PP-CON-003`)  
-**Status:** Structural inventory accepted under DEC-013; profile-only implementation dispositions approved under DEC-017. Component contracts remain partially specified and must be completed during Phase 2.  
+**Status:** Source-derived five-component inventory accepted under DEC-013/DEC-019. All component regions remain in the seven-section composition; missing assets, claims, permissions and destinations use explicit placeholder states.
 **Canonical owner:** Component maintainer (`PP-MAP-013`, role as defined in `icm/01-architecture-map.md`)  
 **Producer:** Component maintainer; Section implementation owner (`PP-MAP-012`) for entries in their section  
 **Approval:** Project owner  
@@ -12,7 +12,7 @@
 
 The component blueprint records, for each component in `components.md`, the **contract** that its consumers and reviewers depend on: responsibility boundary, typed inputs, owned state, native semantics, browser effects, keyboard and focus behavior, responsive variants, asset dependencies, accessibility obligations, and verification controls.
 
-Five component entries were drafted from the export (`PP-CMP-001` to `PP-CMP-005`) and their structural inventory was accepted under DEC-013. Their implementation contracts remain partially specified; DEC-017 records which entries are included or excluded from the profile-only initial site. A component is listed only when the inspected source shows a repeated pattern or a coherent region that justifies it.
+Five component entries were derived from the Canva export (`PP-CMP-001` to `PP-CMP-005`) and their structure was accepted under DEC-013. DEC-019 confirms all component regions remain part of the seven-section composition. Where original assets, claim substantiation, permissions or destinations are missing, define typed placeholder inputs rather than excluding the component.
 
 ## 2. Ownership split
 
@@ -71,7 +71,7 @@ Open questions:        <none | list with owner>
 
 ## 6. Entries and inventory status
 
-Entries below record the source-derived patterns (2026-10-30). The structural inventory is owner-accepted under DEC-013; individual implementation contracts remain partially specified. DEC-017 governs the initial profile-only implementation scope. Fields the source cannot determine remain open questions, not guesses.
+Entries below record the source-derived patterns (2026-10-30). The structural inventory is owner-accepted under DEC-013/DEC-019; individual implementation contracts remain partially specified. All five component regions remain part of the seven-section composition, with explicit placeholder inputs where values, assets, claims or permissions are unavailable.
 
 ### PP-CMP-001 — ValueBadge
 
@@ -92,12 +92,12 @@ Specification: Partially specified | Implementation: Not started | Evidence: Not
 
 ### PP-CMP-002 — ServiceCard
 
-Specification: Partially specified | Initial implementation: text-only service labels under DEC-017 | Evidence: pending Phase 2
+Specification: Partially specified | Initial implementation: source label plus explicit image placeholder under DEC-019 | Evidence: pending Phase 2
 
-- Responsibility: source pattern pairs a sample image with its label; the initial baseline renders the approved service names as text only.
+- Responsibility: preserve the source service image/card pattern and label, with an explicit placeholder until an original, permission-cleared image is available.
 - Used in sections: `PP-IA-005`. Reused by: services only (3 instances).
 - Native element: figure with caption (`figure` / `figcaption`) if non-interactive. A link element if the owner approves links.
-- Typed inputs for the initial baseline: `label: string` (approved service label). No image or alt-text input is used because no source image is available or authorized for publication.
+- Typed inputs: `label: string`; `image: AssetSlot` (resolved asset or named placeholder); `altText: string` when a real informative image is supplied. A placeholder is not a portfolio claim.
 - Owned state: none.
 - Browser effects: none if non-interactive. If linked, the destination type is an open question.
 - Keyboard and focus: open question. It depends on whether the card links to portfolio content.
@@ -109,12 +109,12 @@ Specification: Partially specified | Initial implementation: text-only service l
 
 ### PP-CMP-003 — StatTile
 
-Specification: Partially specified | Implementation: Excluded from initial website under DEC-017 | Evidence: Not applicable to baseline
+Specification: Partially specified | Implementation: Placeholder tile retained under DEC-019 | Evidence: pending Phase 2
 
-- Responsibility: show one figure with its label.
+- Responsibility: preserve one source statistic tile; render a placeholder until the numerical claim and label are substantiated and approved.
 - Used in sections: `PP-IA-006`. Reused by: statistics only (3 instances).
 - Native element: list item (`li`) or a group with the figure and label. Not interactive.
-- Typed inputs: `value: string` ("99%", "1+", "Worldwide"); `label: string | null` ("Projects completed", "Years in Operation", and none for "Worldwide").
+- Typed inputs: `value: string | null`; `label: string | null`; `placeholder: string`. Do not pass the source's unverified values as displayed claims.
 - Owned state: none. Browser effects: none.
 - Keyboard and focus: not applicable.
 - Responsive variants: none in source.
@@ -124,12 +124,12 @@ Specification: Partially specified | Implementation: Excluded from initial websi
 
 ### PP-CMP-004 — TestimonialCard
 
-Specification: Partially specified | Implementation: Excluded from initial website under DEC-017 | Evidence: Not applicable to baseline
+Specification: Partially specified | Implementation: Placeholder testimonial card retained under DEC-019 | Evidence: pending Phase 2
 
-- Responsibility: show one client quote with role and location.
+- Responsibility: preserve one source testimonial card; display a placeholder until quote/attribution publication permission and any material-claim evidence are approved.
 - Used in sections: `PP-IA-007`. Reused by: testimonials only (3 instances).
 - Native element: figure with block quote and caption (`figure` / `blockquote` / `figcaption`). Not interactive.
-- Typed inputs: `quote: string`; `attribution: string | null`; `roleAndLocation: string`. The attribution is null until the client gives permission.
+- Typed inputs: `quote: string | null`; `attribution: string | null`; `roleAndLocation: string | null`; `placeholder: string`. Populate quote and attribution only after the required publication permission.
 - Owned state: none. Browser effects: none.
 - Keyboard and focus: not applicable.
 - Responsive variants: none in source.
@@ -141,7 +141,7 @@ Specification: Partially specified | Implementation: Excluded from initial websi
 
 Specification: Partially specified | Implementation: Not started | Evidence: Not collected
 
-- Responsibility: source lockup pairs the logo symbol with the “Poster Perfect” wordmark; the initial website uses the text-only wordmark and does not recreate the unavailable symbol.
+- Responsibility: preserve the source logo lockup; render the wordmark and reserve the mark slot until the original logo vector is supplied. Do not recreate the symbol.
 - Used in sections: `PP-IA-002` (hero) and `PP-IA-008` (footer). Reused by: hero and footer (2 instances).
 - Native element: open question. A link to the home page, or a plain image group, depending on the owner's decision (`content-structure.md`, Owner decisions 9 and the logo-lockup row).
 - Typed inputs: none. The lockup has a fixed brand asset. Its only variant is the background, and both instances sit on dark navy.
@@ -157,8 +157,8 @@ Specification: Partially specified | Implementation: Not started | Evidence: Not
 | --- | --- | --- | --- |
 | `PP-CMP-001` | ValueBadge | Partially specified | Reflow and label contrast open |
 | `PP-CMP-002` | ServiceCard | Partially specified | Link decision and alternative text open; permissions pending |
-| `PP-CMP-003` | StatTile | Excluded from initial website under DEC-017 | Source observations retained; unsupported claims omitted |
-| `PP-CMP-004` | TestimonialCard | Excluded from initial website under DEC-017 | Individual permission and claim substantiation not available |
+| `PP-CMP-003` | StatTile | Placeholder tile retained under DEC-019 | Three-column source layout; do not render unsubstantiated source values |
+| `PP-CMP-004` | TestimonialCard | Placeholder card retained under DEC-019 | Three-card source layout; quotes/attributions await permissions and claim substantiation |
 | `PP-CMP-005` | BrandLockup | Partially specified | Text-only wordmark in baseline; original symbol unavailable |
 
 ## 8. Verification

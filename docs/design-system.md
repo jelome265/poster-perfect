@@ -2,7 +2,7 @@
 
 ## Status
 
-**Source-derived starting baseline approved under DEC-014/DEC-017 (2026-10-31).** Colors and dimensions remain approximate values from a 72 dpi render, approved only as starting references. Aileron Regular/Bold is approved and its CC0-1.0 source license is recorded in PP-REF-014. The initial site excludes original logo artwork, sample imagery, social icons, and unlicensed customer material. Responsive reflow is an approved web adaptation; detailed implementation and validation remain Phase 2–3 work.
+**Source-derived design baseline approved under DEC-014/DEC-019 (2026-10-31).** Colors and dimensions remain approximate values from a 72 dpi render, approved as starting references rather than exact measurements. Aileron Regular/Bold is approved and its CC0-1.0 source license is recorded in PP-REF-014. Preserve all seven source sections and image/card/logo regions; use named placeholders for original assets, statistics, testimonials, contact values and social URLs that require later updates or permission. Responsive reflow is approved; detailed implementation and validation remain Phase 2–3 work.
 
 ## Token principles
 
@@ -16,14 +16,14 @@
 
 | Category | Values | Status |
 | --- | --- | --- |
-| Color | Six approximate values (see the color table below) | Owner-approved starting references under DEC-014/DEC-017; not exact brand specifications |
+| Color | Six approximate values (see the color table below) | Owner-approved starting references under DEC-014/DEC-019; not exact brand specifications |
 | Typography | Aileron Bold for headings and labels; Aileron Regular for body text. Sizes, line heights, and letter spacing are not measured | Family and source license approved; exact distribution/license metadata and rendered metrics must be verified during Phase 2 |
 | Spacing | Section gaps, component gaps, padding, and margins not yet measured | Pending measurement |
 | Layout | One page, 1024.5 × 4032 pt. Content width, columns, and alignment not yet measured | Partially measured |
 | Shape | Badge and button corner radii; dividers and rules (a short rule sits above some headings) | Pending measurement |
 | Elevation | Not assessed | Pending |
-| Imagery | Source sample images observed in hero, service row, and footer; originals not supplied and excluded under DEC-017 | No imagery in the initial site; no substitutions or recreated brand mark |
-| Responsive | No source variant; owner-approved fluid reflow, content-driven breakpoints, and column stacking | Web adaptation approved under DEC-014/DEC-017; implement in Phase 2 and verify in Phases 2–3 |
+| Imagery | Hero magazine-cover image, three service images, and footer sample image are observed in the source | Preserve each image region with a named placeholder until original or rights-cleared assets are supplied |
+| Responsive | No source variant; owner-approved fluid reflow, content-driven breakpoints, and column stacking | Web adaptation approved under DEC-014/DEC-019; implement in Phase 2 and verify in Phases 2–3 |
 | Motion | Not present in a static export | Not in source |
 
 ## Color values (approximate)
@@ -58,7 +58,7 @@ For each meaningful layout change, record:
 - Any typography or spacing changes.
 - Whether the change is directly represented in the source or is a web-specific adaptation.
 
-No responsive variant is in the source. DEC-014 approves content-driven reflow that preserves semantic order. Statistics and testimonials are excluded from the baseline until substantiated/permission-cleared, so no layout may imply they are approved content.
+No responsive variant is in the source. DEC-014/DEC-019 approve content-driven reflow that preserves semantic order. Statistics and testimonial regions remain in the composition as placeholder cards until claims are substantiated and customer permissions are recorded. Placeholder states must not resemble verified claims or endorsements.
 
 ## Review checklist
 

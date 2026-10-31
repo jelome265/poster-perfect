@@ -2,7 +2,7 @@
 
 **Canonical level:** L2 — Contracts and behaviour  
 **Record class:** Normative project contract index  
-**Status:** Initial requirement set accepted; design-dependent interface contracts pending Phase 0
+**Status:** Initial requirement set accepted; source-derived content is approved under DEC-019; design-dependent implementation contracts progress through Phases 2–3
 
 ## 1. Purpose
 
@@ -41,7 +41,7 @@ Not every visual component needs a separate long-form document. The contract mus
 | `PP-REQ-007` | Do not add a backend, API, persistence, analytics, payments, or other external integration without an approved requirement. | Project scope boundary | Accepted | Dependency/effect review and decision log |
 | `PP-REQ-008` | Merge and production-release authorization remain with the project owner. | Project workflow rule | Accepted | Pull request and release disposition |
 | `PP-REQ-009` | Phase 0 produces an information architecture and component blueprint derived from the inspected source and approved requirements, before Phase 1 foundational technical decisions are made. | DEC-007; project owner directive | Accepted | Phase 0 reconciliation (`PP-VER-016`) and `PP-VER-013` |
-| `PP-REQ-010` | Poster Perfect is a company portfolio for a graphic design business, not an individual designer's personal portfolio; the business-ready website presents its approved offering and authorized work, communicates current availability, and provides an owner-approved enquiry path. The initial profile-only website may omit unavailable contact/availability facts and rights-uncleared work only under DEC-017; it must not be represented as full customer-acquisition fulfilment. | DEC-008; owner clarification 2026-10-30; scoped exception DEC-017 (2026-10-31) | Accepted with explicit profile-only limitation; business-ready release remains gated | Company-purpose and customer-journey reconciliation (PP-VER-017) |
+| `PP-REQ-010` | Poster Perfect is a company portfolio for a graphic design business, not an individual designer's personal portfolio; it must use the company information from the Canva source, present the approved services and capabilities, and preserve the owner-approved customer-facing sections and enquiry regions. Missing supplementary values or rights-dependent content must be represented by explicit update placeholders, not invented or removed. | DEC-008; owner clarification DEC-019 (2026-10-31) | Accepted; missing values/assets/permissions remain explicit publication controls | Company content, seven-section structure and placeholder reconciliation (PP-VER-017) |
 | `PP-REQ-011` | The complete locked npm dependency graph must be scanned for known vulnerabilities and inventoried against an explicit SPDX license policy; unknown licenses and scope violations must fail closed. | DEC-015; project owner instruction dated 2026-10-31 | Accepted | Dependency vulnerability and license audit (`PP-VER-018`) |
 
 This is the accepted requirement baseline as of DEC-008. New requirements receive new IDs; do not repurpose an existing ID to mean something different.
@@ -170,7 +170,7 @@ No external API, remote form submission, analytics provider, payment provider, o
 
 The implementation MUST follow the approved responsive interpretation and be assessed against applicable WCAG 2.2 AA criteria. Semantic structure, keyboard operation, visible focus, readable content, contrast, zoom/reflow, and appropriate alternatives are mandatory review dimensions.
 
-**Specification:** Partially specified; WCAG target accepted, with page-specific responsive and semantic criteria pending Phase 0  
+**Specification:** Partially specified; WCAG target accepted, with page-specific responsive and semantic criteria to be finalized during Phases 2–3  
 **Implementation:** Not started  
 **Evidence:** Not collected
 
@@ -210,20 +210,22 @@ The information architecture MUST define every in-scope page or route, section, 
 **Consumers:** Page and section composition, content inventory, navigation and interaction controls  
 **Requirement:** PP-REQ-010; related contracts PP-CON-002, PP-CON-005, PP-CON-006 and PP-CON-010
 
-The website MUST represent Poster Perfect at company level as a graphic design business, not as an individual designer's personal portfolio. The full business-ready website is intended to present owner-approved company identity and positioning, the approved service/capability offering, selected creative work the company is authorized to publish, current availability, and an accessible owner-approved enquiry path.
+The website MUST represent Poster Perfect at company level as a graphic design business, not as an individual designer's personal portfolio. The Canva design is the primary source for company information, company copy, customer groups, service/capability content, source page hierarchy and visual composition. The website MUST use the source-derived facts recorded in `content-structure.md`, with approved company-voice/editorial adaptations in DEC-014/DEC-019.
 
-The initial profile-only baseline approved under DEC-017 presents the approved company profile and services but explicitly omits current availability, unlicensed work, and external enquiry controls. It MUST NOT be represented as satisfying the full customer-acquisition objective. Exact contact destinations, current availability, social URLs, original artwork/logo files, and third-party/customer publication permissions were not supplied and are expressly excluded from the initial site. Availability MUST be reconfirmed before publication because it can change.
+The one-page, seven-section structure MUST be preserved in source order: Hero, About, Value statement, Services, Statistics, Testimonials, Contact and footer. A source section MUST NOT be removed merely because a value, asset, permission or external destination needs a later update. Use a clearly identified placeholder in the source region until the required owner input, original asset, substantiation or publication permission is available.
 
-The website MUST NOT fabricate or imply company registration, size, team structure, client relationships, testimonials, awards, credentials, metrics, project outcomes, prices, guarantees, or service commitments. Portfolio materials MUST have an identified source and owner-confirmed permission for publication; confidential client information MUST NOT be exposed. Missing rights or consent are not presumed granted.
+The website MUST NOT present unsubstantiated statistics, unauthorized customer quotations/attributions, unlicensed third-party artwork, fabricated portfolio work, fake contact data or dead external links as real. Contact and social controls become operable only after their exact destinations are verified. Source office-hours wording is recorded in the content inventory and MUST be reconfirmed before production publication. Current availability, if displayed, must be owner-confirmed and dated.
 
-A business requirement not represented in the Canva source may be implemented only as an explicitly recorded and owner-approved web adaptation. The Canva source remains the visual/content reference, not an authorization to invent business facts.
+The website MUST NOT fabricate or imply company registration, size, team structure, client relationships, awards, credentials, project outcomes, prices, guarantees or service commitments. Portfolio materials MUST have an identified source and owner-confirmed permission for publication; confidential client information MUST NOT be exposed. Missing rights or consent are not presumed granted.
+
+A business requirement not represented in the Canva source may be implemented only as an explicitly recorded and owner-approved web adaptation. The Canva source remains the content/visual authority for observed facts, not an authorization to invent business facts.
 
 **Inputs:** Owner-approved company profile, positioning, service/capability content, publishable portfolio material, current availability statement, and enquiry destination/behavior.  
 **Outputs:** Company-level presentation and a documented prospective-customer enquiry path.  
-**Invariants:** No personal-portfolio framing; no invented business claims; no unapproved portfolio publication; no stale availability claim; no inert or unverified enquiry control. The profile-only baseline has no external enquiry control and must not imply that a customer-acquisition hand-off exists. Remote submission, data persistence, CRM, or other external integration is not implied and remains subject to PP-REQ-007 and PP-CON-007.  
+**Invariants:** No personal-portfolio framing; no invented business claims; no unapproved portfolio publication; no stale availability claim; no inert or unverified enquiry control. The initial page preserves the source contact and social regions with update placeholders. No placeholder is a live link; native mail/tel/social hand-offs are enabled only when valid owner-approved destinations are supplied. Remote submission, data persistence, CRM, or other external integration is not implied and remains subject to PP-REQ-007 and PP-CON-007.  
 **Verification:** PP-VER-017, PP-VER-005, PP-VER-009, PP-VER-010 and owner review before release.
 
-**Specification:** Accepted for the profile-only baseline under DEC-017; the business-ready enquiry path and current availability remain G4 dependencies  
+**Specification:** Accepted for the Canva-led seven-section baseline under DEC-019; missing contact/social/availability values and rights-dependent claims/assets have explicit update/publication controls  
 **Implementation:** Not started  
 **Evidence:** Not collected
 

@@ -35,7 +35,7 @@ These objectives define the business purpose. They do not prescribe a page count
 | Business type | Graphic design company / business |
 | Website purpose | Company portfolio and prospective-customer acquisition |
 | Positioning | Company-level presentation; not an individual designer's personal portfolio |
-| Availability | No current availability statement approved for publication under DEC-017; the 2026-10-30 note is historical and not relied on as current status |
+| Availability | A visible update slot is reserved; confirm current availability before publication. Source office hours are recorded in `content-structure.md` and require currentness review |
 | Repository | jelome265/poster-perfect |
 | Frontend | React |
 | Language | TypeScript, including TSX |
@@ -43,9 +43,9 @@ These objectives define the business purpose. They do not prescribe a page count
 | Primary quality goals | Accurate company presentation, design fidelity, responsive behavior, accessibility, maintainability |
 | Design source | Canva design supplied by the project owner |
 
-## Business details excluded from the initial baseline (DEC-017)
+The Canva design supplies the baseline company information: Poster Perfect was founded in Blantyre; it serves startups, restaurants, salons and growing businesses in Malawi and across Africa; its positioning is based on making great design accessible to businesses; its source-listed services/capabilities and value points are transcribed in `content-structure.md`; and its stated vision is to help 1,000 African brands compete globally.
 
-The following facts were not supplied and are explicitly excluded from the profile-only implementation: exact email/telephone destinations, current availability, office hours, headquarters/location details, company social profile URLs, original logo vector, standalone source artwork, customer testimonials and attributions, and substantiation for quantified claims. These are unknown or unavailable, not implicitly approved. The source-derived customer groups, company voice, and service categories are approved in DEC-014/DEC-017. Add any excluded item only after evidence is supplied and the project owner approves the scope change.
+The website retains all seven Canva sections. Supplementary fields that are unavailable in the current public source record remain as update placeholders: exact headquarters/contact values, social profile URLs, current availability, original logo/image files, and any replacements for statistics/testimonials that cannot yet be substantiated or permission-cleared. These are placeholders, not invented facts. The source office-hours text is retained as source content but must be reconfirmed before production publication.
 
 ## Not yet specified
 
@@ -63,17 +63,19 @@ The following implementation and content details must be confirmed from the sour
 
 ## Scope boundary
 
-The initial product scope is a responsive, profile-only frontend for a graphic design business, based on the supplied Canva design and the owner-approved DEC-017 scope. It presents the company, approved customer groups and services. It intentionally has no external enquiry path and does not fulfil the full customer-acquisition objective. A verified contact destination or separate owner-authorized restricted-release decision is required at G4.
+The initial product scope is a responsive, one-page company website based on the complete Canva design and the source-led scope approved under DEC-019. It preserves all seven sections and uses the company information transcribed from the source. Missing supplementary contact/social/availability values and rights-dependent proof/assets have explicit update placeholders. The page must not fabricate a value, claim or link.
 
-Backend services, authentication, persistence, payment processing, CMS integration, analytics, remote form submission, CRM integration, and other external services are not assumed. No contact link or external hand-off is included in the initial profile-only baseline. Add one only after its destination and behavior are confirmed and approved. Add a remote integration only when a separate requirement and owner approval make it necessary.
+Backend services, authentication, persistence, payment processing, CMS integration, analytics, remote form submission, CRM integration, and other external services are not assumed. Preserve contact and enquiry regions from the Canva footer. Render clearly identified value placeholders until exact public destinations are verified; enable mail/tel/social links only when valid destinations are supplied. Do not add a remote form or backend without separate approval. Add a remote integration only when a separate requirement and owner approval make it necessary.
 
 ## Acceptance criteria
 
-The profile-only baseline is ready for Phase 2 when:
+The source-led seven-section baseline is ready for Phase 2 when:
 
 - The reference design can be inspected at sufficient resolution.
 - The company-level purpose and positioning are reflected in the approved project brief.
-- Target customer segments, service information, publishable portfolio work, availability wording, and enquiry path are confirmed or explicitly excluded/recorded as accepted limitations.
+- Source-derived customer groups, services, capabilities, value points and company copy are reconciled with Canva.
+- All seven source sections are present in the IA and each unavailable value/asset/permission has a clearly identified placeholder or publication control.
+- Contact/social destinations are not activated until verified; availability and source office hours are reconfirmed before publication; statistics/testimonials and sample artwork require substantiation/permission.
 - The page and content structure are documented in the information architecture and content inventory.
 - The design tokens and required assets are inventoried.
 - Interactive elements and their expected outcomes and destinations are identified.

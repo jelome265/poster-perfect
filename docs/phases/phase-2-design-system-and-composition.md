@@ -2,7 +2,7 @@
 
 | Field | Value |
 | --- | --- |
-| Status | Authorized to start after DEC-017 G0 approval; G2 visual acceptance remains evidence-gated |
+| Status | Authorized after source-led G0 approval under DEC-019; G2 evidence remains required |
 | Objective | Translate the approved visual reference into design tokens, semantic page structure, and working React components |
 | Depends on | Phase 0 approval and Phase 1 application foundation |
 | Primary outputs | Implemented design tokens, asset integration, page composition, typed components |
@@ -13,11 +13,12 @@ Build the website's primary visual composition from the verified Canva specifica
 
 ## 2. Entry conditions
 
-- Phase 0 inventories are owner-approved for the profile-only baseline under DEC-017.
-- Unavailable source assets and their exclusion are recorded; no unapproved substitute is permitted.
-- Typography choices and asset-use constraints are known: Aileron Regular/Bold; no original logo symbol or sample artwork in the initial implementation.
+- Phase 0 inventories and source-led seven-section scope are owner-approved under DEC-019.
+- Unavailable original assets and rights-dependent items have explicit placeholders; no unapproved substitute is permitted.
+- Typography choices and asset-use constraints are known: Aileron Regular/Bold; text wordmark fallback until the original logo symbol is supplied.
 - Phase 1 type checking, development, and production build are operational.
-- The in-scope rendered sections and interactions are identified. The PDF source remains owner-held; re-supply it before detailed side-by-side visual comparison and before G2 exit. The exact CSS comparison viewport is not established by the PDF page dimensions alone and must be recorded when the source is available.
+- All seven source sections are in scope. Preserve the Statistics, Testimonials, Contact/footer and image regions using explicit placeholder states where values, permissions, destinations or originals are unavailable.
+- The Canva PDF is committed at `docs/source/Company_Website_Business_Website_in_Dark_Blue_White_Bright_Blue_Simple_Professional_Style.pdf` under DEC-018. Use that file for detailed side-by-side comparison; record the CSS viewport separately because the PDF page dimensions are not a CSS viewport.
 
 ## 3. Scope and workstreams
 
