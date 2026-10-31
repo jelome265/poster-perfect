@@ -55,4 +55,10 @@ Start with the [system context](docs/icm/00-system-context.md), [architecture ma
 
 ## Development
 
-The application scaffold and package scripts have not been established yet. Setup and verification commands will be documented here after the toolchain is selected and added to the repository.
+The application scaffold and package scripts have not been established yet. Phase 0 documentation integrity can be checked independently of the application toolchain:
+
+```bash
+bash scripts/validate-docs.sh
+```
+
+The dependency-free check runs in GitHub Actions on pull requests targeting `main` and pushes to `main`. It validates repository-relative Markdown targets and anchors, key Phase 0 status statements, canonical documentation presence, and accepted-requirement verification mappings. It is a documentation control, not an application build or a substitute for the full manual PP-VER-013 review. The current branch ruleset requires pull requests but does not yet make this status check a required merge condition.
