@@ -107,6 +107,38 @@ The repository may use Python 3's standard library solely for the PP-VER-013 doc
 
 **Authority:** Project-owner merge of PR #10 at `486a81b687d6dee48802b617e0c0e9f0141bd0a8`, 2026-10-31.
 
+### DEC-012 — Phase 1 application toolchain
+
+**Status:** Accepted (project owner, 2026-10-31). Implemented on `feat/phase1-application-foundation`.
+
+| Choice | Selected | Alternative and trade-off |
+| --- | --- | --- |
+| Build tool and dev server | Vite 8.3.5 | Other bundlers; Vite is the default for a client-side React application with a static build |
+| React | React 19.3.1 and react-dom 19.3.1 | Confirmed in `CLAUDE.md` §4 |
+| TypeScript | 5.9.3, strict mode enabled explicitly | TypeScript 7.0.2 (native) was resolved by the template and tested. 5.9 chosen for a mature stable line; revisit when 7.x is established |
+| Package manager | npm with `package-lock.json`, exact pins | pnpm or yarn would be equally valid; npm needs no additional tooling |
+| Node.js | 22.12 to below 23 (`.nvmrc` 22) | Node 24 was not evaluated for this runtime. Owner to confirm the CI runtime |
+| Lint | oxlint 1.90.0 | ESLint would add plugin and configuration cost; oxlint suffices for the foundation |
+| Test runner | Vitest 5.0.5, jsdom 30.1.3, Testing Library (React 16.3.3, DOM 10.4.2) | Required by Phase 1 §3.4 for unit and component testing; the smallest set that renders and queries components |
+| Routing | None | Single page in the IA draft. Revisit only if the accepted IA defines more than one route |
+| Styling | Neutral base CSS only | No framework until the design tokens are approved (Phase 2) |
+| Formatter | None | Not selected; Phase 1 §3.4 requires a formatter only if one is selected |
+| Rendering | Client-side single-page application | Static pre-rendering may be reconsidered if hosting or search requirements change |
+
+**Rationale:** smallest toolchain that satisfies Phase 1 §3.1–§3.6 and the React/TypeScript direction in `CLAUDE.md` §4.
+
+**Authority:** project owner ratification, 2026-10-31.
+
+### DEC-013 — Information architecture and component inventory accepted as baseline
+
+**Status:** Accepted (project owner, 2026-10-31).
+
+The information architecture (`PP-ART-018`, `PP-CON-010`) and the component inventory and blueprint (`PP-ART-019`) are accepted as the structural baseline drawn from the 2026-10-30 Canva export. Phase 1 may use them as its page-model input.
+
+Not closed by this decision: the content and web-adaptation decisions in `content-structure.md` (duplicated About paragraph, voice, statistics, testimonial permissions, service terms, portfolio permissions, copy typos, hero button destination, social profile URLs, font licence, enquiry path under `PP-CON-011`), the component link decisions (`PP-CMP-002`, `PP-CMP-005`), and responsive reflow. Phase 0 exit criteria therefore remain open, and G0 is not closed.
+
+**Authority:** project owner acceptance, 2026-10-31.
+
 ## Open decisions
 
 | Decision | Status | Resolution gate |
