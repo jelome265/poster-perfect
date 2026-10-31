@@ -285,3 +285,21 @@ Observed output:
 Method: repository-local Python standard-library validator (`python3 -B scripts/validate_docs.py`) executed on GitHub Actions Ubuntu 24.04. The workflow checks out the PR merge candidate; the tested PR head was `a3d933c`, based on `7579e27`. The result is evidence for this exact tested candidate and validator version only; subsequent revisions must rerun PP-VER-013.
 
 This is documentation-integrity evidence only. It does not prove application behavior, visual fidelity, accessibility conformance, or application security.
+
+## 13. PP-VER-013 run — `main` merge revision `486a81b` (PASS)
+
+| Run | Revision (full SHA) | Scope | Result |
+|---|---|---|---|
+| R6 | `486a81b687d6dee48802b617e0c0e9f0141bd0a8` (`main` after PR #10 merge) | Documentation integrity workflow: repository-relative Markdown links and anchors, canonical identifier ownership/references, accepted requirement traceability, process/effect mappings, Phase 0 status assertions and unconfirmed contact-value hygiene | **PASS** |
+
+**Evidence:** [GitHub Actions run 41163670808](https://github.com/jelome265/poster-perfect/actions/runs/41163670808), workflow **Documentation integrity**, job **PP-VER-013 / documentation integrity**, completed 2026-10-31 03:16:55 UTC with conclusion `success` on the exact `main` merge commit above.
+
+The preceding R5 run at `a3d933c` (PR #10 candidate, run 41163140407) reported 34 Markdown files, 70 relative links, 133 canonical identifiers with no duplicate/unresolved definitions, 10 accepted requirements mapped to verification, 7 process definitions, 10 effect mappings, 0 stale Phase 0 assertions and 0 unconfirmed contact values in `content-structure.md`. R6 ran the same validator on the resulting merge commit.
+
+### R6 limitations and governance
+
+- PP-VER-013 is documentation integrity only. It does not establish application implementation, visual fidelity, WCAG conformance, application security, or the factual accuracy of company claims.
+- Manual PP-VER-013 judgments remain necessary for authority precedence, dependency-direction semantics, owner-role adequacy, and unsupported completion/release claims; a structural validator cannot prove these on its own.
+- The active `Protect main` ruleset requires pull requests, blocks non-fast-forward updates and branch deletion, and has no bypass actors. It currently requires zero approving reviews and does not list the `PP-VER-013 / documentation integrity` check as a required status check. The workflow therefore supplies revision-bound evidence but is not a blocking merge rule.
+- G0 remains deferred by the owner. Phase 1 remains unauthorized. The owner decisions in `content-structure.md`, including contact details, publication permissions, company facts, availability and enquiry-path adaptation, remain outstanding.
+- The Python standard-library validator is permitted only as CI runner tooling under DEC-011. It does not select Python for application code or add a website runtime dependency.
