@@ -105,7 +105,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-VER-010` | Asset loading/alt text | Pending asset inventory | G2, G3, G4 |
 | `PP-VER-011` | Release artifact provenance | Planned | G4 |
 | `PP-VER-012` | Owner review/release disposition | Required | G4 |
-| `PP-VER-013` | ICM reference/traceability integrity | Passed at `a3d933c` (PP-ART-017 §12 R5, GitHub Actions run 41163140407); earlier R4 failed at `877933a` (§10). Result is revision-specific and must be rerun after further changes | All gates and material documentation changes |
+| `PP-VER-013` | ICM reference/traceability integrity | Passed at PR candidate `a3d933c` (R5, run 41163140407) and on `main` merge commit `486a81b` (R6, run 41163670808); earlier R4 failed at `877933a` (§10). Results are revision-specific and must be rerun after further material changes | All gates and material documentation changes |
 | `PP-VER-014` | Architecture/component-boundary review | Planned | G1, G2, G4 |
 | `PP-VER-015` | Dependency/side-effect surface review | Defined; not yet run | G1, G2, G4 |
 | `PP-VER-016` | IA and component-blueprint reconciliation | Executed by author 2026-10-30; owner review pending | G0, G2 |
