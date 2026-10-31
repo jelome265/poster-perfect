@@ -2,7 +2,7 @@
 
 ## Status
 
-**Source content recorded from the export (2026-10-30); not yet approved for publication.** The export is one page with seven sections. The company-level purpose is owner-confirmed: Poster Perfect is a graphic design company portfolio intended to attract prospective customers (DEC-008, PP-REQ-010). Claims, testimonials, portfolio items, and contact destinations are recorded as source content and remain subject to the owner confirmations listed under "Owner decisions" below.
+**Source content captured from the export (2026-10-30); conservative implementation dispositions approved under DEC-014 (2026-10-31).** The export is one page with seven sections. The company-level purpose is owner-confirmed (DEC-008, PP-REQ-010). The source transcript remains preserved; owner-approved implementation decisions and publication restrictions are recorded below. Exact contact values, current availability, customer permissions, and rights to supplied sample artwork remain evidence-gated.
 
 Ownership: the page set, hierarchy, section order, and navigation structure are canonical in [the information architecture](information-architecture.md) (`PP-ART-018`). This document owns section content and the interaction inventory. Each fact has one home; reference IDs rather than copying values.
 
@@ -112,22 +112,30 @@ Attribution names are withheld (see Privacy handling). The quoted outcomes need 
 
 Navigation entries are structured in `information-architecture.md` §5.4 and reference rows in this table. Use a link for navigation to a destination. Use a button for an action performed on the current page. Do not create decorative controls that appear interactive but do nothing.
 
-## Owner decisions
+## Owner-approved dispositions (DEC-014, 2026-10-31)
 
-Each item below must be decided by the owner before publication. None has been changed in the recorded copy.
+The project owner authorized the maintainer to resolve the source-derived business/content/design decisions and implement these conservative outcomes. This approval does not waive third-party rights or supply missing information.
 
-1. **Duplicated paragraph.** The About paragraph appears again verbatim in the Services section. Keep, rewrite, or remove the second copy.
-2. **Voice and personal detail.** The About paragraph is written in the first person ("I built Poster Perfect") and includes the owner's study programme. DEC-008 describes a company portfolio, not an individual's portfolio. Confirm the voice and whether the personal detail stays.
-3. **Statistics.** "99% Projects completed", "1+ Years in Operation", and "Worldwide" need evidence or must be removed. "Worldwide" has no figure or label.
-4. **Testimonials.** Confirm each client's permission to publish the quote and attribution. The "Orders went up 30%" outcome needs substantiation.
-5. **Service terms.** Confirm "unlimited minor revisions", "24 hours" turnaround, and "3 concepts" as offered policies before publishing them.
-6. **Portfolio permissions.** Confirm, for each sample, whether it may be published and whether it is a client's brand or magazine: the brochure sample, the "A LETTER DESIGN" logo sample, the magazine covers, the hero cover, and the footer "Beyond Creativity" image. Record the permission status in this file.
-7. **Copy typos and wording.** "brochures,websites" lacks a space. "DMs" in the About heading may be unclear to some readers.
-8. **Contact details.** Confirm the current email address, telephone number, location text, and office hours before any of them are restored to the public content record or used as an enquiry destination. Values are withheld from this document pending confirmation.
-9. **Hero button.** Choose its destination, or confirm that it is decorative.
-10. **Social profiles.** Supply the URLs for the three social icons.
-11. **Font licence.** Confirm the Aileron licence and whether it may be used on the web.
-12. **Enquiry path.** The company objective requires an enquiry path (PP-CON-011). The source has none. Approve a web adaptation, and choose its form.
+| ID | Topic | Approved disposition | Remaining release condition |
+| --- | --- | --- | --- |
+| PP-CNT-01 | Page structure | Retain the one-page, seven-section hierarchy and source order in `information-architecture.md`. | Reconcile the implemented DOM during Phase 2. |
+| PP-CNT-02 | Company positioning and voice | Present Poster Perfect as a company-level graphic design business in company voice. Remove the owner's education details and individual-designer framing. The source's Blantyre origin and customer groups (startups, restaurants, salons, and growing businesses) are approved source-derived content. | Reconfirm time-sensitive or materially changed facts before publication. |
+| PP-CNT-03 | Services | Use the source-listed capabilities: custom logos and brand kits, social media graphics, restaurant menus, posters, flyers, business cards, brochures, websites, packaging, and labels. | Do not add pricing, guarantees, delivery promises, or other service commitments without a separate decision. |
+| PP-CNT-04 | Repeated copy | Remove the second verbatim About paragraph from Services; use a concise service presentation instead. | None. |
+| PP-CNT-05 | Statistics | Omit “99% Projects completed”, “1+ Years in Operation”, and “Worldwide”. | Reintroduce only with substantiation and dated owner approval. |
+| PP-CNT-06 | Testimonials | Do not publish the three retained quotations or attributions in the website baseline. | Obtain each customer's permission and substantiate “Orders went up 30%” before publication. |
+| PP-CNT-07 | Service commitments | Omit “unlimited minor revisions”, “fast turnaround”, “24 hours”, and “3 concepts” as public promises. | Reintroduce only after exact service terms are confirmed. |
+| PP-CNT-08 | Portfolio imagery | Do not publish the brochure, logo, magazine-cover, hero-cover, or footer samples in the baseline. Do not link service cards to those samples. | Obtain original assets and documented publication rights for each item, client mark, and identifiable work. |
+| PP-CNT-09 | Editorial wording | Correct “brochures,websites” to “brochures, websites”. Replace the “DMs” heading with “Distinctive design for growing businesses”. | Review final rendered hierarchy and line breaks. |
+| PP-CNT-10 | Hero action | Make “LEARN MORE” an in-page link to About (`#about`). | Verify keyboard operation and target existence in Phase 2. |
+| PP-CNT-11 | Logo and social links | Render the logo lockup as a non-interactive brand mark. Omit social icons until exact company profile URLs are supplied. | Original logo vector and profile URLs remain to be supplied. |
+| PP-CNT-12 | Typography | Aileron is approved as the source typeface; its CC0-1.0 source license is recorded in PP-REF-014. | Verify the exact font distribution and preserve its license metadata when font files are added. |
+| PP-CNT-13 | Responsive interpretation | Preserve source reading order and hierarchy. Use fluid sizing and content-driven reflow; stack columns/cards on narrow viewports without hiding essential content. | Validate breakpoints, zoom, and overflow during Phases 2–3. |
+| PP-CNT-14 | Contact and enquiry | Approve a simple native email/telephone hand-off after a current owner-approved destination is supplied. Do not add a form, backend, CRM, or tracking. | Exact current email and telephone values remain withheld; no contact link may be published until supplied and confirmed. |
+| PP-CNT-15 | Availability and office details | Do not assert current availability, office hours, or public headquarters/street details in the baseline. | Owner must provide and confirm current values before publication. |
+| PP-CNT-16 | Visual values | Use the measured palette as approximate source-derived starting tokens, not exact canonical measurements. Maintain contrast and legibility during web adaptation. | Compare rendered page to the source and validate contrast before release. |
+
+The source copy and visual observations remain a faithful record of the Canva export. The dispositions above govern the web implementation where they intentionally differ from that source.
 
 ## Content review
 

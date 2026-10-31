@@ -139,13 +139,44 @@ Not closed by this decision: the content and web-adaptation decisions in `conten
 
 **Authority:** project owner acceptance, 2026-10-31.
 
+### DEC-014 — Owner approval of conservative business, content, and design dispositions
+
+**Status:** Accepted (project owner instruction, 2026-10-31).
+
+The project owner authorized the maintainer to resolve the outstanding business, content, and web-design decisions from the source-derived records and to implement conservative dispositions. The canonical implementation decisions are recorded in [content structure](content-structure.md) and [design system](design-system.md).
+
+- Preserve the one-page, seven-section hierarchy and source order.
+- Present the company in company voice; remove personal education details and individual-designer framing.
+- Use the source-derived customer groups and service categories as approved content, without adding pricing, guarantees, or service commitments.
+- Remove duplicated About copy and unsupported statistics. Do not publish testimonials or sample artwork until customer permissions and asset rights are evidenced.
+- Omit unverified service promises, unavailable social links, and unconfirmed current availability/contact/office details.
+- Make “LEARN MORE” an in-page link to About; do not add a remote form, backend, CRM, or tracking.
+- Use Aileron under the recorded CC0-1.0 source license; preserve the license metadata with the actual font distribution.
+- Treat extracted palette values as approximate source-derived starting tokens; implement responsive reflow while preserving reading order.
+
+This approval does not create missing contact data, confirm current availability, grant customer permission, or establish third-party asset ownership. Those remain evidence-gated Phase 0/release dependencies.
+
+**Authority:** Project owner instruction dated 2026-10-31; PP-REQ-001, PP-REQ-004, PP-REQ-010, PP-CON-011.
+
+### DEC-015 — Automated npm vulnerability and license policy
+
+**Status:** Accepted (project owner instruction, 2026-10-31).
+
+The dedicated [dependency security and license policy](security/dependency-audit.md) is normative for the npm dependency graph. CI runs npm advisory auditing, OSV vulnerability scanning, a complete lockfile SPDX inventory, and an independent OSV-Scanner/deps.dev license metadata check on pull requests, pushes to `main`, weekly schedule, and manual dispatch.
+
+The license allowlist is exact and fail-closed. MIT, MIT-0, Apache-2.0, ISC, BSD-2-Clause, BSD-3-Clause, BlueOak-1.0.0, and CC0-1.0 are accepted in both scopes. MPL-2.0 is accepted only in development dependencies because the current lockfile uses it for the Lightning CSS development toolchain; the inventory script rejects it if it enters the runtime dependency graph. Missing metadata, unsupported expressions, and new identifiers require explicit review.
+
+Vulnerability and license exceptions require a documented, time-bounded owner decision. CI does not automatically mutate dependencies.
+
+**Authority:** Project owner instruction dated 2026-10-31; PP-REQ-011; PP-CON-012.
+
 ## Open decisions
 
 | Decision | Status | Resolution gate |
 | --- | --- | --- |
 | Build tool, runtime, package manager, rendering model, and test runner | Resolved in DEC-012 | Reopen only through an approved change |
-| Route model | One-page baseline; no client router in DEC-012/DEC-013 | Revisit only if G0 changes the accepted page/route inventory |
-| Styling implementation | Neutral CSS only; design tokens/framework deferred | Phase 2 after G0 design approval |
+| Route model | One-page baseline; no client router in DEC-012/DEC-013/DEC-014; hero action targets About | Revisit only if the owner changes the accepted page/route inventory |
+| Styling implementation | Neutral CSS foundation; source-derived visual values and responsive adaptations approved under DEC-014; implementation is Phase 2 work | Phase 2 after Phase 1 disposition |
 | Hosting and deployment | Open | Before release planning |
 | Backend or external integrations | Not established; excluded from baseline | Only if a confirmed requirement and owner approval require one |
 

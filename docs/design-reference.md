@@ -52,16 +52,16 @@ The company-level purpose is established by the project brief and DEC-008, indep
 | Canvas dimensions | 1024.5 × 4032 pt (PDF page size). Canva artboard size not separately confirmed |
 | Primary content purpose | Company portfolio for a graphic design business and prospective-customer acquisition (owner-confirmed 2026-10-30; DEC-008) |
 | Target audience | Prospective customers; specific segments pending owner confirmation |
-| Typography identified | Aileron, embedded in Regular and Bold. Family identified; sizes and line heights approximate or pending; licence terms pending owner confirmation |
+| Typography identified | Aileron, embedded in Regular and Bold. Family identified; sizes and line heights approximate or pending; CC0-1.0 source license recorded under DEC-014 and PP-REF-014 owner confirmation |
 | Color palette identified | Six dominant colors, approximate (see `design-system.md`) |
 | Assets inventoried | Hero image (magazine-style sample); three service samples (brochure, logo, magazine cover); footer sample image; logo mark (used twice); four check-mark icons; three social-media icons. Originals not extracted. Publication permission pending |
 | Interactive behavior identified | One button ("LEARN MORE"); contact email and telephone as text; three social icons. Destinations not shown in the source (see `content-structure.md`) |
-| Responsive variants supplied | None. Single desktop-width layout |
-| Owner-approved adaptations | None yet. Enquiry path required by PP-CON-011 is not in the source (see `content-structure.md`) |
+| Responsive variants supplied | None. Single desktop-width layout; responsive reflow is an owner-approved web adaptation under DEC-014 |
+| Owner-approved adaptations | DEC-014 approves company voice, conservative content exclusions, an in-page About action, and responsive reflow. Contact hand-off details and publication rights remain gated (see `content-structure.md`) |
 
 ## Residual dependencies
 
 - Full-resolution original image files and the logo vector, which the owner must supply separately (the export is a rendered PDF).
-- Confirmation of approximate color and type values, and of the Aileron licence.
+- Confirmation of approximate color and type values. Aileron CC0-1.0 licensing is recorded under DEC-014/PP-REF-014; preserve license metadata when the font is added.
 - Responsive variants, if the owner wants them (none supplied).
 - Owner confirmation of the claims, testimonials, portfolio permissions, and contact destinations recorded in `content-structure.md`.
