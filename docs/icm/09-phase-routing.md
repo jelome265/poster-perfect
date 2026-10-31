@@ -127,7 +127,7 @@ Blocks:
 | Gate | Status | Reason |
 |---|---|---|
 | G0 | Complete for the profile-only baseline with accepted limitations under DEC-017 (2026-10-31) | Source inspected; seven-section source inventory and component structure accepted under DEC-013; owner approved the profile-only rendered subset and explicitly excluded missing contact/availability values, social URLs, original assets, testimonials/statistics, and rights-uncleared artwork. These exclusions are not claims that missing facts or rights exist. |
-| G1 | Complete — owner-authorized Phase 1 close-out under DEC-016 on 2026-10-31 | PR #15 merged at `9e81adb7a178db9c48106292b3351d0bafe0a9e8`. On that exact merge SHA, application quality passed (run `41172107909`), PP-VER-013 passed (run `41172107907`), and npm/OSV/SPDX/deps.dev audit passed (run `41172108087`). Six required contexts passed on PR #15 head `ecfc625bcc206771bfc1a6b05a20888a51d862ce`; ruleset `26256454` is active with strict checks and no bypass actors. The close-out documentation change must pass PP-VER-013 again on its own PR revision. |
+| G1 | Complete — owner-authorized Phase 1 close-out under DEC-016 on 2026-10-31 | PR #15 merge `9e81adb7a178db9c48106292b3351d0bafe0a9e8` is the foundation baseline. PR #16 close-out commit `5cff148f088a75f5aa8578f04db3727f6ac3765b` is merged to main at `07860b383555d98d6528ba834653cbe83fe172df`; all six required contexts passed on the PR #16 head. |
 | G2 | Not started | No application composition |
 | G3 | Not started | No responsive implementation |
 | G4 | Not started | No release candidate or execution evidence |
