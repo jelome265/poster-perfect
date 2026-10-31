@@ -258,7 +258,30 @@ Limitations:
 | Testimonial quotations | Do not remove. Quotations restored in `content-structure.md`; no history rewrite | DEC-009 |
 | `CLAUDE.md` §4 Phase 0 status | Approved; replacement applied | DEC-010 |
 | Branch protection on `main` | Active and enforced | GitHub ruleset `26256454`: pull request required, non-fast-forward and deletion blocked, no bypass actors |
-| Contact details | Owner to confirm whether the phone and email remain; they appear in the export footer | Owner decision 8, open |
+| Contact details | Values withheld from the current public content record pending confirmation; older Git revisions are not rewritten | Owner decision 8, open |
 | G0 approval | Deferred ("Wait") | Phase 0 remains awaiting owner approval; Phase 1 not authorized |
 
 PP-VER-013 has not been re-run at the commit that contains this section. Its last formal result is FAIL at `877933a` (§10).
+
+
+## 12. PP-VER-013 automated run — revision `a3d933c` (PASS)
+
+| Run | Revision (full SHA) | Scope | Result |
+| --- | --- | --- | --- |
+| R5 | `a3d933c9db11335ebd9b7521eb57d54a3dd484cf` (PR #10 head) | 34 Markdown files; repository-relative links; canonical identifiers; accepted-requirement verification mappings; process/effect routing; Phase 0 status assertions; unconfirmed contact values | **PASS** |
+
+**Evidence:** [GitHub Actions run 41163140407](https://github.com/jelome265/poster-perfect/actions/runs/41163140407), job **PP-VER-013 / documentation integrity**, completed 2026-10-31 03:09:49 UTC with conclusion `success`.
+
+Observed output:
+- 34 Markdown files checked.
+- 70 relative Markdown links checked.
+- 133 canonical identifiers; no unresolved or duplicate definitions.
+- 10 accepted requirements mapped to verification controls.
+- 7 process definitions checked.
+- 10 effects mapped to process definitions.
+- 0 stale Phase 0 status claims.
+- 0 unconfirmed contact values in `content-structure.md`.
+
+Method: repository-local Python standard-library validator (`python3 -B scripts/validate_docs.py`) executed on GitHub Actions Ubuntu 24.04. The workflow checks out the PR merge candidate; the tested PR head was `a3d933c`, based on `7579e27`. The result is evidence for this exact tested candidate and validator version only; subsequent revisions must rerun PP-VER-013.
+
+This is documentation-integrity evidence only. It does not prove application behavior, visual fidelity, accessibility conformance, or application security.

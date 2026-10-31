@@ -55,11 +55,11 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-CON-003` | Component interface | Accepted | Not started | Not collected |
 | `PP-CON-004` | Design token | Partially specified; values approximate, owner confirmation pending | Not started | Not collected |
 | `PP-CON-005` | Asset | Partially specified; originals and permissions pending | Not started | Not collected |
-| `PP-CON-006` | Interaction | Blocked pending source inventory | Not started | Not collected |
+| `PP-CON-006` | Interaction | Partially specified; visible controls inventoried, destinations/behavior pending owner decisions | Not started | Not collected |
 | `PP-CON-007` | External integration | Excluded from baseline | Not applicable | Not applicable at baseline |
 | `PP-CON-008` | Accessibility/responsive | Partially specified; target accepted, details pending | Not started | Not collected |
 | `PP-CON-009` | Change/release | Accepted | Not applicable (governance contract) | Not collected per individual change |
-| `PP-CON-010` | Information architecture and navigation | Blocked on Phase 0 source and accepted business requirements | Not started | Not collected |
+| `PP-CON-010` | Information architecture and navigation | Partially specified; one-page/seven-section draft exists, owner approval/adaptations pending | Not started | Not collected |
 | `PP-CON-011` | Company positioning, portfolio and customer engagement | Partially specified; company purpose accepted, details pending Phase 0 | Not started | Not collected |
 
 ## 5. Process registry
@@ -105,7 +105,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-VER-010` | Asset loading/alt text | Pending asset inventory | G2, G3, G4 |
 | `PP-VER-011` | Release artifact provenance | Planned | G4 |
 | `PP-VER-012` | Owner review/release disposition | Required | G4 |
-| `PP-VER-013` | ICM reference/traceability integrity | Failed at `877933a` (PP-ART-017 §10 R4): stale statuses and missing §9 reference; remediation pending. Prior: passed at `76f990f` (§8 R3) for that revision only | All gates and material documentation changes |
+| `PP-VER-013` | ICM reference/traceability integrity | Passed at `a3d933c` (PP-ART-017 §12 R5, GitHub Actions run 41163140407); earlier R4 failed at `877933a` (§10). Result is revision-specific and must be rerun after further changes | All gates and material documentation changes |
 | `PP-VER-014` | Architecture/component-boundary review | Planned | G1, G2, G4 |
 | `PP-VER-015` | Dependency/side-effect surface review | Defined; not yet run | G1, G2, G4 |
 | `PP-VER-016` | IA and component-blueprint reconciliation | Executed by author 2026-10-30; owner review pending | G0, G2 |
@@ -115,14 +115,14 @@ Do not infer an implementation status from a specification or a verification sta
 
 | ID | Question/blocker | Owner | Resolution phase | Current disposition |
 |---|---|---|---|---|
-| `PP-RSK-001` | Canva artwork cannot currently be inspected from the supplied URL | Project owner supplies accessible export/reference | Phase 0 | Mitigated 2026-10-30: export inspected (see `design-reference.md`); residual items recorded there |
-| `PP-RSK-002` | Specific customer segments, page count, and section hierarchy are not yet verified; company-level website purpose is owner-confirmed in DEC-008 | Project owner / source inspection | Phase 0 | Partially resolved; do not infer the remaining details |
-| `PP-RSK-003` | Exact copy, destinations, and control behavior are not inventoried | Source inspection / owner | Phase 0 | Unknown; do not implement invented behavior |
+| `PP-RSK-001` | Canva editor URL was not inspectable; an export was subsequently supplied | Project owner supplies accessible export/reference | Phase 0 | Mitigated 2026-10-30: export inspected (see `design-reference.md`); residual asset/measurement items recorded there |
+| `PP-RSK-002` | Target customer segments and owner approval of the observed page/section hierarchy remain outstanding | Project owner / source inspection | Phase 0 | One-page/seven-section hierarchy drafted from the export; G0 approval pending |
+| `PP-RSK-003` | Source copy is transcribed; interaction destinations and control behavior remain unresolved | Source inspection / owner | Phase 0 | Copy inventory drafted; CTA, service-card, logo, social and contact behavior await owner decisions |
 | `PP-RSK-004` | Toolchain, routing, styling, package manager, and hosting are undecided | Maintainer / owner decision | Phase 1 | Open; choose from actual requirements |
 | `PP-RSK-005` | Font and asset availability/licensing not verified | Project owner / source inspection | Phase 0 | Pending |
 | `PP-RSK-006` | Responsive source variants or owner-approved adaptations are not known | Project owner / source inspection | Phase 0 | Pending |
 | `PP-RSK-007` | Foundational tooling (router, rendering model, source layout) could be chosen before the page set and component boundaries are known | Maintainer / project owner | Phase 1 entry | Mitigated by `PP-REQ-009` and DEC-007: foundational decisions wait for the accepted information architecture |
-| `PP-RSK-008` | Specific company positioning, customer segments, service offering, publishable portfolio items and permissions, current availability wording, and enquiry destination remain unconfirmed | Project owner | Phase 0 | Blocks company-content and customer-journey specification; do not invent details |
+| `PP-RSK-008` | Specific positioning, customer segments, service offering, publishable portfolio items/permissions, availability wording, contact details and enquiry destination remain unconfirmed | Project owner | Phase 0 | Blocks company-content and customer-journey acceptance. Source contact values are withheld from the current public content record until confirmed; do not invent or restore them without approval |
 
 These are risk/blocker records, not claims that the listed conditions have caused implementation defects.
 

@@ -20,7 +20,9 @@ Ownership: the page set, hierarchy, section order, and navigation structure are 
 
 ## Privacy handling in this repository
 
-Testimonial attributions name private customers. The repository is public and publication permission is unconfirmed, so this record gives each testimonial's role and location but withholds the customer's name. The owner holds the name in the export.
+Testimonial quotations are retained in this public repository under DEC-009, at the project owner's direction. Customer names remain withheld. Repository retention is not authorization to publish the quotations on the website; obtain permission for each quotation and attribution before website use. The owner retains the source names outside this public record.
+
+The source export also contains a location and contact details. Those values are withheld from the current public content record until the owner confirms the details and approves their use. Earlier Git revisions are not rewritten; this change protects the current branch tip only.
 
 ## Page inventory
 
@@ -31,7 +33,7 @@ Testimonial attributions name private customers. The repository is public and pu
 | Primary audience | Prospective customers; specific segments pending owner confirmation |
 | Main heading | "Your vision, Our design" |
 | Primary action | "LEARN MORE" (hero). Destination not shown in the source |
-| Secondary actions | Contact email and telephone shown in the footer, as text |
+| Secondary actions | The source footer contains email and telephone details; values are withheld here pending owner confirmation |
 | Sections in order | Not recorded here; see `information-architecture.md` §5.3 |
 | Required assets | Hero sample image; logo mark; service samples (brochure, logo, magazine cover); footer sample image; four check icons; three social icons. Originals not yet supplied |
 | Responsive variations | None supplied |
@@ -89,9 +91,9 @@ Attribution names are withheld (see Privacy handling). The quoted outcomes need 
 ### Contact and footer (dark navy band) (`PP-IA-008`)
 
 - Logo lockup: "Poster Perfect"
-- "Headquarters" / "Blantyre, Moneymen"
-- "Tel. +265 996 450 427"
-- "Email: posterperfect192@gmail.com"
+- "Headquarters" / location value withheld pending owner confirmation
+- Telephone contact / value withheld pending owner confirmation
+- Email contact / value withheld pending owner confirmation
 - "OFFICE HOURS" / "Monday to Friday, 9:00 am to 5:00 pm" / "Weekends by appointment"
 - "SOCIAL MEDIA" with three icons (Facebook, X or Twitter, and Instagram by shape; profile URLs not in the source)
 - Footer image: "Beyond Creativity" sample (sample content; permission pending)
@@ -101,8 +103,8 @@ Attribution names are withheld (see Privacy handling). The quoted outcomes need 
 | Element | Expected behavior | Destination or outcome | Status |
 | --- | --- | --- | --- |
 | "LEARN MORE" (hero, PP-IA-002) | Pending owner decision | Not shown in the source | Owner decision required |
-| Email text (PP-IA-008) | Mail link | `mailto:posterperfect192@gmail.com` (source text) | Recorded; owner to confirm as enquiry destination |
-| Telephone text (PP-IA-008) | Telephone link | `tel:+265996450427` (source text) | Recorded; owner to confirm |
+| Email text (PP-IA-008) | Mail link only if confirmed | Destination withheld; no `mailto:` value is approved | Not implemented; owner confirmation required |
+| Telephone text (PP-IA-008) | Telephone link only if confirmed | Destination withheld; no `tel:` value is approved | Not implemented; owner confirmation required |
 | Social icons (PP-IA-008), three | Link to the company's profile | Profile URLs not in the source | Owner to supply |
 | Service cards (PP-IA-005), three | Pending: link to a portfolio item, or non-interactive | Not shown in the source | Owner decision required; links depend on portfolio permissions |
 | Logo lockup (PP-IA-002, PP-IA-008) | Pending: home link or none | Not shown in the source | Owner decision required |
@@ -121,7 +123,7 @@ Each item below must be decided by the owner before publication. None has been c
 5. **Service terms.** Confirm "unlimited minor revisions", "24 hours" turnaround, and "3 concepts" as offered policies before publishing them.
 6. **Portfolio permissions.** Confirm, for each sample, whether it may be published and whether it is a client's brand or magazine: the brochure sample, the "A LETTER DESIGN" logo sample, the magazine covers, the hero cover, and the footer "Beyond Creativity" image. Record the permission status in this file.
 7. **Copy typos and wording.** "brochures,websites" lacks a space. "DMs" in the About heading may be unclear to some readers.
-8. **Contact details.** Confirm the email address, telephone number, and "Blantyre, Moneymen" as the enquiry destination and location text.
+8. **Contact details.** Confirm the current email address, telephone number, location text, and office hours before any of them are restored to the public content record or used as an enquiry destination. Values are withheld from this document pending confirmation.
 9. **Hero button.** Choose its destination, or confirm that it is decorative.
 10. **Social profiles.** Supply the URLs for the three social icons.
 11. **Font licence.** Confirm the Aileron licence and whether it may be used on the web.

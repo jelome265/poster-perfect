@@ -52,7 +52,7 @@ See the [ICM phase routing](icm/09-phase-routing.md) for the mapping between pha
 - Phases 1–4 have not started.
 - The repository currently contains documentation only; no application scaffold, build scripts, or automated application checks have been established.
 - The company-level purpose is confirmed: Poster Perfect is a graphic design company portfolio intended to attract prospective customers, not an individual designer's portfolio.
-- Specific customer segments, positioning copy, service categories, publishable portfolio material and permissions, current availability wording, enquiry route, page hierarchy, visual properties, assets, interactions, and responsive rules remain to be confirmed; none is inferred from the project name.
+- Specific customer segments, approved positioning copy, service categories, publishable portfolio material and permissions, current availability wording, enquiry route, and responsive adaptations remain to be confirmed. The one-page/seven-section hierarchy, source copy, approximate visual values, and observed components are drafted from the export and await G0 approval; none is inferred from the project name.
 
 ## Governance
 
