@@ -43,7 +43,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-MAP-005` | Build/package ecosystem | System context | Vite/npm/Node 22 selected (DEC-012) |
 | `PP-MAP-006` | Hosting/delivery | System context | Not selected |
 | `PP-MAP-007` | External destinations/services | System context | Unknown; not assumed |
-| `PP-MAP-008` | Poster Perfect graphic design business represented by the website | System context | Company-level purpose confirmed; details pending Phase 0 |
+| `PP-MAP-008` | Poster Perfect graphic design business represented by the website | System context | Canva-derived company information and seven-section baseline accepted under DEC-018; missing values/assets/rights have explicit placeholders |
 | `PP-MAP-010`–`PP-MAP-017` | Frontend and engineering-tooling boundaries | Architecture map | Accepted logical boundaries; minimal application topology implemented and reviewed; page topology pending |
 | `PP-MAP-018` | Cross-cutting documentation/ICM governance boundary, not a runtime component | Architecture map | Accepted governance boundary |
 
