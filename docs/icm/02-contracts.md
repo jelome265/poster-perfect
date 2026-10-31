@@ -2,7 +2,7 @@
 
 **Canonical level:** L2 — Contracts and behaviour  
 **Record class:** Normative project contract index  
-**Status:** Initial requirement set accepted; design-dependent interface contracts pending Phase 0
+**Status:** Initial requirement set accepted; source-derived content is approved under DEC-018; design-dependent implementation contracts progress through Phases 2–3
 
 ## 1. Purpose
 
@@ -170,7 +170,7 @@ No external API, remote form submission, analytics provider, payment provider, o
 
 The implementation MUST follow the approved responsive interpretation and be assessed against applicable WCAG 2.2 AA criteria. Semantic structure, keyboard operation, visible focus, readable content, contrast, zoom/reflow, and appropriate alternatives are mandatory review dimensions.
 
-**Specification:** Partially specified; WCAG target accepted, with page-specific responsive and semantic criteria pending Phase 0  
+**Specification:** Partially specified; WCAG target accepted, with page-specific responsive and semantic criteria to be finalized during Phases 2–3  
 **Implementation:** Not started  
 **Evidence:** Not collected
 
