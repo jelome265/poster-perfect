@@ -61,7 +61,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-CON-008` | Accessibility/responsive | Partially specified; target accepted, details pending | Not started | Not collected |
 | `PP-CON-009` | Change/release | Accepted | Not applicable (governance contract) | Not collected per individual change |
 | `PP-CON-010` | Information architecture and navigation | Accepted 2026-10-31 (DEC-013); web adaptations and content decisions still open | Not started | Not collected |
-| `PP-CON-011` | Company positioning, portfolio and customer engagement | Partially specified; company purpose accepted, details pending Phase 0 | Not started | Not collected |
+| `PP-CON-011` | Company positioning, portfolio and customer engagement | Accepted for the profile-only baseline under DEC-017; full customer-acquisition path remains a G4 dependency | Profile-only implementation permitted; no external enquiry control or availability statement | DEC-017; publication rights and current contact facts remain unknown and excluded |
 | `PP-CON-012` | npm dependency security and license compliance | Accepted under DEC-015 | Implemented and passed on PR #15 merge SHA `9e81adb7a178db9c48106292b3351d0bafe0a9e8` | PP-ART-021; PP-VER-018; Actions run `41172108087` |
 
 ## 5. Process registry
@@ -74,7 +74,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-PRC-004` | Local interface interaction | Conditional on source | Not started |
 | `PP-PRC-005` | Remote form/API | Excluded baseline; future extension | Not started |
 | `PP-PRC-006` | Verification/review/release | Target governance process | Applies per change |
-| `PP-PRC-007` | Source inspection/specification | Source inspected 2026-10-30; owner dispositions approved under DEC-014; G0 evidence dependencies remain | Phase 0 human workflow |
+| `PP-PRC-007` | Source inspection/specification | Owner-approved source scope and exclusions recorded under DEC-017 | G0 specification workflow complete for profile-only baseline |
 
 ## 6. Effect registry
 
@@ -111,8 +111,8 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-VER-013` | ICM reference/traceability integrity | Passed on PR #15 merge SHA `9e81adb7a178db9c48106292b3351d0bafe0a9e8` (Actions run `41172107907`); must pass again on this close-out PR revision before merge | All gates and material documentation changes |
 | `PP-VER-014` | Architecture/component-boundary review | Passed by manual review of neutral foundation; re-run after page/section modules are added | G1, G2, G4 |
 | `PP-VER-015` | Dependency/side-effect surface review | Passed by manual foundation review; dedicated automated SCA/license controls are recorded separately under PP-VER-018 | G1, G2, G4 |
-| `PP-VER-016` | IA and component-blueprint reconciliation | Executed by author 2026-10-30; structural baseline accepted by owner on 2026-10-31 (DEC-013); G0 content remains open | G0, G2 |
-| `PP-VER-017` | Company positioning, approved portfolio and customer journey reconciliation | Partially specified; details pending Phase 0 | G0, G2, G4 |
+| `PP-VER-016` | IA and component-blueprint reconciliation | Executed 2026-10-30; structural baseline accepted under DEC-013; profile-only composition scope accepted under DEC-017 | G0, G2 |
+| `PP-VER-017` | Company positioning, approved portfolio and customer journey reconciliation | G0 scope approval completed under DEC-017 for profile-only website; no contact/availability facts, rights, or working enquiry path asserted | G0, G2, G4 |
 | `PP-VER-018` | npm dependency vulnerability and SPDX license audit | Passed on merge SHA `9e81adb7a178db9c48106292b3351d0bafe0a9e8` (Actions run `41172108087`); npm, OSV, SPDX, deps.dev checks passed; 140 entries and zero policy violations | G1, G4 |
 
 ## 8. Open questions and blockers
@@ -153,4 +153,4 @@ DEC-016 records the project owner's Phase 1 completion instruction. The merged b
 | PP-VER-018 | Dependency security/license run [41172108087](https://github.com/jelome265/poster-perfect/actions/runs/41172108087) on the merge SHA; npm, OSV, SPDX, and deps.dev checks passed; 140 package entries and zero policy violations |
 | Protect main | Ruleset [26256454](https://github.com/jelome265/poster-perfect/rules/26256454) active; strict six-context requirement; no bypass actors. All six contexts passed on PR #15 head `ecfc625bcc206771bfc1a6b05a20888a51d862ce`; five Actions checks are listed on the merge SHA and the GHAS `osv-scanner` check passed on the PR head |
 
-Historical verification rows above retain the revisions on which those earlier checks were run. This final record supersedes any earlier Phase 1 status recorded as pending/in progress. G1 is complete; G0 remains open and Phase 2 remains blocked.
+Historical verification rows above retain the revisions on which those earlier checks were run. G1 is complete under DEC-016. G0 is complete for the profile-only baseline under DEC-017 with explicit exclusions; the absence of contact, current availability, original artwork, social URLs and publication-rights evidence is not converted into a factual claim. Phase 2 may begin after this documentation change is merged. A business-ready release still requires a verified enquiry path or separate owner-authorized restricted-release disposition.
