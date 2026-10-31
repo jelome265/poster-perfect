@@ -32,7 +32,7 @@ Phase 3: Responsive and accessible implementation
 Phase 4: Verification and release readiness
 ```
 
-Phase 1 normally depends on stable Phase 0 inputs. The owner authorized a limited foundation overlap under DEC-012/DEC-013. DEC-014 approves conservative content/design dispositions and responsive reflow; DEC-016 records the owner's G1 completion disposition. G0 remains open for current contact and availability data, original assets, company social URLs, and publication rights. **Phase 2 implementation remains gated on G0 completion**, even though Phase 1 is complete.
+Phase 1 normally depends on stable Phase 0 inputs. The owner authorized a limited foundation overlap under DEC-012/DEC-013. DEC-014 and DEC-017 approve the source-derived profile-only content/design baseline and explicitly accept missing contact, availability, original-asset, social-profile, and publication-rights evidence as exclusions from the initial website. **G0 is complete for that bounded scope; Phase 2 may begin after the DEC-017 decision/inventory change is merged.** A verified enquiry path remains a business-ready release condition, not a silently assumed feature.
 
 ## ICM control model
 
@@ -48,11 +48,11 @@ See the [ICM phase routing](icm/09-phase-routing.md) for the mapping between pha
 
 ## Current project state
 
-- Phase 0 remains in progress (G0 open). The owner approved conservative business/content/design dispositions under DEC-014; current contact and availability values, original assets, and publication rights for testimonials and sample artwork remain evidence-gated.
+- Phase 0/G0 is complete for the owner-approved profile-only baseline under DEC-017. No current contact/availability values, original logo/image files, social URLs, testimonials, statistics, or third-party artwork are published or assumed. The remaining limitations are recorded in the canonical inventories and must be respected in Phase 2.
 - Phase 1 is complete. The neutral React shell, npm lockfile, strict TypeScript configuration, lint/test/build scripts, and CI controls are merged through PR #15 at `9e81adb7a178db9c48106292b3351d0bafe0a9e8`. Exact merge-SHA evidence: application quality run `41172107909`, documentation integrity run `41172107907`, and dependency/security/license run `41172108087`. Owner disposition is recorded in DEC-016.
 - Phases 2–4 have not started. No designed page composition, final brand styling, responsive implementation, or production deployment has been introduced.
 - The company-level purpose is confirmed: Poster Perfect is a graphic design company portfolio intended to attract prospective customers, not an individual designer's portfolio.
-- Source-derived customer groups, company voice, service categories, conservative content exclusions, the About anchor action, and responsive reflow are approved under DEC-014. Exact contact/availability values, original logo and asset files, and publication rights for testimonials/sample artwork remain unresolved and are not to be inferred.
+- Source-derived customer groups, company voice, service categories, conservative content exclusions, text-only wordmark, the About anchor action, approximate palette, Aileron type family, and responsive reflow are approved under DEC-014/DEC-017. Missing contact/availability values, original artwork/logo files, social URLs, and publication rights are explicitly excluded from the initial website; do not infer them.
 
 ## Governance
 
