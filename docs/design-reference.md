@@ -4,7 +4,7 @@
 
 The project owner supplied a Canva design as the visual and content reference. The Canva editor URL is intentionally not copied into this public repository; access to the editable document stays under the owner's control.
 
-The export inspected for this record is identified below. The PDF itself is not committed. It contains owner-supplied content and third-party sample imagery whose publication permission is not yet confirmed, so the owner holds it and this record identifies it by name and hash.
+The export inspected for this record is identified below. The PDF is committed at `docs/source/` under DEC-018 (owner decision, 2026-10-31). It contains owner-supplied content and third-party sample imagery whose rights are not evidenced. Committing it does not authorize using that artwork on the website, which remains excluded by DEC-017.
 
 | Field | Value |
 | --- | --- |
@@ -61,7 +61,7 @@ The company-level purpose is established by the project brief and DEC-008, indep
 
 ## Residual dependencies and accepted limitations (DEC-017)
 
-- The owner-held PDF was inspected on 2026-10-30 and is identified above by filename and SHA-256. It is not committed to the repository. Re-supply the PDF before detailed side-by-side visual comparison or any review that requires access to the actual source image.
+- The owner-held PDF was inspected on 2026-10-30 and is identified above by filename and SHA-256. It is committed at `docs/source/` under DEC-018. Re-supply the PDF before detailed side-by-side visual comparison or any review that requires access to the actual source image.
 - Original image files, the original logo vector, and standalone icon files were not extracted or supplied. They are unavailable to the initial implementation and are excluded under DEC-017. Do not recreate the mark or substitute stock/AI imagery.
 - No rights evidence was supplied for third-party/sample artwork, customer work, or testimonials. Their publication status is **not authorized**; exclude them unless item-specific permissions and provenance are later recorded.
 - Aileron Regular/Bold and its CC0-1.0 source license are identified. Verify the exact font distribution and preserve its license metadata when the font files are added.
