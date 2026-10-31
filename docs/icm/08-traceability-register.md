@@ -43,7 +43,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-MAP-005` | Build/package ecosystem | System context | Vite/npm/Node 22 selected (DEC-012) |
 | `PP-MAP-006` | Hosting/delivery | System context | Not selected |
 | `PP-MAP-007` | External destinations/services | System context | Unknown; not assumed |
-| `PP-MAP-008` | Poster Perfect graphic design business represented by the website | System context | Canva-derived company information and seven-section baseline accepted under DEC-018; missing values/assets/rights have explicit placeholders |
+| `PP-MAP-008` | Poster Perfect graphic design business represented by the website | System context | Canva-derived company information and seven-section baseline accepted under DEC-019; missing values/assets/rights have explicit placeholders |
 | `PP-MAP-010`–`PP-MAP-017` | Frontend and engineering-tooling boundaries | Architecture map | Accepted logical boundaries; minimal application topology implemented and reviewed; page topology pending |
 | `PP-MAP-018` | Cross-cutting documentation/ICM governance boundary, not a runtime component | Architecture map | Accepted governance boundary |
 
@@ -61,7 +61,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-CON-008` | Accessibility/responsive | Partially specified; target accepted, details pending | Not started | Not collected |
 | `PP-CON-009` | Change/release | Accepted | Not applicable (governance contract) | Not collected per individual change |
 | `PP-CON-010` | Information architecture and navigation | Accepted 2026-10-31 (DEC-013); web adaptations and content decisions still open | Not started | Not collected |
-| `PP-CON-011` | Company positioning, portfolio and customer engagement | Accepted for Canva-led seven-section baseline under DEC-018; unavailable values/assets/rights use explicit placeholders | Seven sections and source-derived company content in scope; contact/social controls inactive until verified destinations are supplied | DEC-018; asset rights, testimonial permissions and factual claims remain release controls |
+| `PP-CON-011` | Company positioning, portfolio and customer engagement | Accepted for Canva-led seven-section baseline under DEC-019; unavailable values/assets/rights use explicit placeholders | Seven sections and source-derived company content in scope; contact/social controls inactive until verified destinations are supplied | DEC-019; asset rights, testimonial permissions and factual claims remain release controls |
 | `PP-CON-012` | npm dependency security and license compliance | Accepted under DEC-015 | Implemented and passed on PR #15 merge SHA `9e81adb7a178db9c48106292b3351d0bafe0a9e8` | PP-ART-021; PP-VER-018; Actions run `41172108087` |
 
 ## 5. Process registry
@@ -74,7 +74,7 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-PRC-004` | Local interface interaction | Conditional on source | Not started |
 | `PP-PRC-005` | Remote form/API | Excluded baseline; future extension | Not started |
 | `PP-PRC-006` | Verification/review/release | Target governance process | Applies per change |
-| `PP-PRC-007` | Source inspection/specification | Canva company content, seven sections and explicit future-update placeholder rules approved under DEC-018 | G0 source-led specification workflow complete |
+| `PP-PRC-007` | Source inspection/specification | Canva company content, seven sections and explicit future-update placeholder rules approved under DEC-019 | G0 source-led specification workflow complete |
 
 ## 6. Effect registry
 
@@ -111,8 +111,8 @@ Do not infer an implementation status from a specification or a verification sta
 | `PP-VER-013` | ICM reference/traceability integrity | Passed on PR #15 merge SHA `9e81adb7a178db9c48106292b3351d0bafe0a9e8` (Actions run `41172107907`); must pass again on this close-out PR revision before merge | All gates and material documentation changes |
 | `PP-VER-014` | Architecture/component-boundary review | Passed by manual review of neutral foundation; re-run after page/section modules are added | G1, G2, G4 |
 | `PP-VER-015` | Dependency/side-effect surface review | Passed by manual foundation review; dedicated automated SCA/license controls are recorded separately under PP-VER-018 | G1, G2, G4 |
-| `PP-VER-016` | IA and component-blueprint reconciliation | Source hierarchy/component inventory reconciled 2026-10-30; seven-section composition and placeholder regions approved under DEC-018 | G0, G2 |
-| `PP-VER-017` | Company positioning, source-derived content and customer-journey placeholder reconciliation | G0 source-led company content and all seven sections approved under DEC-018; missing values and rights-dependent content have explicit placeholders | G0, G2, G4 |
+| `PP-VER-016` | IA and component-blueprint reconciliation | Source hierarchy/component inventory reconciled 2026-10-30; seven-section composition and placeholder regions approved under DEC-019 | G0, G2 |
+| `PP-VER-017` | Company positioning, source-derived content and customer-journey placeholder reconciliation | G0 source-led company content and all seven sections approved under DEC-019; missing values and rights-dependent content have explicit placeholders | G0, G2, G4 |
 | `PP-VER-018` | npm dependency vulnerability and SPDX license audit | Passed on merge SHA `9e81adb7a178db9c48106292b3351d0bafe0a9e8` (Actions run `41172108087`); npm, OSV, SPDX, deps.dev checks passed; 140 entries and zero policy violations | G1, G4 |
 
 ## 8. Open questions and blockers
@@ -120,11 +120,11 @@ Do not infer an implementation status from a specification or a verification sta
 | ID | Question/blocker | Owner | Resolution phase | Current disposition |
 |---|---|---|---|---|
 | `PP-RSK-001` | Canva editor URL was not inspectable; an export was subsequently supplied | Project owner supplies accessible export/reference | Phase 0 | Mitigated 2026-10-30: export inspected (see `design-reference.md`); residual asset/measurement items recorded there |
-| `PP-RSK-002` | Target customer segments and owner approval of the observed page/section hierarchy remain outstanding | Project owner / source inspection | Phase 0 | Mitigated: source-derived customer groups and seven-section Canva hierarchy approved under DEC-014/DEC-013/DEC-018 |
+| `PP-RSK-002` | Target customer segments and owner approval of the observed page/section hierarchy remain outstanding | Project owner / source inspection | Phase 0 | Mitigated: source-derived customer groups and seven-section Canva hierarchy approved under DEC-014/DEC-013/DEC-019 |
 | `PP-RSK-003` | Source copy is transcribed; interaction destinations and control behavior remain unresolved | Source inspection / owner | Phase 0 | Mitigated for source-visible baseline: source copy/sections and About CTA recorded; withheld external destinations remain explicit placeholders and are not active links |
 | `PP-RSK-004` | Toolchain, styling, and hosting choices were unresolved | Maintainer / owner decision | Phase 1 | Mitigated: core toolchain, rendering model, and no-router baseline selected under DEC-012; styling framework and hosting remain open |
 | `PP-RSK-005` | Font and asset availability/licensing not verified | Project owner / source inspection | Phase 0/G2 | Aileron source license recorded; missing original logo/images use named placeholders. Verify font distribution and record individual asset permissions before integration/publication |
-| `PP-RSK-006` | Responsive source variants or owner-approved adaptations are not known | Project owner / source inspection | Phase 0/G2/G3 | Mitigated: content-driven responsive reflow approved under DEC-014/DEC-018; implement in Phase 2 and verify in Phases 2–3 |
+| `PP-RSK-006` | Responsive source variants or owner-approved adaptations are not known | Project owner / source inspection | Phase 0/G2/G3 | Mitigated: content-driven responsive reflow approved under DEC-014/DEC-019; implement in Phase 2 and verify in Phases 2–3 |
 | `PP-RSK-007` | Foundational tooling (router, rendering model, source layout) could be chosen before the page set and component boundaries are known | Maintainer / project owner | Phase 1 entry | Mitigated by `PP-REQ-009` and DEC-007: foundational decisions wait for the accepted information architecture |
 | `PP-RSK-008` | Specific positioning, customer segments, service offering, publishable portfolio items/permissions, availability wording, contact details and enquiry destination remain unconfirmed | Project owner | G2/G4 publication | Canva-derived positioning, customer groups and services approved; missing contact/social/availability values have update placeholders; stats/testimonials/assets require substantiation/permission before publication. Does not block source-led Phase 2 composition |
 | `PP-RSK-009` | `main` ruleset requires zero approving reviews; required-check failure behavior has not been deliberately tested | Project owner / repository administrator | Continuous governance | The no-status-check gap is mitigated: active ruleset `26256454` requires six named contexts with strict checks and no bypass actors. Zero approving reviews remain configured; no intentionally failing PR has been used to test merge blocking. |
@@ -153,4 +153,4 @@ DEC-016 records the project owner's Phase 1 completion instruction. The merged b
 | PP-VER-018 | Dependency security/license run [41172108087](https://github.com/jelome265/poster-perfect/actions/runs/41172108087) on the merge SHA; npm, OSV, SPDX, and deps.dev checks passed; 140 package entries and zero policy violations |
 | Protect main | Ruleset [26256454](https://github.com/jelome265/poster-perfect/rules/26256454) active; strict six-context requirement; no bypass actors. All six contexts passed on PR #15 head `ecfc625bcc206771bfc1a6b05a20888a51d862ce`; five Actions checks are listed on the merge SHA and the GHAS `osv-scanner` check passed on the PR head |
 
-Historical verification rows above retain the revisions on which those earlier checks were run. G1 is complete under DEC-016. G0 is complete for the Canva-led seven-section specification under DEC-018: source company information, all seven sections, source-derived component regions and explicit update placeholders are recorded. Missing contact/social/availability values and rights-dependent claims/assets remain unknown and are not fabricated. Phase 2 may begin after this correction is merged; G2/G4 evidence still governs composition, publication and release.
+Historical verification rows above retain the revisions on which those earlier checks were run. G1 is complete under DEC-016. G0 is complete for the Canva-led seven-section specification under DEC-019: source company information, all seven sections, source-derived component regions and explicit update placeholders are recorded. Missing contact/social/availability values and rights-dependent claims/assets remain unknown and are not fabricated. Phase 2 may begin after this correction is merged; G2/G4 evidence still governs composition, publication and release.

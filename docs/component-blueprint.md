@@ -2,7 +2,7 @@
 
 **Artifact:** `PP-ART-019`  
 **Class:** Contract / architecture (see `PP-CON-003`)  
-**Status:** Source-derived five-component inventory accepted under DEC-013/DEC-018. All component regions remain in the seven-section composition; missing assets, claims, permissions and destinations use explicit placeholder states.
+**Status:** Source-derived five-component inventory accepted under DEC-013/DEC-019. All component regions remain in the seven-section composition; missing assets, claims, permissions and destinations use explicit placeholder states.
 **Canonical owner:** Component maintainer (`PP-MAP-013`, role as defined in `icm/01-architecture-map.md`)  
 **Producer:** Component maintainer; Section implementation owner (`PP-MAP-012`) for entries in their section  
 **Approval:** Project owner  
@@ -12,7 +12,7 @@
 
 The component blueprint records, for each component in `components.md`, the **contract** that its consumers and reviewers depend on: responsibility boundary, typed inputs, owned state, native semantics, browser effects, keyboard and focus behavior, responsive variants, asset dependencies, accessibility obligations, and verification controls.
 
-Five component entries were derived from the Canva export (`PP-CMP-001` to `PP-CMP-005`) and their structure was accepted under DEC-013. DEC-018 confirms all component regions remain part of the seven-section composition. Where original assets, claim substantiation, permissions or destinations are missing, define typed placeholder inputs rather than excluding the component.
+Five component entries were derived from the Canva export (`PP-CMP-001` to `PP-CMP-005`) and their structure was accepted under DEC-013. DEC-019 confirms all component regions remain part of the seven-section composition. Where original assets, claim substantiation, permissions or destinations are missing, define typed placeholder inputs rather than excluding the component.
 
 ## 2. Ownership split
 
@@ -71,7 +71,7 @@ Open questions:        <none | list with owner>
 
 ## 6. Entries and inventory status
 
-Entries below record the source-derived patterns (2026-10-30). The structural inventory is owner-accepted under DEC-013/DEC-018; individual implementation contracts remain partially specified. All five component regions remain part of the seven-section composition, with explicit placeholder inputs where values, assets, claims or permissions are unavailable.
+Entries below record the source-derived patterns (2026-10-30). The structural inventory is owner-accepted under DEC-013/DEC-019; individual implementation contracts remain partially specified. All five component regions remain part of the seven-section composition, with explicit placeholder inputs where values, assets, claims or permissions are unavailable.
 
 ### PP-CMP-001 — ValueBadge
 
@@ -92,7 +92,7 @@ Specification: Partially specified | Implementation: Not started | Evidence: Not
 
 ### PP-CMP-002 — ServiceCard
 
-Specification: Partially specified | Initial implementation: source label plus explicit image placeholder under DEC-018 | Evidence: pending Phase 2
+Specification: Partially specified | Initial implementation: source label plus explicit image placeholder under DEC-019 | Evidence: pending Phase 2
 
 - Responsibility: preserve the source service image/card pattern and label, with an explicit placeholder until an original, permission-cleared image is available.
 - Used in sections: `PP-IA-005`. Reused by: services only (3 instances).
@@ -109,7 +109,7 @@ Specification: Partially specified | Initial implementation: source label plus e
 
 ### PP-CMP-003 — StatTile
 
-Specification: Partially specified | Implementation: Placeholder tile retained under DEC-018 | Evidence: pending Phase 2
+Specification: Partially specified | Implementation: Placeholder tile retained under DEC-019 | Evidence: pending Phase 2
 
 - Responsibility: preserve one source statistic tile; render a placeholder until the numerical claim and label are substantiated and approved.
 - Used in sections: `PP-IA-006`. Reused by: statistics only (3 instances).
@@ -124,7 +124,7 @@ Specification: Partially specified | Implementation: Placeholder tile retained u
 
 ### PP-CMP-004 — TestimonialCard
 
-Specification: Partially specified | Implementation: Placeholder testimonial card retained under DEC-018 | Evidence: pending Phase 2
+Specification: Partially specified | Implementation: Placeholder testimonial card retained under DEC-019 | Evidence: pending Phase 2
 
 - Responsibility: preserve one source testimonial card; display a placeholder until quote/attribution publication permission and any material-claim evidence are approved.
 - Used in sections: `PP-IA-007`. Reused by: testimonials only (3 instances).
@@ -157,8 +157,8 @@ Specification: Partially specified | Implementation: Not started | Evidence: Not
 | --- | --- | --- | --- |
 | `PP-CMP-001` | ValueBadge | Partially specified | Reflow and label contrast open |
 | `PP-CMP-002` | ServiceCard | Partially specified | Link decision and alternative text open; permissions pending |
-| `PP-CMP-003` | StatTile | Placeholder tile retained under DEC-018 | Three-column source layout; do not render unsubstantiated source values |
-| `PP-CMP-004` | TestimonialCard | Placeholder card retained under DEC-018 | Three-card source layout; quotes/attributions await permissions and claim substantiation |
+| `PP-CMP-003` | StatTile | Placeholder tile retained under DEC-019 | Three-column source layout; do not render unsubstantiated source values |
+| `PP-CMP-004` | TestimonialCard | Placeholder card retained under DEC-019 | Three-card source layout; quotes/attributions await permissions and claim substantiation |
 | `PP-CMP-005` | BrandLockup | Partially specified | Text-only wordmark in baseline; original symbol unavailable |
 
 ## 8. Verification

@@ -2,7 +2,7 @@
 
 ## Status
 
-**Source-derived component inventory accepted under DEC-013/DEC-018 (2026-10-31).** The five repeated/coherent component patterns map to the seven-section Canva page. The source regions remain in scope; missing images, statistics, customer permissions and contact/social values are represented by explicit placeholders, not removed.
+**Source-derived component inventory accepted under DEC-013/DEC-019 (2026-10-31).** The five repeated/coherent component patterns map to the seven-section Canva page. The source regions remain in scope; missing images, statistics, customer permissions and contact/social values are represented by explicit placeholders, not removed.
 
 ## Component criteria
 
@@ -38,7 +38,7 @@ Avoid:
 
 ## Component inventory
 
-**Status:** Source-derived seven-section component inventory accepted under DEC-013/DEC-018. Initial page composition retains source component regions with clear placeholder states where source assets, claim substantiation, permissions or destinations are unavailable.
+**Status:** Source-derived seven-section component inventory accepted under DEC-013/DEC-019. Initial page composition retains source component regions with clear placeholder states where source assets, claim substantiation, permissions or destinations are unavailable.
 
 Derived from the export (2026-10-30). Repeated patterns and coherent regions are listed as components. Single-use markup is listed as local markup with its reason. Contract details are in the [component blueprint](component-blueprint.md) (`PP-ART-019`).
 
@@ -61,7 +61,7 @@ Derived from the export (2026-10-30). Repeated patterns and coherent regions are
 | Contact block | `PP-IA-008` | Single use |
 | Social icon group | `PP-IA-008` | Preserve the source region with three destination placeholders; do not activate links until exact profile URLs are verified |
 
-## Source-led component dispositions (DEC-018)
+## Source-led component dispositions (DEC-019)
 
 - Render all seven source sections in the source order.
 - Keep four source value points; use text fallbacks if original check icons are unavailable.

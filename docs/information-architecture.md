@@ -2,7 +2,7 @@
 
 **Artifact:** `PP-ART-018`  
 **Class:** Specification (contract-backed; see `PP-CON-010`)  
-**Status:** Seven-section Canva source hierarchy accepted under DEC-013/DEC-018; the source-led rendered scope includes all seven sections, with explicit future-update placeholders for unavailable values and assets.
+**Status:** Seven-section Canva source hierarchy accepted under DEC-013/DEC-019; the source-led rendered scope includes all seven sections, with explicit future-update placeholders for unavailable values and assets.
 **Canonical owner:** Page implementation owner (`PP-MAP-011`, role as defined in `icm/01-architecture-map.md`)  
 **Producer:** Page implementation owner, from the source-inspection record  
 **Approval:** Project owner  
@@ -12,7 +12,7 @@
 
 This document is the canonical record of the **structure** of the Poster Perfect website: which pages or routes exist, how they nest, how navigation connects them, what order sections appear in, and where in-page anchor targets exist.
 
-**No page, route, section, navigation entry, or anchor is recorded here until it is observed in the inspected Canva source or explicitly approved by the project owner as a web requirement/adaptation.** Sections 5.1 to 5.6 record the one-page, seven-section structure observed in the 2026-10-30 Canva export and confirmed as the website baseline under DEC-018. Do not infer additional pages, routes, sections, or navigation from the project name or typical company-portfolio patterns.
+**No page, route, section, navigation entry, or anchor is recorded here until it is observed in the inspected Canva source or explicitly approved by the project owner as a web requirement/adaptation.** Sections 5.1 to 5.6 record the one-page, seven-section structure observed in the 2026-10-30 Canva export and confirmed as the website baseline under DEC-019. Do not infer additional pages, routes, sections, or navigation from the project name or typical company-portfolio patterns.
 
 ### Business-purpose constraint
 
@@ -68,7 +68,7 @@ Every node MUST record the following. A field that does not apply is marked "not
 
 ## 5. Structure (observed in the export, 2026-10-30)
 
-The export is one page with seven sections. The source records below define the initial rendered seven-section composition under DEC-018. The Canva source has no navigation bar; the About anchor is an owner-approved web adaptation, not an observed source navigation item. Missing facts/assets remain represented by placeholders inside their source regions; see §5.7.
+The export is one page with seven sections. The source records below define the initial rendered seven-section composition under DEC-019. The Canva source has no navigation bar; the About anchor is an owner-approved web adaptation, not an observed source navigation item. Missing facts/assets remain represented by placeholders inside their source regions; see §5.7.
 
 ### 5.1 Page and route inventory
 
@@ -97,8 +97,8 @@ PP-IA-001 Home page (single page)
 | Home (`PP-IA-001`) | 2 | `PP-IA-003` | About, light grey band | Drafted from export |
 | Home (`PP-IA-001`) | 3 | `PP-IA-004` | Value statement, bright blue band | Drafted from export |
 | Home (`PP-IA-001`) | 4 | `PP-IA-005` | Services, dark navy band | Drafted from export; duplicated paragraph under review |
-| Home (`PP-IA-001`) | 5 | `PP-IA-006` | Statistics, three columns | Source-observed; retain three-column layout with unverified values as placeholders under DEC-018 |
-| Home (`PP-IA-001`) | 6 | `PP-IA-007` | Testimonials, light grey band | Source-observed; retain three testimonial-card slots with permission-gated placeholder content under DEC-018 |
+| Home (`PP-IA-001`) | 5 | `PP-IA-006` | Statistics, three columns | Source-observed; retain three-column layout with unverified values as placeholders under DEC-019 |
+| Home (`PP-IA-001`) | 6 | `PP-IA-007` | Testimonials, light grey band | Source-observed; retain three testimonial-card slots with permission-gated placeholder content under DEC-019 |
 | Home (`PP-IA-001`) | 7 | `PP-IA-008` | Contact and footer, dark navy band | Source-observed; preserve headquarters/contact/office-hours/social regions with explicit update placeholders where values are withheld or need reconfirmation |
 
 ### 5.4 Navigation
@@ -129,7 +129,7 @@ Navigation entries MUST use semantic links (`PP-CON-006`). A navigation entry wi
 
 The export has no navigation bar or separate enquiry CTA. Its footer contains source contact and social regions. Preserve those regions, using update placeholders for withheld values and enabling native hand-off links only after valid destinations are supplied.
 
-### 5.7 Source-led render scope and placeholder rules (DEC-018)
+### 5.7 Source-led render scope and placeholder rules (DEC-019)
 
 All seven Canva sections are part of the initial page composition, in the source order listed in §5.3. Sections are not removed because content or assets need a later update.
 

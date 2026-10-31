@@ -4,7 +4,7 @@
 
 The project owner supplied a Canva design as the visual and content reference. The Canva editor URL is intentionally not copied into this public repository; access to the editable document stays under the owner's control.
 
-The export inspected for this record is identified below. The PDF itself is not committed. It contains owner-supplied content and third-party sample imagery whose publication permission is not yet confirmed, so the owner holds it and this record identifies it by name and hash.
+The export inspected for this record is committed at `docs/source/Company_Website_Business_Website_in_Dark_Blue_White_Bright_Blue_Simple_Professional_Style.pdf` under DEC-018 (owner decision, 2026-10-31). It contains owner-supplied content and third-party sample imagery whose rights are not evidenced. Committing it does not authorize using that artwork on the website.
 
 | Field | Value |
 | --- | --- |
@@ -35,7 +35,7 @@ The Canva design is the primary source for company information, page content, se
 ## Translation rules
 
 1. Treat the inspected Canva design as the visual reference and use owner-approved business requirements as the authority for company purpose and required customer journey.
-2. Record source copy accurately and preserve its hierarchy. Any approved company-voice or editorial adaptation must be traceable to the source and DEC-014/DEC-018; do not add unsupported facts.
+2. Record source copy accurately and preserve its hierarchy. Any approved company-voice or editorial adaptation must be traceable to the source and DEC-014/DEC-019; do not add unsupported facts.
 3. Content or enquiry actions required by the approved company objective but absent from the Canva source must be recorded as proposed web adaptations and approved before inclusion.
 4. Recreate layout with HTML and CSS rather than using a full-page screenshot as the website, unless an image-only implementation is explicitly approved.
 5. Use source assets where available and permitted. Do not substitute unrelated stock imagery or approximate brand assets without approval.
@@ -57,11 +57,11 @@ The Canva design is the primary source for company information, page content, se
 | Assets inventoried | Hero image (magazine-style sample); three service samples (brochure, logo, magazine cover); footer sample image; logo mark (used twice); four check-mark icons; three social-media icons. Originals not extracted. Publication permission pending |
 | Interactive behavior identified | One button ("LEARN MORE"); contact email and telephone as text; three social icons. Destinations not shown in the source (see `content-structure.md`) |
 | Responsive variants supplied | None. Single desktop-width layout; responsive reflow is an owner-approved web adaptation under DEC-014 |
-| Owner-approved adaptations | DEC-014 approves company voice, conservative content exclusions, an in-page About action, and responsive reflow. Contact hand-off details and publication rights remain gated (see `content-structure.md`) |
+| Owner-approved adaptations | DEC-014 approves company voice, source-derived capabilities, removal of personal education details and conservative claim/rights controls; DEC-019 confirms the Canva-led seven-section structure and update-slot policy. Contact/social destinations and publication rights remain controlled in `content-structure.md` |
 
-## Residual dependencies and placeholder policy (DEC-018)
+## Residual dependencies and placeholder policy (DEC-019)
 
-- The owner-held PDF was inspected on 2026-10-30 and is identified above by filename and SHA-256. The source copy, company facts, seven-section hierarchy and visual inventory have been transcribed into the canonical records. The PDF itself is not committed. Re-supply it before detailed side-by-side visual comparison or any review that requires access to the actual source image.
+- The owner-supplied PDF was inspected on 2026-10-30 and is committed at `docs/source/` under DEC-018. Its filename and SHA-256 are recorded above. It is available as the source reference for detailed side-by-side visual comparison; record the selected CSS viewport separately.
 - Original image files, the original logo vector and standalone icon files were not supplied to the repository. Preserve their observed positions with named placeholders. Do not recreate the logo mark or substitute unrelated stock/AI imagery.
 - Rights evidence was not supplied for third-party/sample artwork, customer work or testimonials. Preserve their source layout slots, but publish them only after item-specific provenance and permissions are recorded.
 - Aileron Regular/Bold and its CC0-1.0 source license are identified. Verify the exact font distribution and preserve its license metadata when the font files are added.

@@ -184,13 +184,28 @@ This disposition is limited to the Phase 1 G1 foundation. It does not close Phas
 
 ### DEC-017 — Superseded profile-only interpretation of G0
 
-**Status:** Superseded by DEC-018 on 2026-10-31. This entry is retained as an audit record of the maintainer's incorrect interpretation of the owner's earlier approval. The owner did not intend to reduce the Canva-derived website to a profile-only four-section site.
+**Status:** Superseded by DEC-019 on 2026-10-31. This entry is retained as an audit record of the maintainer's incorrect interpretation of the owner's earlier approval. The owner did not intend to reduce the Canva-derived website to a profile-only four-section site.
 
 The previous implementation disposition treated absent or rights-dependent details as reasons to remove Statistics, Testimonials, Contact/footer and source image regions. That was not the owner's intended scope. The owner clarified that the Canva design contains the company information and that missing supplementary details should have placeholders reserved for later updates.
 
-**Authority:** Subsequent owner clarification in chat on 2026-10-31; see DEC-018.
+**Authority:** Subsequent owner clarification in chat on 2026-10-31; see DEC-019.
 
-### DEC-018 — Canva-led company content and future-update placeholders
+
+### DEC-018 — Publish the Canva export PDF in the repository
+
+**Status:** Accepted (project owner, 2026-10-31).
+
+The owner instructed that the Canva export PDF be published in the repository, after being told that the repository is public and that the PDF contains third-party sample artwork (including sample images, a client logo, and magazine-style covers) whose ownership and publication rights are not evidenced.
+
+- The file is committed at `docs/source/Company_Website_Business_Website_in_Dark_Blue_White_Bright_Blue_Simple_Professional_Style.pdf`. Its SHA-256 is `173bd1a71399067253292eed129af90df0a8caa425679a2674f932ae475baea6`, the value recorded in `docs/design-reference.md`.
+- This supersedes only the earlier "not committed" statement for this file. It does not change DEC-017 or DEC-014: sample artwork, client marks, the original logo symbol, and social icons remain excluded from the website, and testimonials and attributions remain unpublished until customer permission is evidenced.
+- Publication in a public repository is permanent in git history, and the owner accepts that. Removing the file later would require a separate history rewrite decision.
+- Committing this file does not grant third-party rights, customer permissions, or any website publication right.
+
+**Authority:** project owner instruction, 2026-10-31, given after the repository's public visibility and the rights status were stated.
+
+
+### DEC-019 — Canva-led company content and future-update placeholders
 
 **Status:** Accepted by project-owner clarification on 2026-10-31; supersedes the profile-only interpretation in DEC-017.
 

@@ -2,7 +2,7 @@
 
 | Field | Value |
 | --- | --- |
-| Status | Source-led G0 specification complete under DEC-014/DEC-018 (2026-10-31); future-update placeholders explicitly inventoried |
+| Status | Source-led G0 specification complete under DEC-014/DEC-019 (2026-10-31); future-update placeholders explicitly inventoried |
 | Objective | Produce an owner-approved company portfolio and customer-journey specification alongside the verified Canva-to-web design specification |
 | Depends on | Project brief and accessible source material |
 | Primary outputs | Company positioning and customer-journey specification, source inventory, page/content specification, information architecture, component inventory and blueprint, design-token inventory, interaction inventory, approved web interpretation |
@@ -21,7 +21,7 @@ Poster Perfect is a company portfolio for a graphic design business, not an indi
 
 A PNG or equivalent image export is suitable for visual inspection. A PDF is suitable for a multi-page design. Where the source uses separate logos, illustrations, icons, or photographs, provide those assets separately when possible.
 
-**Current status:** the owner-supplied Canva export was inspected on 2026-10-30 (see `design-reference.md`) and its source copy, seven-section hierarchy, visual inventory and company information are transcribed in the canonical inventories. The owner clarified on 2026-10-31 that the Canva content is the company's information and must form the website baseline. DEC-018 supersedes the narrower profile-only interpretation in DEC-017. All seven source sections remain in scope. Missing supplementary details (withheld contact values, social URLs, current availability, original asset files) and rights-dependent claims/artwork are represented by explicit update placeholders rather than removed sections or fabricated values. The company-voice copy removes personal education details while retaining source-derived facts and positioning.
+**Current status:** the owner-supplied Canva export was inspected on 2026-10-30 (see `design-reference.md`) and its source copy, seven-section hierarchy, visual inventory and company information are transcribed in the canonical inventories. The owner clarified on 2026-10-31 that the Canva content is the company's information and must form the website baseline. DEC-019 supersedes the narrower profile-only interpretation in DEC-017. All seven source sections remain in scope. Missing supplementary details (withheld contact values, social URLs, current availability, original asset files) and rights-dependent claims/artwork are represented by explicit update placeholders rather than removed sections or fabricated values. The company-voice copy removes personal education details while retaining source-derived facts and positioning.
 ## 3. Scope
 
 ### 3.1 Source capture and inventory
@@ -144,7 +144,7 @@ The relevant project documents are the authoritative records; avoid maintaining 
 
 ## 6. Exit criteria
 
-Phase 0 is complete when the Canva source has been inspected, the company information and all seven sections have been transcribed/reconciled, company-voice adaptations are approved, and missing supplementary facts/assets/permissions have explicit placeholder or publication controls. DEC-018 records the owner's source-led clarification; it does not imply that absent contact values, third-party rights or unverified claims have been obtained.
+Phase 0 is complete when the Canva source has been inspected, the company information and all seven sections have been transcribed/reconciled, company-voice adaptations are approved, and missing supplementary facts/assets/permissions have explicit placeholder or publication controls. DEC-019 records the owner's source-led clarification; it does not imply that absent contact values, third-party rights or unverified claims have been obtained.
 
 
 

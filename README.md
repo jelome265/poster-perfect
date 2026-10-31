@@ -4,7 +4,7 @@ A responsive company portfolio website for a graphic design business, built with
 
 ## Project status
 
-**Phase 0/G0 is complete for the owner-approved Canva-led seven-section baseline (DEC-018, 2026-10-31), and Phase 1 is complete (DEC-016).** PR #17 merged an earlier G0 documentation interpretation; its profile-only scope was incorrect and is superseded by DEC-018. The follow-up documentation correction is tracked in PR #18. The website must use the company information and all seven sections from the Canva export; values, permissions or assets that need later updates retain explicit placeholders rather than being removed or fabricated.
+**Phase 0/G0 is complete for the owner-approved Canva-led seven-section baseline (DEC-019, 2026-10-31), and Phase 1 is complete (DEC-016).** PR #17 merged an earlier G0 documentation interpretation; its profile-only scope was incorrect and is superseded by DEC-019. PR #18 published the source PDF at `docs/source/`; this follow-up reconciles the source-led specification. The website must use the company information and all seven sections from the Canva export; values, permissions or assets that need later updates retain explicit placeholders rather than being removed or fabricated.
 ## Application development
 
 See [development setup](docs/development.md) for prerequisites and commands.

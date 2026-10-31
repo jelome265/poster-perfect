@@ -2,7 +2,7 @@
 
 ## Status
 
-**Source content captured from the Canva export (2026-10-30); source-led seven-section website scope confirmed under DEC-014/DEC-018 (2026-10-31).** The Canva export is the company-content and visual reference. Use its approved company facts, company voice, customer groups, service categories, value points and section hierarchy. Preserve sections whose values or assets need a later update by using explicit placeholders rather than deleting the section. Statistics, testimonials, source imagery and contact destinations remain in the source inventory but require substantiation, permission, original files or verified values before public use.
+**Source content captured from the Canva export (2026-10-30); source-led seven-section website scope confirmed under DEC-014/DEC-019 (2026-10-31).** The Canva export is the company-content and visual reference. Use its approved company facts, company voice, customer groups, service categories, value points and section hierarchy. Preserve sections whose values or assets need a later update by using explicit placeholders rather than deleting the section. Statistics, testimonials, source imagery and contact destinations remain in the source inventory but require substantiation, permission, original files or verified values before public use.
 Ownership: the page set, hierarchy, section order, and navigation structure are canonical in [the information architecture](information-architecture.md) (`PP-ART-018`). This document owns section content and the interaction inventory. Each fact has one home; reference IDs rather than copying values.
 
 ## Content capture rules
@@ -51,7 +51,7 @@ Exact text from the export. Line breaks are shown as written in the source.
 ### About (light grey band) (`PP-IA-003`)
 
 - Heading in source: "Poster Perfect is built to convert visitors into DMs". Approved editorial heading under PP-CNT-09: "Distinctive design for growing businesses".
-- The source body includes the Blantyre origin, target customer groups, Malawi/Africa context, affordability positioning, partnership philosophy and company vision, as well as a personal education/student biography. The public company copy below preserves the business information and removes the personal education/student biography under DEC-014/DEC-018.
+- The source body includes the Blantyre origin, target customer groups, Malawi/Africa context, affordability positioning, partnership philosophy and company vision, as well as a personal education/student biography. The public company copy below preserves the business information and removes the personal education/student biography under DEC-014/DEC-019.
 - Approved company copy for implementation:
 
   "Founded in Blantyre, Poster Perfect is built on a simple belief: great businesses deserve great design. We help startups, restaurants, salons and growing businesses in Malawi and across Africa access custom branding and visual design without the cost of a traditional agency. Our services span custom logos and brand kits, social media graphics, restaurant menus, posters, flyers, business cards, brochures, websites, packaging and labels. Our approach is partnership over transaction: we listen first, design second, and refine the work together so it reflects each client's vision. Our vision is to help 1,000 African brands compete globally with visuals that command respect."
@@ -107,9 +107,9 @@ Attribution names are withheld (see Privacy handling). The testimonials are not 
 | "LEARN MORE" (hero, PP-IA-002) | In-page navigation | About section (`#about`) | Owner-approved under PP-CNT-10; implement and verify in Phase 2 |
 | Email text (PP-IA-008) | Native mail hand-off only after exact destination is supplied | Destination withheld; no `mailto:` value is approved | Approved pattern, but blocked until current address is supplied and confirmed (PP-CNT-14) |
 | Telephone text (PP-IA-008) | Native telephone hand-off only after exact destination is supplied | Destination withheld; no `tel:` value is approved | Approved pattern, but blocked until current number is supplied and confirmed (PP-CNT-14) |
-| Social icons (PP-IA-008), three | Preserve the source social-media group as three named destination placeholders; activate as links only after URLs are supplied | Facebook, X/Twitter and Instagram are visually indicated; exact profile URLs are not present in the source | Placeholder region is in scope under DEC-018; destinations remain pending PP-CNT-11 |
-| Service cards (PP-IA-005), three | Non-interactive service cards with source labels and named image placeholders | No approved portfolio destination | Source card regions are in scope under DEC-018; replace image placeholders only with original or rights-cleared assets (PP-CNT-08) |
-| Logo lockup (PP-IA-002, PP-IA-008) | Static brand lockup; use text wordmark and reserve logo-mark slot until original vector is supplied | None | Source region is in scope under DEC-018; do not recreate missing logo artwork (PP-CNT-11) |
+| Social icons (PP-IA-008), three | Preserve the source social-media group as three named destination placeholders; activate as links only after URLs are supplied | Facebook, X/Twitter and Instagram are visually indicated; exact profile URLs are not present in the source | Placeholder region is in scope under DEC-019; destinations remain pending PP-CNT-11 |
+| Service cards (PP-IA-005), three | Non-interactive service cards with source labels and named image placeholders | No approved portfolio destination | Source card regions are in scope under DEC-019; replace image placeholders only with original or rights-cleared assets (PP-CNT-08) |
+| Logo lockup (PP-IA-002, PP-IA-008) | Static brand lockup; use text wordmark and reserve logo-mark slot until original vector is supplied | None | Source region is in scope under DEC-019; do not recreate missing logo artwork (PP-CNT-11) |
 | Enquiry path (PP-CON-011) | Native email/telephone hand-off; no remote form/backend | Exact contact destination not supplied | Approved pattern under PP-CNT-14; implementation blocked on owner-supplied destination |
 
 Navigation entries are structured in `information-architecture.md` §5.4 and reference rows in this table. Use a link for navigation to a destination. Use a button for an action performed on the current page. Do not create decorative controls that appear interactive but do nothing.
@@ -138,7 +138,7 @@ The project owner authorized the maintainer to resolve the source-derived busine
 | PP-CNT-16 | Visual values | Use the measured palette as approximate source-derived starting tokens, not exact canonical measurements. | Reconcile actual rendered values with the source PDF and validate contrast before G2/G3 acceptance. |
 
 The source copy and visual observations remain a faithful record of the Canva export. The dispositions above govern the web implementation where they intentionally differ from that source.
-## Source-led implementation and future-update placeholders (DEC-018)
+## Source-led implementation and future-update placeholders (DEC-019)
 
 The initial page preserves all seven source sections and their order. The Canva-derived company information is the public website baseline; missing supplementary details do not justify removing a section.
 

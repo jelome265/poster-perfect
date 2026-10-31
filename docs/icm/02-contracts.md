@@ -2,7 +2,7 @@
 
 **Canonical level:** L2 — Contracts and behaviour  
 **Record class:** Normative project contract index  
-**Status:** Initial requirement set accepted; source-derived content is approved under DEC-018; design-dependent implementation contracts progress through Phases 2–3
+**Status:** Initial requirement set accepted; source-derived content is approved under DEC-019; design-dependent implementation contracts progress through Phases 2–3
 
 ## 1. Purpose
 
@@ -41,7 +41,7 @@ Not every visual component needs a separate long-form document. The contract mus
 | `PP-REQ-007` | Do not add a backend, API, persistence, analytics, payments, or other external integration without an approved requirement. | Project scope boundary | Accepted | Dependency/effect review and decision log |
 | `PP-REQ-008` | Merge and production-release authorization remain with the project owner. | Project workflow rule | Accepted | Pull request and release disposition |
 | `PP-REQ-009` | Phase 0 produces an information architecture and component blueprint derived from the inspected source and approved requirements, before Phase 1 foundational technical decisions are made. | DEC-007; project owner directive | Accepted | Phase 0 reconciliation (`PP-VER-016`) and `PP-VER-013` |
-| `PP-REQ-010` | Poster Perfect is a company portfolio for a graphic design business, not an individual designer's personal portfolio; it must use the company information from the Canva source, present the approved services and capabilities, and preserve the owner-approved customer-facing sections and enquiry regions. Missing supplementary values or rights-dependent content must be represented by explicit update placeholders, not invented or removed. | DEC-008; owner clarification DEC-018 (2026-10-31) | Accepted; missing values/assets/permissions remain explicit publication controls | Company content, seven-section structure and placeholder reconciliation (PP-VER-017) |
+| `PP-REQ-010` | Poster Perfect is a company portfolio for a graphic design business, not an individual designer's personal portfolio; it must use the company information from the Canva source, present the approved services and capabilities, and preserve the owner-approved customer-facing sections and enquiry regions. Missing supplementary values or rights-dependent content must be represented by explicit update placeholders, not invented or removed. | DEC-008; owner clarification DEC-019 (2026-10-31) | Accepted; missing values/assets/permissions remain explicit publication controls | Company content, seven-section structure and placeholder reconciliation (PP-VER-017) |
 | `PP-REQ-011` | The complete locked npm dependency graph must be scanned for known vulnerabilities and inventoried against an explicit SPDX license policy; unknown licenses and scope violations must fail closed. | DEC-015; project owner instruction dated 2026-10-31 | Accepted | Dependency vulnerability and license audit (`PP-VER-018`) |
 
 This is the accepted requirement baseline as of DEC-008. New requirements receive new IDs; do not repurpose an existing ID to mean something different.
@@ -210,7 +210,7 @@ The information architecture MUST define every in-scope page or route, section, 
 **Consumers:** Page and section composition, content inventory, navigation and interaction controls  
 **Requirement:** PP-REQ-010; related contracts PP-CON-002, PP-CON-005, PP-CON-006 and PP-CON-010
 
-The website MUST represent Poster Perfect at company level as a graphic design business, not as an individual designer's personal portfolio. The Canva design is the primary source for company information, company copy, customer groups, service/capability content, source page hierarchy and visual composition. The website MUST use the source-derived facts recorded in `content-structure.md`, with approved company-voice/editorial adaptations in DEC-014/DEC-018.
+The website MUST represent Poster Perfect at company level as a graphic design business, not as an individual designer's personal portfolio. The Canva design is the primary source for company information, company copy, customer groups, service/capability content, source page hierarchy and visual composition. The website MUST use the source-derived facts recorded in `content-structure.md`, with approved company-voice/editorial adaptations in DEC-014/DEC-019.
 
 The one-page, seven-section structure MUST be preserved in source order: Hero, About, Value statement, Services, Statistics, Testimonials, Contact and footer. A source section MUST NOT be removed merely because a value, asset, permission or external destination needs a later update. Use a clearly identified placeholder in the source region until the required owner input, original asset, substantiation or publication permission is available.
 
@@ -225,7 +225,7 @@ A business requirement not represented in the Canva source may be implemented on
 **Invariants:** No personal-portfolio framing; no invented business claims; no unapproved portfolio publication; no stale availability claim; no inert or unverified enquiry control. The initial page preserves the source contact and social regions with update placeholders. No placeholder is a live link; native mail/tel/social hand-offs are enabled only when valid owner-approved destinations are supplied. Remote submission, data persistence, CRM, or other external integration is not implied and remains subject to PP-REQ-007 and PP-CON-007.  
 **Verification:** PP-VER-017, PP-VER-005, PP-VER-009, PP-VER-010 and owner review before release.
 
-**Specification:** Accepted for the Canva-led seven-section baseline under DEC-018; missing contact/social/availability values and rights-dependent claims/assets have explicit update/publication controls  
+**Specification:** Accepted for the Canva-led seven-section baseline under DEC-019; missing contact/social/availability values and rights-dependent claims/assets have explicit update/publication controls  
 **Implementation:** Not started  
 **Evidence:** Not collected
 

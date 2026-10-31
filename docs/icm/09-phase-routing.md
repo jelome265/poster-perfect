@@ -32,7 +32,7 @@ A phase may touch multiple ICM levels, and an ICM level may be revisited across 
 Required:
 - Inspectable source and completed source inventory.
 - PP-PRC-007 source inspection/reconciliation completed.
-- Canva company information, source-derived customer groups/services, all seven sections, company-voice editorial adaptation, and explicit future-update/publication placeholders are owner-approved under DEC-018 (`PP-VER-017`).
+- Canva company information, source-derived customer groups/services, all seven sections, company-voice editorial adaptation, and explicit future-update/publication placeholders are owner-approved under DEC-019 (`PP-VER-017`).
 - Approved page/content hierarchy.
 - Asset, typography, and design-token inventory.
 - Interaction and responsive interpretation.
@@ -127,7 +127,7 @@ Blocks:
 
 | Gate | Status | Reason |
 |---|---|---|
-| G0 | Complete for the Canva-led seven-section specification under DEC-018 (2026-10-31) | Canva source inspected; company information, source copy, seven-section order, design tokens, component regions and company-voice adaptation reconciled. Missing supplementary values/assets/permissions have explicit update placeholders and publication controls, not invented data. |
+| G0 | Complete for the Canva-led seven-section specification under DEC-019 (2026-10-31) | Canva source inspected; company information, source copy, seven-section order, design tokens, component regions and company-voice adaptation reconciled. Missing supplementary values/assets/permissions have explicit update placeholders and publication controls, not invented data. |
 | G1 | Complete — owner-authorized Phase 1 close-out under DEC-016 on 2026-10-31 | PR #15 merge `9e81adb7a178db9c48106292b3351d0bafe0a9e8` is the foundation baseline. PR #16 close-out commit `5cff148f088a75f5aa8578f04db3727f6ac3765b` is merged to main at `07860b383555d98d6528ba834653cbe83fe172df`; all six required contexts passed on the PR #16 head. |
 | G2 | Not started | No application composition |
 | G3 | Not started | No responsive implementation |

@@ -63,7 +63,7 @@ The following implementation and content details must be confirmed from the sour
 
 ## Scope boundary
 
-The initial product scope is a responsive, one-page company website based on the complete Canva design and the source-led scope approved under DEC-018. It preserves all seven sections and uses the company information transcribed from the source. Missing supplementary contact/social/availability values and rights-dependent proof/assets have explicit update placeholders. The page must not fabricate a value, claim or link.
+The initial product scope is a responsive, one-page company website based on the complete Canva design and the source-led scope approved under DEC-019. It preserves all seven sections and uses the company information transcribed from the source. Missing supplementary contact/social/availability values and rights-dependent proof/assets have explicit update placeholders. The page must not fabricate a value, claim or link.
 
 Backend services, authentication, persistence, payment processing, CMS integration, analytics, remote form submission, CRM integration, and other external services are not assumed. Preserve contact and enquiry regions from the Canva footer. Render clearly identified value placeholders until exact public destinations are verified; enable mail/tel/social links only when valid destinations are supplied. Do not add a remote form or backend without separate approval. Add a remote integration only when a separate requirement and owner approval make it necessary.
 

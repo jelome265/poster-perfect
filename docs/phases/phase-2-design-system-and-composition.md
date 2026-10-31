@@ -2,7 +2,7 @@
 
 | Field | Value |
 | --- | --- |
-| Status | Authorized after source-led G0 approval under DEC-018; G2 evidence remains required |
+| Status | Authorized after source-led G0 approval under DEC-019; G2 evidence remains required |
 | Objective | Translate the approved visual reference into design tokens, semantic page structure, and working React components |
 | Depends on | Phase 0 approval and Phase 1 application foundation |
 | Primary outputs | Implemented design tokens, asset integration, page composition, typed components |
@@ -13,7 +13,7 @@ Build the website's primary visual composition from the verified Canva specifica
 
 ## 2. Entry conditions
 
-- Phase 0 inventories and source-led seven-section scope are owner-approved under DEC-018.
+- Phase 0 inventories and source-led seven-section scope are owner-approved under DEC-019.
 - Unavailable original assets and rights-dependent items have explicit placeholders; no unapproved substitute is permitted.
 - Typography choices and asset-use constraints are known: Aileron Regular/Bold; text wordmark fallback until the original logo symbol is supplied.
 - Phase 1 type checking, development, and production build are operational.

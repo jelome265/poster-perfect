@@ -8,7 +8,7 @@ The project follows gated phase progression. A phase is not complete because wor
 
 | Phase | Name | Status | Objective |
 | --- | --- | --- | --- |
-| 0 | [Source discovery and specification](phases/phase-0-source-discovery.md) | Complete — Canva-led source and seven-section scope approved under DEC-018; explicit update placeholders recorded | Complete company information and verified Canva-to-web specification |
+| 0 | [Source discovery and specification](phases/phase-0-source-discovery.md) | Complete — Canva-led source and seven-section scope approved under DEC-019; explicit update placeholders recorded | Complete company information and verified Canva-to-web specification |
 | 1 | [Application foundation](phases/phase-1-application-foundation.md) | Complete — owner-authorized G1 close-out under DEC-016; merge SHA `9e81adb7a178db9c48106292b3351d0bafe0a9e8` | Establish a minimal, reproducible React + TypeScript application |
 | 2 | [Design system and page composition](phases/phase-2-design-system-and-composition.md) | Not started | Translate the approved design into page structure and components |
 | 3 | [Responsive and accessible implementation](phases/phase-3-responsive-accessibility.md) | Not started | Verify responsive behavior and accessibility requirements |
@@ -32,7 +32,7 @@ Phase 3: Responsive and accessible implementation
 Phase 4: Verification and release readiness
 ```
 
-Phase 1 normally depends on stable Phase 0 inputs. The owner authorized a limited foundation overlap under DEC-012/DEC-013. DEC-014/DEC-018 approve the source-derived company content, complete seven-section Canva composition, company-voice edits, source design tokens, and explicit update placeholders for missing values/assets/permissions. **G0 is complete for this source-led specification. Phase 2 may begin after the DEC-018 follow-up documentation is merged.**
+Phase 1 normally depends on stable Phase 0 inputs. The owner authorized a limited foundation overlap under DEC-012/DEC-013. DEC-014/DEC-019 approve the source-derived company content, complete seven-section Canva composition, company-voice edits, source design tokens, and explicit update placeholders for missing values/assets/permissions. **G0 is complete for this source-led specification. Phase 2 may begin after the DEC-019 follow-up documentation is merged.**
 
 ## ICM control model
 
@@ -48,11 +48,11 @@ See the [ICM phase routing](icm/09-phase-routing.md) for the mapping between pha
 
 ## Current project state
 
-- Phase 0/G0 is complete for the owner-approved Canva-led seven-section baseline under DEC-018. All source-derived company content is used; unavailable contact/social/availability values and rights-dependent assets, statistics and testimonials retain explicit placeholders rather than being removed or fabricated.
+- Phase 0/G0 is complete for the owner-approved Canva-led seven-section baseline under DEC-019. All source-derived company content is used; unavailable contact/social/availability values and rights-dependent assets, statistics and testimonials retain explicit placeholders rather than being removed or fabricated.
 - Phase 1 is complete. The neutral React shell, npm lockfile, strict TypeScript configuration, lint/test/build scripts, and CI controls are merged through PR #15 at `9e81adb7a178db9c48106292b3351d0bafe0a9e8`. Exact merge-SHA evidence: application quality run `41172107909`, documentation integrity run `41172107907`, and dependency/security/license run `41172108087`. Owner disposition is recorded in DEC-016.
 - Phases 2–4 have not started. No designed page composition, final brand styling, responsive implementation, or production deployment has been introduced.
 - The company-level purpose is confirmed: Poster Perfect is a graphic design company portfolio intended to attract prospective customers, not an individual designer's portfolio.
-- Source-derived company facts, customer groups, services, value points, company-voice copy, seven-section source hierarchy, About anchor, approximate palette, Aileron type family, and responsive reflow are approved under DEC-014/DEC-018. Missing contact/social/availability values, original assets and rights-dependent claims use update placeholders; do not remove their source section or infer their values.
+- Source-derived company facts, customer groups, services, value points, company-voice copy, seven-section source hierarchy, About anchor, approximate palette, Aileron type family, and responsive reflow are approved under DEC-014/DEC-019. Missing contact/social/availability values, original assets and rights-dependent claims use update placeholders; do not remove their source section or infer their values.
 
 ## Governance
 

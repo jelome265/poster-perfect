@@ -29,7 +29,7 @@ Do not document every JSX render as a process. A process represents meaningful b
 | `PP-PRC-004` | Local interface interaction | Visitor operates a stateful control | User interaction | Conditional on source inventory |
 | `PP-PRC-005` | Remote form/API operation | Visitor submits or requests remote data | External operation | Not in baseline; future only |
 | `PP-PRC-006` | Verification and release | Candidate revision is submitted for review | Governance lifecycle | Target |
-| `PP-PRC-007` | Source inspection and specification | Owner supplies inspectable Canva export or view-only source | Human specification workflow | Source inspected 2026-10-30; Canva company content, seven-section structure and future-update placeholder rules approved under DEC-018 |
+| `PP-PRC-007` | Source inspection and specification | Owner supplies inspectable Canva export or view-only source | Human specification workflow | Source inspected 2026-10-30; Canva company content, seven-section structure and future-update placeholder rules approved under DEC-019 |
 
 ## 3. PP-PRC-001 — Build and delivery
 
@@ -281,7 +281,7 @@ merge / release only as explicitly authorized
 7. Update canonical source, design-token, content, asset, interaction, and decision records.
 8. Obtain owner approval for material adaptations and scope.
 
-**Success:** source facts and limitations are recorded, the approved baseline is internally consistent, and the owner approves the web interpretation. DEC-018 records the owner's approval of source-derived company content and future-update placeholders. Missing values/rights remain unknown and are not fabricated or published as facts.  
+**Success:** source facts and limitations are recorded, the approved baseline is internally consistent, and the owner approves the web interpretation. DEC-019 records the owner's approval of source-derived company content and future-update placeholders. Missing values/rights remain unknown and are not fabricated or published as facts.  
 **Failure/blocking:** if source facts needed by the approved baseline cannot be established, keep the affected work blocked. A missing asset/value does not remove its source section; preserve its intended region with an explicit placeholder. Do not substitute guesses or treat missing publication rights as granted.
 
 **Effects:** no website runtime effect. Outputs are documentation and source-inventory artifacts, not application behavior.  
