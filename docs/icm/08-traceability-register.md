@@ -115,7 +115,7 @@ Do not infer an implementation status from a specification or a verification sta
 
 | ID | Question/blocker | Owner | Resolution phase | Current disposition |
 |---|---|---|---|---|
-| `PP-RSK-001` | Canva artwork cannot currently be inspected from the supplied URL | Project owner supplies accessible export/reference | Phase 0 | Mitigated 2026-10-30: export inspected (see `design-reference.md`); residual items recorded there |
+| `PP-RSK-001` | Original Canva editor URL was not directly inspectable; an owner-supplied PDF export was used for the 2026-10-30 source inspection | Project owner supplies accessible source/export and any missing originals | Phase 0 | Mitigated for structural/text inspection using the export; full-resolution assets, exact measurements and licensing remain residual items in `design-reference.md` |
 | `PP-RSK-002` | Specific customer segments remain unconfirmed; one-page/seven-section hierarchy is drafted from the export but awaits owner approval, and any additional web adaptation remains unapproved | Project owner / source inspection | Phase 0 | Source structure drafted; customer segments and owner acceptance remain open |
 | `PP-RSK-003` | Copy is transcribed from the export; CTA, service-card, logo, social, email and telephone destinations/outcomes remain unresolved | Project owner / source inspection | Phase 0 | Copy inventory drafted; interaction decisions remain open; do not implement invented behavior |
 | `PP-RSK-004` | Toolchain, routing, styling, package manager, and hosting are undecided | Maintainer / owner decision | Phase 1 | Open; choose from actual requirements |
