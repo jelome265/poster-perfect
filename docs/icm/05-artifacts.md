@@ -52,7 +52,7 @@ A file existing in Git does not automatically make it authoritative or prove tha
 
 The registry is a navigation and lifecycle record. Subject-specific details remain in the canonical file listed above.
 
-| `PP-ART-021` | npm dependency security and license inventory | `scripts/audit-licenses.mjs`, `.github/workflows/dependency-audit.yml`, `docs/security/dependency-audit.md` | Verification evidence / generated inventory | Maintainer / CI | Implemented on PR #15; JSON and Markdown lockfile inventory artifacts uploaded from CI; exact-head evidence pending |
+| `PP-ART-021` | npm dependency security and license inventory | `scripts/audit-licenses.mjs`, `.github/workflows/dependency-audit.yml`, `docs/security/dependency-audit.md` | Verification evidence / generated inventory | Maintainer / CI | Implemented and verified on PR #15 code candidate `98c585c9e7ba79a78c24d7ed621148c32066444c`; SPDX inventory artifact uploaded in Actions run `41171547595` (140 package entries; policy PASS) |
 
 ## 4. Required provenance
 

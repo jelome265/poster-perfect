@@ -248,7 +248,7 @@ The audit MUST:
 **Verification:** PP-VER-018.
 
 **Specification:** Accepted under DEC-015  
-**Implementation:** Added to PR #15 candidate; exact-head CI evidence pending  
+**Implementation:** Passed on PR #15 code candidate `98c585c9e7ba79a78c24d7ed621148c32066444c`; npm/OSV/SPDX checks all passed in Actions run `41171547595`  
 **Evidence:** To be recorded after the dedicated workflow passes.
 
 
