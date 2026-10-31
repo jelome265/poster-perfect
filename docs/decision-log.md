@@ -182,33 +182,37 @@ This disposition is limited to the Phase 1 G1 foundation. It does not close Phas
 
 **Authority:** Project owner instruction dated 2026-10-31; Phase 1 close-out and verification record in `docs/phases/phase-1-verification-gap-review-2026-10-31.md`.
 
-### DEC-017 — G0 owner approval: profile-only baseline with accepted limitations
+### DEC-017 — Superseded profile-only interpretation of G0
 
-**Status:** Accepted by the project owner on 2026-10-31. This decision completes G0 for the explicitly bounded initial website baseline. It does not certify missing contact data, current availability, third-party ownership, customer consent, or unprovided assets.
+**Status:** Superseded by DEC-018 on 2026-10-31. This entry is retained as an audit record of the maintainer's incorrect interpretation of the owner's earlier approval. The owner did not intend to reduce the Canva-derived website to a profile-only four-section site.
 
-The owner approves proceeding to Phase 2 on the following profile-only scope:
+The previous implementation disposition treated absent or rights-dependent details as reasons to remove Statistics, Testimonials, Contact/footer and source image regions. That was not the owner's intended scope. The owner clarified that the Canva design contains the company information and that missing supplementary details should have placeholders reserved for later updates.
 
-1. Present Poster Perfect as a company-level graphic design business, using the source-derived company voice, customer groups (startups, restaurants, salons, and growing businesses), and capabilities already recorded in content-structure.md.
-2. Retain the seven-section Canva export as the source-of-truth inventory. The initial rendered page includes Hero, About, Value statement, Services, and a text-only brand footer. Statistics and Testimonials remain documented source observations but are excluded from the initial website.
-3. Keep the hero action as the internal #about link. Do not add external enquiry controls, mail or telephone links, forms, social links, or other external destinations while their exact destinations remain unconfirmed.
-4. Omit current availability, office hours, headquarters/location details, and telephone/email values. The source export's office-hours text is not treated as current business information.
-5. Exclude all source sample photographs/artwork, client marks, the original logo symbol, and social icons from the initial website. No substitute stock imagery or recreated brand symbol is authorized. A text-only Poster Perfect wordmark may be used.
-6. Render the approved service categories as text without the unlicensed sample artwork. Retain no unsubstantiated statistics, testimonials, customer attributions, or service promises.
-7. Use Aileron Regular and Bold as the approved type family, subject to verifying the exact font distribution and preserving its CC0-1.0 license metadata when integrated. Use the recorded color values only as approximate starting tokens. Unmeasured typography metrics, spacing, geometry, and responsive details must be validated during implementation; they must not be represented as exact source measurements.
-8. Preserve the owner-approved responsive reflow and semantic reading order. No new pages, backend, form service, analytics, tracking, or persistence are authorized.
+**Authority:** Subsequent owner clarification in chat on 2026-10-31; see DEC-018.
 
-**Accepted limitations and release controls:**
+### DEC-018 — Canva-led company content and future-update placeholders
 
-- This profile-only baseline does not provide a customer enquiry path and does not satisfy the full customer-acquisition objective in DEC-008 / PP-REQ-010. A verified owner-approved contact destination and behaviour remain required before a business-ready release. Any release without that path requires a separate, explicit owner decision at G4.
-- Current availability is not stated. It must be reconfirmed before being added to the site; a historical confirmation is not current publication evidence.
-- Third-party artwork and customer proof remain unpublished. Their rights/consents are unknown, not presumed granted. They may be added only after item-specific evidence and a reviewed scope change.
-- The owner-supplied PDF is retained by the owner and is not committed to the repository. The source identity and SHA-256 remain recorded in design-reference.md. Re-supply it before any detailed side-by-side visual comparison that requires the source image; the existing 72 dpi inspection does not prove pixel-level fidelity.
-- The original logo vector and standalone image files are recorded as unavailable to the implementation baseline. The wordmark-only treatment is an approved adaptation, not a reconstruction of the original logo.
+**Status:** Accepted by project-owner clarification on 2026-10-31; supersedes the profile-only interpretation in DEC-017.
 
-**Gate disposition:** G0 is complete for this documented profile-only scope with accepted limitations. Phase 2 may begin after this decision and the reconciled inventories are merged to main. G2 must not be marked complete without the applicable content, asset, interaction, and visual evidence. G4 must resolve the enquiry-path limitation through verified contact details or a separate owner-authorized restricted-release decision.
+The owner clarified that G0 must derive the company and website information from the supplied Canva design. The Canva export is the source of truth for company copy, positioning, services, customer groups, the seven-section page hierarchy, visual treatment and source-visible content. The prior interpretation that the initial website should be restricted to Hero, About, Value statement, Services and a wordmark footer was incorrect and is superseded.
 
-**Authority:** Explicit project-owner approval in chat on 2026-10-31 ("I approve"), recorded by the maintainer in this decision.
+**Approved source-led baseline:**
 
+1. Use the company information transcribed in `content-structure.md`: founded in Blantyre; serving startups, restaurants, salons and growing businesses in Malawi and across Africa; the source positioning around great design for great businesses; the source-listed capabilities and services; the four source value points; the source hero heading and CTA; and the stated mission/vision.
+2. Preserve the one-page, seven-section structure and source order: Hero, About, Value statement, Services, Statistics, Testimonials, Contact and footer. Do not remove sections merely because a value, image, permission or external destination needs a later update.
+3. Use the company-voice About copy recorded in `content-structure.md`. Remove the personal education/student biography and individual-designer framing under DEC-014. Retain the Blantyre origin, customer groups, Malawi/Africa context, capabilities, partnership philosophy and stated vision without inventing credentials or outcomes.
+4. Keep the source service list and its three featured examples. Preserve the image/card positions as placeholders until original assets and publication rights are available; do not substitute unrelated stock or fabricated portfolio work.
+5. Preserve the Statistics and Testimonials section layouts as future-update placeholders. Do not publicly present numerical claims or customer quotations/attributions until their accuracy, substantiation and publication permissions are confirmed. Retain source-observed values in the source inventory for traceability.
+6. Preserve the Contact/footer section and its visible field labels. Use explicit update placeholders for headquarters/contact values and social profile destinations withheld or absent from the public inventory. The office-hours wording is source-derived; reconfirm that it remains current before production publication. Do not create dead or fabricated links.
+7. The source does not establish current availability or exact social URLs. Reserve clearly identified update slots rather than inventing them. Contact/social slots become operable links only after verified destinations are supplied.
+8. Keep `LEARN MORE` as the approved in-page About link. Do not add a remote form, backend, CRM, analytics, tracking or persistence without separate approval.
+9. Retain Aileron and the approximate source palette from DEC-014. Preserve source imagery/logo regions using named placeholders where original files are unavailable; use the text wordmark as a non-deceptive fallback, not as a claim that it is the complete original logo.
+
+**Placeholder policy:** A missing value does not remove its source section or layout region. Use a clearly named content/asset slot and record the required owner input, permission or verification. Placeholders must not look like real contact data, real customers, real performance metrics or real portfolio work. They are implementation scaffolding and must be replaced or explicitly accepted before production release.
+
+**Gate disposition:** G0 is complete for the source-led seven-section specification and approved future-update placeholders once the reconciled inventory and ICM changes in the follow-up PR pass PP-VER-013. Phase 2 is authorized after those changes are merged. G2 still requires the seven-section composition, source-led content, documented placeholder states and visual comparison. G4 must not publish unverified claims, unlicensed artwork, customer quotations without permission, or nonfunctional contact/social controls.
+
+**Authority:** Project-owner clarification in chat on 2026-10-31: use the information from Canva as the company information; reserve a place for details not supplied or ready to be updated later.
 ## Open decisions
 
 | Decision | Status | Resolution gate |
