@@ -261,4 +261,30 @@ Limitations:
 | Contact details | Owner to confirm whether the phone and email remain; they appear in the export footer | Owner decision 8, open |
 | G0 approval | Deferred ("Wait") | Phase 0 remains awaiting owner approval; Phase 1 not authorized |
 
-PP-VER-013 has not been re-run at the commit that contains this section. Its last formal result is FAIL at `877933a` (§10).
+PP-VER-013 had not been re-run when PR #9 was merged. Its last formal result on that revision remained FAIL at `877933a` (§10). See §12 for the subsequent PR #9 closeout and remediation baseline.
+
+## 12. PR #9 closeout and remediation baseline (2026-10-31)
+
+PR #9 is merged at `7579e272e44e59542c7bd04c3157f089b14787fb`. Its body was amended after merge to reflect the actual merged disposition; the original pre-merge wording remains in the PR discussion history.
+
+A manual delta review of that main revision found additional stale lifecycle descriptions after the R4 failure was recorded:
+- DEC-007 still described source-derived IA/component content as blocked until source inspection.
+- PP-CON-002/004/005/006/010, PP-PRC-003, PP-VER-009/010, PP-ART-005/013, and PP-RSK-001/002/003 did not consistently reflect the export inspection and populated draft inventories.
+- The source contact values remained in public tracked content although owner decision 8 was still open.
+
+These were treated as specification/status defects, not permission to accept the content or advance G0. The remediation branch corrects the lifecycle descriptions, adds a standard-library documentation validator and GitHub Actions workflow, and redacts unconfirmed contact values from the current tracked content. The three testimonial quotations remain in the repository under DEC-009; retaining them in the repository does not authorize publication on the live website.
+
+### Repository protection evidence
+
+GitHub ruleset `26256454` is active for `refs/heads/main`. It requires pull requests, blocks non-fast-forward updates and branch deletion, has no bypass actors, and applies to administrators. It currently requires **zero approving reviews** and has no required status-check rule. The documentation workflow introduced by this remediation therefore reports revision-bound checks but is not yet enforced as a required merge check by the ruleset.
+
+### Contact-value retention limitation
+
+The phone, email, and location values are removed from the current tracked content pending owner decision 8. Earlier commits remain in public Git history. No history rewrite or force-push was performed or authorized. Removing historical copies would require a separate, explicit owner decision and coordinated history rewrite.
+
+### Phase and evidence disposition
+
+- G0 remains deferred / awaiting owner approval. Phase 1 remains not started.
+- PP-VER-016 remains an author structural reconciliation with open items; it is not owner approval.
+- R4 remains a historical PP-VER-013 FAIL for `877933a`. The new `Documentation integrity` workflow provides automated checks on the exact PR head/commit; only its actual GitHub check result establishes the current mechanical result.
+- No application build, runtime, visual-fidelity, accessibility-conformance, or production-security claim is made because no application exists in this repository.

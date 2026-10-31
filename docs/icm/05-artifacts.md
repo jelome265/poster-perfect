@@ -45,7 +45,7 @@ A file existing in Git does not automatically make it authoritative or prove tha
 | `PP-ART-014` | Visual reference captures | Not yet created | Verification evidence | Phase 0/2/4 | Pending |
 | `PP-ART-015` | Executable verification reports | Not yet created | Verification evidence | CI and manual review | Pending |
 | `PP-ART-016` | Release build and deployment record | Not yet created | Release artifact | Release pipeline / owner | Not started |
-| `PP-ART-017` | ICM integrity audit (2026-10-30) | `docs/icm/integrity-audit-2026-10-30.md` | Verification evidence | ICM/documentation reviewer | Failed at `877933a` (§10 R4): stale statuses and missing §9 reference; remediation pending. Prior: passed at `76f990f` (§8 R3) for that revision only; not application verification |
+| `PP-ART-017` | ICM integrity audit (2026-10-30) | `docs/icm/integrity-audit-2026-10-30.md` | Verification evidence | ICM/documentation reviewer | Historical R4 FAIL at `877933a`; remediation is now checked by automated PP-VER-013 on the exact PR/commit revision. Read the current GitHub check result; prior R3 PASS at `76f990f` remains revision-specific. Not application verification |
 | `PP-ART-018` | Information architecture | `docs/information-architecture.md` | Specification (contract-backed) | Page implementation owner (`PP-MAP-011`); approval: project owner | Drafted from export 2026-10-30; owner approval pending (G0) |
 | `PP-ART-019` | Component blueprint | `docs/component-blueprint.md` | Contract / architecture | Component maintainer (`PP-MAP-013`); approval: project owner | Drafted from export 2026-10-30; owner approval pending (G0) |
 

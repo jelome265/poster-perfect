@@ -71,6 +71,8 @@ Until Phase 0 exit criteria are met and the project owner approves the web inter
 - Do not invent page count, page hierarchy, text, typography, colors, spacing, assets, dimensions, interactions, responsive behavior, or navigation.
 - Do not invent company services, customer segments, portfolio projects, client relationships, testimonials, awards, metrics, credentials, team size, prices, guarantees, or contact destinations. Use only owner-approved business facts and publication-authorized work.
 - Treat availability for new work as time-sensitive content: reconfirm it with the project owner before publication or release.
+- Do not publish owner, company, or customer contact details in this public repository until the project owner has confirmed that the exact details are approved for public release. If the source contains unconfirmed details, redact them from tracked documentation and record the pending decision.
+- A new redaction commit does not remove earlier Git history. Do not rewrite repository history or force-push to remove historical content without separate, explicit project-owner authorization.
 - Where the company-acquisition objective requires content or an enquiry action not present in the Canva source, document it as a proposed web adaptation and obtain owner approval rather than adding it silently.
 - Do not start application scaffolding or production implementation on the assumption that unknown design facts are settled.
 - Do not treat a Canva editor URL that cannot be inspected as evidence of its visual contents.

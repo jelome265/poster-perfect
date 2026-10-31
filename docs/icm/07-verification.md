@@ -35,11 +35,11 @@ Every control must specify:
 | `PP-VER-006` | Visual fidelity comparison | Manual/hybrid | PP-REQ-001, PP-REQ-004, PP-CON-004, PP-CON-005 | Limited to captured references, selected viewports, browser and rendering conditions | Blocked on implementation; export available as the reference |
 | `PP-VER-007` | Responsive viewport matrix | Manual/hybrid | PP-REQ-004, PP-CON-008 | Evidence covers tested widths/browsers, not every possible device or viewport | Planned |
 | `PP-VER-008` | Accessibility manual assessment (keyboard, focus, semantics, contrast, assistive technology) | Manual/hybrid | PP-REQ-005, PP-CON-006, PP-CON-008 | Scope is limited to assessed pages, states, criteria and assistive-technology combinations; not a blanket conformance claim | Planned |
-| `PP-VER-009` | Navigation and interaction behavior | Automated/manual | PP-CON-006 | Covers inventoried controls and destinations; does not guarantee permanent availability of external destinations | Pending interaction inventory |
-| `PP-VER-010` | Asset loading and alternative text review | Automated/manual | PP-CON-005 | Does not independently establish copyright/licensing or full design fidelity | Pending asset inventory |
+| `PP-VER-009` | Navigation and interaction behavior | Automated/manual | PP-CON-006 | Covers inventoried controls and destinations; does not guarantee permanent availability of external destinations | Interaction inventory recorded; destinations and behavior pending owner decisions |
+| `PP-VER-010` | Asset loading and alternative text review | Automated/manual | PP-CON-005 | Does not independently establish copyright/licensing or full design fidelity | Source assets catalogued; original files, permissions, loading and alternative text remain pending |
 | `PP-VER-011` | Release artifact and revision provenance | Automated/manual | PP-REQ-008, PP-CON-009 | Establishes traceability, not the artifact's complete security or runtime correctness | Planned |
 | `PP-VER-012` | Owner review and release disposition | Manual approval | PP-REQ-008, PP-CON-009 | Records authorization; it does not replace technical verification | Required for each release |
-| `PP-VER-013` | ICM reference and traceability integrity | Manual initially; automation when justified | All accepted requirements and ICM registers | Proves documentation/link/identifier/traceability integrity only; not application implementation | Failed at `877933a` (PP-ART-017 §10 R4): stale statuses and missing §9 reference; remediation pending. Prior: passed at `76f990f` (§8 R3) for that revision only |
+| `PP-VER-013` | ICM reference and traceability integrity | Automated (repository workflow) plus manual semantic review | All accepted requirements and ICM registers | Proves the configured documentation-integrity checks for the exact commit; does not prove application implementation, owner approval, source fidelity, publication rights or accessibility | Historical R4 failed at `877933a`; current result is the `Documentation integrity` GitHub Actions run for the PR; its log records the checked-out PR head SHA. Do not infer a pass without that check result |
 | `PP-VER-014` | Architecture and component-boundary review | Manual/hybrid | PP-REQ-003, PP-CON-003 | Depends on the actual source tree and reviewed revision; a logical map alone is not implementation evidence | Planned; run as the physical architecture is introduced |
 | `PP-VER-015` | Dependency and side-effect surface review | Manual/hybrid | PP-REQ-007, PP-CON-007, PP-EFF-005–010 | Reviews declared/observable dependencies and effects; cannot prove absence of all runtime vulnerabilities | Defined; run at foundation and whenever dependencies/effects change |
 | `PP-VER-016` | Information architecture and component-blueprint reconciliation against inspected source | Manual | PP-REQ-001, PP-REQ-003, PP-REQ-006, PP-REQ-009, PP-CON-002, PP-CON-003, PP-CON-010 | Verifies record completeness and cross-reference consistency against the source; does not prove the implemented DOM, visual fidelity, or accessibility (`PP-VER-005`, `PP-VER-006`, `PP-VER-008`, `PP-VER-014`) | Executed by author 2026-10-30 against the export; owner review pending (audit §9) |
@@ -144,7 +144,15 @@ Passing a phase gate requires evidence and approval, not merely completion of a 
 
 ## 10. ICM integrity control — PP-VER-013
 
-The purpose of this control is to detect an internally inconsistent ICM before it becomes an implementation authority. The 2026-10-30 audit result is recorded in [PP-ART-017](integrity-audit-2026-10-30.md). Its pass applies only to the documentation-integrity scope, not to application/runtime behavior.
+The purpose of this control is to detect an internally inconsistent ICM before it becomes an implementation authority. Historical runs are retained in [PP-ART-017](integrity-audit-2026-10-30.md); each result applies only to its named revision. The current automated check is the `Documentation integrity` GitHub Actions check attached to the exact pull-request head or pushed commit.
+
+### Automated execution
+
+Run `python3 scripts/validate_docs.py` from the repository root. The workflow in `.github/workflows/documentation-integrity.yml` invokes this command for pull requests targeting `main` and pushes to `main`.
+
+The validator checks repository-relative Markdown links and heading anchors, Markdown table row shape, canonical identifier references, accepted requirement presence in the traceability register, stale source-inspection status language, and unconfirmed email/telephone values in the public content inventory. It uses only the Python standard library.
+
+A successful workflow run is revision-bound evidence for those mechanical checks only. It does not replace manual semantic review, source reconciliation, owner approval, portfolio publication permission, visual comparison, or accessibility assessment.
 
 ### Manual procedure
 

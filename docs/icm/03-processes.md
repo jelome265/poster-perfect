@@ -2,7 +2,7 @@
 
 **Canonical level:** L2 — Contracts and behaviour  
 **Record class:** Process specification  
-**Status:** Baseline process patterns defined; design-specific user flows pending Phase 0
+**Status:** Baseline process patterns defined; source-derived interactions inventoried, with exact destinations and behavior decisions pending G0
 
 ## 1. Process definition
 
@@ -25,7 +25,7 @@ Do not document every JSX render as a process. A process represents meaningful b
 |---|---|---|---|---|
 | `PP-PRC-001` | Build and delivery | Approved source revision enters build | Engineering lifecycle | Target |
 | `PP-PRC-002` | Initial page load and render | Visitor opens a website URL | Runtime lifecycle | Target |
-| `PP-PRC-003` | Link/navigation activation | Visitor activates a link | User interaction | Conditional on source inventory |
+| `PP-PRC-003` | Link/navigation activation | Visitor activates a link | User interaction | Partially specified; destinations and activation behavior pending owner decisions |
 | `PP-PRC-004` | Local interface interaction | Visitor operates a stateful control | User interaction | Conditional on source inventory |
 | `PP-PRC-005` | Remote form/API operation | Visitor submits or requests remote data | External operation | Not in baseline; future only |
 | `PP-PRC-006` | Verification and release | Candidate revision is submitted for review | Governance lifecycle | Target |
