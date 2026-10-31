@@ -39,7 +39,7 @@ Every control must specify:
 | `PP-VER-010` | Asset loading and alternative text review | Automated/manual | PP-CON-005 | Does not independently establish copyright/licensing or full design fidelity | Pending asset inventory |
 | `PP-VER-011` | Release artifact and revision provenance | Automated/manual | PP-REQ-008, PP-CON-009 | Establishes traceability, not the artifact's complete security or runtime correctness | Planned |
 | `PP-VER-012` | Owner review and release disposition | Manual approval | PP-REQ-008, PP-CON-009 | Records authorization; it does not replace technical verification | Required for each release |
-| `PP-VER-013` | ICM reference and traceability integrity | Manual initially; automation when justified | All accepted requirements and ICM registers | Proves documentation/link/identifier/traceability integrity only; not application implementation | Failed at `877933a` (PP-ART-017 §10 R4): stale statuses and missing §9 reference; remediation pending. Prior: passed at `76f990f` (§8 R3) for that revision only |
+| `PP-VER-013` | ICM reference and traceability integrity | Automated + manual | All accepted requirements and ICM registers | Automated checks cover internal Markdown file links/anchors, canonical-document presence, stale Phase 0 status wording, accepted-requirement rows and verification mappings. Manual checks remain for complete identifier uniqueness/ownership, accountable roles, authority, process/effect semantics and unsupported completion claims. This is not application verification | Validator and workflow implemented in `PP-ART-020`; first run pending on this PR revision. R4 failed at `877933a`; historical R3 pass at `76f990f` applies only to that revision |
 | `PP-VER-014` | Architecture and component-boundary review | Manual/hybrid | PP-REQ-003, PP-CON-003 | Depends on the actual source tree and reviewed revision; a logical map alone is not implementation evidence | Planned; run as the physical architecture is introduced |
 | `PP-VER-015` | Dependency and side-effect surface review | Manual/hybrid | PP-REQ-007, PP-CON-007, PP-EFF-005–010 | Reviews declared/observable dependencies and effects; cannot prove absence of all runtime vulnerabilities | Defined; run at foundation and whenever dependencies/effects change |
 | `PP-VER-016` | Information architecture and component-blueprint reconciliation against inspected source | Manual | PP-REQ-001, PP-REQ-003, PP-REQ-006, PP-REQ-009, PP-CON-002, PP-CON-003, PP-CON-010 | Verifies record completeness and cross-reference consistency against the source; does not prove the implemented DOM, visual fidelity, or accessibility (`PP-VER-005`, `PP-VER-006`, `PP-VER-008`, `PP-VER-014`) | Executed by author 2026-10-30 against the export; owner review pending (audit §9) |
@@ -144,7 +144,7 @@ Passing a phase gate requires evidence and approval, not merely completion of a 
 
 ## 10. ICM integrity control — PP-VER-013
 
-The purpose of this control is to detect an internally inconsistent ICM before it becomes an implementation authority. The 2026-10-30 audit result is recorded in [PP-ART-017](integrity-audit-2026-10-30.md). Its pass applies only to the documentation-integrity scope, not to application/runtime behavior.
+The purpose of this control is to detect an internally inconsistent ICM before it becomes an implementation authority. Historical runs and limitations are recorded in [PP-ART-017](integrity-audit-2026-10-30.md). Every result is bound to the exact commit and scope tested; a prior pass does not transfer to a later revision. This control is documentation integrity, not application/runtime verification.
 
 ### Manual procedure
 
@@ -172,11 +172,19 @@ The purpose of this control is to detect an internally inconsistent ICM before i
 - A target-state statement represented as current implementation.
 - A release/merge status that lacks owner authorization.
 
-### Automation policy
+### Automated baseline
 
-A repository script may automate link resolution, ID uniqueness, registry coverage, owner-field presence, process-to-contract/effect mappings, and presence checks. The first implementation should use the repository's already-selected scripting/runtime ecosystem. Do not introduce a new language or dependency solely for this check before Phase 1 establishes the toolchain.
+The dependency-free validator is `scripts/validate-docs.sh` (PP-ART-020). It uses Bash and standard utilities already available on the GitHub-hosted Ubuntu runner; it adds no package dependency and does not select the application's Node/toolchain.
 
-The script must fail non-zero for mandatory integrity failures and report diagnostics with file and record ID. Until such automation exists, describe the procedure as manual and do not claim a CI gate exists.
+`.github/workflows/docs-integrity.yml` runs the validator for pull requests and pushes to `main`. The automated checks cover:
+- Required canonical documentation files.
+- Repository-relative Markdown file targets and heading anchors.
+- The specific stale Phase 0 status statements that caused R4 to fail.
+- Equality of accepted requirement IDs and the master register, plus the existence of each mapped verification control.
+
+The manual checklist above remains mandatory for canonical identifier uniqueness across all record classes, owner-role and boundary ownership, contract/process/effect completeness, authority precedence, and unsupported completion/release claims. The automated check is a subset of PP-VER-013, not a replacement for the full review.
+
+Workflow results are revision-specific. Inspect the check attached to the exact PR head or `main` commit; never infer a result from the presence of a workflow file or from a previous commit. The current `main` ruleset requires a pull request but does not yet require a named status check. The workflow therefore reports CI evidence but is not yet a required merge check.
 
 ## 11. Architecture and dependency controls
 
