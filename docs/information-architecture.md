@@ -12,7 +12,7 @@
 
 This document is the canonical record of the **structure** of the Poster Perfect website: which pages or routes exist, how they nest, how navigation connects them, what order sections appear in, and where in-page anchor targets exist.
 
-**No page, route, section, navigation entry, or anchor is recorded here until it is observed in the inspected Canva source or explicitly approved by the project owner as a web requirement/adaptation.** The sections below are templates. They contain no sitemap, because none has been established. Do not infer one from the project name, from typical company-portfolio patterns, or from the component names in `components.md`.
+**No page, route, section, navigation entry, or anchor is recorded here until it is observed in the inspected Canva source or explicitly approved by the project owner as a web requirement/adaptation.** Sections 5.1 to 5.6 record the structure observed in the 2026-10-30 export. They await owner approval. Do not infer additional pages, routes, sections, or navigation from the project name, from typical company-portfolio patterns, or from component names in `components.md`.
 
 ### Business-purpose constraint
 
@@ -91,15 +91,15 @@ PP-IA-001 Home page (single page)
 
 ### 5.3 Section order per page
 
-| Page ID | Order | Section ID | Source region | Status |
+| Page | Order | Section | Source region | Status |
 | --- | --- | --- | --- | --- |
-| `PP-IA-001` | 1 | `PP-IA-002` | Hero, dark navy band at top | Drafted from export |
-| `PP-IA-001` | 2 | `PP-IA-003` | About, light grey band | Drafted from export |
-| `PP-IA-001` | 3 | `PP-IA-004` | Value statement, bright blue band | Drafted from export |
-| `PP-IA-001` | 4 | `PP-IA-005` | Services, dark navy band | Drafted from export; duplicated paragraph under review |
-| `PP-IA-001` | 5 | `PP-IA-006` | Statistics, three columns | Drafted from export; claims under review |
-| `PP-IA-001` | 6 | `PP-IA-007` | Testimonials, light grey band | Drafted from export; permissions under review |
-| `PP-IA-001` | 7 | `PP-IA-008` | Contact and footer, dark navy band | Drafted from export; destinations under review |
+| Home (`PP-IA-001`) | 1 | `PP-IA-002` | Hero, dark navy band at top | Drafted from export |
+| Home (`PP-IA-001`) | 2 | `PP-IA-003` | About, light grey band | Drafted from export |
+| Home (`PP-IA-001`) | 3 | `PP-IA-004` | Value statement, bright blue band | Drafted from export |
+| Home (`PP-IA-001`) | 4 | `PP-IA-005` | Services, dark navy band | Drafted from export; duplicated paragraph under review |
+| Home (`PP-IA-001`) | 5 | `PP-IA-006` | Statistics, three columns | Drafted from export; claims under review |
+| Home (`PP-IA-001`) | 6 | `PP-IA-007` | Testimonials, light grey band | Drafted from export; permissions under review |
+| Home (`PP-IA-001`) | 7 | `PP-IA-008` | Contact and footer, dark navy band | Drafted from export; destinations under review |
 
 ### 5.4 Navigation
 

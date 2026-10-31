@@ -21,7 +21,7 @@ Poster Perfect is a company portfolio for a graphic design business, not an indi
 
 A PNG or equivalent image export is suitable for visual inspection. A PDF is suitable for a multi-page design. Where the source uses separate logos, illustrations, icons, or photographs, provide those assets separately when possible.
 
-**Current blocker:** the supplied Canva links did not expose the artwork to the available inspection method. Do not infer the page structure, colors, typography, or layout while this blocker remains.
+**Current status:** the owner's export was inspected on 2026-10-30 (see `design-reference.md`). Records are drafted and await owner approval at G0. Phase 1 has not started. Remaining dependencies: the owner decisions in `content-structure.md`, full-resolution assets, the logo vector, the font licence, and responsive variants.
 
 ## 3. Scope
 

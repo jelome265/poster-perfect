@@ -78,11 +78,11 @@ Claims are unverified. See Owner decisions, item 3.
 
 - Heading: "Client Testimonials"
 - Testimonial 1 (PP-CMP-004), role and location: "Founder, Lilongwe"
-  > "I launched my online boutique with a logo from Poster Perfect and people think I've been in business for years. The brand kit made my Instagram look so professional. She gave me 3 concepts and nailed it on revision #2. Best money I've spent starting up."
+  > [Quotation withheld from the public repository pending owner permission. Held in the export.]
 - Testimonial 2, role and location: "Cafe Owner, Blantyre"
-  > "Poster Perfect redesigned our entire menu and social media look. Orders went up 30% the first month because the new menu was so much easier to read and the food photos actually looked appetizing. Fast, affordable, and he understood exactly what our cafe needed."
+  > [Quotation withheld from the public repository pending owner permission. Held in the export.]
 - Testimonial 3, role and location: "Event Organizer, Zomba"
-  > "Needed last-minute posters for our youth conference. Poster Perfect delivered 2 amazing options in 24 hours. The print quality was perfect and we had record attendance. I don't use anyone else for my event graphics now."
+  > [Quotation withheld from the public repository pending owner permission. Held in the export.]
 
 Attribution names are withheld (see Privacy handling). The quoted outcomes need substantiation (see Owner decisions, item 4).
 
@@ -117,7 +117,7 @@ Each item below must be decided by the owner before publication. None has been c
 1. **Duplicated paragraph.** The About paragraph appears again verbatim in the Services section. Keep, rewrite, or remove the second copy.
 2. **Voice and personal detail.** The About paragraph is written in the first person ("I built Poster Perfect") and includes the owner's study programme. DEC-008 describes a company portfolio, not an individual's portfolio. Confirm the voice and whether the personal detail stays.
 3. **Statistics.** "99% Projects completed", "1+ Years in Operation", and "Worldwide" need evidence or must be removed. "Worldwide" has no figure or label.
-4. **Testimonials.** Confirm each client's permission to publish the quote and attribution. The "Orders went up 30%" outcome needs substantiation.
+4. **Testimonials.** Confirm each client's permission to publish the quote and attribution. The quoted outcome figure in testimonial 2 needs substantiation.
 5. **Service terms.** Confirm "unlimited minor revisions", "24 hours" turnaround, and "3 concepts" as offered policies before publishing them.
 6. **Portfolio permissions.** Confirm, for each sample, whether it may be published and whether it is a client's brand or magazine: the brochure sample, the "A LETTER DESIGN" logo sample, the magazine covers, the hero cover, and the footer "Beyond Creativity" image. Record the permission status in this file.
 7. **Copy typos and wording.** "brochures,websites" lacks a space. "DMs" in the About heading may be unclear to some readers.

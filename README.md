@@ -4,7 +4,7 @@ A responsive company portfolio website for a graphic design business, built with
 
 ## Project status
 
-**Documentation baseline established; application implementation not started.** The design reference has not yet been inspected, so visual specifications and page structure remain pending rather than assumed.
+**Documentation baseline established; application implementation not started.** The owner's Canva export was inspected on 2026-10-30. Records drafted from it await owner approval (Phase 0, G0). Visual values are approximate, and several content and publication decisions remain open.
 
 ## Documentation
 

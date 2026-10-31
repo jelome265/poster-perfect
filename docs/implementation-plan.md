@@ -48,7 +48,7 @@ See the [ICM phase routing](icm/09-phase-routing.md) for the mapping between pha
 
 ## Current project state
 
-- Phase 0 is blocked because the supplied Canva links did not expose the design for inspection. An inspectable full-resolution export or accessible view-only reference is required.
+- Phase 0 is awaiting owner approval (G0). The owner's Canva export was inspected on 2026-10-30; records are drafted, and the owner decisions in `content-structure.md` remain open.
 - Phases 1–4 have not started.
 - The repository currently contains documentation only; no application scaffold, build scripts, or automated application checks have been established.
 - The company-level purpose is confirmed: Poster Perfect is a graphic design company portfolio intended to attract prospective customers, not an individual designer's portfolio.
