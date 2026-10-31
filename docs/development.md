@@ -24,7 +24,7 @@ npm ci
 | `npm run lint` | Strict lint with oxlint; any warning fails (`--deny-warnings`) |
 | `npm test` | Run the unit and component tests once (Vitest, jsdom) |
 
-CI (`.github/workflows/app-quality.yml`) runs strict lint, type-check, and build on each pull request to `main`. The unit test is not in the CI gate yet; run `npm test` locally.
+CI (`.github/workflows/app-quality.yml`) runs strict lint, type-check, unit tests, and build on each pull request to `main`.
 | `npm run build` | Type-check, then produce the production bundle in `dist/` |
 | `npm run preview` | Serve the production bundle locally after `npm run build` |
 
